@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="45%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Badge -->
+  <rect width="64" height="64" rx="14" fill="url(#blueGrad)"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" stroke="rgba(245, 158, 11, 0.4)" stroke-width="2"/>
+  
+  <!-- Architectural Truss / Infrastructure Monogram "P" -->
+  <path d="M18 14H36C42.6274 14 48 19.3726 48 26C48 32.6274 42.6274 38 36 38H26V50H18V14Z" fill="url(#goldGrad)"/>
+  <path d="M26 22H35C37.2091 22 39 23.7909 39 26C39 28.2091 37.2091 30 35 30H26V22Z" fill="#0F172A"/>
+  
+  <!-- Civil Engineering Truss Crosshairs -->
+  <path d="M26 38L46 50" stroke="#38BDF8" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="46" cy="50" r="2.5" fill="#38BDF8"/>
+  <circle cx="26" cy="38" r="2.5" fill="#FDE047"/>
+</svg>
