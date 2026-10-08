@@ -164,6 +164,24 @@
       "priority": 10,
       "passes": true,
       "notes": "Successfully optimized entire web portal for mobile devices (320px–480px) and wide desktop displays adhering to UI/UX Pro Max guidelines."
+    },
+    {
+      "id": "US-012",
+      "title": "Overhaul Color Palette to Rich Light Corporate EPC and Upgrade Custom Accessible Dropdowns",
+      "description": "As an executive stakeholder, tender committee member, or civil engineering official, I want a luminous, rich corporate EPC design benchmarked against Larsen & Toubro (L&T), RKDCPL, and MGCPL with crisp white and light slate canvases, royal engineering blue, safety amber accents, and custom accessible dropdowns with SVG chevrons.",
+      "acceptanceCriteria": [
+        "Global theme overhaul from dark obsidian to prestigious light corporate EPC palette (#FFFFFF, #F8FAFC, #F1F5F9, #0B192C, #0F4C81, #1E40AF, #D97706) benchmarked against L&T, RKDCPL, and MGCPL",
+        "Custom SVG chevron dropdown architecture (.custom-select) replacing browser defaults across all 8 filter, estimator, and form dropdowns with >=44px touch targets",
+        "High-contrast hero section preserving civil infrastructure photography with dramatic dark scrim and subtle blueprint grid",
+        "Crisp white sticky navbar with deep navy typography, amber CTA, and prestigious executive dark navy top utility bar",
+        "Clean white card surfaces (.glass-card) with subtle architectural borders (#E2E8F0) and refined elevation shadows",
+        "Executive corporate navy footer (#0A192F / #0B192C) with gold trust seals and clean typography matching L&T and RKDCPL",
+        "100% bilingual parity preserved across all 234 translation keys in English and Hindi",
+        "HTML5 syntax and JavaScript delimiter validation pass with 0 errors"
+      ],
+      "priority": 11,
+      "passes": true,
+      "notes": "Successfully deployed rich light corporate EPC palette and custom dropdown styling benchmarked against L&T, RKDCPL, and MGCPL via UI/UX Pro Max."
     }
   ]
 }
