@@ -29,7 +29,11 @@
   - **Active Navigation & State Routing:** Added `.nav-active` highlighting across desktop top bar, slide-out drawer, and mobile bottom dock. Enabled cross-page deep linking with URL parameters (`?sector=`, `?district=`, `?id=`) for instant pre-filtering on `projects.html`.
   - **UI/UX Pro Max Rigor:** 100% bilingual parity (248/248 keys in EN & HI), all touch targets >= 44x44px, mobile form inputs >= 16px to prevent iOS Safari auto-zoom, and 7 custom chevron dropdowns.
   - **Automated Validation:** 0 HTML syntax errors/unclosed tags, 0 broken links/missing assets, and 100% balanced JavaScript delimiters.
-
-
-
-
+- **2026-10-08:** [US-014] Deployed "Lite Invisible" Hero Overlay and Global Mobile UI/UX Pro Max Multi-Page Polish:
+  - **Lite Invisible Hero Overlay (`index.html`):** Transformed hero text container into an ultra-translucent, lite-invisible architectural glass scrim (`bg-slate-950/20 sm:bg-slate-950/15 backdrop-blur-[2px] border-white/10 sm:border-white/15`) with sharp, high-contrast drop-shadows (`.hero-text-shadow`, `.hero-sub-shadow`). Enhanced background photograph clarity to `brightness-[0.94] contrast-[1.04]` with a light ambient gradient (`from-slate-950/45 via-transparent to-slate-950/20`), ensuring engineers with blueprints, 1200mm pipeline, cranes, bridge, and sunset sky are 100% visible and unobstructed.
+  - **Hero Metric Counters Mobile 2x2 Layout:** Converted metric counters to compact 2x2 grid on mobile viewports (`grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4`) with tactile tap-feedback (`.tap-feedback:active`) and crisp glass cards (`bg-white/95`).
+  - **Light Corporate EPC Continuity:** Converted dark sections on `index.html` (e.g. Accreditation Ticker from `bg-slate-900` to clean `bg-white border-y border-slate-200 text-slate-700 shadow-xs`; Ganges Radar map preview from `bg-slate-900` to light architectural slate `bg-slate-100 border-slate-200`) and `operations.html` into luminous, crisp EPC sections matching Larsen & Toubro (L&T) and RKDCPL standards.
+  - **Global Mobile Clearance (`pb-24 md:pb-0`):** Applied `pb-24 md:pb-0` across all 9 HTML pages (`index.html`, `about.html`, `sectors.html`, `projects.html`, `operations.html`, `estimator.html`, `tenders.html`, `careers.html`, `contact.html`) to permanently eliminate overlap between fixed mobile bottom docks and footers/forms.
+  - **Mobile Dock Active Highlighting:** Enhanced `.mobile-dock-link.nav-active` with accessible soft royal blue pill background (`#EFF6FF`), rounded corners (`12px`), and bold engineering blue typography (`#1E40AF`).
+  - **Touch Momentum & Responsive Typography:** Enforced `-webkit-overflow-scrolling: touch` across all scroll containers, micro-interaction scale feedback (`.tap-feedback:active`), and verified all mobile form inputs retain font size >= 16px to prevent iOS Safari auto-zoom.
+  - **Validation & Quality Gate:** Passed Python `html.parser` across all 9 pages with 0 errors, 0 unclosed tags, 100% balanced JavaScript delimiters, and 0 broken links.

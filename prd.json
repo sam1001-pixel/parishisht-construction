@@ -199,6 +199,26 @@
       "priority": 12,
       "passes": true,
       "notes": "Successfully transformed portal into 9 verified multi-pages with prominent hero photograph and UI/UX Pro Max standards."
+    },
+    {
+      "id": "US-014",
+      "title": "Lite Invisible Hero Overlay and Mobile UI/UX Pro Max Multi-Page Polish",
+      "description": "As a mobile user, tender official, or prospective client, I want the hero background infrastructure photograph completely visible through a lite invisible translucent overlay without dark blocking cards, and I want premier mobile UI/UX ergonomics across all 9 pages including dock clearance, active dock pills, touch momentum scrolling, and >=44px touch targets.",
+      "acceptanceCriteria": [
+        "Hero container on index.html converted to lite-invisible translucent overlay (bg-slate-950/20 sm:bg-slate-950/15 backdrop-blur-[2px] border-white/10) with crisp text drop shadows (.hero-text-shadow, .hero-sub-shadow)",
+        "Hero photograph rendered at high clarity (brightness 0.94, contrast 1.04) with light ambient gradient allowing engineers, pipeline, and cranes to be unobstructed",
+        "Hero metric counters rendered in compact 2x2 mobile grid with tap-feedback and clean glass surfaces",
+        "Accreditation ticker converted from dark slate to crisp white (bg-white border-y border-slate-200 text-slate-700) matching light EPC standard",
+        "Radar map preview on index.html and operations.html updated from dark to light architectural slate (bg-slate-100 border-slate-200)",
+        "Global mobile bottom clearance pb-24 md:pb-0 implemented across all 9 HTML pages",
+        "Mobile floating bottom dock equipped with active pill highlights (.mobile-dock-link.nav-active with bg-royalBlue-50 text-royalBlue-600)",
+        "CSS momentum scrolling (-webkit-overflow-scrolling: touch) and micro-interaction tap-feedback active across mobile viewports",
+        "All 9 HTML pages pass Python html.parser validation with 0 errors",
+        "All JavaScript files pass delimiter balance checks with 0 errors"
+      ],
+      "priority": 13,
+      "passes": true,
+      "notes": "Completed lite invisible hero overlay and premier mobile UI/UX ergonomics across all 9 pages adhering to UI/UX Pro Max guidelines."
     }
   ]
 }

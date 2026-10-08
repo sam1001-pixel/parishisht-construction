@@ -20,7 +20,7 @@
   <script src="assets/js/tailwind-config.js"></script>
 </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-royalBlue-600 selection:text-white relative min-h-screen flex flex-col pb-20 md:pb-0">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-royalBlue-600 selection:text-white relative min-h-screen flex flex-col pb-24 md:pb-0">
 
   <!-- ================= TOP EXECUTIVE UTILITY BAR ================= -->
   <header class="w-full bg-slate-900 border-b border-slate-800 text-xs py-1.5 px-3 sm:px-6 lg:px-8 z-40 relative">
@@ -175,21 +175,21 @@
   </nav>
 
   <!-- ================= CINEMATIC HERO & COMMAND CENTER ================= -->
-  <!-- Task 1: Visible photo with brightness-[0.92] contrast-[1.05], subtle vignette, and executive architectural frosted glass card -->
-  <section class="relative min-h-[88vh] sm:min-h-[92vh] flex items-center justify-center tech-grid py-14 sm:py-20 px-3 sm:px-6 lg:px-8 overflow-hidden">
-    <!-- Photorealistic Infrastructure Background with Subtle Vignette -->
+  <!-- Lite Invisible Overlay with 100% visible photograph & mobile-optimized touch ergonomics -->
+  <section class="relative min-h-[82vh] sm:min-h-[90vh] flex items-center justify-center tech-grid py-8 sm:py-16 px-3 sm:px-6 lg:px-8 overflow-hidden">
+    <!-- Photorealistic Infrastructure Background with Light Transparent Vignette -->
     <div class="absolute inset-0 z-0">
-      <img src="assets/images/hero-infrastructure.jpg" alt="Parishisht Heavy Infrastructure Bihar" class="w-full h-full object-cover object-center filter brightness-[0.92] contrast-[1.05]">
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-900/30 to-slate-900/40"></div>
+      <img src="assets/images/hero-infrastructure.jpg" alt="Parishisht Heavy Infrastructure Bihar" class="w-full h-full object-cover object-center filter brightness-[0.94] contrast-[1.04]">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/45 via-transparent to-slate-950/20"></div>
     </div>
 
     <div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col items-center text-center">
       
-      <!-- Executive Architectural Frosted Glass Card for 100% Readable Text & Visible Sunset/Cranes Background -->
-      <div class="bg-slate-900/80 backdrop-blur-md border border-white/20 p-8 sm:p-12 rounded-3xl shadow-2xl max-w-4xl w-full flex flex-col items-center">
+      <!-- Lite Invisible Translucent Container: lets the photograph shine through completely -->
+      <div class="bg-slate-950/25 sm:bg-slate-950/15 backdrop-blur-[2px] border border-white/10 sm:border-white/15 p-5 sm:p-10 rounded-3xl shadow-xl max-w-4xl w-full flex flex-col items-center">
         
         <!-- Flagship Site Status Ticker -->
-        <div class="inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-slate-950/70 border border-blueprint-400/40 text-xs text-slate-200 mb-6 backdrop-blur-md shadow-lg max-w-full flex-wrap justify-center">
+        <div class="inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-slate-950/75 border border-white/20 text-xs text-slate-200 mb-4 sm:mb-6 backdrop-blur-md shadow-lg max-w-full flex-wrap justify-center">
           <span class="flex h-2.5 w-2.5 relative shrink-0">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-laserEmerald-400 opacity-75"></span>
             <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-laserEmerald-500"></span>
@@ -199,18 +199,18 @@
           <span class="text-white font-medium text-[11px] sm:text-xs truncate max-w-[260px] sm:max-w-none" data-i18n="hero-live-text">Muzaffarpur Rural Water Supply Grid — 92% Handover Ready</span>
         </div>
 
-        <!-- Main Cinematic Headline -->
-        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15] mb-4 sm:mb-6">
+        <!-- Main Cinematic Headline with Sharp Text Shadows -->
+        <h1 class="hero-text-shadow text-2xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight mb-3 sm:mb-5">
           <span data-i18n="hero-title-prefix">Pioneering Bihar's</span> <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-amberGold-400" data-i18n="hero-title-highlight">Mission-Critical Public Works</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-sky-200 to-amberGold-300" data-i18n="hero-title-highlight">Mission-Critical Public Works</span>
         </h1>
 
-        <p class="text-sm sm:text-base lg:text-lg text-slate-200 max-w-2xl leading-relaxed mb-8 font-normal drop-shadow-sm" data-i18n="hero-subtitle">
+        <p class="hero-sub-shadow text-xs sm:text-base lg:text-lg text-slate-100 max-w-2xl leading-relaxed mb-6 sm:mb-8 font-medium">
           Statewide Class-1 EPC contractor executing large-scale piped drinking water grids, high-speed arterial highways, and municipal stormwater drainage networks with uncompromised engineering precision.
         </p>
 
         <!-- Primary Action Buttons linking to dedicated pages -->
-        <div class="flex flex-col sm:flex-row justify-center gap-3.5 w-full sm:w-auto">
+        <div class="flex flex-col sm:flex-row justify-center gap-3 w-full sm:w-auto">
           <a href="projects.html" class="w-full sm:w-auto px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-royalBlue-600 hover:bg-royalBlue-500 text-white font-bold text-xs sm:text-sm tracking-wide shadow-xl shadow-royalBlue-600/40 hover:shadow-royalBlue-500/50 transition-all flex items-center justify-center gap-2 min-h-[48px] active:scale-95">
             <i data-lucide="layers" class="w-4 h-4"></i>
             <span data-i18n="hero-cta-explore">Explore Dynamic Projects</span>
@@ -222,26 +222,26 @@
         </div>
       </div>
 
-      <!-- 4 Viewport Animated Metric Counters -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl mt-8">
-        <div class="glass-card p-4 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg">
-          <div class="text-2xl sm:text-4xl font-black font-mono text-royalBlue-600 counter-target" data-target="250" data-prefix="₹" data-suffix="+ Cr." data-suffix-hi="+ करोड़">₹250+ Cr.</div>
-          <div class="text-[10px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-works">Audited Public Works</div>
+      <!-- 4 Viewport Animated Metric Counters: Optimized for Mobile Touch Grids -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 w-full max-w-5xl mt-5 sm:mt-8">
+        <div class="glass-card p-3 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg tap-feedback">
+          <div class="text-xl sm:text-3xl font-black font-mono text-royalBlue-600 counter-target" data-target="250" data-prefix="₹" data-suffix="+ Cr." data-suffix-hi="+ करोड़">₹250+ Cr.</div>
+          <div class="text-[9px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-works">Audited Public Works</div>
         </div>
 
-        <div class="glass-card p-4 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg">
-          <div class="text-2xl sm:text-4xl font-black font-mono text-amberGold-600 counter-target" data-target="15" data-suffix="+ Districts" data-suffix-hi="+ जिले">15+ Districts</div>
-          <div class="text-[10px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-districts">Bihar District Footprint</div>
+        <div class="glass-card p-3 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg tap-feedback">
+          <div class="text-xl sm:text-3xl font-black font-mono text-amberGold-600 counter-target" data-target="15" data-suffix="+ Districts" data-suffix-hi="+ जिले">15+ Districts</div>
+          <div class="text-[9px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-districts">Bihar District Footprint</div>
         </div>
 
-        <div class="glass-card p-4 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg">
-          <div class="text-2xl sm:text-4xl font-black font-mono text-laserEmerald-600 counter-target" data-target="100" data-suffix="%" data-suffix-hi="%">100%</div>
-          <div class="text-[10px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-delivery">On-Time Handover</div>
+        <div class="glass-card p-3 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg tap-feedback">
+          <div class="text-xl sm:text-3xl font-black font-mono text-laserEmerald-600 counter-target" data-target="100" data-suffix="%" data-suffix-hi="%">100%</div>
+          <div class="text-[9px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-delivery">On-Time Handover</div>
         </div>
 
-        <div class="glass-card p-4 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg">
-          <div class="text-2xl sm:text-4xl font-black font-mono text-cyan-600 counter-target" data-target="450" data-suffix="k+ Safe Hrs" data-suffix-hi="हज़ार+ सुरक्षित घंटे">450k+ Safe Hrs</div>
-          <div class="text-[10px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-safety">Safe Man-Hours (Zero LTI)</div>
+        <div class="glass-card p-3 sm:p-5 rounded-2xl border border-slate-200/90 bg-white/95 backdrop-blur-md flex flex-col items-center text-center shadow-lg tap-feedback">
+          <div class="text-xl sm:text-3xl font-black font-mono text-cyan-600 counter-target" data-target="450" data-suffix="k+ Safe Hrs" data-suffix-hi="हज़ार+ सुरक्षित घंटे">450k+ Safe Hrs</div>
+          <div class="text-[9px] sm:text-xs text-slate-600 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-safety">Safe Man-Hours (Zero LTI)</div>
         </div>
       </div>
 
@@ -249,19 +249,19 @@
   </section>
 
   <!-- ================= INFINITE APPROVAL & ACCREDITATION TICKER ================= -->
-  <section class="py-3 bg-slate-900 border-y border-slate-800 text-xs text-slate-300 overflow-hidden font-mono">
+  <section class="py-3 bg-white border-y border-slate-200 text-xs text-slate-700 overflow-hidden font-mono shadow-xs">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-6 overflow-x-auto scrollbar-none whitespace-nowrap">
-      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-400"></i> PHED Bihar (Public Health Engineering)</span>
-      <span class="text-slate-700">•</span>
-      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-400"></i> BUIDCO (Urban Infrastructure)</span>
-      <span class="text-slate-700">•</span>
-      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-400"></i> Jal Jeevan Mission (Har Ghar Nal Ka Jal)</span>
-      <span class="text-slate-700">•</span>
-      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-400"></i> RCD Bihar (Road Construction)</span>
-      <span class="text-slate-700">•</span>
-      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-400"></i> RWD Bihar (Rural Works)</span>
-      <span class="text-slate-700">•</span>
-      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-400"></i> ISO 9001:2015 & 45001:2018</span>
+      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-600"></i> PHED Bihar (Public Health Engineering)</span>
+      <span class="text-slate-300">•</span>
+      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-600"></i> BUIDCO (Urban Infrastructure)</span>
+      <span class="text-slate-300">•</span>
+      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-600"></i> Jal Jeevan Mission (Har Ghar Nal Ka Jal)</span>
+      <span class="text-slate-300">•</span>
+      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-600"></i> RCD Bihar (Road Construction)</span>
+      <span class="text-slate-300">•</span>
+      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-600"></i> RWD Bihar (Rural Works)</span>
+      <span class="text-slate-300">•</span>
+      <span class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-laserEmerald-600"></i> ISO 9001:2015 & 45001:2018</span>
     </div>
   </section>
 
@@ -431,22 +431,22 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <!-- Interactive Vector Map Radar View -->
-        <div class="lg:col-span-7 bg-slate-900 rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-slate-800 shadow-xl min-h-[380px] sm:min-h-[440px] flex items-center justify-center">
-          <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <!-- Interactive Vector Map Radar View (Light Architectural Standard) -->
+        <div class="lg:col-span-7 bg-slate-100 rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-slate-200 shadow-sm min-h-[380px] sm:min-h-[440px] flex items-center justify-center">
+          <div class="absolute inset-0 opacity-40 pointer-events-none">
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="grid-pattern-radar" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#60A5FA" stroke-width="0.5"/>
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#CBD5E1" stroke-width="0.8"/>
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#grid-pattern-radar)"/>
             </svg>
           </div>
           <!-- Stylized Ganges River Vector Path -->
-          <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" viewBox="0 0 800 500">
-            <path d="M 50 240 Q 200 280 350 240 T 600 260 T 780 230" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
-            <text x="360" y="225" fill="#38BDF8" font-size="10" font-family="JetBrains Mono" font-weight="bold" letter-spacing="2">GANGES CORRIDOR</text>
+          <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-60" viewBox="0 0 800 500">
+            <path d="M 50 240 Q 200 280 350 240 T 600 260 T 780 230" fill="none" stroke="#0284C7" stroke-width="6" stroke-linecap="round"/>
+            <text x="360" y="225" fill="#0369A1" font-size="10" font-family="JetBrains Mono" font-weight="bold" letter-spacing="2">GANGES CORRIDOR</text>
           </svg>
 
           <!-- Interactive District Radar Pins Container -->
@@ -454,9 +454,9 @@
             <!-- Dynamically populated via ParishishtApp.renderRadar() -->
           </div>
 
-          <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-[10px] font-mono text-slate-400 bg-slate-950/80 px-3.5 py-2 rounded-xl border border-slate-800 backdrop-blur-md">
+          <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-[10px] font-mono text-slate-600 bg-white/95 px-3.5 py-2 rounded-xl border border-slate-200 shadow-xs backdrop-blur-md">
             <span>GIS COORDINATES: 25.5941° N, 85.1376° E</span>
-            <span class="text-laserEmerald-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-laserEmerald-400 animate-pulse"></span> 15 SITES ACTIVE</span>
+            <span class="text-laserEmerald-600 font-bold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-laserEmerald-500 animate-pulse"></span> 15 SITES ACTIVE</span>
           </div>
         </div>
 

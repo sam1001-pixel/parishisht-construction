@@ -20,7 +20,7 @@
   <script src="assets/js/tailwind-config.js"></script>
 </head>
 
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-royalBlue-600 selection:text-white relative min-h-screen flex flex-col pb-20 md:pb-0">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-royalBlue-600 selection:text-white relative min-h-screen flex flex-col pb-24 md:pb-0">
 
   <!-- ================= TOP EXECUTIVE UTILITY BAR ================= -->
   <header class="w-full bg-slate-900 border-b border-slate-800 text-xs py-1.5 px-3 sm:px-6 lg:px-8 z-40 relative">
@@ -200,22 +200,22 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-        <!-- Interactive Vector Map Radar View -->
-        <div class="lg:col-span-7 bg-slate-900 rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-slate-800 shadow-xl min-h-[380px] sm:min-h-[460px] flex items-center justify-center">
-          <div class="absolute inset-0 opacity-20 pointer-events-none">
+        <!-- Interactive Vector Map Radar View (Light Corporate EPC Standard) -->
+        <div class="lg:col-span-7 bg-slate-100 rounded-3xl p-6 sm:p-8 relative overflow-hidden border border-slate-200 shadow-sm min-h-[380px] sm:min-h-[460px] flex items-center justify-center">
+          <div class="absolute inset-0 opacity-40 pointer-events-none">
             <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern id="grid-pattern-radar-ops" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#60A5FA" stroke-width="0.5"/>
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#CBD5E1" stroke-width="0.8"/>
                 </pattern>
               </defs>
               <rect width="100%" height="100%" fill="url(#grid-pattern-radar-ops)"/>
             </svg>
           </div>
           <!-- Stylized Ganges River Vector Path -->
-          <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" viewBox="0 0 800 500">
-            <path d="M 50 240 Q 200 280 350 240 T 600 260 T 780 230" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
-            <text x="360" y="225" fill="#38BDF8" font-size="10" font-family="JetBrains Mono" font-weight="bold" letter-spacing="2">GANGES CORRIDOR</text>
+          <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-60" viewBox="0 0 800 500">
+            <path d="M 50 240 Q 200 280 350 240 T 600 260 T 780 230" fill="none" stroke="#0284C7" stroke-width="6" stroke-linecap="round"/>
+            <text x="360" y="225" fill="#0369A1" font-size="10" font-family="JetBrains Mono" font-weight="bold" letter-spacing="2">GANGES CORRIDOR</text>
           </svg>
 
           <!-- Interactive District Radar Pins Container -->
@@ -223,9 +223,9 @@
             <!-- Dynamically populated via ParishishtApp.renderRadar() -->
           </div>
 
-          <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-[10px] font-mono text-slate-400 bg-slate-950/80 px-3.5 py-2 rounded-xl border border-slate-800 backdrop-blur-md">
+          <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-[10px] font-mono text-slate-600 bg-white/95 px-3.5 py-2 rounded-xl border border-slate-200 shadow-xs backdrop-blur-md">
             <span>GIS MAP: BIHAR OPERATIONAL RADAR</span>
-            <span class="text-laserEmerald-400 flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-laserEmerald-400 animate-pulse"></span> SATELLITE SYNC OK</span>
+            <span class="text-laserEmerald-600 font-bold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-laserEmerald-500 animate-pulse"></span> SATELLITE SYNC OK</span>
           </div>
         </div>
 
