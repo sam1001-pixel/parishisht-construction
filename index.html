@@ -6,10 +6,10 @@
   <title data-i18n="portal-title">Parishisht Construction | Class-1 Registered EPC Contractor (Govt of Bihar)</title>
   <meta name="description" content="Parishisht Construction Private Limited is an elite Class-1 registered EPC infrastructure contractor in Bihar specializing in PHE water supply grids, civil highways, BUIDCO urban drainage, and turnkey public works.">
   
-  <!-- Typography: Plus Jakarta Sans & JetBrains Mono -->
+  <!-- Typography: Outfit (Modern Architectural Sans via UI/UX Pro Max), Noto Sans Devanagari & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -20,7 +20,8 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans: ['"Outfit"', '"Noto Sans Devanagari"', 'system-ui', '-apple-system', 'sans-serif'],
+            heading: ['"Outfit"', '"Noto Sans Devanagari"', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace']
           },
           colors: {
@@ -85,6 +86,45 @@
 
     .glass-card:hover {
       border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    /* UI/UX Pro Max Typography Architecture */
+    *, html, body {
+      font-family: 'Outfit', 'Noto Sans Devanagari', system-ui, -apple-system, sans-serif;
+    }
+    .font-mono, pre, code, [data-mono] {
+      font-family: 'JetBrains Mono', monospace !important;
+    }
+
+    /* Machinery Telemetry Left-to-Right Auto-Scroll Conveyor */
+    .telemetry-ticker-container {
+      position: relative;
+      width: 100%;
+      overflow-x: hidden;
+      cursor: grab;
+      user-select: none;
+    }
+    .telemetry-ticker-container:active {
+      cursor: grabbing;
+    }
+    .telemetry-ticker-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+      will-change: transform;
+      animation: autoScrollLeftToRight 42s linear infinite;
+    }
+    .telemetry-ticker-container:hover .telemetry-ticker-track,
+    .telemetry-ticker-track.paused {
+      animation-play-state: paused !important;
+    }
+    @keyframes autoScrollLeftToRight {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
     }
 
     .pulse-ring {
@@ -723,36 +763,77 @@
   </section>
 
   <!-- ================= MACHINERY & FLEET TELEMETRY ================= -->
-  <section id="fleet" class="py-20 bg-obsidian-950 tech-grid border-t border-obsidian-700/60">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="fleet" class="py-20 bg-obsidian-950 tech-grid border-t border-obsidian-700/60 overflow-hidden relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
       
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-12">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
         <div>
-          <span class="inline-block px-3 py-1 rounded-full bg-blueprint-500/10 border border-blueprint-500/30 text-blueprint-400 font-mono text-[11px] font-bold tracking-widest uppercase mb-2" data-i18n="fleet-badge">
-            SELF-OWNED ASSETS
-          </span>
+          <div class="flex items-center gap-2.5 mb-2">
+            <span class="inline-block px-3 py-1 rounded-full bg-blueprint-500/10 border border-blueprint-500/30 text-blueprint-400 font-mono text-[11px] font-bold tracking-widest uppercase" data-i18n="fleet-badge">
+              SELF-OWNED ASSETS
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-laserEmerald-500/10 border border-laserEmerald-500/25 text-laserEmerald-400 font-mono text-[10px]">
+              <span class="w-1.5 h-1.5 rounded-full bg-laserEmerald-400 animate-pulse"></span>
+              <span data-i18n="fleet-live-pulse">LIVE TELEMETRY FEED • AUTO-SCROLL CONVEYOR</span>
+            </span>
+          </div>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight" data-i18n="fleet-title">
             Plant & Machinery Telemetry
           </h2>
-          <p class="text-slate-400 text-sm mt-2 max-w-2xl" data-i18n="fleet-sub">
+          <p class="text-slate-400 text-sm mt-2 max-w-2xl leading-relaxed" data-i18n="fleet-sub">
             We maintain 100% self-owned computerized batching plants, transit mixers, sensor pavers, and testing labs to ensure zero dependency on rental contractors.
           </p>
         </div>
 
-        <!-- Fleet Category Filter Tabs -->
-        <div class="inline-flex p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-semibold shrink-0">
-          <button onclick="ParishishtApp.filterFleet('all')" class="fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all" data-fleet="all" data-i18n="fleet-tab-all">All</button>
-          <button onclick="ParishishtApp.filterFleet('concrete')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="concrete" data-i18n="fleet-tab-concrete">Batching</button>
-          <button onclick="ParishishtApp.filterFleet('transport')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="transport" data-i18n="fleet-tab-transport">Transit Mixers</button>
-          <button onclick="ParishishtApp.filterFleet('earth')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="earth" data-i18n="fleet-tab-earth">Excavators</button>
+        <!-- Controls: Filters + Auto-scroll Controls -->
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Fleet Category Filter Tabs -->
+          <div class="inline-flex p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-semibold shrink-0">
+            <button onclick="ParishishtApp.filterFleet('all')" class="fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all shadow-sm shadow-blueprint-600/30" data-fleet="all" data-i18n="fleet-tab-all">All</button>
+            <button onclick="ParishishtApp.filterFleet('concrete')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="concrete" data-i18n="fleet-tab-concrete">Batching</button>
+            <button onclick="ParishishtApp.filterFleet('transport')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="transport" data-i18n="fleet-tab-transport">Transit Mixers</button>
+            <button onclick="ParishishtApp.filterFleet('earth')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="earth" data-i18n="fleet-tab-earth">Excavators</button>
+            <button onclick="ParishishtApp.filterFleet('pavers')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="pavers" data-i18n="fleet-tab-pavers">Pavers</button>
+          </div>
+
+          <!-- Auto-scroll playback controls -->
+          <div class="inline-flex items-center gap-1.5 p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-mono">
+            <button onclick="ParishishtApp.scrollFleetManual(-1)" title="Step Left" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-obsidian-700 transition-all">
+              <i data-lucide="chevron-left" class="w-4 h-4"></i>
+            </button>
+            <button onclick="ParishishtApp.toggleFleetAutoScroll()" id="fleet-pause-btn" title="Pause / Resume Conveyor" class="px-2.5 py-1 rounded-lg text-slate-300 hover:text-white hover:bg-obsidian-700 flex items-center gap-1.5 transition-all">
+              <i data-lucide="pause" id="fleet-pause-icon" class="w-3.5 h-3.5 text-blueprint-400"></i>
+              <span id="fleet-pause-label" class="text-[11px] font-sans" data-i18n="fleet-pause">Pause</span>
+            </button>
+            <button onclick="ParishishtApp.scrollFleetManual(1)" title="Step Right" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-obsidian-700 transition-all">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </button>
+          </div>
         </div>
       </div>
+    </div>
 
-      <!-- Machinery Cards Grid -->
-      <div id="machinery-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Rendered Dynamically via JS -->
+    <!-- Auto-scrolling Conveyor Viewport with Left & Right Gradient Vignettes -->
+    <div class="relative w-full overflow-hidden telemetry-ticker-container group py-3" id="telemetry-viewport">
+      <!-- Left Edge Blur & Fade -->
+      <div class="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-obsidian-950 via-obsidian-950/90 to-transparent z-20"></div>
+      
+      <!-- Right Edge Blur & Fade -->
+      <div class="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-obsidian-950 via-obsidian-950/90 to-transparent z-20"></div>
+
+      <!-- Ticker Track: Smooth Left-to-Right Scrolling -->
+      <div id="machinery-ticker-track" class="telemetry-ticker-track flex items-stretch gap-6 px-4">
+        <!-- Rendered Dynamically via JS (duplicated for infinite seamless loop) -->
       </div>
+    </div>
 
+    <!-- Telemetry Guidance Subtitle -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 flex flex-wrap justify-between items-center text-[11px] font-mono text-slate-500 gap-2">
+      <span class="flex items-center gap-1.5">
+        <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 text-blueprint-400"></i>
+        <span data-i18n="fleet-hover-hint">Conveyor scrolls smoothly left-to-right • Hover over any card to inspect & pause</span>
+      </span>
+      <span class="hidden sm:inline" data-i18n="fleet-cert-hint">100% Self-owned heavy fleet registered under Form-20 statutory filings</span>
     </div>
   </section>
 
@@ -1940,6 +2021,42 @@
         "assignedDistrict_hi": "केंद्रीय एवं फील्ड लैब",
         "desc": "Air-conditioned specialized field testing vans outfitted with digital concrete cube compression machines, core drillers, aggregate sieves, and nuclear density gauges.",
         "desc_hi": "डिजिटल कंक्रीट क्यूब संपीडन मशीन, कोर ड्रिलर और एग्रीगेट छलनी से सुसज्जित वातानुकूलित मोबाइल फील्ड परीक्षण वैन।"
+    },
+    {
+        "id": "mach-7",
+        "name": "Heavy Hydraulic Vibratory Soil & Tandem Compactor Rollers",
+        "name_hi": "भारी हाइड्रोलिक वाइब्रेटरी मृदा एवं टेंडेम रोलर्स",
+        "category": "earth",
+        "categoryLabel": "Soil & Pavement Compaction",
+        "categoryLabel_hi": "मृदा एवं फुटपाथ संघनन",
+        "count": 6,
+        "capacity": "12 - 15 Ton Operating Weight",
+        "icon": "circle-dot",
+        "status": "Operational",
+        "status_hi": "परिचालित",
+        "engineHours": "3,890 hrs",
+        "assignedDistrict": "Patna, Muzaffarpur, Gaya",
+        "assignedDistrict_hi": "पटना, मुजफ्फरपुर, गया",
+        "desc": "Dynapac & HAMM high-amplitude vibratory compactors equipped with compaction meters ensuring 98% modified proctor density on subgrades.",
+        "desc_hi": "डायनापैक एवं हैम उच्च-आयाम वाइब्रेटरी कम्पेक्टर जो सबग्रेड पर 98% संशोधित प्रॉक्टर घनत्व सुनिश्चित करते हैं।"
+    },
+    {
+        "id": "mach-8",
+        "name": "High-Discharge Submersible & Well-Point Dewatering Pumps",
+        "name_hi": "उच्च-निर्वहन सबमर्सिबल एवं वेल-पॉइंट डीवाटरिंग पंप",
+        "category": "concrete",
+        "categoryLabel": "Trench Dewatering Systems",
+        "categoryLabel_hi": "ट्रेंच डीवाटरिंग सिस्टम",
+        "count": 14,
+        "capacity": "5,000 - 15,000 LPM Discharge",
+        "icon": "droplet",
+        "status": "Operational",
+        "status_hi": "परिचालित",
+        "engineHours": "4,750 hrs",
+        "assignedDistrict": "Ganges & Sone Basin Sites",
+        "assignedDistrict_hi": "गंगा एवं सोन बेसिन कार्यस्थल",
+        "desc": "Kirloskar & KSB high-head mud and slurry dewatering sets maintaining dry trenches during monsoon water supply pipe laying.",
+        "desc_hi": "किर्लोस्कर एवं केएसबी उच्च-हेड कीचड़ और स्लरी डीवाटरिंग सेट जो मानसून में शुष्क ट्रेंच बनाए रखते हैं।"
     }
 ];
     const TRANSLATIONS = {
@@ -2410,6 +2527,7 @@
         this.renderEstimatorInputs();
         this.recomputeEstimator();
         this.renderMachinery();
+        this.setupFleetDrag();
         this.initCounterObserver();
         this.setupKeyboardShortcuts();
         this.applyLanguage(this.state.lang);
@@ -3112,7 +3230,7 @@ Fleet: ${fleet}`;
         this.state.activeFleetCategory = cat;
         document.querySelectorAll('.fleet-pill').forEach(btn => {
           if (btn.getAttribute('data-fleet') === cat) {
-            btn.className = "fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all";
+            btn.className = "fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all shadow-sm shadow-blueprint-600/30";
           } else {
             btn.className = "fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all";
           }
@@ -3121,18 +3239,26 @@ Fleet: ${fleet}`;
       },
 
       renderMachinery() {
-        const container = document.getElementById('machinery-grid-container');
-        if (!container) return;
-        container.innerHTML = '';
+        const track = document.getElementById('machinery-ticker-track');
+        if (!track) return;
+        track.innerHTML = '';
         const isHi = this.state.lang === 'hi';
 
         const filtered = MACHINERY_DATA.filter(m => {
           return this.state.activeFleetCategory === 'all' || m.category === this.state.activeFleetCategory;
         });
 
-        filtered.forEach(m => {
+        // Ensure enough cards for a continuous infinite loop (at least 8 items base)
+        let displayList = [...filtered];
+        while (displayList.length < 8) {
+          displayList = displayList.concat(filtered);
+        }
+        // Duplicate the list so at -50% to 0% it loops seamlessly left-to-right
+        const loopList = displayList.concat(displayList);
+
+        loopList.forEach(m => {
           const item = document.createElement('div');
-          item.className = "glass-card p-6 rounded-3xl border border-obsidian-700/60 hover:border-blueprint-500/50 transition-all flex flex-col justify-between";
+          item.className = "glass-card p-6 rounded-3xl border border-obsidian-700/60 hover:border-blueprint-400 hover:shadow-xl hover:shadow-blueprint-500/10 transition-all flex flex-col justify-between shrink-0 w-[320px] sm:w-[360px] md:w-[380px] group/card";
 
           const name = isHi ? m.name_hi : m.name;
           const catLabel = isHi ? m.categoryLabel_hi : m.categoryLabel;
@@ -3142,27 +3268,124 @@ Fleet: ${fleet}`;
           item.innerHTML = `
             <div>
               <div class="flex justify-between items-center mb-3">
-                <span class="w-10 h-10 rounded-xl bg-blueprint-500/10 text-blueprint-400 flex items-center justify-center border border-blueprint-500/30">
+                <span class="w-10 h-10 rounded-xl bg-blueprint-500/10 text-blueprint-400 flex items-center justify-center border border-blueprint-500/30 group-hover/card:scale-110 transition-transform">
                   <i data-lucide="${m.icon}" class="w-5 h-5"></i>
                 </span>
-                <span class="text-xs font-mono font-bold text-laserEmerald-400 bg-laserEmerald-500/10 px-2.5 py-0.5 rounded border border-laserEmerald-500/20">
+                <span class="inline-flex items-center gap-1.5 text-[11px] font-mono font-bold text-laserEmerald-400 bg-laserEmerald-500/10 px-2.5 py-0.5 rounded-full border border-laserEmerald-500/20">
+                  <span class="w-1.5 h-1.5 rounded-full bg-laserEmerald-400 animate-pulse"></span>
                   ${isHi ? 'परिचालित' : 'Operational'}
                 </span>
               </div>
-              <div class="text-3xl font-black font-mono text-white mb-1">${m.count} <span class="text-xs text-slate-400 font-normal font-sans">${isHi ? 'इकाइयां' : 'Units'}</span></div>
-              <h4 class="font-bold text-white text-base leading-snug mb-1">${name}</h4>
+              <div class="text-3xl font-black font-mono text-white mb-1 tracking-tight">
+                ${m.count} <span class="text-xs text-slate-400 font-normal font-sans">${isHi ? 'इकाइयां' : 'Units'}</span>
+              </div>
+              <h4 class="font-bold text-white text-base leading-snug mb-1 group-hover/card:text-blueprint-300 transition-colors">${name}</h4>
               <div class="text-xs font-mono text-blueprint-400 mb-2">${catLabel} • ${m.capacity}</div>
-              <p class="text-xs text-slate-400 leading-relaxed mb-4">${desc}</p>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4 line-clamp-3">${desc}</p>
             </div>
 
-            <div class="pt-3 border-t border-obsidian-800 text-[11px] font-mono text-slate-400 space-y-1">
-              <div>Hub: <span class="text-slate-200">${assigned}</span></div>
-              <div>Usage: <span class="text-amberGold-400">${m.engineHours}</span></div>
+            <div class="pt-3 border-t border-obsidian-800 text-[11px] font-mono text-slate-400 space-y-1.5">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-500">Hub:</span>
+                <span class="text-slate-200 font-sans font-medium">${assigned}</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-500">Engine Hours:</span>
+                <span class="text-amberGold-400 font-bold">${m.engineHours}</span>
+              </div>
+              <div class="flex justify-between items-center text-[10px] text-slate-500">
+                <span>Certification:</span>
+                <span class="text-laserEmerald-400">ISO/NABL Verified</span>
+              </div>
             </div>
           `;
-          container.appendChild(item);
+          track.appendChild(item);
         });
         if (window.lucide) lucide.createIcons();
+      },
+
+      toggleFleetAutoScroll() {
+        const track = document.getElementById('machinery-ticker-track');
+        const btnIcon = document.getElementById('fleet-pause-icon');
+        const btnLabel = document.getElementById('fleet-pause-label');
+        if (!track) return;
+        
+        const isPaused = track.classList.toggle('paused');
+        if (btnIcon && btnLabel) {
+          if (isPaused) {
+            btnIcon.setAttribute('data-lucide', 'play');
+            btnLabel.textContent = this.state.lang === 'hi' ? 'चालू करें' : 'Resume';
+          } else {
+            btnIcon.setAttribute('data-lucide', 'pause');
+            btnLabel.textContent = this.state.lang === 'hi' ? 'रोकें' : 'Pause';
+          }
+          if (window.lucide) lucide.createIcons();
+        }
+        this.showToast(isPaused ? (this.state.lang === 'hi' ? 'कन्वेयर रोका गया' : 'Telemetry auto-scroll paused') : (this.state.lang === 'hi' ? 'कन्वेयर चालू किया गया' : 'Telemetry auto-scroll resumed'), 'info');
+      },
+
+      scrollFleetManual(direction) {
+        const track = document.getElementById('machinery-ticker-track');
+        if (!track) return;
+        track.classList.add('paused');
+        const btnIcon = document.getElementById('fleet-pause-icon');
+        const btnLabel = document.getElementById('fleet-pause-label');
+        if (btnIcon && btnLabel) {
+          btnIcon.setAttribute('data-lucide', 'play');
+          btnLabel.textContent = this.state.lang === 'hi' ? 'चालू करें' : 'Resume';
+          if (window.lucide) lucide.createIcons();
+        }
+        
+        const computed = window.getComputedStyle(track);
+        const matrix = new DOMMatrixReadOnly(computed.transform);
+        const currentX = matrix.m41;
+        const cardWidth = 380 + 24;
+        const newX = currentX + (direction * cardWidth);
+        track.style.transition = 'transform 0.4s ease-out';
+        track.style.transform = `translateX(${newX}px)`;
+        setTimeout(() => {
+          track.style.transition = '';
+        }, 400);
+      },
+
+      setupFleetDrag() {
+        const viewport = document.getElementById('telemetry-viewport');
+        const track = document.getElementById('machinery-ticker-track');
+        if (!viewport || !track) return;
+        
+        let isDown = false;
+        let startX = 0;
+        let scrollLeft = 0;
+
+        viewport.addEventListener('mousedown', (e) => {
+          isDown = true;
+          viewport.classList.add('active');
+          track.classList.add('paused');
+          const btnIcon = document.getElementById('fleet-pause-icon');
+          const btnLabel = document.getElementById('fleet-pause-label');
+          if (btnIcon && btnLabel) {
+            btnIcon.setAttribute('data-lucide', 'play');
+            btnLabel.textContent = this.state.lang === 'hi' ? 'चालू करें' : 'Resume';
+            if (window.lucide) lucide.createIcons();
+          }
+          startX = e.pageX;
+          const computed = window.getComputedStyle(track);
+          const matrix = new DOMMatrixReadOnly(computed.transform);
+          scrollLeft = matrix.m41;
+        });
+
+        window.addEventListener('mouseup', () => {
+          isDown = false;
+          viewport.classList.remove('active');
+        });
+
+        viewport.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX;
+          const walk = (x - startX);
+          track.style.transform = `translateX(${scrollLeft + walk}px)`;
+        });
       },
 
       // Viewport Animated Metric Counters

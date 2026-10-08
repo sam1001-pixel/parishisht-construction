@@ -129,6 +129,23 @@
       "priority": 8,
       "passes": true,
       "notes": "Completed full ground-up rebuild of index.html as a fully dynamic SPA with Obsidian Blueprint design system."
+    },
+    {
+      "id": "US-010",
+      "title": "Migrate Global Typography to Outfit and Implement Left-to-Right Machinery Telemetry Conveyor",
+      "description": "As a site visitor or engineer, I want the full site typography upgraded to Outfit paired with Noto Sans Devanagari and JetBrains Mono for architectural clarity, and the Plant & Machinery Telemetry section to smoothly auto-scroll left to right with pause-on-hover and playback controls.",
+      "acceptanceCriteria": [
+        "Full site typography upgraded to Outfit (Display & Interface) paired with Noto Sans Devanagari and JetBrains Mono via UI/UX Pro Max intelligence",
+        "Machinery Telemetry section converted to an auto-scrolling left-to-right conveyor ticker with seamless 50% loop",
+        "Pause on hover implemented with CSS animation-play-state",
+        "Interactive playback controls (Play/Pause, Step Left, Step Right) with accessible toasts",
+        "Expanded fleet catalog with vibratory compactors and high-head dewatering pumps",
+        "100% bilingual translation parity verified across English and Hindi",
+        "HTML5 syntax and JS delimiter balance check passes with 0 errors"
+      ],
+      "priority": 9,
+      "passes": true,
+      "notes": "Successfully migrated site typography to Outfit and built left-to-right auto-scroll telemetry conveyor."
     }
   ]
 }
