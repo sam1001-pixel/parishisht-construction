@@ -146,6 +146,24 @@
       "priority": 9,
       "passes": true,
       "notes": "Successfully migrated site typography to Outfit and built left-to-right auto-scroll telemetry conveyor."
+    },
+    {
+      "id": "US-011",
+      "title": "Comprehensive Mobile UI/UX Optimization and Dual-Device Responsiveness",
+      "description": "As a mobile user, field engineer, or executive on a smartphone or tablet, I want the web portal to be fully ergonomic and responsive with touch-first standards (>=44x44px touch targets), zero iOS auto-zoom, swipeable carousels, a thumb-friendly bottom floating action dock, and native bottom-sheet modal experiences.",
+      "acceptanceCriteria": [
+        "Viewport-fit=cover and iOS font-size >= 16px to completely eliminate unwanted mobile auto-zoom",
+        "All interactive buttons, chips, tabs, inputs, and pins satisfy >= 44x44px touch target ergonomics with active:scale-95 feedback",
+        "Horizontally swipeable carousels with inertial scrolling for Bihar district tabs, project category filters, and machinery fleet tabs",
+        "Mobile bottom floating action dock with 5 thumb actions (Home, Radar, Projects, Estimator, Menu) and safe-area inset support",
+        "Native bottom-sheet modal styling on mobile viewports with top swipe indicator bars and responsive full-width form inputs",
+        "Repositioned floating toast container to avoid mobile bottom dock collisions",
+        "100% bilingual translation coverage and key parity across all mobile navigation labels in English and Hindi",
+        "HTML5 syntax and JS delimiter validation pass with 0 errors"
+      ],
+      "priority": 10,
+      "passes": true,
+      "notes": "Successfully optimized entire web portal for mobile devices (320px–480px) and wide desktop displays adhering to UI/UX Pro Max guidelines."
     }
   ]
 }

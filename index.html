@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title data-i18n="portal-title">Parishisht Construction | Class-1 Registered EPC Contractor (Govt of Bihar)</title>
   <meta name="description" content="Parishisht Construction Private Limited is an elite Class-1 registered EPC infrastructure contractor in Bihar specializing in PHE water supply grids, civil highways, BUIDCO urban drainage, and turnkey public works.">
   
@@ -48,6 +48,7 @@
               glow: 'rgba(245, 158, 11, 0.2)'
             },
             laserEmerald: {
+              50: '#ECFDF5',
               400: '#34D399',
               500: '#10B981',
               600: '#059669',
@@ -65,7 +66,7 @@
 
   <style>
     /* Custom Scrollbar & Grid Texture */
-    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: #080D1A; }
     ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.2); }
     ::-webkit-scrollbar-thumb:hover { background: #0284C7; }
@@ -96,6 +97,29 @@
       font-family: 'JetBrains Mono', monospace !important;
     }
 
+    /* Mobile UX & Touch Optimizations */
+    html {
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
+    }
+    button, a, input, select, textarea {
+      touch-action: manipulation;
+    }
+    .safe-area-pb {
+      padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+    }
+    .safe-area-pt {
+      padding-top: calc(0.5rem + env(safe-area-inset-top, 0px));
+    }
+    .scrollbar-none::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
     /* Machinery Telemetry Left-to-Right Auto-Scroll Conveyor */
     .telemetry-ticker-container {
       position: relative;
@@ -103,13 +127,15 @@
       overflow-x: hidden;
       cursor: grab;
       user-select: none;
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
     }
     .telemetry-ticker-container:active {
       cursor: grabbing;
     }
     .telemetry-ticker-track {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.25rem;
       width: max-content;
       will-change: transform;
       animation: autoScrollLeftToRight 42s linear infinite;
@@ -137,30 +163,30 @@
   </style>
 </head>
 
-<body class="bg-obsidian-950 text-slate-100 font-sans antialiased selection:bg-blueprint-500 selection:text-white relative min-h-screen flex flex-col">
+<body class="bg-obsidian-950 text-slate-100 font-sans antialiased selection:bg-blueprint-500 selection:text-white relative min-h-screen flex flex-col pb-20 md:pb-0">
 
   <!-- ================= TOP EXECUTIVE UTILITY BAR ================= -->
-  <header class="w-full bg-obsidian-900 border-b border-obsidian-700/60 text-xs py-1.5 px-4 sm:px-6 lg:px-8 z-40 relative">
-    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
-      <div class="flex items-center gap-2.5 flex-wrap">
-        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-amberGold-500/15 text-amberGold-400 border border-amberGold-500/30">
+  <header class="w-full bg-obsidian-900 border-b border-obsidian-700/60 text-xs py-1.5 px-3 sm:px-6 lg:px-8 z-40 relative">
+    <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-amberGold-500/15 text-amberGold-400 border border-amberGold-500/30 whitespace-nowrap shrink-0">
           <span class="w-1.5 h-1.5 rounded-full bg-amberGold-400 animate-pulse"></span>
           <span data-i18n="top-badge">GOVERNMENT OF BIHAR EMPANELED</span>
         </span>
-        <span class="text-slate-400 font-medium hidden md:inline text-[11px]" data-i18n="top-subtext">Class-1 Registered EPC Contractor • PHED • BUIDCO • RCD • RWD</span>
+        <span class="text-slate-400 font-medium hidden md:inline text-[11px] truncate" data-i18n="top-subtext">Class-1 Registered EPC Contractor • PHED • BUIDCO • RCD • RWD</span>
         <span class="text-slate-600 hidden xl:inline">|</span>
         <span class="text-slate-400 font-mono text-[10px] hidden xl:inline" data-i18n="top-iso">ISO 9001:2015 | 45001:2018 Certified</span>
       </div>
 
-      <div class="flex items-center gap-4 text-[11px] text-slate-300">
+      <div class="flex items-center gap-2 sm:gap-4 text-[11px] text-slate-300 shrink-0">
         <span class="hidden sm:flex items-center gap-1.5 font-mono text-slate-400">
           <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blueprint-400"></i>
           <span data-i18n="top-cin">CIN: U45200BR2018PTC039000</span>
         </span>
         <span class="text-slate-700 hidden sm:inline">|</span>
         
-        <!-- Language Switcher Button -->
-        <button onclick="ParishishtApp.toggleLanguage()" id="global-lang-btn" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-obsidian-800 hover:bg-obsidian-700 border border-blueprint-500/40 text-blueprint-400 font-bold transition-all shadow-sm group">
+        <!-- Language Switcher Button with Min 44px Touch Target -->
+        <button onclick="ParishishtApp.toggleLanguage()" id="global-lang-btn" class="inline-flex items-center gap-1.5 px-3 py-1.5 min-h-[38px] rounded-lg bg-obsidian-800 hover:bg-obsidian-700 active:scale-95 border border-blueprint-500/40 text-blueprint-400 font-bold transition-all shadow-sm group">
           <i data-lucide="globe" class="w-3.5 h-3.5 text-blueprint-400 group-hover:rotate-45 transition-transform"></i>
           <span id="lang-btn-label">हिंदी</span>
           <span class="text-[10px] font-mono text-slate-400" id="lang-btn-sub">/ EN</span>
@@ -171,19 +197,19 @@
 
   <!-- ================= STICKY MEGA NAVIGATION ================= -->
   <nav class="sticky top-0 z-40 bg-obsidian-900/80 backdrop-blur-xl border-b border-obsidian-700/70 transition-all">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center gap-4">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex justify-between items-center gap-3 sm:gap-4">
       
       <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3.5 group shrink-0">
-        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-blueprint-600 via-blueprint-700 to-obsidian-900 border border-blueprint-400/30 flex items-center justify-center text-white shadow-lg shadow-blueprint-600/20 group-hover:border-blueprint-400 transition-all">
-          <i data-lucide="hard-hat" class="w-6 h-6 text-blueprint-400 group-hover:scale-110 transition-transform"></i>
+      <a href="#" class="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-blueprint-600 via-blueprint-700 to-obsidian-900 border border-blueprint-400/30 flex items-center justify-center text-white shadow-lg shadow-blueprint-600/20 group-hover:border-blueprint-400 transition-all">
+          <i data-lucide="hard-hat" class="w-5 h-5 sm:w-6 sm:h-6 text-blueprint-400 group-hover:scale-110 transition-transform"></i>
         </div>
         <div>
-          <div class="font-extrabold text-lg sm:text-xl tracking-tight text-white leading-none group-hover:text-blueprint-400 transition-colors flex items-center gap-2">
+          <div class="font-extrabold text-base sm:text-xl tracking-tight text-white leading-none group-hover:text-blueprint-400 transition-colors flex items-center gap-1.5 sm:gap-2">
             <span>PARISHISHT</span>
-            <span class="text-[10px] px-1.5 py-0.5 font-mono font-bold bg-blueprint-500/20 text-blueprint-400 rounded border border-blueprint-500/30">CLASS-1</span>
+            <span class="text-[9px] sm:text-[10px] px-1 sm:px-1.5 py-0.5 font-mono font-bold bg-blueprint-500/20 text-blueprint-400 rounded border border-blueprint-500/30">CLASS-1</span>
           </div>
-          <div class="text-[10px] font-mono text-slate-400 tracking-wider mt-1" data-i18n="top-tagline">Engineering Bihar's Infrastructure Future</div>
+          <div class="text-[9px] sm:text-[10px] font-mono text-slate-400 tracking-wider mt-0.5 sm:mt-1 truncate max-w-[190px] sm:max-w-none" data-i18n="top-tagline">Engineering Bihar's Infrastructure Future</div>
         </div>
       </a>
 
@@ -207,34 +233,86 @@
         </button>
 
         <!-- Tender Pre-Quals Dossier Modal Trigger -->
-        <button onclick="ParishishtApp.openModal('tender-modal')" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amberGold-500 to-amberGold-600 hover:from-amberGold-400 hover:to-amberGold-500 text-obsidian-950 font-bold text-xs uppercase tracking-wider shadow-lg shadow-amberGold-500/20 hover:shadow-amberGold-500/30 transition-all flex items-center gap-1.5">
-          <i data-lucide="file-check" class="w-4 h-4"></i>
+        <button onclick="ParishishtApp.openModal('tender-modal')" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-amberGold-500 to-amberGold-600 hover:from-amberGold-400 hover:to-amberGold-500 text-obsidian-950 font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-lg shadow-amberGold-500/20 hover:shadow-amberGold-500/30 transition-all flex items-center gap-1.5 min-h-[38px] active:scale-95">
+          <i data-lucide="file-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
           <span data-i18n="nav-btn-dossier">Tender Pre-Quals</span>
         </button>
 
-        <!-- Mobile Menu Toggle -->
-        <button onclick="ParishishtApp.toggleMobileMenu()" class="lg:hidden p-2 rounded-xl bg-obsidian-800 text-slate-300 hover:text-white border border-obsidian-700">
+        <!-- Mobile Menu Toggle Button (Min 44x44 Touch Target) -->
+        <button onclick="ParishishtApp.toggleMobileMenu()" class="lg:hidden min-w-[42px] min-h-[42px] flex items-center justify-center rounded-xl bg-obsidian-800 text-slate-300 hover:text-white border border-obsidian-700 active:scale-95">
           <i data-lucide="menu" class="w-5 h-5"></i>
         </button>
       </div>
 
     </div>
 
-    <!-- Mobile Drawer -->
-    <div id="mobile-drawer" class="hidden lg:hidden bg-obsidian-900 border-b border-obsidian-700 px-6 py-5 text-sm space-y-3">
-      <a href="#radar" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-radar">Operations Radar</a>
-      <a href="#projects" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-projects">Projects Explorer</a>
-      <a href="#estimator" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-estimator">BOQ Estimator</a>
-      <a href="#calculator" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-calculator">Bidding Capacity</a>
-      <a href="#fleet" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-fleet">Fleet Telemetry</a>
-      <a href="#solvency" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-solvency">Financial Strength</a>
-      <a href="#careers" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-careers">Careers</a>
-      <a href="#contact" onclick="ParishishtApp.toggleMobileMenu()" class="block text-slate-300 hover:text-blueprint-400 py-1" data-i18n="nav-contact">Contact</a>
+    <!-- Upgraded Touch-Optimized Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden lg:hidden bg-obsidian-900/98 backdrop-blur-2xl border-b border-obsidian-700 px-4 sm:px-6 py-5 text-sm space-y-4 max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-obsidian-800">
+        <span class="text-xs font-mono font-bold text-slate-400 uppercase tracking-wider" data-i18n="mob-menu-title">Corporate Portal Navigation</span>
+        <button onclick="ParishishtApp.toggleMobileMenu()" class="p-2 text-slate-400 hover:text-white rounded-lg active:scale-90 min-w-[44px] min-h-[44px] flex items-center justify-center">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold">
+        <a href="#radar" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-blueprint-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="radar" class="w-4 h-4 text-blueprint-400"></i>
+          <span data-i18n="nav-radar">Operations Radar</span>
+        </a>
+        <a href="#projects" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-blueprint-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="layers" class="w-4 h-4 text-blueprint-400"></i>
+          <span data-i18n="nav-projects">Projects Explorer</span>
+        </a>
+        <a href="#estimator" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-amberGold-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="calculator" class="w-4 h-4 text-amberGold-400"></i>
+          <span data-i18n="nav-estimator">BOQ Estimator</span>
+        </a>
+        <a href="#calculator" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-blueprint-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="bar-chart-2" class="w-4 h-4 text-blueprint-400"></i>
+          <span data-i18n="nav-calculator">Bidding Capacity</span>
+        </a>
+        <a href="#fleet" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-laserEmerald-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="truck" class="w-4 h-4 text-laserEmerald-400"></i>
+          <span data-i18n="nav-fleet">Fleet Telemetry</span>
+        </a>
+        <a href="#solvency" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-amberGold-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="shield-check" class="w-4 h-4 text-amberGold-400"></i>
+          <span data-i18n="nav-solvency">Financial Strength</span>
+        </a>
+        <a href="#careers" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-blueprint-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="users" class="w-4 h-4 text-blueprint-400"></i>
+          <span data-i18n="nav-careers">Careers</span>
+        </a>
+        <a href="#contact" onclick="ParishishtApp.toggleMobileMenu()" class="flex items-center gap-3 p-3 rounded-xl bg-obsidian-800/80 text-slate-200 hover:text-blueprint-400 active:bg-obsidian-700 border border-obsidian-700/60 min-h-[48px]">
+          <i data-lucide="mail" class="w-4 h-4 text-blueprint-400"></i>
+          <span data-i18n="nav-contact">Contact</span>
+        </a>
+      </div>
+
+      <!-- Quick Action Cards in Mobile Drawer -->
+      <div class="pt-3 border-t border-obsidian-800 space-y-2.5">
+        <a href="tel:+916122200450" class="flex items-center justify-between p-3.5 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-mono text-slate-200 active:scale-98 min-h-[48px]">
+          <div class="flex items-center gap-2.5">
+            <i data-lucide="phone-call" class="w-4 h-4 text-laserEmerald-400"></i>
+            <div>
+              <div class="font-bold text-white" data-i18n="mob-nav-call">Call Directorate Desk</div>
+              <div class="text-[10px] text-slate-400">+91 612 2200 450</div>
+            </div>
+          </div>
+          <span class="text-[10px] font-bold text-laserEmerald-400 bg-laserEmerald-500/10 px-2 py-0.5 rounded border border-laserEmerald-500/20">LIVE</span>
+        </a>
+
+        <button onclick="ParishishtApp.toggleMobileMenu(); ParishishtApp.openModal('tender-modal')" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amberGold-500 to-amberGold-600 text-obsidian-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-amberGold-500/20 active:scale-98 min-h-[48px]">
+          <i data-lucide="file-check" class="w-4 h-4"></i>
+          <span data-i18n="nav-btn-dossier">Tender Pre-Quals Dossier</span>
+        </button>
+      </div>
     </div>
   </nav>
 
   <!-- ================= CINEMATIC HERO & COMMAND CENTER ================= -->
-  <section class="relative min-h-[90vh] flex items-center justify-center tech-grid py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+  <section class="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center tech-grid py-14 sm:py-20 px-3 sm:px-6 lg:px-8 overflow-hidden">
     <!-- Photorealistic Infrastructure Background with Dark Scrim -->
     <div class="absolute inset-0 z-0">
       <img src="assets/images/hero-infrastructure.jpg" alt="Parishisht Heavy Infrastructure Bihar" class="w-full h-full object-cover object-center filter brightness-[0.38] contrast-[1.12]">
@@ -245,58 +323,58 @@
     <div class="max-w-7xl mx-auto w-full relative z-10 flex flex-col items-center text-center">
       
       <!-- Flagship Site Status Ticker -->
-      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-obsidian-900/90 border border-blueprint-500/40 text-xs text-slate-300 mb-8 backdrop-blur-md shadow-xl">
-        <span class="flex h-2.5 w-2.5 relative">
+      <div class="inline-flex items-center gap-2 sm:gap-2.5 px-3 sm:px-3.5 py-1.5 rounded-full bg-obsidian-900/90 border border-blueprint-500/40 text-xs text-slate-300 mb-6 sm:mb-8 backdrop-blur-md shadow-xl max-w-full flex-wrap justify-center">
+        <span class="flex h-2.5 w-2.5 relative shrink-0">
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-laserEmerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-laserEmerald-500"></span>
         </span>
-        <span class="font-mono text-blueprint-400 font-bold text-[11px]" data-i18n="hero-live-label">Flagship Site Telemetry</span>
-        <span class="text-slate-600">|</span>
-        <span class="text-white font-medium" data-i18n="hero-live-text">Muzaffarpur Rural Water Supply Grid — 92% Handover Ready</span>
+        <span class="font-mono text-blueprint-400 font-bold text-[10px] sm:text-[11px] uppercase tracking-wider" data-i18n="hero-live-label">Flagship Site Telemetry</span>
+        <span class="text-slate-600 hidden sm:inline">|</span>
+        <span class="text-white font-medium text-[11px] sm:text-xs truncate max-w-[260px] sm:max-w-none" data-i18n="hero-live-text">Muzaffarpur Rural Water Supply Grid — 92% Handover Ready</span>
       </div>
 
       <!-- Main Cinematic Headline -->
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl leading-[1.1] mb-6">
+      <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-white max-w-5xl leading-[1.15] mb-4 sm:mb-6">
         <span data-i18n="hero-title-prefix">Pioneering Bihar's</span> <br class="hidden sm:inline" />
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-blueprint-400 via-sky-300 to-amberGold-400" data-i18n="hero-title-highlight">Mission-Critical Public Works</span>
       </h1>
 
-      <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl leading-relaxed mb-10 font-normal drop-shadow" data-i18n="hero-subtitle">
+      <p class="text-sm sm:text-lg lg:text-xl text-slate-300 max-w-3xl leading-relaxed mb-8 sm:mb-10 font-normal drop-shadow" data-i18n="hero-subtitle">
         Statewide Class-1 EPC contractor executing large-scale piped drinking water grids, high-speed arterial highways, and municipal stormwater drainage networks with uncompromised engineering precision.
       </p>
 
       <!-- Primary Action Buttons -->
-      <div class="flex flex-wrap justify-center gap-4 mb-16">
-        <a href="#projects" class="px-7 py-4 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-sm tracking-wide shadow-xl shadow-blueprint-600/30 hover:shadow-blueprint-500/50 transition-all flex items-center gap-2">
+      <div class="flex flex-col sm:flex-row justify-center gap-3.5 w-full sm:w-auto mb-12 sm:mb-16">
+        <a href="#projects" class="w-full sm:w-auto px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs sm:text-sm tracking-wide shadow-xl shadow-blueprint-600/30 hover:shadow-blueprint-500/50 transition-all flex items-center justify-center gap-2 min-h-[48px] active:scale-95">
           <i data-lucide="layers" class="w-4 h-4"></i>
           <span data-i18n="hero-cta-explore">Explore Dynamic Projects</span>
         </a>
-        <a href="#estimator" class="px-7 py-4 rounded-xl bg-obsidian-900/90 hover:bg-obsidian-800 text-amberGold-400 border border-amberGold-500/40 font-bold text-sm tracking-wide shadow-xl backdrop-blur-md transition-all flex items-center gap-2">
+        <a href="#estimator" class="w-full sm:w-auto px-6 py-3.5 sm:px-7 sm:py-4 rounded-xl bg-obsidian-900/90 hover:bg-obsidian-800 text-amberGold-400 border border-amberGold-500/40 font-bold text-xs sm:text-sm tracking-wide shadow-xl backdrop-blur-md transition-all flex items-center justify-center gap-2 min-h-[48px] active:scale-95">
           <i data-lucide="calculator" class="w-4 h-4"></i>
           <span data-i18n="hero-cta-estimator">Launch BOQ Estimator</span>
         </a>
       </div>
 
       <!-- 4 Viewport Animated Metric Counters -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-5xl">
-        <div class="glass-card p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center">
-          <div class="text-3xl sm:text-4xl font-black font-mono text-blueprint-400 counter-target" data-target="250" data-prefix="₹" data-suffix="+ Cr." data-suffix-hi="+ करोड़">₹250+ Cr.</div>
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-works">Audited Public Works</div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl">
+        <div class="glass-card p-3.5 sm:p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center text-center">
+          <div class="text-2xl sm:text-4xl font-black font-mono text-blueprint-400 counter-target" data-target="250" data-prefix="₹" data-suffix="+ Cr." data-suffix-hi="+ करोड़">₹250+ Cr.</div>
+          <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-works">Audited Public Works</div>
         </div>
 
-        <div class="glass-card p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center">
-          <div class="text-3xl sm:text-4xl font-black font-mono text-amberGold-400 counter-target" data-target="15" data-suffix="+ Districts" data-suffix-hi="+ जिले">15+ Districts</div>
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-districts">Bihar District Footprint</div>
+        <div class="glass-card p-3.5 sm:p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center text-center">
+          <div class="text-2xl sm:text-4xl font-black font-mono text-amberGold-400 counter-target" data-target="15" data-suffix="+ Districts" data-suffix-hi="+ जिले">15+ Districts</div>
+          <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-districts">Bihar District Footprint</div>
         </div>
 
-        <div class="glass-card p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center">
-          <div class="text-3xl sm:text-4xl font-black font-mono text-laserEmerald-400 counter-target" data-target="100" data-suffix="%" data-suffix-hi="%">100%</div>
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-delivery">On-Time Handover</div>
+        <div class="glass-card p-3.5 sm:p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center text-center">
+          <div class="text-2xl sm:text-4xl font-black font-mono text-laserEmerald-400 counter-target" data-target="100" data-suffix="%" data-suffix-hi="%">100%</div>
+          <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-delivery">On-Time Handover</div>
         </div>
 
-        <div class="glass-card p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center">
-          <div class="text-3xl sm:text-4xl font-black font-mono text-cyan-300 counter-target" data-target="450" data-suffix="k+ Safe Hrs" data-suffix-hi="हज़ार+ सुरक्षित घंटे">450k+ Safe Hrs</div>
-          <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-safety">Safe Man-Hours (Zero LTI)</div>
+        <div class="glass-card p-3.5 sm:p-5 rounded-2xl border border-obsidian-700/60 flex flex-col items-center text-center">
+          <div class="text-2xl sm:text-4xl font-black font-mono text-cyan-300 counter-target" data-target="450" data-suffix="k+ Safe Hrs" data-suffix-hi="हज़ार+ सुरक्षित घंटे">450k+ Safe Hrs</div>
+          <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1" data-i18n="hero-metric-safety">Safe Man-Hours (Zero LTI)</div>
         </div>
       </div>
 
@@ -304,13 +382,13 @@
   </section>
 
   <!-- ================= SECTOR QUICK JUMP GRID ================= -->
-  <section class="py-12 bg-obsidian-900 border-y border-obsidian-700/60">
+  <section class="py-8 sm:py-12 bg-obsidian-900 border-y border-obsidian-700/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
         
-        <div onclick="ParishishtApp.setFilter('phe')" class="glass-card p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 transition-all flex items-start gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-blueprint-500/10 border border-blueprint-500/30 text-blueprint-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-            <i data-lucide="droplet" class="w-6 h-6"></i>
+        <div onclick="ParishishtApp.setFilter('phe')" class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 active:scale-98 transition-all flex items-start gap-3.5 sm:gap-4 group min-h-[48px]">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-blueprint-500/10 border border-blueprint-500/30 text-blueprint-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+            <i data-lucide="droplet" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
           <div>
             <h4 class="font-bold text-white text-sm group-hover:text-blueprint-400 transition-colors" data-i18n="sec-phe">Public Health (PHE)</h4>
@@ -318,9 +396,9 @@
           </div>
         </div>
 
-        <div onclick="ParishishtApp.setFilter('roads')" class="glass-card p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 transition-all flex items-start gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30 text-amberGold-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-            <i data-lucide="navigation" class="w-6 h-6"></i>
+        <div onclick="ParishishtApp.setFilter('roads')" class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 active:scale-98 transition-all flex items-start gap-3.5 sm:gap-4 group min-h-[48px]">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amberGold-500/10 border border-amberGold-500/30 text-amberGold-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+            <i data-lucide="navigation" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
           <div>
             <h4 class="font-bold text-white text-sm group-hover:text-amberGold-400 transition-colors" data-i18n="sec-roads">Civil & Highways</h4>
@@ -328,9 +406,9 @@
           </div>
         </div>
 
-        <div onclick="ParishishtApp.setFilter('urban')" class="glass-card p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 transition-all flex items-start gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-laserEmerald-500/10 border border-laserEmerald-500/30 text-laserEmerald-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-            <i data-lucide="git-merge" class="w-6 h-6"></i>
+        <div onclick="ParishishtApp.setFilter('urban')" class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 active:scale-98 transition-all flex items-start gap-3.5 sm:gap-4 group min-h-[48px]">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-laserEmerald-500/10 border border-laserEmerald-500/30 text-laserEmerald-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+            <i data-lucide="git-merge" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
           <div>
             <h4 class="font-bold text-white text-sm group-hover:text-laserEmerald-400 transition-colors" data-i18n="sec-urban">Urban Drainage</h4>
@@ -338,9 +416,9 @@
           </div>
         </div>
 
-        <div onclick="ParishishtApp.setFilter('all')" class="glass-card p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 transition-all flex items-start gap-4 group">
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-            <i data-lucide="building-2" class="w-6 h-6"></i>
+        <div onclick="ParishishtApp.setFilter('all')" class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer hover:border-blueprint-400/60 active:scale-98 transition-all flex items-start gap-3.5 sm:gap-4 group min-h-[48px]">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+            <i data-lucide="building-2" class="w-5 h-5 sm:w-6 sm:h-6"></i>
           </div>
           <div>
             <h4 class="font-bold text-white text-sm group-hover:text-purple-400 transition-colors" data-i18n="sec-epc">Turnkey Heavy EPC</h4>
@@ -405,25 +483,25 @@
             </div>
           </div>
 
-          <!-- Quick District Selector Pills -->
-          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-4" id="district-quick-tabs">
+          <!-- Quick District Selector Pills (Swipeable on Mobile) -->
+          <div class="flex overflow-x-auto pb-2 scrollbar-none sm:grid sm:grid-cols-6 gap-2 mt-4 -mx-1 px-1" id="district-quick-tabs">
             <!-- Populated via JS -->
           </div>
         </div>
 
         <!-- Right: Real-time Telemetry Inspector Card -->
-        <div class="lg:col-span-5 glass-card p-6 sm:p-8 rounded-3xl border border-obsidian-700/60 sticky top-28">
+        <div class="lg:col-span-5 glass-card p-5 sm:p-8 rounded-3xl border border-obsidian-700/60 lg:sticky lg:top-28">
           <div class="flex justify-between items-start pb-4 border-b border-obsidian-700/60 mb-5">
             <div>
               <span id="telemetry-role" class="text-[10px] font-mono font-bold uppercase tracking-wider text-blueprint-400 bg-blueprint-500/10 px-2 py-0.5 rounded border border-blueprint-500/20">PATNA REGIONAL HUB</span>
-              <h3 id="telemetry-name" class="text-2xl font-extrabold text-white mt-1">Patna Urban Command</h3>
+              <h3 id="telemetry-name" class="text-xl sm:text-2xl font-extrabold text-white mt-1">Patna Urban Command</h3>
             </div>
             <div class="text-right">
               <span id="telemetry-coords" class="font-mono text-xs text-amberGold-400 font-bold">25.61° N, 85.14° E</span>
             </div>
           </div>
 
-          <div class="space-y-4 text-xs font-mono">
+          <div class="space-y-3.5 sm:space-y-4 text-xs font-mono">
             <div>
               <div class="text-slate-400 text-[11px] mb-1" data-i18n="radar-batching">Batching Plant Capacity</div>
               <div id="telemetry-batching" class="text-sm font-bold text-white bg-obsidian-900 p-2.5 rounded-xl border border-obsidian-800">60 m³/hr Automated</div>
@@ -446,7 +524,7 @@
           </div>
 
           <!-- 1-Click Action linking to Project Directory -->
-          <button onclick="ParishishtApp.filterByDistrictFromRadar()" class="w-full mt-6 py-3 px-4 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blueprint-600/20 transition-all flex items-center justify-center gap-2">
+          <button onclick="ParishishtApp.filterByDistrictFromRadar()" class="w-full mt-6 py-3.5 px-4 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blueprint-600/20 active:scale-95 transition-all flex items-center justify-center gap-2 min-h-[44px]">
             <i data-lucide="filter" class="w-4 h-4"></i>
             <span data-i18n="radar-filter-btn">Filter Directory for This District</span>
           </button>
@@ -458,11 +536,11 @@
   </section>
 
   <!-- ================= DYNAMIC PROJECTS EXPLORER (3 VIEW MODES) ================= -->
-  <section id="projects" class="py-20 bg-obsidian-900 relative border-t border-obsidian-700/60">
+  <section id="projects" class="py-14 sm:py-20 bg-obsidian-900 relative border-t border-obsidian-700/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-10">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8 sm:mb-10">
         <div>
           <span class="inline-block px-3 py-1 rounded-full bg-blueprint-500/10 border border-blueprint-500/30 text-blueprint-400 font-mono text-[11px] font-bold tracking-widest uppercase mb-2" data-i18n="proj-badge">
             PUBLIC SECTOR PORTFOLIO
@@ -477,36 +555,39 @@
 
         <!-- 3 Interactive View Mode Switcher -->
         <div class="inline-flex p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-semibold shrink-0">
-          <button onclick="ParishishtApp.setViewMode('bento')" id="btn-view-bento" class="px-3.5 py-1.5 rounded-lg bg-blueprint-600 text-white shadow transition-all flex items-center gap-1.5">
+          <button onclick="ParishishtApp.setViewMode('bento')" id="btn-view-bento" class="px-2.5 sm:px-3.5 py-2 sm:py-1.5 rounded-lg bg-blueprint-600 text-white shadow transition-all flex items-center gap-1.5 min-h-[38px] active:scale-95">
             <i data-lucide="layout-grid" class="w-3.5 h-3.5"></i>
-            <span data-i18n="proj-view-bento">Bento Cards</span>
+            <span class="hidden sm:inline" data-i18n="proj-view-bento">Bento Cards</span>
+            <span class="sm:hidden" data-i18n="proj-view-bento-mob">Bento</span>
           </button>
-          <button onclick="ParishishtApp.setViewMode('table')" id="btn-view-table" class="px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+          <button onclick="ParishishtApp.setViewMode('table')" id="btn-view-table" class="px-2.5 sm:px-3.5 py-2 sm:py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5 min-h-[38px] active:scale-95">
             <i data-lucide="table" class="w-3.5 h-3.5"></i>
-            <span data-i18n="proj-view-table">Data Table</span>
+            <span class="hidden sm:inline" data-i18n="proj-view-table">Data Table</span>
+            <span class="sm:hidden" data-i18n="proj-view-table-mob">Table</span>
           </button>
-          <button onclick="ParishishtApp.setViewMode('corridor')" id="btn-view-corridor" class="px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5">
+          <button onclick="ParishishtApp.setViewMode('corridor')" id="btn-view-corridor" class="px-2.5 sm:px-3.5 py-2 sm:py-1.5 rounded-lg text-slate-400 hover:text-white transition-all flex items-center gap-1.5 min-h-[38px] active:scale-95">
             <i data-lucide="map" class="w-3.5 h-3.5"></i>
-            <span data-i18n="proj-view-corridor">Regional Corridor</span>
+            <span class="hidden sm:inline" data-i18n="proj-view-corridor">Regional Corridor</span>
+            <span class="sm:hidden" data-i18n="proj-view-corridor-mob">Corridors</span>
           </button>
         </div>
       </div>
 
       <!-- Multi-Criteria Dynamic Filter Controls Bar -->
-      <div class="glass-card p-4 rounded-2xl border border-obsidian-700/60 mb-8 flex flex-wrap gap-4 items-center justify-between">
+      <div class="glass-card p-4 sm:p-5 rounded-2xl border border-obsidian-700/60 mb-8 flex flex-wrap gap-4 items-center justify-between">
         
-        <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap items-center gap-1.5">
-          <button onclick="ParishishtApp.setCategoryFilter('all')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-blueprint-600 text-white transition-all" data-cat="all" data-i18n="proj-filter-all">All Disciplines</button>
-          <button onclick="ParishishtApp.setCategoryFilter('phe')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-obsidian-800 text-slate-400 hover:text-white transition-all" data-cat="phe" data-i18n="proj-filter-phe">PHE / Jal Jeevan</button>
-          <button onclick="ParishishtApp.setCategoryFilter('roads')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-obsidian-800 text-slate-400 hover:text-white transition-all" data-cat="roads" data-i18n="proj-filter-roads">Highways & Roads</button>
-          <button onclick="ParishishtApp.setCategoryFilter('urban')" class="cat-pill px-3 py-1.5 rounded-lg text-xs font-bold bg-obsidian-800 text-slate-400 hover:text-white transition-all" data-cat="urban" data-i18n="proj-filter-urban">Urban Drainage</button>
+        <!-- Category Filter Tabs (Swipeable on Mobile) -->
+        <div class="flex overflow-x-auto pb-1.5 scrollbar-none sm:flex-wrap items-center gap-1.5 w-full sm:w-auto -mx-1 px-1">
+          <button onclick="ParishishtApp.setCategoryFilter('all')" class="cat-pill px-3.5 py-2 rounded-lg text-xs font-bold bg-blueprint-600 text-white transition-all whitespace-nowrap min-h-[40px] shrink-0 active:scale-95" data-cat="all" data-i18n="proj-filter-all">All Disciplines</button>
+          <button onclick="ParishishtApp.setCategoryFilter('phe')" class="cat-pill px-3.5 py-2 rounded-lg text-xs font-bold bg-obsidian-800 text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[40px] shrink-0 active:scale-95" data-cat="phe" data-i18n="proj-filter-phe">PHE / Jal Jeevan</button>
+          <button onclick="ParishishtApp.setCategoryFilter('roads')" class="cat-pill px-3.5 py-2 rounded-lg text-xs font-bold bg-obsidian-800 text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[40px] shrink-0 active:scale-95" data-cat="roads" data-i18n="proj-filter-roads">Highways & Roads</button>
+          <button onclick="ParishishtApp.setCategoryFilter('urban')" class="cat-pill px-3.5 py-2 rounded-lg text-xs font-bold bg-obsidian-800 text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[40px] shrink-0 active:scale-95" data-cat="urban" data-i18n="proj-filter-urban">Urban Drainage</button>
         </div>
 
         <!-- Search & District Dropdowns -->
-        <div class="flex flex-wrap items-center gap-3 w-full lg:w-auto">
+        <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2.5 sm:gap-3 w-full lg:w-auto">
           <!-- District Dropdown -->
-          <select id="proj-district-filter" onchange="ParishishtApp.setDistrictFilter(this.value)" class="bg-obsidian-800 border border-obsidian-700 text-xs font-mono text-slate-300 rounded-xl px-3 py-2 focus:outline-none focus:border-blueprint-500">
+          <select id="proj-district-filter" onchange="ParishishtApp.setDistrictFilter(this.value)" class="bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs font-mono text-slate-300 rounded-xl px-3 py-2.5 min-h-[44px] focus:outline-none focus:border-blueprint-500">
             <option value="all" data-i18n="proj-district-all">All Bihar Districts</option>
             <option value="Patna">Patna (पटना)</option>
             <option value="Muzaffarpur">Muzaffarpur (मुजफ्फरपुर)</option>
@@ -518,12 +599,12 @@
 
           <!-- Search Input -->
           <div class="relative flex-1 sm:w-64">
-            <input type="text" id="proj-search-input" oninput="ParishishtApp.handleSearch(this.value)" placeholder="Search projects by title, client, district..." data-i18n-placeholder="proj-search-ph" class="w-full pl-9 pr-4 py-2 bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blueprint-500">
-            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-2.5"></i>
+            <input type="text" id="proj-search-input" oninput="ParishishtApp.handleSearch(this.value)" placeholder="Search projects by title, client, district..." data-i18n-placeholder="proj-search-ph" class="w-full pl-9 pr-4 py-2.5 bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:border-blueprint-500 min-h-[44px]">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-3 sm:top-2.5"></i>
           </div>
 
           <!-- Sort Select -->
-          <select id="proj-sort-select" onchange="ParishishtApp.setSort(this.value)" class="bg-obsidian-800 border border-obsidian-700 text-xs font-mono text-slate-300 rounded-xl px-3 py-2 focus:outline-none focus:border-blueprint-500">
+          <select id="proj-sort-select" onchange="ParishishtApp.setSort(this.value)" class="bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs font-mono text-slate-300 rounded-xl px-3 py-2.5 min-h-[44px] focus:outline-none focus:border-blueprint-500">
             <option value="progress-desc" data-i18n="proj-sort-progress">Progress %</option>
             <option value="value-desc" data-i18n="proj-sort-value">Sanction Value</option>
             <option value="date-asc" data-i18n="proj-sort-date">Contract Handover</option>
@@ -539,7 +620,7 @@
           <span id="projects-count-filtered" class="font-bold text-blueprint-400">6</span>
           <span> of 6 verified public works packages</span>
         </div>
-        <button onclick="ParishishtApp.resetFilters()" class="text-slate-400 hover:text-amberGold-400 transition-colors flex items-center gap-1" data-i18n="proj-reset-filters">
+        <button onclick="ParishishtApp.resetFilters()" class="text-slate-400 hover:text-amberGold-400 transition-colors flex items-center gap-1 active:scale-95" data-i18n="proj-reset-filters">
           <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
           <span>Reset Filters</span>
         </button>
@@ -552,7 +633,7 @@
 
       <!-- Projects View 2: Engineering Data Table Container -->
       <div id="projects-table-view" class="hidden overflow-x-auto rounded-2xl border border-obsidian-700/60 glass-card">
-        <table class="w-full text-left text-xs font-mono">
+        <table class="w-full text-left text-xs font-mono min-w-[700px]">
           <thead class="bg-obsidian-950/90 text-slate-400 uppercase tracking-wider text-[11px] border-b border-obsidian-700">
             <tr>
               <th class="p-4" data-i18n="proj-th-title">Project Title & Package</th>
@@ -586,11 +667,11 @@
   </section>
 
   <!-- ================= PARAMETRIC BOQ & TIMELINE ESTIMATOR ================= -->
-  <section id="estimator" class="py-20 bg-obsidian-950 relative tech-grid border-t border-obsidian-700/60">
+  <section id="estimator" class="py-14 sm:py-20 bg-obsidian-950 relative tech-grid border-t border-obsidian-700/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
         <span class="inline-block px-3 py-1 rounded-full bg-amberGold-500/10 border border-amberGold-500/30 text-amberGold-400 font-mono text-[11px] font-bold tracking-widest uppercase mb-3" data-i18n="est-badge">
           PARAMETRIC TENDER ESTIMATOR
         </span>
@@ -603,22 +684,22 @@
       </div>
 
       <!-- Estimator Calculator Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
         
         <!-- Controls Column -->
-        <div class="lg:col-span-7 glass-card p-6 sm:p-8 rounded-3xl border border-obsidian-700/60 space-y-6">
+        <div class="lg:col-span-7 glass-card p-5 sm:p-8 rounded-3xl border border-obsidian-700/60 space-y-6">
           
           <!-- Sector Selector Tabs -->
-          <div class="grid grid-cols-3 gap-2 p-1.5 rounded-xl bg-obsidian-900 border border-obsidian-800 text-xs font-bold text-center">
-            <button onclick="ParishishtApp.setEstimatorSector('phe')" id="est-sec-phe" class="py-2.5 rounded-lg bg-blueprint-600 text-white shadow transition-all" data-i18n="est-tab-phe">PHE Water Supply</button>
-            <button onclick="ParishishtApp.setEstimatorSector('roads')" id="est-sec-roads" class="py-2.5 rounded-lg text-slate-400 hover:text-white transition-all" data-i18n="est-tab-roads">Highways & Roads</button>
-            <button onclick="ParishishtApp.setEstimatorSector('urban')" id="est-sec-urban" class="py-2.5 rounded-lg text-slate-400 hover:text-white transition-all" data-i18n="est-tab-urban">Urban Stormwater</button>
+          <div class="grid grid-cols-3 gap-1.5 sm:gap-2 p-1.5 rounded-xl bg-obsidian-900 border border-obsidian-800 text-[11px] sm:text-xs font-bold text-center">
+            <button onclick="ParishishtApp.setEstimatorSector('phe')" id="est-sec-phe" class="py-2.5 rounded-lg bg-blueprint-600 text-white shadow transition-all min-h-[42px] active:scale-95" data-i18n="est-tab-phe">PHE Water Supply</button>
+            <button onclick="ParishishtApp.setEstimatorSector('roads')" id="est-sec-roads" class="py-2.5 rounded-lg text-slate-400 hover:text-white transition-all min-h-[42px] active:scale-95" data-i18n="est-tab-roads">Highways & Roads</button>
+            <button onclick="ParishishtApp.setEstimatorSector('urban')" id="est-sec-urban" class="py-2.5 rounded-lg text-slate-400 hover:text-white transition-all min-h-[42px] active:scale-95" data-i18n="est-tab-urban">Urban Stormwater</button>
           </div>
 
           <!-- District & Geotechnical Multiplier -->
           <div>
             <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2" data-i18n="est-lbl-district">Target Bihar District & Geotechnical Terrain</label>
-            <select id="est-district-select" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl p-3 text-slate-200 focus:outline-none focus:border-blueprint-500 font-mono">
+            <select id="est-district-select" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl p-3 min-h-[44px] text-slate-200 focus:outline-none focus:border-blueprint-500 font-mono">
               <option value="1.08">Muzaffarpur (North Alluvial Floodplain Multiplier 1.08x)</option>
               <option value="1.10">Patna (Gangetic Dewatering & Urban Utility Multiplier 1.10x)</option>
               <option value="1.05">Bhagalpur (Arterial Riverbank Embankment 1.05x)</option>
@@ -634,16 +715,16 @@
           </div>
 
           <!-- Estimator Action Buttons -->
-          <div class="flex flex-wrap gap-3 pt-4 border-t border-obsidian-700">
-            <button onclick="ParishishtApp.openBoqPrintModal()" class="px-5 py-3 rounded-xl bg-amberGold-500 hover:bg-amberGold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 shadow-lg shadow-amberGold-500/20">
+          <div class="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3 pt-4 border-t border-obsidian-700">
+            <button onclick="ParishishtApp.openBoqPrintModal()" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-amberGold-500 hover:bg-amberGold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-lg shadow-amberGold-500/20 min-h-[44px] active:scale-95">
               <i data-lucide="printer" class="w-4 h-4"></i>
               <span data-i18n="est-btn-print">Print / Export Official Factsheet</span>
             </button>
-            <button onclick="ParishishtApp.copyEstimatorSummary()" class="px-5 py-3 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-slate-300 font-bold text-xs uppercase tracking-wider transition-all flex items-center gap-1.5 border border-obsidian-700">
+            <button onclick="ParishishtApp.copyEstimatorSummary()" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-slate-300 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 border border-obsidian-700 min-h-[44px] active:scale-95">
               <i data-lucide="copy" class="w-4 h-4"></i>
               <span data-i18n="est-btn-copy">Copy Calculation Summary</span>
             </button>
-            <button onclick="ParishishtApp.resetEstimator()" class="px-4 py-3 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-slate-400 font-mono text-xs transition-all" data-i18n="est-btn-reset">
+            <button onclick="ParishishtApp.resetEstimator()" class="w-full sm:w-auto px-4 py-3 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-slate-400 font-mono text-xs transition-all min-h-[44px] active:scale-95 text-center" data-i18n="est-btn-reset">
               Reset Baseline
             </button>
           </div>
@@ -651,7 +732,7 @@
         </div>
 
         <!-- Live Projection Cards Column -->
-        <div class="lg:col-span-5 glass-card p-6 sm:p-8 rounded-3xl border border-obsidian-700/60 sticky top-28 space-y-6">
+        <div class="lg:col-span-5 glass-card p-5 sm:p-8 rounded-3xl border border-obsidian-700/60 lg:sticky lg:top-28 space-y-5 sm:space-y-6">
           <div class="flex justify-between items-center pb-4 border-b border-obsidian-700">
             <h4 class="font-extrabold text-white text-base" data-i18n="est-res-title">Estimated Engineering Projections</h4>
             <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-laserEmerald-500/15 text-laserEmerald-400 border border-laserEmerald-500/30">REAL-TIME</span>
@@ -712,10 +793,10 @@
   </section>
 
   <!-- ================= TENDER BIDDING CAPACITY EVALUATOR ================= -->
-  <section id="calculator" class="py-20 bg-obsidian-900 relative border-t border-obsidian-700/60">
+  <section id="calculator" class="py-14 sm:py-20 bg-obsidian-900 relative border-t border-obsidian-700/60">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
         <span class="inline-block px-3 py-1 rounded-full bg-blueprint-500/10 border border-blueprint-500/30 text-blueprint-400 font-mono text-[11px] font-bold tracking-widest uppercase mb-2" data-i18n="calc-badge">
           B2G TENDER QUALIFICATION
         </span>
@@ -727,30 +808,30 @@
         </p>
       </div>
 
-      <div class="glass-card p-8 rounded-3xl border border-obsidian-700 space-y-6">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="glass-card p-5 sm:p-8 rounded-3xl border border-obsidian-700 space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           <div>
             <label class="block text-xs font-mono text-slate-300 mb-2" data-i18n="calc-lbl-a">A: Max Annual Turnover in Last 5 Years (₹ Cr.)</label>
-            <input type="number" id="calc-a" value="85" oninput="ParishishtApp.recomputeBiddingCapacity()" class="w-full bg-obsidian-800 border border-obsidian-700 text-white font-mono text-sm rounded-xl p-3 focus:outline-none focus:border-blueprint-500">
+            <input type="number" id="calc-a" value="85" inputmode="decimal" oninput="ParishishtApp.recomputeBiddingCapacity()" class="w-full bg-obsidian-800 border border-obsidian-700 text-white font-mono text-base sm:text-sm rounded-xl p-3 min-h-[44px] focus:outline-none focus:border-blueprint-500">
           </div>
           <div>
             <label class="block text-xs font-mono text-slate-300 mb-2" data-i18n="calc-lbl-n">N: Completion Period for Proposed Tender (Years)</label>
-            <input type="number" step="0.5" id="calc-n" value="2.0" oninput="ParishishtApp.recomputeBiddingCapacity()" class="w-full bg-obsidian-800 border border-obsidian-700 text-white font-mono text-sm rounded-xl p-3 focus:outline-none focus:border-blueprint-500">
+            <input type="number" step="0.5" id="calc-n" value="2.0" inputmode="decimal" oninput="ParishishtApp.recomputeBiddingCapacity()" class="w-full bg-obsidian-800 border border-obsidian-700 text-white font-mono text-base sm:text-sm rounded-xl p-3 min-h-[44px] focus:outline-none focus:border-blueprint-500">
           </div>
           <div>
             <label class="block text-xs font-mono text-slate-300 mb-2" data-i18n="calc-lbl-b">B: Total Existing Commitments & Ongoing Works (₹ Cr.)</label>
-            <input type="number" id="calc-b" value="70" oninput="ParishishtApp.recomputeBiddingCapacity()" class="w-full bg-obsidian-800 border border-obsidian-700 text-white font-mono text-sm rounded-xl p-3 focus:outline-none focus:border-blueprint-500">
+            <input type="number" id="calc-b" value="70" inputmode="decimal" oninput="ParishishtApp.recomputeBiddingCapacity()" class="w-full bg-obsidian-800 border border-obsidian-700 text-white font-mono text-base sm:text-sm rounded-xl p-3 min-h-[44px] focus:outline-none focus:border-blueprint-500">
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-obsidian-950 border border-obsidian-800 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="p-5 sm:p-6 rounded-2xl bg-obsidian-950 border border-obsidian-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 sm:gap-6">
           <div>
             <div class="text-xs font-mono text-slate-400 uppercase tracking-wider" data-i18n="calc-res-lbl">Assessed Available Bidding Capacity</div>
-            <div id="calc-result-capacity" class="text-4xl font-black font-mono text-amberGold-400 mt-1">₹270.00 Cr.</div>
+            <div id="calc-result-capacity" class="text-3xl sm:text-4xl font-black font-mono text-amberGold-400 mt-1">₹270.00 Cr.</div>
             <div class="text-[11px] font-mono text-slate-500 mt-1">Formula: (85 × 2.0 × 2) - 70 = ₹270.00 Cr.</div>
           </div>
 
-          <div class="text-right">
+          <div class="text-left md:text-right">
             <span class="text-xs font-mono text-slate-400 block mb-1" data-i18n="calc-qual-verdict">Qualification Status</span>
             <span id="calc-result-verdict" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-laserEmerald-500/15 border border-laserEmerald-500/30 text-laserEmerald-400 font-mono font-bold text-xs" data-i18n="calc-qual-yes">
               QUALIFIED FOR TENDER SUBMISSION
@@ -786,26 +867,26 @@
         </div>
 
         <!-- Controls: Filters + Auto-scroll Controls -->
-        <div class="flex flex-wrap items-center gap-3">
+        <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
           <!-- Fleet Category Filter Tabs -->
-          <div class="inline-flex p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-semibold shrink-0">
-            <button onclick="ParishishtApp.filterFleet('all')" class="fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all shadow-sm shadow-blueprint-600/30" data-fleet="all" data-i18n="fleet-tab-all">All</button>
-            <button onclick="ParishishtApp.filterFleet('concrete')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="concrete" data-i18n="fleet-tab-concrete">Batching</button>
-            <button onclick="ParishishtApp.filterFleet('transport')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="transport" data-i18n="fleet-tab-transport">Transit Mixers</button>
-            <button onclick="ParishishtApp.filterFleet('earth')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="earth" data-i18n="fleet-tab-earth">Excavators</button>
-            <button onclick="ParishishtApp.filterFleet('pavers')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-fleet="pavers" data-i18n="fleet-tab-pavers">Pavers</button>
+          <div class="flex overflow-x-auto pb-1 scrollbar-none p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-semibold max-w-full -mx-1 px-1">
+            <button onclick="ParishishtApp.filterFleet('all')" class="fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all shadow-sm shadow-blueprint-600/30 whitespace-nowrap min-h-[38px] active:scale-95 shrink-0" data-fleet="all" data-i18n="fleet-tab-all">All</button>
+            <button onclick="ParishishtApp.filterFleet('concrete')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[38px] active:scale-95 shrink-0" data-fleet="concrete" data-i18n="fleet-tab-concrete">Batching</button>
+            <button onclick="ParishishtApp.filterFleet('transport')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[38px] active:scale-95 shrink-0" data-fleet="transport" data-i18n="fleet-tab-transport">Transit Mixers</button>
+            <button onclick="ParishishtApp.filterFleet('earth')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[38px] active:scale-95 shrink-0" data-fleet="earth" data-i18n="fleet-tab-earth">Excavators</button>
+            <button onclick="ParishishtApp.filterFleet('pavers')" class="fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[38px] active:scale-95 shrink-0" data-fleet="pavers" data-i18n="fleet-tab-pavers">Pavers</button>
           </div>
 
           <!-- Auto-scroll playback controls -->
-          <div class="inline-flex items-center gap-1.5 p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-mono">
-            <button onclick="ParishishtApp.scrollFleetManual(-1)" title="Step Left" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-obsidian-700 transition-all">
+          <div class="inline-flex items-center gap-1.5 p-1 rounded-xl bg-obsidian-800 border border-obsidian-700 text-xs font-mono shrink-0">
+            <button onclick="ParishishtApp.scrollFleetManual(-1)" title="Step Left" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-obsidian-700 transition-all min-w-[38px] min-h-[38px] flex items-center justify-center active:scale-95">
               <i data-lucide="chevron-left" class="w-4 h-4"></i>
             </button>
-            <button onclick="ParishishtApp.toggleFleetAutoScroll()" id="fleet-pause-btn" title="Pause / Resume Conveyor" class="px-2.5 py-1 rounded-lg text-slate-300 hover:text-white hover:bg-obsidian-700 flex items-center gap-1.5 transition-all">
+            <button onclick="ParishishtApp.toggleFleetAutoScroll()" id="fleet-pause-btn" title="Pause / Resume Conveyor" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-obsidian-700 flex items-center gap-1.5 transition-all min-h-[38px] active:scale-95">
               <i data-lucide="pause" id="fleet-pause-icon" class="w-3.5 h-3.5 text-blueprint-400"></i>
               <span id="fleet-pause-label" class="text-[11px] font-sans" data-i18n="fleet-pause">Pause</span>
             </button>
-            <button onclick="ParishishtApp.scrollFleetManual(1)" title="Step Right" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-obsidian-700 transition-all">
+            <button onclick="ParishishtApp.scrollFleetManual(1)" title="Step Right" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-obsidian-700 transition-all min-w-[38px] min-h-[38px] flex items-center justify-center active:scale-95">
               <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </button>
           </div>
@@ -957,7 +1038,7 @@
             Join our multidisciplinary engineering team executing high-impact public health schemes and highways across Bihar.
           </p>
         </div>
-        <button onclick="ParishishtApp.applyJob('General Civil Application', 'Patna / Sites')" class="px-5 py-3 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-blueprint-400 border border-blueprint-500/30 font-bold text-xs uppercase tracking-wider" data-i18n="car-btn-general">
+        <button onclick="ParishishtApp.applyJob('General Civil Application', 'Patna / Sites')" class="w-full md:w-auto px-5 py-3 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-blueprint-400 border border-blueprint-500/30 font-bold text-xs uppercase tracking-wider min-h-[44px] active:scale-95 transition-all" data-i18n="car-btn-general">
           Submit General Application
         </button>
       </div>
@@ -974,7 +1055,7 @@
             </div>
             <p class="text-xs text-slate-400 mt-3 leading-relaxed">Lead turnkey piped water schemes, coordinate with PHED engineers, oversee subcontractor lines, and guarantee zero-leak third-party audits.</p>
           </div>
-          <button onclick="ParishishtApp.applyJob('Senior Project Manager (PHE)', 'Muzaffarpur / Gaya')" class="mt-6 w-full py-2.5 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider transition-colors" data-i18n="car-btn-apply">
+          <button onclick="ParishishtApp.applyJob('Senior Project Manager (PHE)', 'Muzaffarpur / Gaya')" class="mt-6 w-full py-3 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider min-h-[44px] active:scale-95 transition-all" data-i18n="car-btn-apply">
             Apply for Position
           </button>
         </div>
@@ -989,7 +1070,7 @@
             </div>
             <p class="text-xs text-slate-400 mt-3 leading-relaxed">Direct field cube tests, aggregate sieve analysis, bitumen grading, soil compaction, and maintain statutory QA registers for government audits.</p>
           </div>
-          <button onclick="ParishishtApp.applyJob('QA / QC Field Engineer', 'Patna / Field Labs')" class="mt-6 w-full py-2.5 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider transition-colors" data-i18n="car-btn-apply">
+          <button onclick="ParishishtApp.applyJob('QA / QC Field Engineer', 'Patna / Field Labs')" class="mt-6 w-full py-3 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider min-h-[44px] active:scale-95 transition-all" data-i18n="car-btn-apply">
             Apply for Position
           </button>
         </div>
@@ -1004,7 +1085,7 @@
             </div>
             <p class="text-xs text-slate-400 mt-3 leading-relaxed">Prepare Measurement Books (MB), rate analysis, variation statements, escalation claims under Bihar Public Works formulas, and compliance dossiers.</p>
           </div>
-          <button onclick="ParishishtApp.applyJob('Billing & Quantity Surveyor', 'Patna Corporate HQ')" class="mt-6 w-full py-2.5 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider transition-colors" data-i18n="car-btn-apply">
+          <button onclick="ParishishtApp.applyJob('Billing & Quantity Surveyor', 'Patna Corporate HQ')" class="mt-6 w-full py-3 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider min-h-[44px] active:scale-95 transition-all" data-i18n="car-btn-apply">
             Apply for Position
           </button>
         </div>
@@ -1014,10 +1095,10 @@
   </section>
 
   <!-- ================= TENDERS & VENDOR EMPANELMENT ================= -->
-  <section id="tenders" class="py-20 bg-obsidian-950 tech-grid border-t border-obsidian-700/60">
+  <section id="tenders" class="py-14 sm:py-20 bg-obsidian-950 tech-grid border-t border-obsidian-700/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-center">
         
         <div class="lg:col-span-6">
           <span class="inline-block px-3 py-1 rounded-full bg-amberGold-500/10 border border-amberGold-500/30 text-amberGold-400 font-mono text-[11px] font-bold tracking-widest uppercase mb-2" data-i18n="ten-badge">
@@ -1046,30 +1127,30 @@
           </div>
         </div>
 
-        <div class="lg:col-span-6 glass-card p-8 rounded-3xl border border-obsidian-700">
+        <div class="lg:col-span-6 glass-card p-5 sm:p-8 rounded-3xl border border-obsidian-700">
           <h4 class="font-bold text-white text-base mb-4" data-i18n="ten-form-title">Vendor Empanelment Application</h4>
           <form onsubmit="ParishishtApp.handleVendorSubmit(event)" class="space-y-4 text-xs font-mono">
             <div>
               <label class="block text-slate-300 mb-1" data-i18n="ten-form-company">Company / Firm Name</label>
-              <input type="text" id="ven-company" required placeholder="e.g. Apex Minerals & Steel Corp" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+              <input type="text" id="ven-company" required placeholder="e.g. Apex Minerals & Steel Corp" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-slate-300 mb-1" data-i18n="ten-form-contact">Contact Person Name</label>
-                <input type="text" id="ven-name" required placeholder="Full Name" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+                <input type="text" id="ven-name" required placeholder="Full Name" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
               </div>
               <div>
                 <label class="block text-slate-300 mb-1" data-i18n="ten-form-phone">Phone Number</label>
-                <input type="tel" id="ven-phone" required placeholder="+91 98765 43210" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+                <input type="tel" id="ven-phone" inputmode="tel" required placeholder="+91 98765 43210" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
               </div>
             </div>
             <div>
               <label class="block text-slate-300 mb-1" data-i18n="ten-form-email">Email Address</label>
-              <input type="email" id="ven-email" required placeholder="vendor@domain.com" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+              <input type="email" id="ven-email" inputmode="email" required placeholder="vendor@domain.com" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
             </div>
             <div>
               <label class="block text-slate-300 mb-1" data-i18n="ten-form-scope">Primary Supply Scope</label>
-              <select id="ven-scope" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+              <select id="ven-scope" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500 font-mono">
                 <option>Ductile Iron (DI) & HDPE Pipelines</option>
                 <option>TMT Reinforcement Steel (Fe 550D)</option>
                 <option>Portland Pozzolana Cement (PPC/OPC 53)</option>
@@ -1078,7 +1159,7 @@
                 <option>Heavy Earthmoving & Trenching Subcontracting</option>
               </select>
             </div>
-            <button type="submit" class="w-full py-3.5 rounded-xl bg-amberGold-500 hover:bg-amberGold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-all" data-i18n="ten-btn-submit">
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-amberGold-500 hover:bg-amberGold-400 text-obsidian-950 font-bold text-xs uppercase tracking-wider transition-all min-h-[48px] active:scale-95" data-i18n="ten-btn-submit">
               Submit Vendor Credentials
             </button>
           </form>
@@ -1090,10 +1171,10 @@
   </section>
 
   <!-- ================= CONTACT & HEADQUARTERS ================= -->
-  <section id="contact" class="py-20 bg-obsidian-900 border-t border-obsidian-700/60">
+  <section id="contact" class="py-14 sm:py-20 bg-obsidian-900 border-t border-obsidian-700/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10">
         
         <div class="lg:col-span-5 space-y-6">
           <span class="inline-block px-3 py-1 rounded-full bg-blueprint-500/10 border border-blueprint-500/30 text-blueprint-400 font-mono text-[11px] font-bold tracking-widest uppercase" data-i18n="con-badge">
@@ -1106,7 +1187,7 @@
             Connect directly with our corporate tendering division, project directors, or technical evaluation desk in Patna.
           </p>
 
-          <div class="glass-card p-6 rounded-2xl border border-obsidian-700 space-y-4 text-xs font-mono">
+          <div class="glass-card p-5 sm:p-6 rounded-2xl border border-obsidian-700 space-y-4 text-xs font-mono">
             <div>
               <div class="text-blueprint-400 font-bold mb-1" data-i18n="con-office-title">Registered Corporate Headquarters</div>
               <div class="text-slate-300" data-i18n="con-office-addr">Boring Road / Fraser Road Commercial Precinct, Patna, Bihar — 800001, India</div>
@@ -1130,38 +1211,38 @@
           </div>
         </div>
 
-        <div class="lg:col-span-7 glass-card p-8 rounded-3xl border border-obsidian-700">
+        <div class="lg:col-span-7 glass-card p-5 sm:p-8 rounded-3xl border border-obsidian-700">
           <h4 class="font-bold text-white text-base mb-4" data-i18n="con-form-title">Dispatch Official Message</h4>
           <form onsubmit="ParishishtApp.handleContactSubmit(event)" class="space-y-4 text-xs font-mono">
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-slate-300 mb-1" data-i18n="con-form-name">Official Full Name</label>
-                <input type="text" id="con-name" required placeholder="e.g. Er. Sunil Kumar" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+                <input type="text" id="con-name" required placeholder="e.g. Er. Sunil Kumar" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
               </div>
               <div>
                 <label class="block text-slate-300 mb-1" data-i18n="con-form-org">Department / PSU / Firm</label>
-                <input type="text" id="con-org" required placeholder="e.g. PHED Division / EPC Partner" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+                <input type="text" id="con-org" required placeholder="e.g. PHED Division / EPC Partner" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
               </div>
             </div>
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-slate-300 mb-1" data-i18n="ten-form-email">Email Address</label>
-                <input type="email" id="con-email" required placeholder="officer@bihar.gov.in" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+                <input type="email" id="con-email" inputmode="email" required placeholder="officer@bihar.gov.in" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
               </div>
               <div>
                 <label class="block text-slate-300 mb-1" data-i18n="ten-form-phone">Phone Number</label>
-                <input type="tel" id="con-phone" required placeholder="+91 94310 XXXXX" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+                <input type="tel" id="con-phone" inputmode="tel" required placeholder="+91 94310 XXXXX" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
               </div>
             </div>
             <div>
               <label class="block text-slate-300 mb-1" data-i18n="con-form-subject">Subject / Tender Reference</label>
-              <input type="text" id="con-subject" required placeholder="Regarding PHED Tender JV / Technical Clarification" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+              <input type="text" id="con-subject" required placeholder="Regarding PHED Tender JV / Technical Clarification" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
             </div>
             <div>
               <label class="block text-slate-300 mb-1" data-i18n="con-form-msg">Inquiry Details</label>
-              <textarea id="con-msg" rows="4" required placeholder="Provide project scope or partnership requirements..." class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500"></textarea>
+              <textarea id="con-msg" rows="4" required placeholder="Provide project scope or partnership requirements..." class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs focus:outline-none focus:border-blueprint-500"></textarea>
             </div>
-            <button type="submit" class="w-full py-3.5 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blueprint-600/30 transition-all" data-i18n="con-btn-send">
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blueprint-600/30 transition-all min-h-[48px] active:scale-95" data-i18n="con-btn-send">
               Transmit Message to Directorate
             </button>
           </form>
@@ -1232,9 +1313,10 @@
   <!-- ================= MODALS & OVERLAYS ================= -->
 
   <!-- 1. COMPREHENSIVE TABBED PROJECT DOSSIER MODAL -->
-  <div id="project-dossier-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="bg-obsidian-900 border border-obsidian-700 rounded-3xl max-w-3xl w-full p-6 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[90vh]">
-      <button onclick="ParishishtApp.closeModal('project-dossier-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2">
+  <div id="project-dossier-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-obsidian-900 border border-obsidian-700 rounded-t-3xl sm:rounded-3xl max-w-3xl w-full p-5 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[92dvh] sm:max-h-[90vh] pb-8 sm:pb-8">
+      <div class="w-12 h-1.5 bg-obsidian-700 rounded-full mx-auto mb-4 sm:hidden"></div>
+      <button onclick="ParishishtApp.closeModal('project-dossier-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 min-w-[40px] min-h-[40px] flex items-center justify-center">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
@@ -1243,19 +1325,19 @@
         <span id="mdossier-status" class="text-xs font-mono font-bold text-laserEmerald-400">Active Execution</span>
       </div>
 
-      <h3 id="mdossier-title" class="text-xl sm:text-2xl font-black text-white mb-2"></h3>
+      <h3 id="mdossier-title" class="text-lg sm:text-2xl font-black text-white mb-2 leading-snug"></h3>
       
-      <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-400 pb-4 border-b border-obsidian-800 mb-6">
+      <div class="flex flex-wrap gap-3 sm:gap-4 text-xs font-mono text-slate-400 pb-4 border-b border-obsidian-800 mb-6">
         <span>Department: <strong id="mdossier-client" class="text-slate-200"></strong></span>
         <span>Location: <strong id="mdossier-loc" class="text-slate-200"></strong></span>
         <span>Sanction: <strong id="mdossier-val" class="text-amberGold-400"></strong></span>
       </div>
 
       <!-- Dossier Tabs -->
-      <div class="flex border-b border-obsidian-800 text-xs font-mono font-bold mb-6 gap-6">
-        <button onclick="ParishishtApp.setDossierTab('scope')" id="dossier-tab-btn-scope" class="pb-2 text-blueprint-400 border-b-2 border-blueprint-400">Scope & Specs</button>
-        <button onclick="ParishishtApp.setDossierTab('milestones')" id="dossier-tab-btn-milestones" class="pb-2 text-slate-400 hover:text-white">Milestone Gantt</button>
-        <button onclick="ParishishtApp.setDossierTab('fleet')" id="dossier-tab-btn-fleet" class="pb-2 text-slate-400 hover:text-white">Fleet Deployed</button>
+      <div class="flex border-b border-obsidian-800 text-xs font-mono font-bold mb-6 gap-4 sm:gap-6 overflow-x-auto pb-1 scrollbar-none">
+        <button onclick="ParishishtApp.setDossierTab('scope')" id="dossier-tab-btn-scope" class="pb-2 text-blueprint-400 border-b-2 border-blueprint-400 whitespace-nowrap min-h-[38px]">Scope & Specs</button>
+        <button onclick="ParishishtApp.setDossierTab('milestones')" id="dossier-tab-btn-milestones" class="pb-2 text-slate-400 hover:text-white whitespace-nowrap min-h-[38px]">Milestone Gantt</button>
+        <button onclick="ParishishtApp.setDossierTab('fleet')" id="dossier-tab-btn-fleet" class="pb-2 text-slate-400 hover:text-white whitespace-nowrap min-h-[38px]">Fleet Deployed</button>
       </div>
 
       <!-- Tab Content 1: Scope & Specs -->
@@ -1280,93 +1362,97 @@
         <div id="mdossier-fleet" class="text-slate-300 leading-relaxed"></div>
       </div>
 
-      <div class="flex justify-between items-center pt-6 border-t border-obsidian-800 mt-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pt-6 border-t border-obsidian-800 mt-6">
         <span class="text-[11px] font-mono text-slate-500">Verified by Bihar Technical Evaluation Board</span>
-        <button onclick="ParishishtApp.closeModal('project-dossier-modal')" class="px-5 py-2.5 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-white font-mono font-bold text-xs uppercase" data-i18n="modal-close">Close Window</button>
+        <button onclick="ParishishtApp.closeModal('project-dossier-modal')" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-obsidian-800 hover:bg-obsidian-700 text-white font-mono font-bold text-xs uppercase min-h-[44px] active:scale-95" data-i18n="modal-close">Close Window</button>
       </div>
     </div>
   </div>
 
   <!-- 2. TENDER PRE-QUALIFICATION DOSSIER SHEET (PRINTABLE) -->
-  <div id="tender-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="bg-white text-slate-900 rounded-3xl max-w-3xl w-full p-8 relative shadow-2xl overflow-y-auto max-h-[92vh]">
-      <button onclick="ParishishtApp.closeModal('tender-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 p-2 print:hidden">
+  <div id="tender-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white text-slate-900 rounded-t-3xl sm:rounded-3xl max-w-3xl w-full p-5 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[92dvh] sm:max-h-[92vh] pb-8 sm:pb-8">
+      <div class="w-12 h-1.5 bg-slate-300 rounded-full mx-auto mb-4 sm:hidden print:hidden"></div>
+      <button onclick="ParishishtApp.closeModal('tender-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 p-2 print:hidden min-w-[40px] min-h-[40px] flex items-center justify-center">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
       <!-- Letterhead -->
-      <div class="flex justify-between items-start pb-6 border-b-2 border-slate-900 mb-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start gap-4 pb-6 border-b-2 border-slate-900 mb-6">
         <div>
-          <div class="text-2xl font-black tracking-tight text-slate-950">PARISHISHT CONSTRUCTION PRIVATE LIMITED</div>
+          <div class="text-xl sm:text-2xl font-black tracking-tight text-slate-950">PARISHISHT CONSTRUCTION PRIVATE LIMITED</div>
           <div class="text-xs text-slate-600 font-mono">CIN: U45200BR2018PTC039000 • GSTIN: 10AAECP1234F1Z5</div>
           <div class="text-xs text-slate-600">Registered Office: Boring Road / Fraser Road, Patna, Bihar — 800001</div>
         </div>
-        <div class="text-right font-mono text-xs">
-          <div class="bg-amberGold-500 text-obsidian-950 px-2.5 py-1 rounded font-bold">CLASS-1 EPC CONTRACTOR</div>
+        <div class="text-left sm:text-right font-mono text-xs">
+          <div class="bg-amberGold-500 text-obsidian-950 px-2.5 py-1 rounded font-bold inline-block">CLASS-1 EPC CONTRACTOR</div>
           <div class="text-slate-500 mt-1">Ref: PAR-PQ-2026-8841</div>
         </div>
       </div>
 
-      <h4 class="font-bold text-base text-slate-950 mb-3" data-i18n="modal-dossier-title">Official Tender Pre-Qualification Dossier</h4>
+      <h4 class="font-bold text-base text-slate-950 mb-1" data-i18n="modal-dossier-title">Official Tender Pre-Qualification Dossier</h4>
       <p class="text-xs text-slate-600 mb-4" data-i18n="modal-dossier-sub">Class-1 Credential Factsheet • Issued for Technical Evaluation</p>
 
-      <table class="w-full text-xs font-mono border-collapse border border-slate-200 mb-6">
-        <tr class="bg-slate-100 font-bold">
-          <th class="border border-slate-200 p-2.5 text-left">Credential Metric</th>
-          <th class="border border-slate-200 p-2.5 text-left">Statutory Value</th>
-          <th class="border border-slate-200 p-2.5 text-left">Verification Authority</th>
-        </tr>
-        <tr>
-          <td class="border border-slate-200 p-2 font-semibold">Contractor Class</td>
-          <td class="border border-slate-200 p-2 font-bold text-slate-950">Class-1 (No Upper Financial Limit)</td>
-          <td class="border border-slate-200 p-2 text-slate-600">Govt of Bihar Works Dept</td>
-        </tr>
-        <tr>
-          <td class="border border-slate-200 p-2 font-semibold">PHE Jal Jeevan Registration</td>
-          <td class="border border-slate-200 p-2 font-bold text-slate-950">Grade-A Empaneled</td>
-          <td class="border border-slate-200 p-2 text-slate-600">PHED Bihar</td>
-        </tr>
-        <tr>
-          <td class="border border-slate-200 p-2 font-semibold">Aggregate 3-Yr Turnover</td>
-          <td class="border border-slate-200 p-2 font-bold text-slate-950">₹250+ Crore (Audited)</td>
-          <td class="border border-slate-200 p-2 text-slate-600">Statutory Chartered Accountants</td>
-        </tr>
-        <tr>
-          <td class="border border-slate-200 p-2 font-semibold">Bank Solvency Capacity</td>
-          <td class="border border-slate-200 p-2 font-bold text-slate-950">₹60+ Crore Backed</td>
-          <td class="border border-slate-200 p-2 text-slate-600">Scheduled Commercial Banks (SBI/PNB)</td>
-        </tr>
-        <tr>
-          <td class="border border-slate-200 p-2 font-semibold">Equipment Asset Net Worth</td>
-          <td class="border border-slate-200 p-2 font-bold text-slate-950">₹35+ Crore (Self-Owned Fleet)</td>
-          <td class="border border-slate-200 p-2 text-slate-600">Affidavit Registered</td>
-        </tr>
-      </table>
+      <div class="overflow-x-auto -mx-1 px-1 mb-6">
+        <table class="w-full min-w-[500px] text-xs font-mono border-collapse border border-slate-200">
+          <tr class="bg-slate-100 font-bold">
+            <th class="border border-slate-200 p-2.5 text-left">Credential Metric</th>
+            <th class="border border-slate-200 p-2.5 text-left">Statutory Value</th>
+            <th class="border border-slate-200 p-2.5 text-left">Verification Authority</th>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold">Contractor Class</td>
+            <td class="border border-slate-200 p-2 font-bold text-slate-950">Class-1 (No Upper Financial Limit)</td>
+            <td class="border border-slate-200 p-2 text-slate-600">Govt of Bihar Works Dept</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold">PHE Jal Jeevan Registration</td>
+            <td class="border border-slate-200 p-2 font-bold text-slate-950">Grade-A Empaneled</td>
+            <td class="border border-slate-200 p-2 text-slate-600">PHED Bihar</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold">Aggregate 3-Yr Turnover</td>
+            <td class="border border-slate-200 p-2 font-bold text-slate-950">₹250+ Crore (Audited)</td>
+            <td class="border border-slate-200 p-2 text-slate-600">Statutory Chartered Accountants</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold">Bank Solvency Capacity</td>
+            <td class="border border-slate-200 p-2 font-bold text-slate-950">₹60+ Crore Backed</td>
+            <td class="border border-slate-200 p-2 text-slate-600">Scheduled Commercial Banks (SBI/PNB)</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold">Equipment Asset Net Worth</td>
+            <td class="border border-slate-200 p-2 font-bold text-slate-950">₹35+ Crore (Self-Owned Fleet)</td>
+            <td class="border border-slate-200 p-2 text-slate-600">Affidavit Registered</td>
+          </tr>
+        </table>
+      </div>
 
-      <div class="flex justify-between items-center pt-4 border-t border-slate-200 print:hidden">
-        <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-950 text-white font-bold text-xs uppercase flex items-center gap-2">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-3 pt-4 border-t border-slate-200 print:hidden">
+        <button onclick="window.print()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-950 text-white font-bold text-xs uppercase flex items-center justify-center gap-2 min-h-[44px] active:scale-95">
           <i data-lucide="printer" class="w-4 h-4"></i>
           <span data-i18n="modal-btn-print">Print / Save PDF</span>
         </button>
-        <button onclick="ParishishtApp.closeModal('tender-modal')" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs" data-i18n="modal-close">Close Window</button>
+        <button onclick="ParishishtApp.closeModal('tender-modal')" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs min-h-[44px] active:scale-95" data-i18n="modal-close">Close Window</button>
       </div>
     </div>
   </div>
 
   <!-- 3. PRINTABLE BOQ FACTSHEET MODAL -->
-  <div id="boq-printable-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="bg-white text-slate-900 rounded-3xl max-w-3xl w-full p-8 relative shadow-2xl overflow-y-auto max-h-[92vh]">
-      <button onclick="ParishishtApp.closeModal('boq-printable-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 p-2 print:hidden">
+  <div id="boq-printable-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white text-slate-900 rounded-t-3xl sm:rounded-3xl max-w-3xl w-full p-5 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[92dvh] sm:max-h-[92vh] pb-8 sm:pb-8">
+      <div class="w-12 h-1.5 bg-slate-300 rounded-full mx-auto mb-4 sm:hidden print:hidden"></div>
+      <button onclick="ParishishtApp.closeModal('boq-printable-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-800 p-2 print:hidden min-w-[40px] min-h-[40px] flex items-center justify-center">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
-      <div class="flex justify-between items-start pb-6 border-b-2 border-slate-900 mb-6">
+      <div class="flex flex-col sm:flex-row justify-between items-start gap-4 pb-6 border-b-2 border-slate-900 mb-6">
         <div>
-          <div class="text-2xl font-black tracking-tight text-slate-950">PARISHISHT CONSTRUCTION PRIVATE LIMITED</div>
+          <div class="text-xl sm:text-2xl font-black tracking-tight text-slate-950">PARISHISHT CONSTRUCTION PRIVATE LIMITED</div>
           <div class="text-xs text-slate-600 font-mono">Tender Planning & Technical Estimation Division</div>
         </div>
-        <div class="text-right font-mono text-xs">
-          <div class="bg-blueprint-600 text-white px-2.5 py-1 rounded font-bold">PRELIMINARY BOQ DOCKET</div>
+        <div class="text-left sm:text-right font-mono text-xs">
+          <div class="bg-blueprint-600 text-white px-2.5 py-1 rounded font-bold inline-block">PRELIMINARY BOQ DOCKET</div>
           <div class="text-slate-500 mt-1">Ref: <span id="boq-sheet-ref">EST-2026-9921</span></div>
         </div>
       </div>
@@ -1378,58 +1464,83 @@
         <!-- Injected via JS -->
       </div>
 
-      <div class="flex justify-between items-center pt-6 border-t border-slate-200 mt-6 print:hidden">
-        <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-slate-950 text-white font-bold text-xs uppercase flex items-center gap-2">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6 border-t border-slate-200 mt-6 print:hidden">
+        <button onclick="window.print()" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-950 text-white font-bold text-xs uppercase flex items-center justify-center gap-2 min-h-[44px] active:scale-95">
           <i data-lucide="printer" class="w-4 h-4"></i>
           <span data-i18n="modal-btn-print">Print / Save PDF</span>
         </button>
-        <button onclick="ParishishtApp.closeModal('boq-printable-modal')" class="px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs" data-i18n="modal-close">Close Window</button>
+        <button onclick="ParishishtApp.closeModal('boq-printable-modal')" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs min-h-[44px] active:scale-95" data-i18n="modal-close">Close Window</button>
       </div>
     </div>
   </div>
 
   <!-- 4. JOB APPLICATION MODAL -->
-  <div id="job-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
-    <div class="bg-obsidian-900 border border-obsidian-700 rounded-3xl max-w-lg w-full p-8 relative shadow-2xl">
-      <button onclick="ParishishtApp.closeModal('job-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2">
+  <div id="job-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-obsidian-900 border border-obsidian-700 rounded-t-3xl sm:rounded-3xl max-w-lg w-full p-5 sm:p-8 relative shadow-2xl max-h-[92dvh] overflow-y-auto pb-8 sm:pb-8">
+      <div class="w-12 h-1.5 bg-obsidian-700 rounded-full mx-auto mb-4 sm:hidden"></div>
+      <button onclick="ParishishtApp.closeModal('job-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 min-w-[40px] min-h-[40px] flex items-center justify-center">
         <i data-lucide="x" class="w-6 h-6"></i>
       </button>
 
-      <h3 class="text-xl font-bold text-white mb-1" data-i18n="modal-job-title">Career Application Portal</h3>
+      <h3 class="text-lg sm:text-xl font-bold text-white mb-1" data-i18n="modal-job-title">Career Application Portal</h3>
       <p class="text-xs text-blueprint-400 font-mono mb-6" id="job-modal-title">Position: Site Engineering</p>
 
       <form onsubmit="ParishishtApp.handleJobSubmit(event)" class="space-y-4 text-xs font-mono">
         <div>
           <label class="block text-slate-300 mb-1">Candidate Full Name *</label>
-          <input type="text" id="app-name" required placeholder="Full Name" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+          <input type="text" id="app-name" required placeholder="Full Name" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
         </div>
-        <div class="grid grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-slate-300 mb-1">Phone Number *</label>
-            <input type="tel" id="app-phone" required placeholder="+91 98765 43210" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+            <input type="tel" inputmode="tel" id="app-phone" required placeholder="+91 98765 43210" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
           </div>
           <div>
             <label class="block text-slate-300 mb-1">Experience (Years) *</label>
-            <input type="number" id="app-exp" required placeholder="5" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+            <input type="number" inputmode="numeric" id="app-exp" required placeholder="5" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
           </div>
         </div>
         <div>
           <label class="block text-slate-300 mb-1">Email Address *</label>
-          <input type="email" id="app-email" required placeholder="applicant@domain.com" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500">
+          <input type="email" inputmode="email" id="app-email" required placeholder="applicant@domain.com" class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs min-h-[44px] focus:outline-none focus:border-blueprint-500">
         </div>
         <div>
           <label class="block text-slate-300 mb-1">Resume / Portfolio Link or Experience Summary *</label>
-          <textarea id="app-summary" rows="3" required placeholder="Paste Google Drive link or summarize projects executed in Bihar..." class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white focus:outline-none focus:border-blueprint-500"></textarea>
+          <textarea id="app-summary" rows="3" required placeholder="Paste Google Drive link or summarize projects executed in Bihar..." class="w-full bg-obsidian-800 border border-obsidian-700 rounded-xl p-3 text-white text-base sm:text-xs focus:outline-none focus:border-blueprint-500"></textarea>
         </div>
-        <button type="submit" class="w-full py-3.5 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider transition-all">
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-blueprint-600 hover:bg-blueprint-500 text-white font-bold text-xs uppercase tracking-wider min-h-[48px] active:scale-95 transition-all">
           Submit Engineering Application
         </button>
       </form>
     </div>
   </div>
 
+  <!-- ================= MOBILE BOTTOM FLOATING ACTION DOCK ================= -->
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-obsidian-900/95 backdrop-blur-xl border-t border-obsidian-700/80 px-3 py-2 flex items-center justify-around shadow-2xl safe-area-pb" aria-label="Mobile Bottom Navigation">
+    <a href="#hero" class="flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-400 hover:text-blueprint-400 active:scale-95 transition-all">
+      <i data-lucide="home" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-home">Home</span>
+    </a>
+    <a href="#radar" class="flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-400 hover:text-blueprint-400 active:scale-95 transition-all">
+      <i data-lucide="map-pin" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-radar">Radar</span>
+    </a>
+    <a href="#projects" class="flex flex-col items-center justify-center gap-1 min-w-[58px] min-h-[48px] -mt-5 px-3 py-1.5 rounded-2xl bg-gradient-to-tr from-blueprint-600 to-blueprint-500 text-white shadow-lg shadow-blueprint-500/30 active:scale-95 transition-all">
+      <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono font-bold tracking-tight" data-i18n="mob-nav-projects">Projects</span>
+    </a>
+    <a href="#estimator" class="flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-400 hover:text-blueprint-400 active:scale-95 transition-all">
+      <i data-lucide="calculator" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-estimator">Estimator</span>
+    </a>
+    <button onclick="ParishishtApp.toggleMobileMenu()" class="flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-400 hover:text-amberGold-400 active:scale-95 transition-all" aria-label="Toggle Navigation Menu">
+      <i data-lucide="menu" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-menu">Menu</span>
+    </button>
+  </aside>
+
   <!-- ================= FLOATING TOAST NOTIFICATION CENTER ================= -->
-  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none max-w-sm w-full" role="region" aria-live="polite">
+  <div id="toast-container" class="fixed bottom-20 md:bottom-6 right-3 sm:right-6 left-3 sm:left-auto z-50 flex flex-col gap-2.5 pointer-events-none max-w-sm w-auto sm:w-full" role="region" aria-live="polite">
     <!-- Toasts dynamically appended via JS -->
   </div>
 
@@ -2202,6 +2313,10 @@
         "fleet-units-lbl": "Units Deployed",
         "fleet-engine-hours": "Avg Engine Hours",
         "fleet-assigned-district": "Assigned District Hub",
+        "fleet-live-pulse": "LIVE TELEMETRY FEED • AUTO-SCROLL CONVEYOR",
+        "fleet-pause": "Pause",
+        "fleet-hover-hint": "Conveyor scrolls smoothly left-to-right • Hover over any card to inspect & pause",
+        "fleet-cert-hint": "100% Self-owned heavy fleet registered under Form-20 statutory filings",
         "fin-badge": "AUDITED FISCAL STRENGTH",
         "fin-title": "Financial Solvency & Corporate Bankability",
         "fin-sub": "Public works authorities demand verified cashflow stability. Parishisht Construction maintains audited statutory reserves and Tier-1 banking lines.",
@@ -2280,7 +2395,17 @@
         "toast-filtered": "Filtered projects by selection.",
         "toast-reset": "Reset parameters to baseline.",
         "toast-applied": "Application registered successfully!",
-        "toast-vendor": "Vendor application registered!"
+        "toast-vendor": "Vendor application registered!",
+        "mob-nav-home": "Home",
+        "mob-nav-radar": "Radar",
+        "mob-nav-projects": "Projects",
+        "mob-nav-estimator": "Estimator",
+        "mob-nav-menu": "Menu",
+        "mob-menu-title": "Corporate Portal Navigation",
+        "mob-nav-call": "Call Directorate Desk",
+        "proj-view-bento-mob": "Bento",
+        "proj-view-table-mob": "Table",
+        "proj-view-corridor-mob": "Corridors"
     },
     "hi": {
         "portal-title": "परिशिष्ट कंस्ट्रक्शन | वर्ग-1 पंजीकृत ईपीसी संवेदक (बिहार सरकार)",
@@ -2424,6 +2549,10 @@
         "fleet-units-lbl": "इकाइयां तैनात",
         "fleet-engine-hours": "औसत इंजन घंटे",
         "fleet-assigned-district": "तैनात जिला हब",
+        "fleet-live-pulse": "लाइव टेलीमेट्री फीड • ऑटो-स्क्रॉल कन्वेयर",
+        "fleet-pause": "रोकें",
+        "fleet-hover-hint": "कन्वेयर बाएं से दाएं सुचारू रूप से चलता है • निरीक्षण एवं रोकने हेतु कार्ड पर होवर/टैप करें",
+        "fleet-cert-hint": "प्रपत्र-20 वैधानिक फाइलिंग के तहत पंजीकृत 100% स्व-स्वामित्व वाला भारी बेड़ा",
         "fin-badge": "ऑडिटेड वित्तीय क्षमता",
         "fin-title": "वित्तीय सुदृढ़ता एवं बैंक शोधन क्षमता",
         "fin-sub": "लोक निर्माण प्राधिकारी सत्यापित नकदी प्रवाह स्थिरता की मांग करते हैं। परिशिष्ट कंस्ट्रक्शन ऑडिटेड वैधानिक भंडार और टियर-1 बैंकिंग साख बनाए रखता है।",
@@ -2502,7 +2631,17 @@
         "toast-filtered": "परियोजनाओं को फ़िल्टर किया गया।",
         "toast-reset": "पैरामीटर रीसेट किए गए।",
         "toast-applied": "आवेदन सफलतापूर्वक दर्ज किया गया!",
-        "toast-vendor": "विक्रेता आवेदन सफलतापूर्वक पंजीकृत हुआ!"
+        "toast-vendor": "विक्रेता आवेदन सफलतापूर्वक पंजीकृत हुआ!",
+        "mob-nav-home": "होम",
+        "mob-nav-radar": "रडार",
+        "mob-nav-projects": "परियोजनाएं",
+        "mob-nav-estimator": "एस्टीमेटर",
+        "mob-nav-menu": "मेनू",
+        "mob-menu-title": "कॉर्पोरेट पोर्टल नेविगेशन",
+        "mob-nav-call": "निदेशालय डेस्क को कॉल करें",
+        "proj-view-bento-mob": "बेंटो",
+        "proj-view-table-mob": "तालिका",
+        "proj-view-corridor-mob": "कॉरिडोर"
     }
 };
 
@@ -2604,18 +2743,19 @@
 
         DISTRICTS_RADAR.forEach(d => {
           const pos = coordsMap[d.id] || { top: '50%', left: '50%' };
+          const isActive = this.state.activeRadarDistrict === d.id;
           
           // Map Pin
           const pin = document.createElement('div');
-          pin.className = "absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group";
+          pin.className = "absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer group min-w-[44px] min-h-[44px] flex items-center justify-center";
           pin.style.top = pos.top;
           pin.style.left = pos.left;
           pin.onclick = () => this.selectRadarDistrict(d.id);
           pin.innerHTML = `
             <div class="relative flex items-center justify-center">
-              <span class="w-6 h-6 rounded-full bg-blueprint-500/20 pulse-ring absolute"></span>
-              <span class="w-3.5 h-3.5 rounded-full bg-amberGold-500 border-2 border-white shadow-lg group-hover:scale-125 transition-transform"></span>
-              <span class="absolute top-4 font-mono text-[9px] font-bold text-white bg-obsidian-950/80 px-1.5 py-0.5 rounded border border-obsidian-700 whitespace-nowrap shadow group-hover:text-blueprint-400">
+              <span class="w-6 h-6 rounded-full ${isActive ? 'bg-amberGold-500/30' : 'bg-blueprint-500/20'} pulse-ring absolute"></span>
+              <span class="w-3.5 h-3.5 rounded-full ${isActive ? 'bg-amberGold-400 scale-125' : 'bg-amberGold-500'} border-2 border-white shadow-lg group-hover:scale-125 transition-transform"></span>
+              <span class="absolute top-4 font-mono text-[9px] font-bold ${isActive ? 'text-amberGold-400 border-amberGold-500/50' : 'text-white border-obsidian-700'} bg-obsidian-950/90 px-1.5 py-0.5 rounded border whitespace-nowrap shadow group-hover:text-blueprint-400">
                 ${this.state.lang === 'hi' ? d.name_hi : d.name}
               </span>
             </div>
@@ -2624,7 +2764,7 @@
 
           // Quick Tab
           const tab = document.createElement('button');
-          tab.className = "px-2 py-1.5 rounded-lg text-[10px] font-mono font-bold bg-obsidian-800 text-slate-400 hover:text-white hover:bg-obsidian-700 transition-all text-center truncate border border-obsidian-700";
+          tab.className = `px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-mono font-bold transition-all text-center whitespace-nowrap active:scale-95 border ${isActive ? 'bg-blueprint-500/20 text-blueprint-300 border-blueprint-500/50 shadow-md shadow-blueprint-500/10' : 'bg-obsidian-800/80 text-slate-400 hover:text-white hover:bg-obsidian-700/80 border-obsidian-700'}`;
           tab.textContent = this.state.lang === 'hi' ? d.name_hi : d.name;
           tab.onclick = () => this.selectRadarDistrict(d.id);
           quickTabsContainer.appendChild(tab);
@@ -2635,8 +2775,10 @@
 
       selectRadarDistrict(distId) {
         this.state.activeRadarDistrict = distId;
-        this.updateRadarInspector();
-        this.showToast(`Selected ${distId.replace('dist-', '').toUpperCase()} Radar Hub`, 'info');
+        this.renderRadar();
+        const d = DISTRICTS_RADAR.find(x => x.id === distId);
+        const name = d ? (this.state.lang === 'hi' ? d.name_hi : d.name) : distId;
+        this.showToast(`Selected ${name} Radar Hub`, 'info');
       },
 
       updateRadarInspector() {
@@ -2994,7 +3136,7 @@
                 <span data-i18n="est-lbl-scale1">${isHi ? 'वितरण पाइपलाइन नेटवर्क लंबाई (किमी)' : 'Distribution Pipeline Network Length (km)'}</span>
                 <span id="est-val-pipe" class="font-bold text-blueprint-400">85 km</span>
               </div>
-              <input type="range" min="10" max="300" value="85" id="est-input-pipe" oninput="ParishishtApp.updatePipeSlider(this.value)" class="w-full accent-blueprint-500 bg-obsidian-800 rounded-lg">
+              <input type="range" min="10" max="300" value="85" id="est-input-pipe" oninput="ParishishtApp.updatePipeSlider(this.value)" class="w-full h-8 sm:h-6 accent-blueprint-500 bg-obsidian-800 rounded-lg cursor-pointer">
             </div>
 
             <div>
@@ -3002,13 +3144,13 @@
                 <span data-i18n="est-lbl-scale2">${isHi ? 'उच्चस्तरीय सेवा जलाशय (OHSR संख्या)' : 'Over Head Service Reservoirs (OHSR Count)'}</span>
                 <span id="est-val-ohsr" class="font-bold text-blueprint-400">4 Units</span>
               </div>
-              <input type="range" min="1" max="10" value="4" id="est-input-ohsr" oninput="ParishishtApp.updateOhsrSlider(this.value)" class="w-full accent-blueprint-500 bg-obsidian-800 rounded-lg">
+              <input type="range" min="1" max="10" value="4" id="est-input-ohsr" oninput="ParishishtApp.updateOhsrSlider(this.value)" class="w-full h-8 sm:h-6 accent-blueprint-500 bg-obsidian-800 rounded-lg cursor-pointer">
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1">${isHi ? 'OHSR टैंक क्षमता' : 'OHSR Tank Capacity'}</label>
-                <select id="est-select-ohsrcap" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl p-2.5 text-white font-mono">
+                <select id="est-select-ohsrcap" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl p-2.5 min-h-[44px] text-white font-mono focus:outline-none focus:border-blueprint-500">
                   <option value="2.5">2.5 Lakh Liters</option>
                   <option value="4.5" selected>4.5 Lakh Liters</option>
                   <option value="7.5">7.5 Lakh Liters</option>
@@ -3017,7 +3159,7 @@
               </div>
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1">${isHi ? 'नल कनेक्शन (FHTC)' : 'Household Taps (FHTC)'}</label>
-                <input type="number" id="est-input-fhtc" value="22000" step="1000" oninput="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl p-2.5 text-white font-mono">
+                <input type="number" inputmode="numeric" id="est-input-fhtc" value="22000" step="1000" oninput="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl p-2.5 min-h-[44px] text-white font-mono focus:outline-none focus:border-blueprint-500">
               </div>
             </div>
           `;
@@ -3028,20 +3170,20 @@
                 <span data-i18n="est-lbl-road-len">${isHi ? 'राजमार्ग / सड़क लंबाई (किमी)' : 'Highway / Road Length (km)'}</span>
                 <span id="est-val-road" class="font-bold text-amberGold-400">24 km</span>
               </div>
-              <input type="range" min="5" max="100" value="24" id="est-input-road" oninput="ParishishtApp.updateRoadSlider(this.value)" class="w-full accent-amberGold-500 bg-obsidian-800 rounded-lg">
+              <input type="range" min="5" max="100" value="24" id="est-input-road" oninput="ParishishtApp.updateRoadSlider(this.value)" class="w-full h-8 sm:h-6 accent-amberGold-500 bg-obsidian-800 rounded-lg cursor-pointer">
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1">${isHi ? 'फुटपाथ प्रकार' : 'Pavement Type'}</label>
-                <select id="est-select-pavement" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl p-2.5 text-white font-mono">
+                <select id="est-select-pavement" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl p-2.5 min-h-[44px] text-white font-mono focus:outline-none focus:border-blueprint-500">
                   <option value="flexible" selected>Flexible Bituminous (IRC:37)</option>
                   <option value="rigid">Rigid PQC Concrete (IRC:58)</option>
                 </select>
               </div>
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1">${isHi ? 'आरसीसी बॉक्स पुलिया' : 'RCC Box Culverts'}</label>
-                <input type="number" id="est-input-culverts" value="6" min="1" max="30" oninput="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl p-2.5 text-white font-mono">
+                <input type="number" inputmode="numeric" id="est-input-culverts" value="6" min="1" max="30" oninput="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl p-2.5 min-h-[44px] text-white font-mono focus:outline-none focus:border-blueprint-500">
               </div>
             </div>
           `;
@@ -3052,13 +3194,13 @@
                 <span data-i18n="est-lbl-drain-len">${isHi ? 'वर्षा जल नाला लंबाई (किमी)' : 'Stormwater Conduit Length (km)'}</span>
                 <span id="est-val-drain" class="font-bold text-laserEmerald-400">4.2 km</span>
               </div>
-              <input type="range" min="1" max="25" step="0.2" value="4.2" id="est-input-drain" oninput="ParishishtApp.updateDrainSlider(this.value)" class="w-full accent-laserEmerald-500 bg-obsidian-800 rounded-lg">
+              <input type="range" min="1" max="25" step="0.2" value="4.2" id="est-input-drain" oninput="ParishishtApp.updateDrainSlider(this.value)" class="w-full h-8 sm:h-6 accent-laserEmerald-500 bg-obsidian-800 rounded-lg cursor-pointer">
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1">${isHi ? 'बॉक्स ड्रेन आयाम' : 'Box Drain Cross-Section'}</label>
-                <select id="est-select-drainbox" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl p-2.5 text-white font-mono">
+                <select id="est-select-drainbox" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl p-2.5 min-h-[44px] text-white font-mono focus:outline-none focus:border-blueprint-500">
                   <option value="2.0">Standard Box (2.0m x 1.5m)</option>
                   <option value="2.5" selected>Heavy Box (2.5m x 2.0m)</option>
                   <option value="4.0">Twin-Cell Box (4.0m x 2.5m)</option>
@@ -3066,7 +3208,7 @@
               </div>
               <div>
                 <label class="block text-xs font-mono text-slate-300 mb-1">${isHi ? 'पंपिंग स्टेशन' : 'Pumping Station LPM'}</label>
-                <select id="est-select-pumping" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-xs rounded-xl p-2.5 text-white font-mono">
+                <select id="est-select-pumping" onchange="ParishishtApp.recomputeEstimator()" class="w-full bg-obsidian-800 border border-obsidian-700 text-base sm:text-xs rounded-xl p-2.5 min-h-[44px] text-white font-mono focus:outline-none focus:border-blueprint-500">
                   <option value="6000">6,000 LPM Station</option>
                   <option value="12000" selected>12,000 LPM High-Discharge</option>
                   <option value="24000">24,000 LPM Regional Flood</option>
@@ -3230,9 +3372,9 @@ Fleet: ${fleet}`;
         this.state.activeFleetCategory = cat;
         document.querySelectorAll('.fleet-pill').forEach(btn => {
           if (btn.getAttribute('data-fleet') === cat) {
-            btn.className = "fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all shadow-sm shadow-blueprint-600/30";
+            btn.className = "fleet-pill px-3 py-1.5 rounded-lg bg-blueprint-600 text-white transition-all shadow-sm shadow-blueprint-600/30 whitespace-nowrap min-h-[38px] active:scale-95 shrink-0";
           } else {
-            btn.className = "fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all";
+            btn.className = "fleet-pill px-3 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all whitespace-nowrap min-h-[38px] active:scale-95 shrink-0";
           }
         });
         this.renderMachinery();
@@ -3258,7 +3400,7 @@ Fleet: ${fleet}`;
 
         loopList.forEach(m => {
           const item = document.createElement('div');
-          item.className = "glass-card p-6 rounded-3xl border border-obsidian-700/60 hover:border-blueprint-400 hover:shadow-xl hover:shadow-blueprint-500/10 transition-all flex flex-col justify-between shrink-0 w-[320px] sm:w-[360px] md:w-[380px] group/card";
+          item.className = "glass-card p-5 sm:p-6 rounded-3xl border border-obsidian-700/60 hover:border-blueprint-400 hover:shadow-xl hover:shadow-blueprint-500/10 transition-all flex flex-col justify-between shrink-0 w-[285px] sm:w-[340px] md:w-[380px] group/card";
 
           const name = isHi ? m.name_hi : m.name;
           const catLabel = isHi ? m.categoryLabel_hi : m.categoryLabel;
