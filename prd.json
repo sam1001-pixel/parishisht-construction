@@ -1,0 +1,69 @@
+{
+  "project": "Parishisht Construction Corporate Web Portal",
+  "branchName": "ralph/corporate-portal",
+  "description": "B2G public works copywriting suite, Wix master blocks, and interactive web portal for Parishisht Construction Private Limited in Bihar",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Initialize Repository Hygiene and CodeRabbit Quality Gates",
+      "description": "As a lead architect, I want repository structure and .coderabbit.yaml initialized to enforce quality standards.",
+      "acceptanceCriteria": [
+        "Git repository initialized at /scratch/parishisht-construction",
+        ".coderabbit.yaml created with assertive review rules",
+        ".planning/PROJECT.md and ROADMAP.md created",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": "Completed initial scaffolding and git repository."
+    },
+    {
+      "id": "US-002",
+      "title": "Author Complete Wix Master Copywriting and Layout Blueprint",
+      "description": "As a marketing director, I want exact copy blocks for all pages including Investors, Careers, and Bihar public works sectors.",
+      "acceptanceCriteria": [
+        "Complete Hero Banner with trust metrics and dual CTAs",
+        "4-Sector Capability Grid (PHE, Civil & Roads, BUIDCO Urban Drainage, Heavy Works)",
+        "Comprehensive About Us section with 4 core pillars",
+        "Dedicated Investors & Financial Strength section with balance sheet ratios, bank solvency, and JV criteria",
+        "Dedicated Careers & Leadership section with open positions across Bihar districts",
+        "Corporate Footer with CIN, GSTIN, and compliance certifications",
+        "Typecheck passes"
+      ],
+      "priority": 2,
+      "passes": true,
+      "notes": "Completed WIX_MASTER_BLOCKS.md with copy-pasteable blocks for all 8 corporate pages and sections."
+    },
+    {
+      "id": "US-003",
+      "title": "Build Interactive Standalone Web Portal Prototype",
+      "description": "As an executive or tender board member, I want to experience the complete portal interactively with project filters and career modal.",
+      "acceptanceCriteria": [
+        "Standalone HTML5 + Tailwind CSS web application built with clean semantic markup",
+        "Sticky corporate navigation with mobile drawer menu",
+        "Animated counter stats for turnover, districts covered, and delivery rates",
+        "Filterable project showcase tabs (All, Water Supply, Roads & Bridges, Urban Drainage)",
+        "Interactive Career Application modal with role selector and resume submission simulation",
+        "Subcontractor / Vendor Empanelment registration form",
+        "Typecheck passes"
+      ],
+      "priority": 3,
+      "passes": true,
+      "notes": "Completed index.html with interactive filter tabs, modals, and responsive layout."
+    },
+    {
+      "id": "US-004",
+      "title": "Create Brand Identity and Design Tokens Documentation",
+      "description": "As a design team, I want color palettes, typography specifications, and asset guides documented for brand consistency.",
+      "acceptanceCriteria": [
+        "Color system documented: Navy (#0A192F), Safety Gold (#D97706), Steel Slate (#334155)",
+        "Typography hierarchy documented for Inter / Plus Jakarta Sans",
+        "Asset guidance for construction imagery, safety gear, and official certifications",
+        "Typecheck passes"
+      ],
+      "priority": 4,
+      "passes": true,
+      "notes": "Completed BRAND_GUIDELINES.md with full token system."
+    }
+  ]
+}
