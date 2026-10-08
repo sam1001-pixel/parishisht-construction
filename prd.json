@@ -182,6 +182,23 @@
       "priority": 11,
       "passes": true,
       "notes": "Successfully deployed rich light corporate EPC palette and custom dropdown styling benchmarked against L&T, RKDCPL, and MGCPL via UI/UX Pro Max."
+    },
+    {
+      "id": "US-013",
+      "title": "Multi-Page Web Portal Transformation and Hero Image Visibility Enhancement",
+      "description": "As an executive user, tender board official, or partner, I want the website structured into 9 dedicated pages with vivid hero photograph visibility, UI/UX Pro Max construction color palette, persistent bilingual state, and shared modular assets.",
+      "acceptanceCriteria": [
+        "Hero image visibility restored to brightness 0.92 with clear view of engineers, cranes, 1200mm pipeline, and sunset sky",
+        "9 dedicated pages built and verified: index.html, about.html, sectors.html, projects.html, operations.html, estimator.html, tenders.html, careers.html, contact.html",
+        "Shared asset architecture: assets/css/style.css, assets/js/tailwind-config.js, assets/js/data.js, assets/js/translations.js, assets/js/app.js",
+        "Persistent bilingual state (localStorage) across all page navigation",
+        "Zero broken inter-page links across all 9 pages",
+        "All HTML pages pass syntax validation with 0 errors",
+        "All JS files pass delimiter balance checks"
+      ],
+      "priority": 12,
+      "passes": true,
+      "notes": "Successfully transformed portal into 9 verified multi-pages with prominent hero photograph and UI/UX Pro Max standards."
     }
   ]
 }

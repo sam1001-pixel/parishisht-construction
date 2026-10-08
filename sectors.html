@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Capabilities & Engineering Sectors | Parishisht Construction Private Limited</title>
+  <meta name="description" content="Explore Parishisht Construction's multi-disciplinary EPC capabilities across Piped Water Grids (JJM/PHED), Civil Highways (RCD), Urban Drainage (BUIDCO), and Bridges & Heavy RCC.">
+  
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Shared Global Stylesheet & Tailwind Config -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tailwind-config.js"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-royalBlue-600 selection:text-white relative min-h-screen flex flex-col pb-20 md:pb-0">
+
+  <!-- ================= TOP EXECUTIVE UTILITY BAR ================= -->
+  <header class="w-full bg-slate-900 border-b border-slate-800 text-xs py-1.5 px-3 sm:px-6 lg:px-8 z-40 relative">
+    <div class="max-w-7xl mx-auto flex justify-between items-center gap-2">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-amberGold-500/20 text-amberGold-400 border border-amberGold-500/30 whitespace-nowrap shrink-0">
+          <span class="w-1.5 h-1.5 rounded-full bg-amberGold-400 animate-pulse"></span>
+          <span data-i18n="top-badge">GOVERNMENT OF BIHAR EMPANELED</span>
+        </span>
+        <span class="text-slate-300 font-medium hidden md:inline text-[11px] truncate" data-i18n="top-subtext">Class-1 Registered EPC Contractor • PHED • BUIDCO • RCD • RWD</span>
+        <span class="text-slate-700 hidden xl:inline">|</span>
+        <span class="text-slate-400 font-mono text-[10px] hidden xl:inline" data-i18n="top-iso">ISO 9001:2015 | 45001:2018 Certified</span>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-4 text-[11px] text-slate-300 shrink-0">
+        <span class="hidden sm:flex items-center gap-1.5 font-mono text-slate-400">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span data-i18n="top-cin">CIN: U45200BR2018PTC039000</span>
+        </span>
+        <span class="text-slate-700 hidden sm:inline">|</span>
+        
+        <button onclick="ParishishtApp.toggleLanguage()" id="global-lang-btn" class="inline-flex items-center gap-1.5 px-3 py-1.5 min-h-[38px] rounded-lg bg-slate-800 hover:bg-slate-700 active:scale-95 border border-blue-500/40 text-blue-300 font-bold transition-all shadow-sm group">
+          <i data-lucide="globe" class="w-3.5 h-3.5 text-blue-400 group-hover:rotate-45 transition-transform"></i>
+          <span id="lang-btn-label">हिंदी</span>
+          <span class="text-[10px] font-mono text-slate-400" id="lang-btn-sub">/ EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= STICKY MEGA NAVIGATION ================= -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-slate-200/90 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex justify-between items-center gap-3 sm:gap-4">
+      
+      <a href="index.html" class="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
+        <div class="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-royalNavy-700 via-royalBlue-600 to-royalNavy-900 border border-royalBlue-400/30 flex items-center justify-center text-white shadow-md shadow-royalBlue-600/20 group-hover:scale-105 transition-all">
+          <i data-lucide="hard-hat" class="w-5 h-5 sm:w-6 sm:h-6 text-amberGold-400 group-hover:scale-110 transition-transform"></i>
+        </div>
+        <div>
+          <div class="font-extrabold text-base sm:text-xl tracking-tight text-slate-900 leading-none group-hover:text-royalBlue-600 transition-colors flex items-center gap-1.5 sm:gap-2">
+            <span>PARISHISHT</span>
+            <span class="text-[9px] sm:text-[10px] px-1 sm:px-1.5 py-0.5 font-mono font-bold bg-royalBlue-50 text-royalBlue-700 rounded border border-royalBlue-200">CLASS-1</span>
+          </div>
+          <div class="text-[9px] sm:text-[10px] font-mono text-slate-500 tracking-wider mt-0.5 sm:mt-1 truncate max-w-[190px] sm:max-w-none" data-i18n="top-tagline">Engineering Bihar's Infrastructure Future</div>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-1 xl:gap-2 text-xs font-semibold text-slate-700">
+        <a href="index.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-home">Home</a>
+        <a href="about.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-about">About Us</a>
+        <a href="sectors.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg text-royalBlue-600 font-bold border-b-2 border-royalBlue-600" data-i18n="nav-sectors">Sectors</a>
+        <a href="projects.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-projects">Projects</a>
+        <a href="operations.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-operations">Operations & Fleet</a>
+        <a href="estimator.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-estimator">BOQ Estimator</a>
+        <a href="tenders.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-tenders">Tenders & JV</a>
+        <a href="careers.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-careers">Careers</a>
+        <a href="contact.html" class="desktop-nav-link px-2.5 py-1.5 rounded-lg hover:text-royalBlue-600 hover:bg-slate-100 transition-colors" data-i18n="nav-contact">Contact</a>
+      </div>
+
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="projects.html" class="hidden md:flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-100 border border-slate-300 text-slate-600 hover:text-slate-900 hover:border-slate-400 text-xs font-mono transition-all">
+          <i data-lucide="search" class="w-3.5 h-3.5 text-royalBlue-600"></i>
+          <span data-i18n="nav-search-tip">Quick Search (Ctrl + K)</span>
+        </a>
+
+        <button onclick="ParishishtApp.openModal('tender-modal')" class="px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-gradient-to-r from-amberGold-500 to-amberGold-600 hover:from-amberGold-400 hover:to-amberGold-500 text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider shadow-md shadow-amberGold-500/20 hover:shadow-amberGold-500/30 transition-all flex items-center gap-1.5 min-h-[38px] active:scale-95">
+          <i data-lucide="file-check" class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white"></i>
+          <span data-i18n="nav-btn-dossier">Tender Pre-Quals</span>
+        </button>
+
+        <button onclick="ParishishtApp.toggleMobileMenu()" class="lg:hidden min-w-[42px] min-h-[42px] flex items-center justify-center rounded-xl bg-slate-100 text-slate-700 hover:text-slate-900 border border-slate-200 active:scale-95" aria-label="Open Navigation Menu">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="hidden lg:hidden bg-white/98 backdrop-blur-2xl border-b border-slate-200 px-4 sm:px-6 py-5 text-sm space-y-4 max-h-[85vh] overflow-y-auto shadow-2xl">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <span class="text-xs font-mono font-bold text-slate-500 uppercase tracking-wider" data-i18n="mob-menu-title">Corporate Portal Navigation</span>
+        <button onclick="ParishishtApp.toggleMobileMenu()" class="p-2 text-slate-500 hover:text-slate-800 rounded-lg active:scale-90 min-w-[44px] min-h-[44px] flex items-center justify-center" aria-label="Close Menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-semibold">
+        <a href="index.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-royalBlue-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="home" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-home">Home</span>
+        </a>
+        <a href="about.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-royalBlue-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="shield-check" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-about">About Us</span>
+        </a>
+        <a href="sectors.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-royalBlue-50 text-royalBlue-700 font-bold border border-royalBlue-300 min-h-[48px]">
+          <i data-lucide="grid" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-sectors">Sectors</span>
+        </a>
+        <a href="projects.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-royalBlue-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="layers" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-projects">Projects</span>
+        </a>
+        <a href="operations.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-royalBlue-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="radar" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-operations">Operations & Fleet</span>
+        </a>
+        <a href="estimator.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-amberGold-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="calculator" class="w-4 h-4 text-amberGold-500"></i>
+          <span data-i18n="nav-estimator">BOQ Estimator</span>
+        </a>
+        <a href="tenders.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-royalBlue-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="file-text" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-tenders">Tenders & JV</span>
+        </a>
+        <a href="careers.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-royalBlue-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="users" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-careers">Careers</span>
+        </a>
+        <a href="contact.html" class="drawer-nav-link flex items-center gap-3 p-3 rounded-xl bg-slate-50 text-slate-800 hover:text-royalBlue-600 hover:bg-slate-100 active:bg-slate-200 border border-slate-200 min-h-[48px]">
+          <i data-lucide="mail" class="w-4 h-4 text-royalBlue-600"></i>
+          <span data-i18n="nav-contact">Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= SECTORS HERO ================= -->
+  <section class="bg-gradient-to-br from-royalNavy-950 via-royalNavy-900 to-royalNavy-950 text-white py-16 sm:py-24 relative overflow-hidden tech-grid">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-royalBlue-500/20 text-blue-300 border border-royalBlue-400/30 mb-4">
+        <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+        <span>MULTI-DISCIPLINARY PUBLIC WORKS CAPABILITIES</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
+        Engineering Capabilities Across 4 Core Sectors
+      </h1>
+      <p class="text-sm sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+        From deep Ganga intake wells and regional drinking water distribution grids to high-capacity highways and urban stormwater mitigation networks across Bihar.
+      </p>
+
+      <!-- Quick Jump Sector Buttons -->
+      <div class="flex flex-wrap justify-center gap-2.5 mt-8">
+        <a href="#phe" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-mono font-bold text-white border border-slate-700 transition-all flex items-center gap-1.5">
+          <i data-lucide="droplet" class="w-3.5 h-3.5 text-blue-400"></i> Water Grids (PHE)
+        </a>
+        <a href="#roads" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-mono font-bold text-white border border-slate-700 transition-all flex items-center gap-1.5">
+          <i data-lucide="truck" class="w-3.5 h-3.5 text-amberGold-400"></i> Civil Highways & Roads
+        </a>
+        <a href="#urban" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-mono font-bold text-white border border-slate-700 transition-all flex items-center gap-1.5">
+          <i data-lucide="waves" class="w-3.5 h-3.5 text-laserEmerald-400"></i> Urban Drainage (BUIDCO)
+        </a>
+        <a href="#epc" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-mono font-bold text-white border border-slate-700 transition-all flex items-center gap-1.5">
+          <i data-lucide="building-2" class="w-3.5 h-3.5 text-cyan-400"></i> Heavy RCC & Structures
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTOR 1: PHE WATER GRIDS ================= -->
+  <section id="phe" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-royalBlue-50 text-royalBlue-700 border border-royalBlue-200">
+            <i data-lucide="droplet" class="w-3.5 h-3.5"></i>
+            <span>PUBLIC HEALTH ENGINEERING (PHED)</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Piped Drinking Water Grids & Jal Jeevan Mission
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Parishisht Construction specializes in rural and urban piped drinking water transmission grids. We execute intake wells in alluvial Ganga riverbeds, high-capacity Water Treatment Plants (WTP), Over Head Service Reservoirs (OHSR) up to 20-meter staging, and extensive DI K7/K9 and PE-100 HDPE distribution networks.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-royalBlue-700 pt-2">
+            <span class="bg-royalBlue-50 px-2.5 py-1 rounded border border-royalBlue-200">45 MLD WTP</span>
+            <span class="bg-royalBlue-50 px-2.5 py-1 rounded border border-royalBlue-200">DI K9 1200mm Conduits</span>
+            <span class="bg-royalBlue-50 px-2.5 py-1 rounded border border-royalBlue-200">Automated SCADA Telemetry</span>
+            <span class="bg-royalBlue-50 px-2.5 py-1 rounded border border-royalBlue-200">Zero Leak Tolerance (TPIA)</span>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a href="estimator.html?sector=phe" class="px-5 py-2.5 rounded-xl bg-royalBlue-600 hover:bg-royalBlue-700 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm">
+              <i data-lucide="calculator" class="w-4 h-4"></i> Estimate PHE BOQ & Timeline
+            </a>
+            <a href="projects.html?sector=phe" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center gap-1.5 transition-all">
+              View Executed PHE Works
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4">
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-3">Key Technical Scope & Capabilities</h3>
+            <ul class="space-y-3 text-xs text-slate-700 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-royalBlue-600 shrink-0 mt-0.5"></i>
+                <span><strong>Intake Well Sinking:</strong> Caisson sinking through difficult alluvial strata in Ganga, Gandak, and Koshi river basins.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-royalBlue-600 shrink-0 mt-0.5"></i>
+                <span><strong>OHSR RCC Construction:</strong> Multi-column braced staging with slip-form and shuttering techniques for 4.5 to 10 Lakh Liter reservoirs.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-royalBlue-600 shrink-0 mt-0.5"></i>
+                <span><strong>Pipeline Hydro-Testing:</strong> 1.5x design pressure hydrostatic field testing with zero leakage certification by Third-Party Inspection Agencies.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-royalBlue-600 shrink-0 mt-0.5"></i>
+                <span><strong>Chlorination & Automation:</strong> Gas and electro-chlorination systems paired with GSM/GPRS flow meters for state command telemetry.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-2">Dedicated Equipment Deployed</h3>
+            <p class="text-xs text-slate-600 font-mono leading-relaxed">
+              04 Computerized Batching Plants (30–60 m³/hr), 12 Transit Mixers, 06 Automated HDPE Butt Fusion Rigs (63mm–400mm), 02 Mobile Hydrostatic Pressure Test Rigs, 08 Hydraulic Excavators with trenching buckets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTOR 2: CIVIL HIGHWAYS & ROADS ================= -->
+  <section id="roads" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-amberGold-50 text-amberGold-700 border border-amberGold-200">
+            <i data-lucide="truck" class="w-3.5 h-3.5"></i>
+            <span>ROAD CONSTRUCTION DEPARTMENT (RCD)</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Civil Highways & Arterial Expressways
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Executing major state highway corridors and arterial bypasses adhering to IRC and MoRTH specifications. We handle flexible asphalt pavements, rigid concrete pavements (PQC with DLC sub-base), subgrade stabilization, and flood-resilient embankment works.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-amberGold-700 pt-2">
+            <span class="bg-amberGold-50 px-2.5 py-1 rounded border border-amberGold-200">IRC / MoRTH Standards</span>
+            <span class="bg-amberGold-50 px-2.5 py-1 rounded border border-amberGold-200">Sensor Pavers Deployed</span>
+            <span class="bg-amberGold-50 px-2.5 py-1 rounded border border-amberGold-200">PQC Rigid Pavements</span>
+            <span class="bg-amberGold-50 px-2.5 py-1 rounded border border-amberGold-200">Twin RCC Box Culverts</span>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a href="estimator.html?sector=roads" class="px-5 py-2.5 rounded-xl bg-amberGold-500 hover:bg-amberGold-600 text-slate-950 font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm">
+              <i data-lucide="calculator" class="w-4 h-4"></i> Estimate Highway BOQ & Cost
+            </a>
+            <a href="projects.html?sector=roads" class="px-5 py-2.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-bold text-xs flex items-center gap-1.5 transition-all">
+              View Executed Road Corridors
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4">
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-3">Key Technical Scope & Capabilities</h3>
+            <ul class="space-y-3 text-xs text-slate-700 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amberGold-500 shrink-0 mt-0.5"></i>
+                <span><strong>Rigid Pavement (PQC):</strong> Automated slipform paving with electronic level sensors ensuring superior ride quality and 30-year design life.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amberGold-500 shrink-0 mt-0.5"></i>
+                <span><strong>Flexible Bituminous Surfacing:</strong> High-density DBM and BC laying with computerized hot mix plants and multi-wheel pneumatic rollers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amberGold-500 shrink-0 mt-0.5"></i>
+                <span><strong>Subgrade & Geosynthetics:</strong> Fly ash and lime stabilization over expansive black cotton and alluvial clays with non-woven geotextile separation layers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-amberGold-500 shrink-0 mt-0.5"></i>
+                <span><strong>Cross Drainage Structures:</strong> Precast and cast-in-situ RCC box culverts designed to withstand 1-in-50-year Bihar monsoon flood discharges.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-2">Dedicated Equipment Deployed</h3>
+            <p class="text-xs text-slate-600 font-mono leading-relaxed">
+              03 Electronic Sensor Pavers (Vögele & Dynapac), 04 Heavy Vibratory Soil Compactors (11-ton), 02 Tandem Steel Rollers, 01 Cold Milling Planer, 16 Heavy Tipper Dumpers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTOR 3: URBAN DRAINAGE ================= -->
+  <section id="urban" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-laserEmerald-50 text-laserEmerald-700 border border-laserEmerald-200">
+            <i data-lucide="waves" class="w-3.5 h-3.5"></i>
+            <span>BUIDCO & MUNICIPAL INFRASTRUCTURE</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Stormwater Conduits & Urban Flood Drainage
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Eliminating urban monsoon waterlogging through modern subterranean civil conduits. In partnership with BUIDCO and municipal corporations, we build high-capacity twin RCC storm boxes, deep interceptor sewer conduits, and high-discharge automated pumping outfalls.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-laserEmerald-700 pt-2">
+            <span class="bg-laserEmerald-50 px-2.5 py-1 rounded border border-laserEmerald-200">Twin RCC Box Culverts</span>
+            <span class="bg-laserEmerald-50 px-2.5 py-1 rounded border border-laserEmerald-200">Microtunneling & Pipe Jacking</span>
+            <span class="bg-laserEmerald-50 px-2.5 py-1 rounded border border-laserEmerald-200">Automated Trash Rakes</span>
+            <span class="bg-laserEmerald-50 px-2.5 py-1 rounded border border-laserEmerald-200">High-Discharge Outfalls</span>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a href="estimator.html?sector=urban" class="px-5 py-2.5 rounded-xl bg-laserEmerald-600 hover:bg-laserEmerald-700 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm">
+              <i data-lucide="calculator" class="w-4 h-4"></i> Estimate Drainage BOQ & Timeline
+            </a>
+            <a href="projects.html?sector=urban" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs flex items-center gap-1.5 transition-all">
+              View Executed Drainage Works
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4">
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-3">Key Technical Scope & Capabilities</h3>
+            <ul class="space-y-3 text-xs text-slate-700 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-laserEmerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>High-Discharge Pumping Stations:</strong> Up to 15,000 LPM submersible drainage pump installations with SCADA telemetry and standby diesel generator automation.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-laserEmerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>Cast-in-Situ & Precast Box Conduits:</strong> Rapid assembly twin-box drains cast with high-strength M35/M40 concrete designed for maximum hydraulic throughput.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-laserEmerald-600 shrink-0 mt-0.5"></i>
+                <span><strong>Dense Urban Trench Shoring:</strong> Heavy sheet piling and hydraulic trench shoring boxes protecting adjacent multi-story buildings and utility lines during 5-meter deep excavations.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-2">Dedicated Equipment Deployed</h3>
+            <p class="text-xs text-slate-600 font-mono leading-relaxed">
+              06 Heavy Dewatering Submersible Pump Sets, 02 Long-Boom Excavators, 02 Precast Handling Mobile Cranes, 01 Laser Pipe-Laying Station, Heavy Trench Shoring Systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SECTOR 4: BRIDGES & HEAVY RCC ================= -->
+  <section id="epc" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-cyan-50 text-cyan-700 border border-cyan-200">
+            <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
+            <span>BRIDGES & HEAVY CIVIL STRUCTURES</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+            Major RCC Bridges, Flyovers & Turnkey EPC
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Delivering major structural engineering landmarks across Bihar. From multi-span river bridges with deep well foundations to institutional government complexes, we offer single-point EPC turnkey accountability from soil testing to statutory departmental handover.
+          </p>
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-cyan-700 pt-2">
+            <span class="bg-cyan-50 px-2.5 py-1 rounded border border-cyan-200">Well & Pile Foundations</span>
+            <span class="bg-cyan-50 px-2.5 py-1 rounded border border-cyan-200">PSC Girder Launching</span>
+            <span class="bg-cyan-50 px-2.5 py-1 rounded border border-cyan-200">Heavy Institutional EPC</span>
+            <span class="bg-cyan-50 px-2.5 py-1 rounded border border-cyan-200">Mass Earthworks</span>
+          </div>
+          <div class="pt-4 flex flex-wrap gap-3">
+            <a href="estimator.html" class="px-5 py-2.5 rounded-xl bg-cyan-600 hover:bg-cyan-700 text-white font-bold text-xs flex items-center gap-1.5 transition-all shadow-sm">
+              <i data-lucide="calculator" class="w-4 h-4"></i> Public Works Bidding Calculator
+            </a>
+            <a href="projects.html" class="px-5 py-2.5 rounded-xl bg-white border border-slate-300 hover:bg-slate-100 text-slate-800 font-bold text-xs flex items-center gap-1.5 transition-all">
+              View All Public Works Packages
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-4">
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-3">Key Technical Scope & Capabilities</h3>
+            <ul class="space-y-3 text-xs text-slate-700 font-mono">
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-600 shrink-0 mt-0.5"></i>
+                <span><strong>Deep Rotary Bored Piling:</strong> 1200mm diameter bored cast-in-situ piles with bentonite slurry circulation reaching hard strata depths of up to 45 meters.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-600 shrink-0 mt-0.5"></i>
+                <span><strong>Prestressed Concrete (PSC) Girders:</strong> In-house post-tensioning jack systems and high-capacity girder launching gantries ensuring flawless bridge deck installation.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-cyan-600 shrink-0 mt-0.5"></i>
+                <span><strong>Turnkey Institutional Facilities:</strong> Multi-story administrative centers, departmental laboratories, and utility buildings built to green building standards.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm">
+            <h3 class="text-sm font-mono font-bold text-slate-900 uppercase tracking-wider mb-2">Dedicated Equipment Deployed</h3>
+            <p class="text-xs text-slate-600 font-mono leading-relaxed">
+              01 Hydraulic Rotary Piling Rig (Casagrande/Bauer class), 02 Heavy Mobile Telescopic Cranes (50-ton & 80-ton), 02 Concrete Boom Placers, 03 High-Pressure Grouting Units.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CORPORATE FOOTER ================= -->
+  <footer class="bg-slate-950 border-t border-slate-800 py-14 text-xs font-mono text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="space-y-3">
+          <div class="font-extrabold text-base text-white tracking-tight">PARISHISHT CONSTRUCTION</div>
+          <p class="text-[11px] text-slate-400 leading-relaxed font-sans" data-i18n="footer-desc">
+            Parishisht Construction Private Limited is a registered Class-1 EPC contractor in Bihar specializing in public health engineering, highways, urban drainage, and institutional infrastructure.
+          </p>
+          <div class="text-[10px] text-amberGold-400">CIN: U45200BR2018PTC039000 • GSTIN: 10AAECP1234F1Z5</div>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-4" data-i18n="footer-col-sectors">Public Works Sectors</h4>
+          <ul class="space-y-2 text-[11px]">
+            <li><a href="sectors.html#phe" class="hover:text-blue-400">PHE Drinking Water Grids (JJM)</a></li>
+            <li><a href="sectors.html#roads" class="hover:text-blue-400">Civil Highways & Culverts (RCD)</a></li>
+            <li><a href="sectors.html#urban" class="hover:text-blue-400">BUIDCO Urban Drainage Networks</a></li>
+            <li><a href="operations.html" class="hover:text-blue-400">Computerized Batching Fleet</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-4" data-i18n="footer-col-corp">Governance & Transparency</h4>
+          <ul class="space-y-2 text-[11px]">
+            <li><a href="about.html" class="hover:text-blue-400">Financial Solvency Statements</a></li>
+            <li><a href="estimator.html" class="hover:text-blue-400">Tender Bidding Capacity Engine</a></li>
+            <li><a href="tenders.html" class="hover:text-blue-400">Vendor Empanelment Desk</a></li>
+            <li><a href="careers.html" class="hover:text-blue-400">Careers & Site Vacancies</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-4" data-i18n="footer-col-ops">Bihar District Operations</h4>
+          <p class="text-[11px] text-slate-400 leading-relaxed mb-3 font-sans">
+            Active command across 15+ districts including Patna, Muzaffarpur, Bhagalpur, Gaya, Darbhanga, and Nalanda.
+          </p>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-[10px] text-blue-400 font-mono">
+            Direct Tendering Hotline:<br>
+            tenders@parishishtconstruction.com
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px]">
+        <div data-i18n="footer-copy">© 2026 Parishisht Construction Private Limited. All Rights Reserved.</div>
+        <div class="flex items-center gap-6">
+          <a href="about.html" class="hover:text-slate-200" data-i18n="footer-privacy">Privacy Policy</a>
+          <a href="#" onclick="ParishishtApp.openModal('tender-modal')" class="hover:text-slate-200" data-i18n="footer-statutory">Statutory Credentials</a>
+          <a href="contact.html" class="hover:text-slate-200" data-i18n="footer-sitemap">Contact Directorate</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= MOBILE BOTTOM FLOATING ACTION DOCK ================= -->
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 px-3 py-2 flex items-center justify-around shadow-2xl safe-area-pb text-slate-600" aria-label="Mobile Bottom Navigation">
+    <a href="index.html" class="mobile-dock-link flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-500 hover:text-royalBlue-600 active:scale-95 transition-all">
+      <i data-lucide="home" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-home">Home</span>
+    </a>
+    <a href="projects.html" class="mobile-dock-link flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-500 hover:text-royalBlue-600 active:scale-95 transition-all">
+      <i data-lucide="layers" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-projects">Projects</span>
+    </a>
+    <a href="operations.html" class="mobile-dock-link flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-500 hover:text-royalBlue-600 active:scale-95 transition-all">
+      <i data-lucide="radar" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-radar">Radar</span>
+    </a>
+    <a href="estimator.html" class="mobile-dock-link flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-500 hover:text-royalBlue-600 active:scale-95 transition-all">
+      <i data-lucide="calculator" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-estimator">Estimator</span>
+    </a>
+    <button onclick="ParishishtApp.toggleMobileMenu()" class="flex flex-col items-center justify-center gap-1 min-w-[54px] min-h-[44px] text-slate-500 hover:text-amberGold-600 active:scale-95 transition-all" aria-label="Toggle Navigation Menu">
+      <i data-lucide="menu" class="w-5 h-5"></i>
+      <span class="text-[10px] font-mono tracking-tight" data-i18n="mob-nav-menu">Menu</span>
+    </button>
+  </aside>
+
+  <!-- ================= FLOATING TOAST NOTIFICATION CENTER ================= -->
+  <div id="toast-container" class="fixed bottom-20 md:bottom-6 right-3 sm:right-6 left-3 sm:left-auto z-50 flex flex-col gap-2.5 pointer-events-none max-w-sm w-auto sm:w-full" role="region" aria-live="polite"></div>
+
+  <!-- ================= TENDER MODAL ================= -->
+  <div id="tender-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-white border border-slate-200 text-slate-900 rounded-t-3xl sm:rounded-3xl max-w-2xl w-full p-5 sm:p-8 relative shadow-2xl overflow-y-auto max-h-[92dvh] sm:max-h-[90vh] pb-8 sm:pb-8">
+      <div class="w-12 h-1.5 bg-slate-300 rounded-full mx-auto mb-4 sm:hidden"></div>
+      <button onclick="ParishishtApp.closeModal('tender-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-2 min-w-[40px] min-h-[40px] flex items-center justify-center" aria-label="Close Modal">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <div class="flex items-center gap-2 mb-2">
+        <span class="bg-amberGold-50 text-amberGold-700 text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md border border-amberGold-200">Statutory Pre-Quals</span>
+        <span class="text-xs font-mono font-bold text-slate-500">Government of Bihar Empaneled</span>
+      </div>
+
+      <h3 class="text-xl sm:text-2xl font-black text-slate-900 mb-2">Parishisht Corporate Tender Dossier</h3>
+      <p class="text-xs text-slate-600 mb-6">Class-1 registered credentials verified for PHE, BUIDCO, RCD, and RWD procurement committees.</p>
+
+      <div class="space-y-4 text-xs font-mono">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-slate-500 text-[10px]">Contractor Registration</div>
+            <div class="font-bold text-slate-900 mt-0.5">Class-1 (Govt of Bihar)</div>
+            <div class="text-[10px] text-royalBlue-600 mt-1">Valid across all 38 Districts</div>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="text-slate-500 text-[10px]">Bank Solvency Line</div>
+            <div class="font-bold text-amberGold-600 mt-0.5">₹120+ Crore</div>
+            <div class="text-[10px] text-slate-500 mt-1">Tier-1 Banking Consortium</div>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+          <div class="text-slate-500 text-[10px]">Statutory Identifiers</div>
+          <div class="flex justify-between border-b border-slate-200 pb-1">
+            <span class="text-slate-600">CIN:</span>
+            <span class="font-bold text-slate-900">U45200BR2018PTC039000</span>
+          </div>
+          <div class="flex justify-between border-b border-slate-200 pb-1">
+            <span class="text-slate-600">GSTIN:</span>
+            <span class="font-bold text-slate-900">10AAECP1234F1Z5</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-600">PAN:</span>
+            <span class="font-bold text-slate-900">AAECP1234F</span>
+          </div>
+        </div>
+
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="text-slate-500 text-[10px] mb-1">Quality & Safety Standards</div>
+          <div class="text-slate-800 font-bold">ISO 9001:2015 (QMS) • ISO 45001:2018 (OHSMS)</div>
+          <div class="text-[10px] text-laserEmerald-600 mt-0.5">Zero-LTI Certified across 450,000+ Safe Man-Hours</div>
+        </div>
+      </div>
+
+      <div class="mt-6 pt-4 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+        <button onclick="window.print()" class="w-full sm:flex-1 py-3 rounded-xl bg-royalBlue-600 hover:bg-royalBlue-700 text-white font-bold text-xs uppercase tracking-wider min-h-[44px] active:scale-95 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>Print Statutory Dossier</span>
+        </button>
+        <a href="mailto:tenders@parishishtconstruction.com?subject=Tender%20Pre-Quals%20Inquiry" class="w-full sm:flex-1 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider min-h-[44px] active:scale-95 transition-all flex items-center justify-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span>Email Directorate Cell</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Modular Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
