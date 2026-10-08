@@ -286,11 +286,14 @@
         
         <div class="grid grid-cols-1 sm:grid-cols-4 gap-4">
           <div>
-            <label class="block text-xs font-mono text-slate-700 mb-1">Formula Factor</label>
-            <select id="calc-factor" onchange="ParishishtApp.recomputeBiddingCapacity()" class="custom-select w-full bg-slate-50 border border-slate-300 text-base sm:text-xs rounded-xl p-2.5 min-h-[44px] text-slate-800 font-mono focus:outline-none focus:border-royalBlue-600">
-              <option value="1.5" selected>1.5x (CPWD/NHAI)</option>
-              <option value="2.0">2.0x (Bihar State PWD)</option>
-            </select>
+            <label class="block text-xs font-mono font-bold text-slate-700 mb-1">Formula Factor (Multiplier N)</label>
+            <div class="relative flex items-center">
+              <i data-lucide="scale" class="w-4 h-4 text-amberGold-600 absolute left-3 pointer-events-none z-10"></i>
+              <select id="calc-factor" onchange="ParishishtApp.recomputeBiddingCapacity()" class="custom-select w-full bg-white border border-slate-300 text-base sm:text-xs rounded-xl pl-9 pr-8 p-2.5 min-h-[44px] text-slate-800 font-mono font-bold shadow-xs hover:border-amberGold-400 focus:outline-none focus:border-royalBlue-600">
+                <option value="1.5" selected>1.5x (CPWD / NHAI Standard)</option>
+                <option value="2.0">2.0x (Bihar State PWD / RCD)</option>
+              </select>
+            </div>
           </div>
           <div>
             <label class="block text-xs font-mono text-slate-700 mb-1">A: Max Annual Turnover (₹ Cr.)</label>

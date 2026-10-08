@@ -219,6 +219,23 @@
       "priority": 13,
       "passes": true,
       "notes": "Completed lite invisible hero overlay and premier mobile UI/UX ergonomics across all 9 pages adhering to UI/UX Pro Max guidelines."
+    },
+    {
+      "id": "US-015",
+      "title": "Side Hero Layout with Hero Image Sunset Harmony & Elevated UI/UX Pro Max Dropdowns",
+      "description": "As a site visitor, engineer, or executive, I want the Mission-Critical Public Works section aligned to the side to give full prominence to the civil infrastructure photograph, with colors that harmonize with the sunset and safety equipment, and elevated custom dropdowns with icons, hover/focus states, and option styling.",
+      "acceptanceCriteria": [
+        "Hero section on index.html converted to executive side-by-side layout (grid grid-cols-1 lg:grid-cols-12) with card aligned to left (col-span-7) and open photographic space with Live Site Telemetry HUD on right (col-span-5)",
+        "Headline gradient updated to radiant sunset amber-gold and safety orange (from-amber-300 via-amber-400 to-orange-400) directly matching the sunset horizon and safety helmets in the hero photo",
+        "Primary CTA button elevated to high-vis sunset gold (bg-gradient-to-r from-amber-500 via-amberGold-500 to-amber-600) with dark typography for optimal contrast",
+        "Custom dropdowns (.custom-select) upgraded with royal blue SVG chevrons, smooth hover lift, 3.5px focus rings, and styled native option states",
+        "Projects Explorer and BOQ Estimator dropdowns enhanced with map-pin, arrow-down-up, and scale icons",
+        "All 9 HTML pages pass Python html.parser validation with 0 errors",
+        "All JS files pass delimiter balance checks with 0 errors"
+      ],
+      "priority": 14,
+      "passes": true,
+      "notes": "Successfully aligned hero to side layout with sunset color harmony and upgraded custom dropdowns across the portal."
     }
   ]
 }

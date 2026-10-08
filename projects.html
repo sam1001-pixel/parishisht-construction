@@ -177,27 +177,33 @@
         </div>
 
         <div class="flex items-center gap-2 sm:gap-3 flex-wrap">
-          <!-- District Filter Dropdown -->
-          <select id="proj-district-filter" onchange="ParishishtApp.setDistrictFilter(this.value)" class="custom-select py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-base sm:text-xs font-mono font-medium focus:outline-none min-h-[44px]">
-            <option value="all">All Bihar Districts</option>
-            <option value="Patna">Patna</option>
-            <option value="Muzaffarpur">Muzaffarpur</option>
-            <option value="Bhagalpur">Bhagalpur</option>
-            <option value="Gaya">Gaya</option>
-            <option value="Darbhanga">Darbhanga</option>
-            <option value="Nalanda">Nalanda</option>
-            <option value="Vaishali">Vaishali</option>
-            <option value="Samastipur">Samastipur</option>
-            <option value="Begusarai">Begusarai</option>
-            <option value="Purnia">Purnia</option>
-          </select>
+          <!-- District Filter Dropdown with Map Pin Icon -->
+          <div class="relative flex items-center min-w-[210px]">
+            <i data-lucide="map-pin" class="w-4 h-4 text-royalBlue-600 absolute left-3.5 pointer-events-none z-10"></i>
+            <select id="proj-district-filter" onchange="ParishishtApp.setDistrictFilter(this.value)" class="custom-select w-full py-2.5 pl-10 pr-9 rounded-xl bg-white border border-slate-300 text-slate-800 text-base sm:text-xs font-mono font-bold shadow-xs hover:border-royalBlue-400 focus:outline-none min-h-[44px]" aria-label="Filter by Bihar District">
+              <option value="all">All Bihar Districts</option>
+              <option value="Patna">Patna</option>
+              <option value="Muzaffarpur">Muzaffarpur</option>
+              <option value="Bhagalpur">Bhagalpur</option>
+              <option value="Gaya">Gaya</option>
+              <option value="Darbhanga">Darbhanga</option>
+              <option value="Nalanda">Nalanda</option>
+              <option value="Vaishali">Vaishali</option>
+              <option value="Samastipur">Samastipur</option>
+              <option value="Begusarai">Begusarai</option>
+              <option value="Purnia">Purnia</option>
+            </select>
+          </div>
 
-          <!-- Sort Dropdown -->
-          <select id="proj-sort-select" onchange="ParishishtApp.setSort(this.value)" class="custom-select py-2.5 px-3 rounded-xl bg-slate-50 border border-slate-300 text-slate-800 text-base sm:text-xs font-mono font-medium focus:outline-none min-h-[44px]">
-            <option value="progress-desc">Progress: High to Low</option>
-            <option value="progress-asc">Progress: Low to High</option>
-            <option value="value-desc">Value: High to Low</option>
-          </select>
+          <!-- Sort Dropdown with Arrow Sort Icon -->
+          <div class="relative flex items-center min-w-[190px]">
+            <i data-lucide="arrow-down-up" class="w-4 h-4 text-amberGold-600 absolute left-3.5 pointer-events-none z-10"></i>
+            <select id="proj-sort-select" onchange="ParishishtApp.setSort(this.value)" class="custom-select w-full py-2.5 pl-10 pr-9 rounded-xl bg-white border border-slate-300 text-slate-800 text-base sm:text-xs font-mono font-bold shadow-xs hover:border-amberGold-400 focus:outline-none min-h-[44px]" aria-label="Sort Projects Directory">
+              <option value="progress-desc">Progress: High to Low</option>
+              <option value="progress-asc">Progress: Low to High</option>
+              <option value="value-desc">Value: High to Low</option>
+            </select>
+          </div>
 
           <!-- View Switcher -->
           <div class="flex items-center p-1 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono">
