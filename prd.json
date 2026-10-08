@@ -79,6 +79,21 @@
       "priority": 5,
       "passes": true,
       "notes": "Hero background updated with multi-layered gradient scrims, blueprint overlay, and operational HUD card."
+    },
+    {
+      "id": "US-006",
+      "title": "Streamline Hero Layout, Add Bilingual Hindi/English Engine, and Deploy Safety Orange Palette",
+      "description": "As an executive visitor or government engineer, I want the hero HUD card removed to let the engineering imagery breathe, a Hindi/English switcher in the header, and an authoritative Safety Orange & Blueprint Steel palette.",
+      "acceptanceCriteria": [
+        "HUD card removed from hero banner allowing wide, majestic layout",
+        "Hindi / English toggle button added to sticky header, utility bar, and mobile drawer",
+        "Client-side bilingual translation engine with localStorage persistence implemented",
+        "High-Vis Safety Orange (#EA580C) and Blueprint Steel (#0F172A) palette applied with WCAG AAA contrast",
+        "HTML validation passes"
+      ],
+      "priority": 6,
+      "passes": true,
+      "notes": "Completed HUD card removal, language toggle, and color system deployment."
     }
   ]
 }

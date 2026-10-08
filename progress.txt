@@ -1,7 +1,7 @@
 # Progress Log - Parishisht Construction Private Limited Corporate Web Portal
 
 ## Codebase Patterns
-- **Brand Palette:** Deep Marine Navy (`#0A192F`), Public Works Safety Amber/Gold (`#D97706`), Steel Slate (`#334155`), Off-white Background (`#F8FAFC`).
+- **Brand Palette:** High-Vis Safety Orange (`#EA580C`), Blueprint Steel (`#0F172A`), Midnight Obsidian (`#020617`), Precision Blueprint Blue (`#0284C7`), Surface Off-White (`#F8FAFC`).
 - **Terminology Standard:** Aligned strictly with Bihar Public Sector works (PHED, BUIDCO, RCD, RWD, Jal Jeevan Mission, CPWD/IRC standards).
 - **Target Audience:** Tender evaluation committees, chief engineers, institutional bank partners, JV consortiums, civil engineering job applicants.
 - **Wix Block Integration:** Page-by-page ready markdown with pre-formatted H1/H2, body paragraphs, and button configurations.
@@ -12,3 +12,4 @@
 - **2026-10-08:** [US-003] Built responsive standalone web portal prototype in `index.html` with interactive filter tabs, tender dossier modal, and career application modal.
 - **2026-10-08:** [US-004] Created `BRAND_GUIDELINES.md` detailing design tokens, color hierarchy, and photography standards.
 - **2026-10-08:** [US-005] Upgraded Hero Banner section to use the photorealistic civil infrastructure hero image as the full-bleed background with multi-layered high-contrast gradient scrims, blueprint overlay, and floating Bihar Field Radar HUD card.
+- **2026-10-08:** [US-006] Removed hero HUD card for clean cinematic presentation, introduced bilingual Hindi/English toggle button with client-side translation engine, and deployed UI/UX Pro Max High-Vis Safety Orange & Blueprint Steel color system.

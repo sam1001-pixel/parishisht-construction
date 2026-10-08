@@ -8,14 +8,17 @@
 
 ---
 
-## 2. Color Palette (Tokens)
+## 2. Color Palette (Tokens) — High-Vis Safety Orange & Blueprint Steel Edition (UI/UX Pro Max)
 
 | Token Name | Hex Code | HSL / RGB | Usage |
 | :--- | :--- | :--- | :--- |
-| **Primary Navy** | `#0A192F` | `rgb(10, 25, 47)` | Hero background, Header, Dark cards, Footer, Primary typography |
-| **Deep Charcoal** | `#06101E` | `rgb(6, 16, 30)` | Global footer base, deep contrast backgrounds |
-| **Safety Gold / Amber** | `#D97706` | `rgb(217, 119, 6)` | Primary buttons, key stats, tender badges, active tabs, icon highlights |
-| **Vibrant Gold Hover** | `#B45309` | `rgb(180, 83, 9)` | Button hover state, interactive links |
+| **Blueprint Steel (Primary Navy)** | `#0F172A` | `rgb(15, 23, 42)` | Slate-900: Header, hero background, dark cards, footer, primary typography |
+| **Midnight Obsidian (Deep)** | `#020617` | `rgb(2, 6, 23)` | Slate-950: Global footer base, deep contrast backgrounds, utility strip |
+| **Precision Blueprint Blue** | `#0284C7` | `rgb(2, 132, 199)` | Sky-600: Water infrastructure (PHED/JJM), CAD accents, technical badges |
+| **High-Vis Safety Orange** | `#EA580C` | `rgb(234, 88, 12)` | Orange-600: Primary CTAs, key statistics, tender badges, active tabs, icon highlights |
+| **Vibrant Orange Glow** | `#F97316` | `rgb(249, 115, 22)` | Orange-500: Active glow, gradient accents, focus rings |
+| **Orange Hover** | `#C2410C` | `rgb(194, 65, 12)` | Orange-700: Button hover state, interactive links |
+| **Orange Light Tint** | `#FFEDD5` | `rgb(255, 237, 213)` | Orange-100: Soft badge backgrounds on light surfaces |
 | **Steel Slate** | `#334155` | `rgb(51, 65, 85)` | Subheadings, card borders, secondary text |
 | **Light Slate / Border** | `#E2E8F0` | `rgb(226, 232, 240)` | Card borders, divider lines, muted text on dark surfaces |
 | **Clean White** | `#FFFFFF` | `rgb(255, 255, 255)` | Body text on dark backgrounds, card containers on light surfaces |

@@ -20,20 +20,23 @@
   ```
 
 ## Sticky Navigation Header
-* **Wix Component:** Header Strip (Sticky / Fixed at Top, Navy `#0A192F` with backdrop blur).
+* **Wix Component:** Header Strip (Sticky / Fixed at Top, Blueprint Steel `#0F172A` with backdrop blur).
 * **Logo Position:** Top Left — "PARISHISHT" in bold uppercase sans-serif with an architectural emblem, subtext "CONSTRUCTION PVT. LTD. • Engineering Bihar's Future".
+* **Language Switcher (Top Right):**
+  - **Button Text:** `हिंदी / EN`
+  - **Style:** Compact pill button, slate background `#1E293B`, white text, globe icon. Toggles site between Hindi and English.
 * **Navigation Links:**
-  1. About Us
-  2. Capabilities & Sectors *(Dropdown Mega Menu: Public Health Engineering | Civil & Roads | Urban Drainage | Turnkey EPC)*
-  3. Projects
-  4. Plant & Machinery Fleet *(Inspired by RKDCPL & MGCPL)*
-  5. Investors & Solvency
+  1. About Us (हमारे बारे में)
+  2. Capabilities & Sectors (कार्यक्षेत्र) *(Dropdown Mega Menu: Public Health Engineering | Civil & Roads | Urban Drainage | Turnkey EPC)*
+  3. Projects (परियोजनाएं)
+  4. Plant & Machinery Fleet (संयंत्र एवं मशीनरी) *(Inspired by RKDCPL & MGCPL)*
+  5. Investors & Solvency (वित्तीय क्षमता)
   6. Sustainability & ESG *(Inspired by L&T)*
-  7. Careers
-  8. Tenders & JV
+  7. Careers (करियर)
+  8. Tenders & JV (निविदा एवं JV)
 * **Header CTA Button (Top Right):**
-  - **Button Text:** Tender Pre-Quals
-  - **Button Style:** Safety Gold background (`#D97706`), Navy text (`#0A192F`), bold, rounded-xl.
+  - **Button Text:** Tender Pre-Quals (निविदा पूर्व-योग्यता)
+  - **Button Style:** High-Vis Safety Orange background (`#EA580C`), Clean White text (`#FFFFFF`), bold, rounded-xl.
 
 ---
 
