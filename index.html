@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Parishisht Construction Private Limited | Bihar Infrastructure & Public Health Engineering</title>
-  <meta name="description" content="Empaneled EPC contractor in Bihar specializing in Civil Infrastructure, Public Health Engineering (Jal Jeevan Mission), and Urban Drainage for PHED, BUIDCO, RCD.">
+  <title>Parishisht Construction Private Limited | Premier Infrastructure & Public Health Engineering</title>
+  <meta name="description" content="Empaneled Class-1 EPC contractor in Bihar. Specialized in Civil Infrastructure, Public Health Engineering (Jal Jeevan Mission), and Urban Drainage for PHED, BUIDCO, RCD. Benchmarked against Larsen & Toubro, RKD, and MGCPL.">
   
-  <!-- Google Fonts -->
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D97706'><path d='M3 21h18M3 7v14M21 7v14M6 10h3M15 10h3M6 14h3M15 14h3M6 18h3M15 18h3M9 3h6v4H9z'/></svg>">
+
+  <!-- Google Fonts: Manrope & Plus Jakarta Sans & Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -23,19 +26,33 @@
         extend: {
           colors: {
             brand: {
-              navy: '#0A192F',
-              deep: '#06101E',
-              gold: '#D97706',
+              navy: '#0A192F',      // Primary Architectural Navy
+              deep: '#06101E',      // Deep Corporate Slate
+              darkBlue: '#024D87',  // L&T Technical Blue
+              gold: '#D97706',      // Public Works Safety Gold
               goldHover: '#B45309',
               goldLight: '#FEF3C7',
+              goldAccent: '#F59E0B',
               slate: '#334155',
+              muted: '#64748B',
               surface: '#F8FAFC',
+              surfaceAlt: '#F1F5F9',
               border: '#E2E8F0'
             }
           },
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['"Manrope"', '"Plus Jakarta Sans"', 'sans-serif'],
             mono: ['"Space Grotesk"', 'monospace']
+          },
+          animation: {
+            'marquee': 'marquee 25s linear infinite',
+            'marquee-slow': 'marquee 35s linear infinite',
+          },
+          keyframes: {
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
+            }
           }
         }
       }
@@ -43,142 +60,300 @@
   </script>
 
   <style>
-    .bg-grid-pattern {
+    /* Architectural Blueprint & Grid Patterns */
+    .bg-blueprint {
       background-size: 40px 40px;
       background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+    .bg-dots {
+      background-image: radial-gradient(rgba(10, 25, 47, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+    /* Hide scrollbar for tabs */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   </style>
+
+  <!-- Schema.org Rich Snippets (Inspired by RKDCPL & L&T) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Parishisht Construction Private Limited",
+        "url": "https://parishishtconstruction.com",
+        "logo": "https://parishishtconstruction.com/logo.png",
+        "description": "Premier Class-1 EPC contractor in Bihar specializing in Civil Infrastructure, Public Health Engineering (PHE / Jal Jeevan Mission), and Urban Drainage.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Patna",
+          "addressRegion": "Bihar",
+          "postalCode": "800001",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-612-2200000",
+          "contactType": "tenders",
+          "email": "tenders@parishishtconstruction.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are Parishisht Construction's primary engineering domains in Bihar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Parishisht Construction specializes in Public Health Engineering (intake wells, WTP, OHSR, and water supply networks under Jal Jeevan Mission), Civil Infrastructure (highways, RCC bridges, rural connectivity under RCD/RWD), and Municipal Urban Drainage (stormwater conduits and STPs for BUIDCO)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Parishisht Construction eligible for Tier-1 Joint Ventures (JV)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Parishisht Construction holds Class-1 Bihar EPC registration with high bank solvency, audited financial track records, and in-house fleet of heavy machinery, pre-qualifying for consortium bidding on major public tenders."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-brand-surface text-slate-800 font-sans antialiased selection:bg-brand-gold selection:text-white">
 
-  <!-- ================= TOP NOTIFICATION BAR ================= -->
-  <div class="bg-brand-deep text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-brand-gold/20 text-brand-gold border border-brand-gold/30">
-          OFFICIAL EPC CONTRACTOR
+  <!-- ================= 00. TOP EXECUTIVE UTILITY BAR (Inspired by MGCPL & L&T) ================= -->
+  <div class="bg-brand-deep text-slate-300 text-xs py-2 px-4 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-brand-gold/20 text-brand-gold border border-brand-gold/40">
+          GOVT OF BIHAR EMPANELED
         </span>
-        <span>Empaneled with PHED, BUIDCO, RCD & RWD — Govt. of Bihar</span>
+        <span class="text-slate-300 text-[11px]">Class-1 Registered EPC Contractor • PHED • BUIDCO • RCD • RWD</span>
       </div>
-      <div class="flex items-center gap-4 text-xs font-mono">
-        <span><i data-lucide="shield-check" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>ISO 9001:2015</span>
-        <span class="hidden md:inline">CIN: U45200BR2018PTC039000</span>
-        <span><i data-lucide="mail" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>tenders@parishishtconstruction.com</span>
+      <div class="flex items-center gap-5 text-xs font-mono">
+        <span class="hidden sm:inline"><i data-lucide="shield-check" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>ISO 9001:2015 | 45001:2018</span>
+        <span class="hidden lg:inline text-slate-400">CIN: U45200BR2018PTC039000</span>
+        <a href="mailto:tenders@parishishtconstruction.com" class="hover:text-brand-gold flex items-center gap-1 transition-colors">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <span>tenders@parishishtconstruction.com</span>
+        </a>
+        <a href="tel:+916122200000" class="hover:text-brand-gold flex items-center gap-1 transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+          <span>+91 612 220-XXXX</span>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- ================= STICKY HEADER ================= -->
+  <!-- ================= 01. MEGA-NAVIGATION HEADER (Inspired by L&T & MGCPL) ================= -->
   <header class="sticky top-0 z-40 bg-brand-navy/95 backdrop-blur-md border-b border-slate-800 text-white transition-all duration-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- Brand Logo -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-brand-gold to-amber-600 flex items-center justify-center text-brand-navy font-bold text-xl shadow-lg shadow-brand-gold/20 group-hover:scale-105 transition-transform">
-          <i data-lucide="building-2" class="w-6 h-6 stroke-[2.5]"></i>
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-gold to-amber-600 flex items-center justify-center text-brand-navy font-black text-2xl shadow-lg shadow-brand-gold/20 group-hover:scale-105 transition-transform border border-amber-400/40">
+          <i data-lucide="building-2" class="w-7 h-7 stroke-[2.5]"></i>
         </div>
         <div>
-          <div class="text-xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
+          <div class="text-xl sm:text-2xl font-black tracking-tight text-white flex items-center gap-1.5 font-sans">
             PARISHISHT <span class="text-brand-gold font-normal">CONSTRUCTION</span>
           </div>
-          <div class="text-[10px] uppercase tracking-widest text-slate-400 font-medium">Private Limited • Bihar Public Works</div>
+          <div class="text-[10px] uppercase tracking-widest text-slate-400 font-semibold flex items-center gap-2">
+            <span>Private Limited</span>
+            <span class="w-1 h-1 rounded-full bg-brand-gold"></span>
+            <span class="text-brand-gold">Engineering Bihar's Future</span>
+          </div>
         </div>
       </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#about" class="hover:text-brand-gold transition-colors">About</a>
-        <a href="#sectors" class="hover:text-brand-gold transition-colors">Sectors</a>
+      <!-- Desktop Mega Navigation -->
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-300">
+        <a href="#about" class="hover:text-brand-gold transition-colors">About Us</a>
+        
+        <!-- Capabilities Dropdown trigger -->
+        <div class="relative group py-2">
+          <a href="#sectors" class="hover:text-brand-gold flex items-center gap-1 transition-colors">
+            <span>Capabilities</span>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
+          </a>
+          <!-- Dropdown Mega Menu -->
+          <div class="absolute top-full left-0 w-80 bg-brand-deep border border-slate-700/80 rounded-2xl shadow-2xl p-4 hidden group-hover:block transition-all">
+            <div class="text-[11px] font-mono text-brand-gold uppercase tracking-wider px-3 py-1 font-bold">Public Works Disciplines</div>
+            <a href="#sectors" class="block p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+              <div class="font-bold text-white text-xs">Public Health Engineering (PHE)</div>
+              <div class="text-[11px] text-slate-400">Jal Jeevan Mission, WTP, OHSR, DI/HDPE</div>
+            </a>
+            <a href="#sectors" class="block p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+              <div class="font-bold text-white text-xs">Civil & Roads Infrastructure</div>
+              <div class="text-[11px] text-slate-400">Highways, RCC Bridges, Rural Connectivity (RWD)</div>
+            </a>
+            <a href="#sectors" class="block p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+              <div class="font-bold text-white text-xs">Urban Development & Drainage</div>
+              <div class="text-[11px] text-slate-400">BUIDCO Stormwater Networks, STPs, Pumping Stations</div>
+            </a>
+            <a href="#sectors" class="block p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
+              <div class="font-bold text-white text-xs">Turnkey EPC Public Works</div>
+              <div class="text-[11px] text-slate-400">Geotechnical, Heavy Earthworks & Complexes</div>
+            </a>
+          </div>
+        </div>
+
         <a href="#projects" class="hover:text-brand-gold transition-colors">Projects</a>
+        <a href="#machinery" class="hover:text-brand-gold transition-colors">Plant & Machinery</a>
         <a href="#investors" class="hover:text-brand-gold transition-colors">Investors & Solvency</a>
         <a href="#careers" class="hover:text-brand-gold transition-colors">Careers</a>
-        <a href="#tenders" class="hover:text-brand-gold transition-colors">Tenders & Empanelment</a>
-        <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
+        <a href="#tenders" class="hover:text-brand-gold transition-colors">Tenders & JV</a>
       </nav>
 
-      <!-- Action Button -->
+      <!-- Action Buttons -->
       <div class="hidden sm:flex items-center gap-3">
-        <button onclick="openModal('tender-modal')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold px-4 py-2 rounded-lg text-xs uppercase tracking-wider flex items-center gap-2 shadow-md hover:shadow-brand-gold/30 transition-all">
-          <i data-lucide="file-badge-2" class="w-4 h-4"></i>
-          Tender Pre-Quals
+        <button onclick="openModal('tender-modal')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold px-4 py-2.5 rounded-xl text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-brand-gold/25 transition-all">
+          <i data-lucide="file-check-2" class="w-4 h-4"></i>
+          <span>Tender Pre-Quals</span>
         </button>
       </div>
 
-      <!-- Mobile Hamburger -->
+      <!-- Mobile Hamburger Button -->
       <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-brand-deep border-b border-slate-800 px-6 py-4 space-y-3">
+    <div id="mobile-menu" class="hidden lg:hidden bg-brand-deep border-b border-slate-800 px-6 py-5 space-y-3">
       <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">About Us</a>
-      <a href="#sectors" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Sectors & Capabilities</a>
+      <a href="#sectors" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Capabilities & Sectors</a>
       <a href="#projects" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Projects Portfolio</a>
-      <a href="#investors" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Investors & Solvency</a>
-      <a href="#careers" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Careers</a>
-      <a href="#tenders" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Tenders & Empanelment</a>
-      <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Contact Office</a>
-      <button onclick="toggleMobileMenu(); openModal('tender-modal')" class="w-full mt-3 bg-brand-gold text-brand-navy font-bold py-2 rounded-lg text-xs uppercase tracking-wider">
-        Tender Pre-Qualifications
+      <a href="#machinery" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Plant & Machinery Fleet</a>
+      <a href="#investors" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Investors & Bank Solvency</a>
+      <a href="#careers" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Careers & Talent</a>
+      <a href="#tenders" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Tenders & Vendor Desk</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1">Patna Office & Contact</a>
+      <button onclick="toggleMobileMenu(); openModal('tender-modal')" class="w-full mt-3 bg-brand-gold text-brand-navy font-bold py-2.5 rounded-xl text-xs uppercase tracking-wider">
+        Download Pre-Qualifications
       </button>
     </div>
   </header>
 
-  <!-- ================= HERO BANNER ================= -->
-  <section class="relative bg-brand-navy text-white overflow-hidden py-24 lg:py-32 bg-grid-pattern">
-    <!-- Ambient Light Blob -->
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- ================= 02. HERO BANNER WITH LIVE STATUS (Inspired by L&T & MGCPL) ================= -->
+  <section class="relative bg-brand-navy text-white overflow-hidden py-20 lg:py-28 bg-blueprint">
+    <!-- Ambient Radial Glow -->
+    <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-brand-gold/15 to-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="max-w-3xl">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Pre-headline Pill -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-brand-gold mb-6 shadow-sm">
-          <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i>
-          GOVERNMENT OF BIHAR EMPANELED & REGISTERED EPC CONTRACTOR
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-8">
+          
+          <!-- Live Project Status Pill (MGCPL style) -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-slate-700 text-xs font-semibold mb-6 shadow-md">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-slate-300">Live Project:</span>
+            <span class="text-brand-gold font-bold">Muzaffarpur Jal Jeevan Mission Rural Grid — 92% Executed</span>
+          </div>
+
+          <!-- Master Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] mb-6">
+            Engineering Bihar’s <br class="hidden sm:inline" />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-brand-gold to-yellow-500">
+              Future Infrastructure.
+            </span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8 max-w-2xl font-light">
+            Delivering excellence in civil and public health engineering for the public sector. Executing mission-critical water networks, municipal corridors, and turnkey public works with unyielding structural integrity.
+          </p>
+
+          <!-- Dual Action CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10">
+            <a href="#projects" class="bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-wider text-center shadow-lg shadow-brand-gold/25 transition-all flex items-center justify-center gap-2">
+              <span>Explore Public Works Portfolio</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <button onclick="openModal('tender-modal')" class="bg-slate-800/90 hover:bg-slate-700 text-white border border-slate-600 font-semibold px-6 py-3.5 rounded-xl text-xs uppercase tracking-wider text-center transition-all flex items-center justify-center gap-2">
+              <i data-lucide="download" class="w-4 h-4 text-brand-gold"></i>
+              <span>Download Company Dossier (PDF)</span>
+            </button>
+          </div>
+
+          <!-- Certifications badges -->
+          <div class="pt-6 border-t border-slate-800 flex flex-wrap items-center gap-6 text-xs text-slate-400 font-mono">
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="award" class="w-4 h-4 text-brand-gold"></i>
+              <span>ISO 9001:2015 Quality</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-brand-gold"></i>
+              <span>ISO 45001:2018 Safety</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="leaf" class="w-4 h-4 text-brand-gold"></i>
+              <span>ISO 14001:2015 Environment</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <i data-lucide="file-check" class="w-4 h-4 text-brand-gold"></i>
+              <span>CPWD & BIS Compliant</span>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Headline -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] mb-6">
-          Engineering Bihar’s <br class="hidden sm:inline" />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-brand-gold to-yellow-500">
-            Future Infrastructure.
-          </span>
-        </h1>
+        <!-- Right Hero Floating Fact Card (L&T Corporate Style) -->
+        <div class="lg:col-span-4">
+          <div class="bg-gradient-to-b from-slate-800/90 to-slate-900/95 border border-slate-700/80 rounded-3xl p-7 shadow-2xl backdrop-blur-md">
+            
+            <div class="flex items-center justify-between pb-4 border-b border-slate-700">
+              <span class="text-xs uppercase tracking-wider font-mono text-brand-gold font-bold">Execution Snapshot</span>
+              <span class="bg-emerald-500/20 text-emerald-400 text-[10px] font-bold px-2 py-0.5 rounded">Active Bidding</span>
+            </div>
 
-        <!-- Subheadline -->
-        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
-          Delivering excellence in civil and public health engineering for the public sector. Executing mission-critical water networks, municipal corridors, and turnkey public works with unyielding structural integrity.
-        </p>
+            <div class="mt-5 space-y-4 font-mono text-xs">
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-400">Aggregate Value:</span>
+                <span class="text-xl font-bold text-white">₹250+ Cr.</span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-400">Districts Served:</span>
+                <span class="text-base font-bold text-brand-gold">15+ Across Bihar</span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-400">PHE Pipeline Laid:</span>
+                <span class="text-base font-bold text-white">450+ Kilometers</span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-400">On-Time Completion:</span>
+                <span class="text-base font-bold text-emerald-400">100% Track Record</span>
+              </div>
+              <div class="flex justify-between items-center py-1">
+                <span class="text-slate-400">Self-Owned Fleet:</span>
+                <span class="text-base font-bold text-white">35+ Heavy Plants</span>
+              </div>
+            </div>
 
-        <!-- CTA Action Buttons -->
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-          <a href="#projects" class="bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold px-7 py-3.5 rounded-xl text-sm uppercase tracking-wider text-center shadow-lg shadow-brand-gold/25 transition-all flex items-center justify-center gap-2">
-            <span>Explore Public Works</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-          </a>
-          <button onclick="openModal('tender-modal')" class="bg-slate-800/90 hover:bg-slate-700 text-white border border-slate-600 font-semibold px-6 py-3.5 rounded-xl text-sm text-center transition-all flex items-center justify-center gap-2">
-            <i data-lucide="download" class="w-4 h-4 text-brand-gold"></i>
-            <span>Download Company Dossier</span>
-          </button>
-        </div>
+            <div class="mt-6 pt-5 border-t border-slate-700/80">
+              <button onclick="openModal('investor-modal')" class="w-full bg-slate-700/80 hover:bg-slate-600 text-white font-semibold py-2.5 rounded-xl text-xs flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="file-text" class="w-3.5 h-3.5 text-brand-gold"></i>
+                <span>Request Financial Solvency Statement</span>
+              </button>
+            </div>
 
-        <!-- Key Certifications Strip -->
-        <div class="mt-12 pt-8 border-t border-slate-800/80 flex flex-wrap items-center gap-6 text-xs text-slate-400">
-          <div class="flex items-center gap-2">
-            <i data-lucide="award" class="w-4 h-4 text-brand-gold"></i>
-            <span>ISO 9001:2015 Quality Management</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i data-lucide="shield" class="w-4 h-4 text-brand-gold"></i>
-            <span>ISO 45001:2018 Occupational Health & Safety</span>
-          </div>
-          <div class="flex items-center gap-2">
-            <i data-lucide="leaf" class="w-4 h-4 text-brand-gold"></i>
-            <span>ISO 14001:2015 Environmental Systems</span>
           </div>
         </div>
 
@@ -186,126 +361,177 @@
     </div>
   </section>
 
-  <!-- ================= TRUST METRICS BAR ================= -->
-  <section class="bg-slate-900 border-y border-slate-800 py-10 text-white">
+  <!-- ================= 03. INFINITE CLIENT & APPROVALS TICKER (Directly from MGCPL) ================= -->
+  <div class="bg-slate-900 border-y border-slate-800 py-3.5 overflow-hidden text-slate-300 font-mono text-xs">
+    <div class="flex items-center">
+      <div class="px-6 py-1 bg-brand-gold text-brand-navy font-bold text-[11px] uppercase tracking-wider whitespace-nowrap z-10 shadow-lg">
+        Departments & Empanelments
+      </div>
+      <div class="flex animate-marquee whitespace-nowrap">
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>PHED Bihar (Public Health Engineering)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>BUIDCO (Bihar Urban Infrastructure Dev. Corp)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>Jal Jeevan Mission (Har Ghar Nal Ka Jal)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>RCD Bihar (Road Construction Department)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>RWD Bihar (Rural Works Department)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>CPWD Registered Standards</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>Bihar e-Procurement (eproc2.bihar.gov.in)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>ISO 9001:2015 & 45001:2018 Certified</span>
+      </div>
+      <div class="flex animate-marquee whitespace-nowrap">
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>PHED Bihar (Public Health Engineering)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>BUIDCO (Bihar Urban Infrastructure Dev. Corp)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>Jal Jeevan Mission (Har Ghar Nal Ka Jal)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>RCD Bihar (Road Construction Department)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>RWD Bihar (Rural Works Department)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>CPWD Registered Standards</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>Bihar e-Procurement (eproc2.bihar.gov.in)</span>
+        <span class="mx-6 flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-gold"></i>ISO 9001:2015 & 45001:2018 Certified</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 04. "THE HARD CASE FOR PARISHISHT" (Inspired by MGCPL & RKDCPL) ================= -->
+  <section class="py-20 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="pt-4 md:pt-0">
-          <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold font-mono">₹250+ Cr.</div>
-          <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Aggregate Works Executed</div>
+        <div class="lg:col-span-5">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
+            The Public Sector Case
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-4 leading-tight">
+            A delayed public works package costs far more <span class="text-brand-gold">than a cheap tender saves.</span>
+          </h2>
         </div>
 
-        <div class="pt-4 md:pt-0">
-          <div class="text-3xl sm:text-4xl font-extrabold text-white font-mono">15+ Districts</div>
-          <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Active Footprint in Bihar</div>
-        </div>
-
-        <div class="pt-4 md:pt-0">
-          <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold font-mono">100%</div>
-          <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">On-Time Tender Delivery</div>
-        </div>
-
-        <div class="pt-4 md:pt-0">
-          <div class="text-3xl sm:text-4xl font-extrabold text-white font-mono">Tier-1</div>
-          <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Bank Solvency & Guarantees</div>
+        <div class="lg:col-span-7 text-slate-600 text-sm leading-relaxed space-y-4">
+          <p class="text-base text-slate-800 font-medium">
+            Public infrastructure in Bihar runs on published deadlines, fixed state allocations, and public accountability. When a water supply package or road corridor slips, the cost falls on the department, the executing engineers, and the citizens waiting for safe drinking water.
+          </p>
+          <p>
+            At Parishisht Construction, we tender only where our equipment capacity, working capital, and specialized engineering bandwidth guarantee timely handover. We mobilize our own batching plants, operate in-house testing labs, and maintain direct supply agreements with Tier-1 manufacturers (SAIL, TATA, Jindal) ensuring zero site stoppages.
+          </p>
+          <div class="pt-2 flex items-center gap-6 text-xs font-mono font-bold text-slate-900">
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>Zero Contractual Abandonments</span>
+            <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>Zero Price-Escalation Litigation</span>
+          </div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ================= THE GRID (BUSINESS SECTORS) ================= -->
-  <section id="sectors" class="py-20 bg-brand-surface">
+  <!-- ================= 05. THE GRID (BUSINESS SECTORS & CAPABILITIES) ================= -->
+  <section id="sectors" class="py-20 bg-brand-surface bg-dots">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
-          Core Capabilities & Specializations
+          Core Capabilities & Disciplines
         </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-4">
           Built for Scale. Engineered for Longevity.
         </h2>
         <p class="text-slate-600 mt-3 text-base">
-          From rural potable water pipelines under the Jal Jeevan Mission to arterial road bridges and deep municipal drainage networks across Bihar.
+          From potable water grids serving remote blocks under the Jal Jeevan Mission to arterial road bridges and deep municipal drainage networks across Bihar.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Card 1: PHE -->
-        <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+        <!-- Sector Card 1: Public Health Engineering -->
+        <div class="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-5 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
               <i data-lucide="droplets" class="w-6 h-6"></i>
             </div>
             <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold">PHED & Jal Jeevan Mission</span>
             <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Public Health Engineering</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-              Implementing safe, reliable, and scalable water and sanitation systems for our communities. Specialized in intake wells, WTP, OHSR, and extensive DI/HDPE pipeline grids.
+            <p class="text-slate-600 text-xs leading-relaxed mb-6">
+              Implementing safe, reliable, and scalable water and sanitation systems for our communities. Specialized in intake wells, Water Treatment Plants (WTP), Over Head Service Reservoirs (OHSR), and extensive DI/HDPE pipeline grids.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600">
-            <span class="bg-slate-100 px-2 py-0.5 rounded">Intake Wells</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">WTP & OHSR</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">DI / HDPE Piping</span>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-3">
+              <span class="bg-slate-100 px-2 py-0.5 rounded">Intake Wells</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">WTP & OHSR</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">DI / HDPE Lines</span>
+            </div>
+            <a href="#projects" class="text-xs font-bold text-brand-navy group-hover:text-brand-gold flex items-center gap-1 transition-colors">
+              View PHE Projects <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Card 2: Civil Infrastructure -->
-        <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+        <!-- Sector Card 2: Civil Infrastructure -->
+        <div class="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-gold flex items-center justify-center mb-5 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
               <i data-lucide="milestone" class="w-6 h-6"></i>
             </div>
             <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold">RCD & RWD Specifications</span>
             <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Civil Infrastructure</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-              Building robust, sustainable frameworks for tomorrow’s public spaces. High-capacity state highways, major RCC bridges, rural connectivity roads, and grade separators.
+            <p class="text-slate-600 text-xs leading-relaxed mb-6">
+              Building robust, sustainable frameworks for tomorrow’s public spaces. High-capacity state highways, major RCC bridges, rural connectivity roads, and grade-separated bypass corridors adhering to MoRTH and IRC standards.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600">
-            <span class="bg-slate-100 px-2 py-0.5 rounded">RCC Bridges</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">Flexible/Rigid Pavement</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">MoRTH Standards</span>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-3">
+              <span class="bg-slate-100 px-2 py-0.5 rounded">RCC Bridges</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">Flexible/Rigid</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">MoRTH Codes</span>
+            </div>
+            <a href="#projects" class="text-xs font-bold text-brand-navy group-hover:text-brand-gold flex items-center gap-1 transition-colors">
+              View Road Works <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Card 3: Urban Development (BUIDCO) -->
-        <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+        <!-- Sector Card 3: Urban Development (BUIDCO) -->
+        <div class="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-5 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
               <i data-lucide="waves" class="w-6 h-6"></i>
             </div>
             <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold">BUIDCO & Municipal Works</span>
             <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Urban Drainage & Utilities</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-              Modernizing urban centers through high-volume stormwater drainage, Sewage Treatment Plants (STP), automated pumping stations, and smart city utility ducts.
+            <p class="text-slate-600 text-xs leading-relaxed mb-6">
+              Modernizing urban centers through high-volume stormwater drainage, Sewage Treatment Plants (STP), automated pumping stations, and smart city utility conduits to eliminate monsoon inundation.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600">
-            <span class="bg-slate-100 px-2 py-0.5 rounded">Stormwater Conduits</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">STPs</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">Pump Stations</span>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-3">
+              <span class="bg-slate-100 px-2 py-0.5 rounded">Stormwater Conduits</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">STPs</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">Pump Stations</span>
+            </div>
+            <a href="#projects" class="text-xs font-bold text-brand-navy group-hover:text-brand-gold flex items-center gap-1 transition-colors">
+              View Urban Works <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Card 4: Heavy Turnkey EPC -->
-        <div class="bg-white rounded-2xl p-7 border border-slate-200 shadow-sm hover:shadow-xl transition-all group flex flex-col justify-between">
+        <!-- Sector Card 4: Heavy Turnkey EPC -->
+        <div class="bg-white rounded-2xl p-7 border border-slate-200/90 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col justify-between">
           <div>
             <div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-5 group-hover:bg-brand-navy group-hover:text-brand-gold transition-colors">
               <i data-lucide="hard-hat" class="w-6 h-6"></i>
             </div>
             <span class="text-[10px] font-mono uppercase tracking-wider text-slate-400 font-semibold">Government Contracting</span>
             <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Heavy Construction</h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6">
-              Delivering structural integrity and innovation for enduring public works. Full EPC single-point turnkey accountability from soil testing to final handover.
+            <p class="text-slate-600 text-xs leading-relaxed mb-6">
+              Delivering structural integrity and innovation for enduring public works. Full EPC single-point turnkey accountability from soil testing, topographical drone surveys to final testing and departmental handover.
             </p>
           </div>
-          <div class="pt-4 border-t border-slate-100 flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600">
-            <span class="bg-slate-100 px-2 py-0.5 rounded">EPC Turnkey</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">Heavy Earthworks</span>
-            <span class="bg-slate-100 px-2 py-0.5 rounded">Institutional Hubs</span>
+          <div class="pt-4 border-t border-slate-100">
+            <div class="flex flex-wrap gap-1.5 text-[11px] font-medium text-slate-600 mb-3">
+              <span class="bg-slate-100 px-2 py-0.5 rounded">EPC Turnkey</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">Heavy Earthworks</span>
+              <span class="bg-slate-100 px-2 py-0.5 rounded">Institutional Hubs</span>
+            </div>
+            <a href="#tenders" class="text-xs font-bold text-brand-navy group-hover:text-brand-gold flex items-center gap-1 transition-colors">
+              Tender Credentials <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
           </div>
         </div>
 
@@ -313,117 +539,120 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT US SECTION ================= -->
+  <!-- ================= 06. ABOUT US & 4 PILLARS ================= -->
   <section id="about" class="py-20 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <!-- Left: Text -->
+        <!-- Left Column -->
         <div class="lg:col-span-7">
           <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
-            About Parishisht Construction
+            About Parishisht Construction Private Limited
           </span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-4 mb-6">
             Committed to Transforming the Infrastructure Landscape of Bihar.
           </h2>
 
-          <div class="p-6 bg-slate-50 border-l-4 border-brand-gold rounded-r-xl mb-6">
+          <div class="p-6 bg-slate-50 border-l-4 border-brand-gold rounded-r-2xl mb-6 shadow-sm">
             <p class="text-slate-700 italic font-medium text-base leading-relaxed">
               "At Parishisht Construction Private Limited, we are committed to transforming the infrastructure landscape of Bihar. With a steadfast focus on quality, safety, and efficiency, we partner with the public sector to build foundational civil and public health projects that serve and empower local communities."
             </p>
           </div>
 
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
-            Headquartered in Patna, Parishisht Construction operates across Bihar's urban and rural districts. We have proven capabilities in executing projects under challenging geotechnical environments—from high water-table flood zones along the Ganges to densely populated urban corridors.
+          <p class="text-slate-600 text-sm leading-relaxed mb-8">
+            Headquartered in Patna, Parishisht Construction operates across Bihar's urban and rural districts. We combine deep regional geotechnical knowledge with rigorous engineering protocols to deliver projects in flood-prone river basins, densely populated municipal belts, and remote rural panchayats.
           </p>
 
-          <!-- 4 Pillars List -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="flex items-start gap-3">
-              <div class="p-1 rounded-full bg-emerald-100 text-emerald-600 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+          <!-- 4 Pillars of Excellence -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="flex items-start gap-3.5">
+              <div class="p-1.5 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
               </div>
               <div>
                 <h4 class="font-bold text-slate-900 text-sm">BIS & CPWD Standards</h4>
-                <p class="text-xs text-slate-500">Rigorous on-site testing labs and third-party inspection verification.</p>
+                <p class="text-xs text-slate-500 mt-0.5">Strict compliance with IS codes, field batch testing, and third-party inspection certifications.</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3">
-              <div class="p-1 rounded-full bg-emerald-100 text-emerald-600 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            <div class="flex items-start gap-3.5">
+              <div class="p-1.5 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
               </div>
               <div>
-                <h4 class="font-bold text-slate-900 text-sm">Zero-Harm Safety Policy</h4>
-                <p class="text-xs text-slate-500">ISO 45001:2018 certified occupational safety standards on all sites.</p>
+                <h4 class="font-bold text-slate-900 text-sm">Zero-Harm Safety Culture</h4>
+                <p class="text-xs text-slate-500 mt-0.5">ISO 45001:2018 certified occupational health protocols, daily toolbox talks, and full PPE mandate.</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3">
-              <div class="p-1 rounded-full bg-emerald-100 text-emerald-600 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            <div class="flex items-start gap-3.5">
+              <div class="p-1.5 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
               </div>
               <div>
-                <h4 class="font-bold text-slate-900 text-sm">Heavy Machinery Fleet</h4>
-                <p class="text-xs text-slate-500">Self-owned batching plants, transit mixers, and excavators.</p>
+                <h4 class="font-bold text-slate-900 text-sm">Heavy Equipment Fleet</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Self-owned computerized batching plants, transit mixers, pavers, and trenchers avoiding leased bottlenecks.</p>
               </div>
             </div>
 
-            <div class="flex items-start gap-3">
-              <div class="p-1 rounded-full bg-emerald-100 text-emerald-600 mt-0.5">
-                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            <div class="flex items-start gap-3.5">
+              <div class="p-1.5 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 mt-0.5">
+                <i data-lucide="check" class="w-4 h-4 stroke-[3]"></i>
               </div>
               <div>
-                <h4 class="font-bold text-slate-900 text-sm">High Working Capital</h4>
-                <p class="text-xs text-slate-500">Tier-1 banking consortium solvency ensuring uninterrupted execution.</p>
+                <h4 class="font-bold text-slate-900 text-sm">Financial Bankability</h4>
+                <p class="text-xs text-slate-500 mt-0.5">Unencumbered working capital reserves and Tier-1 banking consortium solvency backing.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: Stats & Image Box -->
+        <!-- Right Column: Corporate Credentials Card -->
         <div class="lg:col-span-5">
-          <div class="relative bg-brand-navy rounded-3xl p-8 text-white shadow-2xl overflow-hidden border border-slate-800">
-            <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-brand-gold/10 rounded-full blur-2xl pointer-events-none"></div>
-            
-            <h3 class="text-xl font-bold mb-6 text-brand-gold flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-5 h-5"></i>
-              Statutory & Governance Credibility
-            </h3>
+          <div class="relative bg-brand-navy rounded-3xl p-8 text-white shadow-2xl overflow-hidden border border-slate-700/80">
+            <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
 
-            <div class="space-y-4 text-xs font-mono">
-              <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                <span class="text-slate-400">Class Registration:</span>
-                <span class="text-white font-semibold">Class-1 EPC Contractor</span>
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2.5 rounded-xl bg-brand-gold/20 text-brand-gold border border-brand-gold/30">
+                <i data-lucide="award" class="w-6 h-6"></i>
               </div>
-              <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                <span class="text-slate-400">Key Empanelments:</span>
-                <span class="text-brand-gold font-semibold">PHED • BUIDCO • RCD</span>
-              </div>
-              <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                <span class="text-slate-400">e-Procurement Id:</span>
-                <span class="text-white font-semibold">Active Bidder (eproc2.bihar)</span>
-              </div>
-              <div class="flex justify-between items-center py-2 border-b border-slate-800">
-                <span class="text-slate-400">Geographic Focus:</span>
-                <span class="text-white font-semibold">All 38 Districts of Bihar</span>
-              </div>
-              <div class="flex justify-between items-center py-2">
-                <span class="text-slate-400">Audit Compliance:</span>
-                <span class="text-emerald-400 font-semibold">100% Tax/GST/EPF Clean</span>
+              <div>
+                <h3 class="text-lg font-bold text-white">Statutory & Governance</h3>
+                <p class="text-xs text-slate-400">Government of Bihar Class-1 Registration</p>
               </div>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-slate-800">
-              <div class="flex items-center gap-4">
-                <div class="text-center p-3 rounded-xl bg-slate-800/80 border border-slate-700 flex-1">
-                  <div class="text-xl font-bold text-brand-gold font-mono">15+</div>
-                  <div class="text-[10px] text-slate-400 uppercase">Engineers on Staff</div>
-                </div>
-                <div class="text-center p-3 rounded-xl bg-slate-800/80 border border-slate-700 flex-1">
-                  <div class="text-xl font-bold text-white font-mono">35+</div>
-                  <div class="text-[10px] text-slate-400 uppercase">Heavy Machines</div>
-                </div>
+            <div class="space-y-3.5 text-xs font-mono">
+              <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                <span class="text-slate-400">Class Registration:</span>
+                <span class="text-brand-gold font-bold">Class-1 Registered EPC</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                <span class="text-slate-400">Empaneled Bodies:</span>
+                <span class="text-white font-semibold">PHED • BUIDCO • RCD • RWD</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                <span class="text-slate-400">e-Procurement Portal:</span>
+                <span class="text-emerald-400 font-semibold">Active Bidder (eproc2.bihar)</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-slate-800">
+                <span class="text-slate-400">Geographic Footprint:</span>
+                <span class="text-white font-semibold">All 38 Districts of Bihar</span>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <span class="text-slate-400">Statutory Track Record:</span>
+                <span class="text-emerald-400 font-semibold">100% Tax / GST / EPF Compliant</span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
+              <div>
+                <div class="text-2xl font-black text-brand-gold font-mono">₹250+ Cr.</div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400">Works Managed</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black text-white font-mono">100%</div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400">On-Time Handover</div>
               </div>
             </div>
 
@@ -434,7 +663,7 @@
     </div>
   </section>
 
-  <!-- ================= PROJECTS SHOWCASE (WITH TABS) ================= -->
+  <!-- ================= 07. PROJECTS PORTFOLIO (FILTERABLE TABS + PROGRESS) ================= -->
   <section id="projects" class="py-20 bg-brand-surface border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -444,119 +673,269 @@
             Portfolio & Track Record
           </span>
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-4">
-            Transforming Communities Across Bihar
+            Transforming Bihar’s Districts
           </h2>
+          <p class="text-slate-600 mt-2 text-sm">Filter through completed and actively executing public works packages.</p>
         </div>
 
         <!-- Filter Tabs -->
         <div class="flex flex-wrap gap-2 mt-6 md:mt-0" id="project-filters">
-          <button onclick="filterProjects('all')" class="filter-btn active bg-brand-navy text-white text-xs font-semibold px-4 py-2 rounded-lg transition-all shadow-sm">
+          <button onclick="filterProjects('all')" class="filter-btn active bg-brand-navy text-white text-xs font-semibold px-4 py-2 rounded-xl transition-all shadow-sm">
             All Works
           </button>
-          <button onclick="filterProjects('phe')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-lg border border-slate-300 transition-all">
+          <button onclick="filterProjects('phe')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-300 transition-all">
             Water Supply (PHE)
           </button>
-          <button onclick="filterProjects('roads')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-lg border border-slate-300 transition-all">
+          <button onclick="filterProjects('roads')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-300 transition-all">
             Roads & Bridges
           </button>
-          <button onclick="filterProjects('urban')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-lg border border-slate-300 transition-all">
+          <button onclick="filterProjects('urban')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-300 transition-all">
             Urban Drainage
           </button>
         </div>
       </div>
 
       <!-- Project Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-container">
         
-        <!-- Project 1 -->
-        <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all" data-category="phe">
-          <div class="h-44 bg-gradient-to-br from-blue-900 to-brand-navy p-6 flex flex-col justify-between text-white relative">
-            <span class="inline-block bg-brand-gold text-brand-navy text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md self-start">
-              Jal Jeevan Mission
-            </span>
-            <div>
-              <div class="text-xs text-slate-300 font-mono">Client: PHED Bihar</div>
-              <h3 class="text-lg font-bold text-white">Rural Piped Water Supply Grid</h3>
+        <!-- Project 1: PHE Jal Jeevan Mission -->
+        <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="phe">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-blue-900 to-brand-navy p-6 flex flex-col justify-between text-white relative">
+              <div class="flex justify-between items-center">
+                <span class="inline-block bg-brand-gold text-brand-navy text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                  Jal Jeevan Mission
+                </span>
+                <span class="text-emerald-400 font-mono text-xs font-bold flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 92% Executed
+                </span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-300 font-mono">Client: PHED Bihar</div>
+                <h3 class="text-lg font-bold text-white leading-snug">Muzaffarpur Rural Piped Water Supply Grid</h3>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex justify-between items-center text-xs text-slate-500 mb-3 font-mono">
+                <span><i data-lucide="map-pin" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>Muzaffarpur District</span>
+                <span class="text-brand-navy font-bold">Value: ₹38.4 Cr.</span>
+              </div>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                Construction of 4 Over Head Service Reservoirs (OHSR), deep tube wells, chlorination plants, and 85 km ductile iron & HDPE distribution pipelines connecting 22,000+ rural households.
+              </p>
+              
+              <!-- Progress Bar -->
+              <div class="mb-4">
+                <div class="flex justify-between text-[11px] font-mono text-slate-500 mb-1">
+                  <span>Physical Completion</span>
+                  <span class="font-bold text-brand-navy">92%</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                  <div class="bg-brand-gold h-2 rounded-full" style="width: 92%"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="p-6">
-            <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
-              <span><i data-lucide="map-pin" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>Muzaffarpur District</span>
-              <span class="text-emerald-600 font-semibold bg-emerald-50 px-2 py-0.5 rounded">Completed</span>
-            </div>
-            <p class="text-slate-600 text-xs leading-relaxed mb-4">
-              Construction of 4 Over Head Service Reservoirs (OHSR), deep tube wells, and 85 km ductile iron & HDPE distribution pipelines serving 22,000+ rural households.
-            </p>
-            <div class="text-[11px] font-mono text-slate-400 pt-3 border-t border-slate-100 flex justify-between">
-              <span>Value: ₹38.4 Cr.</span>
-              <span>100% Commissioned</span>
+
+          <div class="px-6 pb-6 pt-0 border-t border-slate-100">
+            <div class="text-[11px] font-mono text-slate-500 pt-3 flex justify-between items-center">
+              <span>Scope: EPC Turnkey</span>
+              <span class="text-emerald-600 font-semibold">Ahead of Schedule</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
-        <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all" data-category="roads">
-          <div class="h-44 bg-gradient-to-br from-amber-900 to-brand-navy p-6 flex flex-col justify-between text-white relative">
-            <span class="inline-block bg-brand-gold text-brand-navy text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md self-start">
-              RCD Bihar Corridor
-            </span>
-            <div>
-              <div class="text-xs text-slate-300 font-mono">Client: Road Construction Dept</div>
-              <h3 class="text-lg font-bold text-white">Arterial Highway Bypass & Culverts</h3>
+        <!-- Project 2: Civil Highway RCD -->
+        <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="roads">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-amber-900 to-brand-navy p-6 flex flex-col justify-between text-white relative">
+              <div class="flex justify-between items-center">
+                <span class="inline-block bg-brand-gold text-brand-navy text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                  RCD Bihar Corridor
+                </span>
+                <span class="text-emerald-400 font-mono text-xs font-bold flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Completed
+                </span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-300 font-mono">Client: Road Construction Dept</div>
+                <h3 class="text-lg font-bold text-white leading-snug">Bhagalpur 2-Lane Arterial Highway & Culverts</h3>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex justify-between items-center text-xs text-slate-500 mb-3 font-mono">
+                <span><i data-lucide="map-pin" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>Bhagalpur Region</span>
+                <span class="text-brand-navy font-bold">Value: ₹52.1 Cr.</span>
+              </div>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                Widening and strengthening of 24 km 2-lane flexible pavement highway with 6 major RCC box culverts, erosion-proof river embankments, and high-specification retro-reflective signage.
+              </p>
+
+              <!-- Progress Bar -->
+              <div class="mb-4">
+                <div class="flex justify-between text-[11px] font-mono text-slate-500 mb-1">
+                  <span>Physical Completion</span>
+                  <span class="font-bold text-brand-navy">100%</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                  <div class="bg-emerald-500 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="p-6">
-            <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
-              <span><i data-lucide="map-pin" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>Bhagalpur Region</span>
-              <span class="text-emerald-600 font-semibold bg-emerald-50 px-2 py-0.5 rounded">Completed</span>
-            </div>
-            <p class="text-slate-600 text-xs leading-relaxed mb-4">
-              Widening and strengthening of 24 km 2-lane flexible pavement highway with 6 major RCC box culverts and high-density flood protection embankments.
-            </p>
-            <div class="text-[11px] font-mono text-slate-400 pt-3 border-t border-slate-100 flex justify-between">
-              <span>Value: ₹52.1 Cr.</span>
-              <span>MoRTH Standard</span>
+
+          <div class="px-6 pb-6 pt-0 border-t border-slate-100">
+            <div class="text-[11px] font-mono text-slate-500 pt-3 flex justify-between items-center">
+              <span>Standard: MoRTH / IRC</span>
+              <span class="text-emerald-600 font-semibold">Handed Over</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 3 -->
-        <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-lg transition-all" data-category="urban">
-          <div class="h-44 bg-gradient-to-br from-emerald-950 to-brand-navy p-6 flex flex-col justify-between text-white relative">
-            <span class="inline-block bg-brand-gold text-brand-navy text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md self-start">
-              BUIDCO Urban
-            </span>
-            <div>
-              <div class="text-xs text-slate-300 font-mono">Client: BUIDCO Bihar</div>
-              <h3 class="text-lg font-bold text-white">Municipal Stormwater Conduit</h3>
+        <!-- Project 3: BUIDCO Urban Drainage -->
+        <div class="project-card bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col justify-between" data-category="urban">
+          <div>
+            <div class="h-48 bg-gradient-to-br from-emerald-950 to-brand-navy p-6 flex flex-col justify-between text-white relative">
+              <div class="flex justify-between items-center">
+                <span class="inline-block bg-brand-gold text-brand-navy text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">
+                  BUIDCO Municipal
+                </span>
+                <span class="text-blue-400 font-mono text-xs font-bold flex items-center gap-1">
+                  <span class="w-2 h-2 rounded-full bg-blue-400"></span> 78% Active
+                </span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-300 font-mono">Client: BUIDCO Bihar</div>
+                <h3 class="text-lg font-bold text-white leading-snug">Patna Municipal Stormwater Conduit & Pumps</h3>
+              </div>
+            </div>
+            
+            <div class="p-6">
+              <div class="flex justify-between items-center text-xs text-slate-500 mb-3 font-mono">
+                <span><i data-lucide="map-pin" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>Patna Urban Zone</span>
+                <span class="text-brand-navy font-bold">Value: ₹46.7 Cr.</span>
+              </div>
+              <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                Deep underground reinforced concrete box drain construction with automated high-discharge pumping station, designed to mitigate monsoon waterlogging during river Ganges flood cresting.
+              </p>
+
+              <!-- Progress Bar -->
+              <div class="mb-4">
+                <div class="flex justify-between text-[11px] font-mono text-slate-500 mb-1">
+                  <span>Physical Completion</span>
+                  <span class="font-bold text-brand-navy">78%</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 78%"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="p-6">
-            <div class="flex justify-between items-center text-xs text-slate-500 mb-3">
-              <span><i data-lucide="map-pin" class="inline w-3.5 h-3.5 text-brand-gold mr-1"></i>Patna Urban Zone</span>
-              <span class="text-blue-600 font-semibold bg-blue-50 px-2 py-0.5 rounded">Execution Phase</span>
-            </div>
-            <p class="text-slate-600 text-xs leading-relaxed mb-4">
-              Underground precast concrete drainage network with high-discharge automated pumping station to prevent waterlogging during monsoon high-tide river cresting.
-            </p>
-            <div class="text-[11px] font-mono text-slate-400 pt-3 border-t border-slate-100 flex justify-between">
-              <span>Value: ₹46.7 Cr.</span>
-              <span>78% Physical Progress</span>
+
+          <div class="px-6 pb-6 pt-0 border-t border-slate-100">
+            <div class="text-[11px] font-mono text-slate-500 pt-3 flex justify-between items-center">
+              <span>Scope: Drainage & Electro-Mech</span>
+              <span class="text-blue-600 font-semibold">Under Active Build</span>
             </div>
           </div>
         </div>
 
       </div>
+
     </div>
   </section>
 
-  <!-- ================= INVESTORS & FINANCIAL STRENGTH ================= -->
-  <section id="investors" class="py-20 bg-brand-navy text-white relative overflow-hidden">
+  <!-- ================= 08. PLANT & MACHINERY FLEET (Inspired by RKDCPL & MGCPL) ================= -->
+  <section id="machinery" class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+        <div class="lg:col-span-6">
+          <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
+            Execution Muscle & Logistics
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-4">
+            100% In-House Heavy Plant & Machinery Fleet
+          </h2>
+        </div>
+        <div class="lg:col-span-6 text-slate-600 text-sm leading-relaxed">
+          <p>
+            Unlike general contractors who rely on unpredictable third-party equipment rentals, Parishisht Construction owns and operates an extensive fleet of modern earthmoving, batching, paving, and water pipeline machinery across Bihar. This self-reliance ensures instant mobilization upon tender award.
+          </p>
+        </div>
+      </div>
+
+      <!-- Machinery Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 text-center">
+        
+        <div class="bg-brand-surface p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-brand-gold flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="factory" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl font-black text-brand-navy font-mono">04</div>
+          <div class="text-xs font-bold text-slate-900 mt-1">Batching Plants</div>
+          <div class="text-[11px] text-slate-500 font-mono">30-60 m³/hr capacity</div>
+        </div>
+
+        <div class="bg-brand-surface p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="truck" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl font-black text-brand-navy font-mono">12</div>
+          <div class="text-xs font-bold text-slate-900 mt-1">Transit Mixers</div>
+          <div class="text-[11px] text-slate-500 font-mono">6m³ & 7m³ TM Units</div>
+        </div>
+
+        <div class="bg-brand-surface p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="cog" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl font-black text-brand-navy font-mono">08</div>
+          <div class="text-xs font-bold text-slate-900 mt-1">Hydraulic Excavators</div>
+          <div class="text-[11px] text-slate-500 font-mono">JCB / Tata Hitachi</div>
+        </div>
+
+        <div class="bg-brand-surface p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="layers" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl font-black text-brand-navy font-mono">03</div>
+          <div class="text-xs font-bold text-slate-900 mt-1">Sensor Pavers</div>
+          <div class="text-[11px] text-slate-500 font-mono">Asphalt / Concrete</div>
+        </div>
+
+        <div class="bg-brand-surface p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl font-black text-brand-navy font-mono">06</div>
+          <div class="text-xs font-bold text-slate-900 mt-1">HDPE Butt Fusion Rigs</div>
+          <div class="text-[11px] text-slate-500 font-mono">63mm - 400mm Dia</div>
+        </div>
+
+        <div class="bg-brand-surface p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center mx-auto mb-3">
+            <i data-lucide="test-tube" class="w-5 h-5"></i>
+          </div>
+          <div class="text-2xl font-black text-brand-navy font-mono">02</div>
+          <div class="text-xs font-bold text-slate-900 mt-1">Mobile Testing Labs</div>
+          <div class="text-[11px] text-slate-500 font-mono">NABL accredited standards</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 09. INVESTORS & FINANCIAL STRENGTH ================= -->
+  <section id="investors" class="py-20 bg-brand-navy text-white relative overflow-hidden bg-blueprint">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <div class="max-w-3xl mb-16">
         <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/30">
-          Financial Strength & Bankability
+          Financial Soundness & Bankability
         </span>
         <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-4 text-white">
           Strong Financial Foundations. <br class="hidden sm:inline"/>
@@ -569,20 +948,20 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
         
-        <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/80">
+        <div class="bg-slate-800/80 rounded-3xl p-8 border border-slate-700/80 hover:border-brand-gold/50 transition-colors">
           <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6">
             <i data-lucide="wallet" class="w-6 h-6"></i>
           </div>
           <h3 class="text-xl font-bold mb-3 text-white">Robust Working Capital</h3>
           <p class="text-slate-300 text-sm leading-relaxed mb-6">
-            Substantial internal capital reserves allow us to mobilize men, materials, and machinery immediately upon Letter of Acceptance (LOA) without waiting for advance disbursements.
+            Substantial internal capital reserves allow us to mobilize men, materials, and machinery immediately upon Letter of Acceptance (LOA) without waiting for mobilization advances.
           </p>
-          <div class="text-xs text-brand-gold font-mono font-semibold">
-            ✓ Bulk Steel & Cement Cash Purchasing Advantage
+          <div class="text-xs text-brand-gold font-mono font-semibold flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4"></i> Bulk Steel & Cement Cash Purchasing Power
           </div>
         </div>
 
-        <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/80">
+        <div class="bg-slate-800/80 rounded-3xl p-8 border border-slate-700/80 hover:border-brand-gold/50 transition-colors">
           <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6">
             <i data-lucide="landmark" class="w-6 h-6"></i>
           </div>
@@ -590,12 +969,12 @@
           <p class="text-slate-300 text-sm leading-relaxed mb-6">
             Extensive Bank Guarantee (BG) and Letter of Credit (LC) credit lines with premier public sector and scheduled commercial banks for high-value tenders.
           </p>
-          <div class="text-xs text-brand-gold font-mono font-semibold">
-            ✓ Tier-1 Solvency Certification Ready
+          <div class="text-xs text-brand-gold font-mono font-semibold flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4"></i> Tier-1 Bank Solvency Certificates Issued
           </div>
         </div>
 
-        <div class="bg-slate-800/80 rounded-2xl p-8 border border-slate-700/80">
+        <div class="bg-slate-800/80 rounded-3xl p-8 border border-slate-700/80 hover:border-brand-gold/50 transition-colors">
           <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center mb-6">
             <i data-lucide="handshake" class="w-6 h-6"></i>
           </div>
@@ -603,18 +982,18 @@
           <p class="text-slate-300 text-sm leading-relaxed mb-6">
             We partner with national EPC infrastructure giants requiring regional execution muscle, localized quarry supply lines, and proven Bihar tender track records.
           </p>
-          <div class="text-xs text-brand-gold font-mono font-semibold">
-            ✓ Consortium Bidding Prequalified
+          <div class="text-xs text-brand-gold font-mono font-semibold flex items-center gap-1.5">
+            <i data-lucide="check-circle" class="w-4 h-4"></i> Consortium Prequalified for Public Works
           </div>
         </div>
 
       </div>
 
-      <!-- Financial Factsheet CTA Box -->
-      <div class="bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Financial Dossier Banner -->
+      <div class="bg-gradient-to-r from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <h4 class="text-lg font-bold text-white">Require Audited Balance Sheets for Tender Pre-Qualification?</h4>
-          <p class="text-slate-400 text-xs sm:text-sm mt-1">Our corporate finance desk provides audited financial dossiers, solvency proofs, and equipment availability statements for government agencies and JV partners.</p>
+          <p class="text-slate-400 text-xs sm:text-sm mt-1">Our finance desk provides audited financial disclosures, solvency certificates, and machinery affidavits for government evaluation committees.</p>
         </div>
         <button onclick="openModal('investor-modal')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-navy font-bold px-6 py-3 rounded-xl text-xs uppercase tracking-wider whitespace-nowrap shadow-md transition-all">
           Request Financial Dossier
@@ -624,7 +1003,60 @@
     </div>
   </section>
 
-  <!-- ================= CAREERS & TALENT ACQUISITION ================= -->
+  <!-- ================= 10. SUSTAINABILITY & CSR (Inspired by L&T) ================= -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
+          Environmental, Social & Governance (ESG)
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-4">
+          Building Sustainably for Bihar’s Tomorrow
+        </h2>
+        <p class="text-slate-600 mt-3 text-base">
+          Our commitment extends beyond concrete and steel. We engineer infrastructure that conserves natural ecosystems and fosters civic empowerment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="p-8 rounded-3xl bg-brand-surface border border-slate-200">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-6">
+            <i data-lucide="droplet" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Water Conservation</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Preserving Bihar's precious groundwater table through advanced leak detection, automated SCADA valves, and rainwater recharge sumps integrated across all PHE installations.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-brand-surface border border-slate-200">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-brand-gold flex items-center justify-center mb-6">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Local Employment & Skilling</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            Prioritizing regional youth recruitment in project districts, providing formal training in pipe fusion welding, surveying, safety supervision, and heavy machinery operation.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-brand-surface border border-slate-200">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Ethical Governance</h3>
+          <p class="text-slate-600 text-xs leading-relaxed">
+            100% statutory transparency with uncompromised compliance in employee provident funds (EPF), ESIC health insurance, and zero tolerance for workplace safety violations.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 11. CAREERS & TALENT ACQUISITION ================= -->
   <section id="careers" class="py-20 bg-brand-surface border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -643,7 +1075,7 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
         
         <!-- Job Card 1 -->
-        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex justify-between items-start mb-4">
               <span class="bg-blue-50 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-md">Full Time • On Site</span>
@@ -655,13 +1087,13 @@
               Lead execution of large-scale intake wells, WTP, OHSR, and DI pipeline networks under Jal Jeevan Mission. Coordinate with PHED Executive Engineers and third-party inspectors.
             </p>
           </div>
-          <button onclick="applyJob('Senior Project Manager (PHE)')" class="w-full bg-slate-900 hover:bg-brand-navy text-white text-xs font-bold py-2.5 rounded-xl transition-all">
+          <button onclick="applyJob('Senior Project Manager (PHE)')" class="w-full bg-slate-900 hover:bg-brand-navy text-white text-xs font-bold py-3 rounded-xl transition-all">
             Apply For Position
           </button>
         </div>
 
         <!-- Job Card 2 -->
-        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex justify-between items-start mb-4">
               <span class="bg-blue-50 text-blue-700 text-xs font-bold px-2.5 py-1 rounded-md">Full Time • On Site</span>
@@ -673,13 +1105,13 @@
               Oversee field testing labs, concrete cube testing, aggregate grading, steel tensile tests, and ensure full compliance with IS Codes and departmental Quality Assurance registers.
             </p>
           </div>
-          <button onclick="applyJob('Civil QA/QC Engineer')" class="w-full bg-slate-900 hover:bg-brand-navy text-white text-xs font-bold py-2.5 rounded-xl transition-all">
+          <button onclick="applyJob('Civil QA/QC Engineer')" class="w-full bg-slate-900 hover:bg-brand-navy text-white text-xs font-bold py-3 rounded-xl transition-all">
             Apply For Position
           </button>
         </div>
 
         <!-- Job Card 3 -->
-        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+        <div class="bg-white rounded-3xl p-7 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
           <div>
             <div class="flex justify-between items-start mb-4">
               <span class="bg-amber-50 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-md">Corporate HQ</span>
@@ -691,7 +1123,7 @@
               Preparation of Running Account (RA) bills, rate analysis based on Bihar PWD / CPWD Schedule of Rates, bid preparation on Bihar e-Procurement portal, and material reconciliation.
             </p>
           </div>
-          <button onclick="applyJob('Tendering & Billing Engineer')" class="w-full bg-slate-900 hover:bg-brand-navy text-white text-xs font-bold py-2.5 rounded-xl transition-all">
+          <button onclick="applyJob('Tendering & Billing Engineer')" class="w-full bg-slate-900 hover:bg-brand-navy text-white text-xs font-bold py-3 rounded-xl transition-all">
             Apply For Position
           </button>
         </div>
@@ -699,10 +1131,10 @@
       </div>
 
       <!-- Quick Resume Box -->
-      <div class="bg-slate-100 rounded-2xl p-6 border border-slate-300 text-center max-w-2xl mx-auto">
+      <div class="bg-white rounded-3xl p-7 border border-slate-200 text-center max-w-2xl mx-auto shadow-sm">
         <h4 class="font-bold text-slate-900 text-sm">Don't see an exact opening for your profile?</h4>
-        <p class="text-xs text-slate-600 mt-1 mb-4">We are always scouting Graduate Engineer Trainees (GET) and experienced Site Supervisors. Email your CV directly to our HR team.</p>
-        <a href="mailto:careers@parishishtconstruction.com" class="inline-flex items-center gap-2 text-brand-navy font-bold text-xs bg-white px-4 py-2 rounded-lg border border-slate-300 hover:border-brand-gold transition-colors">
+        <p class="text-xs text-slate-600 mt-1 mb-4">We actively scout Graduate Engineer Trainees (GET - Civil) and experienced Site Supervisors. Email your CV directly to our HR directorate.</p>
+        <a href="mailto:careers@parishishtconstruction.com" class="inline-flex items-center gap-2 text-brand-navy font-bold text-xs bg-slate-100 px-5 py-2.5 rounded-xl border border-slate-300 hover:border-brand-gold transition-colors">
           <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i>
           careers@parishishtconstruction.com
         </a>
@@ -711,8 +1143,72 @@
     </div>
   </section>
 
-  <!-- ================= TENDERS & VENDOR EMPANELMENT ================= -->
-  <section id="tenders" class="py-20 bg-white border-t border-slate-200">
+  <!-- ================= 12. B2G FAQs WITH ACCORDIONS (Inspired by RKDCPL) ================= -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/20">
+          Frequently Asked Questions
+        </span>
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mt-4">
+          Government Tendering & Technical Queries
+        </h2>
+      </div>
+
+      <div class="space-y-4" id="faq-accordion">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-slate-200 rounded-2xl p-5 hover:border-slate-300 transition-all">
+          <button onclick="toggleFaq(1)" class="w-full flex justify-between items-center text-left font-bold text-slate-900 text-sm focus:outline-none">
+            <span>What are Parishisht Construction's primary engineering domains in Bihar?</span>
+            <i data-lucide="chevron-down" id="faq-icon-1" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          </button>
+          <div id="faq-ans-1" class="hidden mt-3 text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+            Parishisht Construction specializes in Public Health Engineering (intake wells, WTP, OHSR, and water supply networks under Jal Jeevan Mission), Civil Infrastructure (highways, RCC bridges, rural connectivity under RCD/RWD), and Municipal Urban Drainage (stormwater conduits and STPs for BUIDCO).
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-slate-200 rounded-2xl p-5 hover:border-slate-300 transition-all">
+          <button onclick="toggleFaq(2)" class="w-full flex justify-between items-center text-left font-bold text-slate-900 text-sm focus:outline-none">
+            <span>Is Parishisht Construction eligible for Tier-1 Joint Ventures (JV)?</span>
+            <i data-lucide="chevron-down" id="faq-icon-2" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          </button>
+          <div id="faq-ans-2" class="hidden mt-3 text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+            Yes. Parishisht Construction holds Class-1 Bihar EPC registration with high bank solvency, audited financial track records, and in-house fleet of heavy machinery, pre-qualifying for consortium bidding on major public tenders.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-slate-200 rounded-2xl p-5 hover:border-slate-300 transition-all">
+          <button onclick="toggleFaq(3)" class="w-full flex justify-between items-center text-left font-bold text-slate-900 text-sm focus:outline-none">
+            <span>How does Parishisht Construction ensure 100% on-time project completion?</span>
+            <i data-lucide="chevron-down" id="faq-icon-3" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          </button>
+          <div id="faq-ans-3" class="hidden mt-3 text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+            We ensure execution speed through 100% in-house machinery ownership (eliminating rental delays), robust unencumbered working capital (enabling immediate material cash purchasing), and dedicated project directors stationed on site.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-slate-200 rounded-2xl p-5 hover:border-slate-300 transition-all">
+          <button onclick="toggleFaq(4)" class="w-full flex justify-between items-center text-left font-bold text-slate-900 text-sm focus:outline-none">
+            <span>How can material suppliers and subcontractors register with Parishisht?</span>
+            <i data-lucide="chevron-down" id="faq-icon-4" class="w-4 h-4 text-slate-500 transition-transform"></i>
+          </button>
+          <div id="faq-ans-4" class="hidden mt-3 text-xs text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+            Suppliers of BIS-certified TMT steel, DI/HDPE pipes, cement, aggregates, and valves can register directly via our online Vendor Desk below or by emailing test certificates to vendors@parishishtconstruction.com.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 13. TENDERS & VENDOR EMPANELMENT DESK ================= -->
+  <section id="tenders" class="py-20 bg-brand-surface border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
@@ -723,7 +1219,7 @@
           <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-4 mb-6">
             Transparent Procurement & Vendor Empanelment
           </h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+          <p class="text-slate-600 text-sm leading-relaxed mb-6">
             Parishisht Construction invites bids from verified suppliers and specialized subcontractors across Bihar. We maintain rigorous standards for material provenance, test certificates, and delivery timelines.
           </p>
 
@@ -743,48 +1239,48 @@
           </div>
 
           <div class="flex flex-wrap gap-4 text-xs font-mono text-slate-500">
-            <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Tenders: tenders@parishishtconstruction.com</span>
-            <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">Vendors: vendors@parishishtconstruction.com</span>
+            <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">Tenders: tenders@parishishtconstruction.com</span>
+            <span class="bg-white px-3 py-1.5 rounded-lg border border-slate-200">Vendors: vendors@parishishtconstruction.com</span>
           </div>
         </div>
 
         <!-- Vendor Registration Form -->
         <div class="lg:col-span-6">
-          <div class="bg-brand-surface rounded-3xl p-8 border border-slate-200 shadow-md">
+          <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-md">
             <h3 class="text-xl font-bold text-slate-900 mb-2">Vendor / Subcontractor Registration</h3>
             <p class="text-xs text-slate-500 mb-6">Submit your organization details to be added to our empaneled procurement registry.</p>
 
             <form onsubmit="handleVendorSubmit(event)" class="space-y-4">
               <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Company / Firm Name *</label>
-                <input type="text" required placeholder="e.g. Apex Minerals & Logistics" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-white">
+                <input type="text" required placeholder="e.g. Apex Minerals & Logistics" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-brand-surface">
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Contact Person *</label>
-                  <input type="text" required placeholder="Full Name" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-white">
+                  <input type="text" required placeholder="Full Name" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-brand-surface">
                 </div>
                 <div>
                   <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Phone Number *</label>
-                  <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-white">
+                  <input type="tel" required placeholder="+91 98765 43210" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-brand-surface">
                 </div>
               </div>
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Email Address *</label>
-                  <input type="email" required placeholder="vendor@example.com" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-white">
+                  <input type="email" required placeholder="vendor@example.com" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-brand-surface">
                 </div>
                 <div>
                   <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Material / Scope *</label>
-                  <select class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-white">
+                  <select class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold bg-brand-surface">
                     <option>DI & HDPE Pipes</option>
                     <option>TMT Steel / Reinforcement</option>
                     <option>Cement (OPC/PPC)</option>
                     <option>Aggregates & Sand Mining</option>
                     <option>Valves & Flow Meters</option>
-                    <option>Earthmoving & Trenching Subcontracting</option>
+                    <option>Earthmoving Subcontracting</option>
                   </select>
                 </div>
               </div>
@@ -803,7 +1299,7 @@
     </div>
   </section>
 
-  <!-- ================= CONTACT & REGISTERED OFFICE ================= -->
+  <!-- ================= 14. CONTACT & REGISTERED OFFICE ================= -->
   <section id="contact" class="py-20 bg-slate-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -918,7 +1414,7 @@
     </div>
   </section>
 
-  <!-- ================= CORPORATE FOOTER ================= -->
+  <!-- ================= 15. CORPORATE FOOTER (L&T Style Multi-Tiered) ================= -->
   <footer class="bg-brand-deep text-slate-400 text-xs py-14 border-t border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -938,7 +1434,7 @@
           <div class="font-mono text-[11px] text-slate-500 space-y-1">
             <div>CIN: U45200BR2018PTC039000</div>
             <div>GSTIN: 10AAECP1234F1Z5</div>
-            <div>Class-1 Bihar Registered EPC</div>
+            <div>Class-1 Bihar Registered EPC Contractor</div>
           </div>
         </div>
 
@@ -950,7 +1446,7 @@
             <li><a href="#sectors" class="hover:text-brand-gold transition-colors">Civil & Transportation Corridors</a></li>
             <li><a href="#sectors" class="hover:text-brand-gold transition-colors">BUIDCO Municipal Drainage</a></li>
             <li><a href="#sectors" class="hover:text-brand-gold transition-colors">Jal Jeevan Mission Pipelines</a></li>
-            <li><a href="#sectors" class="hover:text-brand-gold transition-colors">Turnkey EPC Public Contracts</a></li>
+            <li><a href="#machinery" class="hover:text-brand-gold transition-colors">Plant & Machinery Fleet</a></li>
           </ul>
         </div>
 
@@ -972,7 +1468,7 @@
           <p class="text-xs text-slate-400 leading-relaxed mb-3">
             Active project execution across 15+ districts including Patna, Muzaffarpur, Bhagalpur, Darbhanga, Gaya, Purnia, and Nalanda.
           </p>
-          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-[11px] font-mono text-brand-gold">
+          <div class="p-3.5 rounded-xl bg-slate-900 border border-slate-800 text-[11px] font-mono text-brand-gold">
             Central Tendering Desk:<br>
             tenders@parishishtconstruction.com
           </div>
@@ -997,7 +1493,7 @@
 
   <!-- ================= MODALS ================= -->
   <!-- Tender Modal -->
-  <div id="tender-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div id="tender-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl">
       <button onclick="closeModal('tender-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
         <i data-lucide="x" class="w-6 h-6"></i>
@@ -1006,7 +1502,7 @@
         <i data-lucide="file-check" class="w-6 h-6"></i>
       </div>
       <h3 class="text-xl font-bold text-slate-900 mb-1">Download Tender Pre-Qualification Dossier</h3>
-      <p class="text-xs text-slate-500 mb-6">Includes audited balance sheets, class-1 Bihar registration certificates, equipment lists, and solvency certificates.</p>
+      <p class="text-xs text-slate-500 mb-6">Includes audited balance sheets, class-1 Bihar registration certificates, machinery fleet lists, and solvency certificates.</p>
       
       <form onsubmit="handleDownloadSubmit(event)" class="space-y-4">
         <div>
@@ -1032,7 +1528,7 @@
   </div>
 
   <!-- Job Application Modal -->
-  <div id="job-modal" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div id="job-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-4">
     <div class="bg-white rounded-3xl max-w-lg w-full p-8 relative shadow-2xl">
       <button onclick="closeModal('job-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600">
         <i data-lucide="x" class="w-6 h-6"></i>
@@ -1063,8 +1559,8 @@
           <input type="email" required placeholder="applicant@example.com" class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold">
         </div>
         <div>
-          <label class="block text-xs font-semibold text-slate-700 mb-1">Resume / Portfolio Link or Summary *</label>
-          <textarea rows="3" required placeholder="Paste Google Drive/LinkedIn resume link or summary of projects handled in Bihar..." class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Resume Link / Profile Summary *</label>
+          <textarea rows="3" required placeholder="Paste Google Drive/LinkedIn link or summary of projects handled in Bihar..." class="w-full px-4 py-2.5 text-xs rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-brand-gold"></textarea>
         </div>
         <button type="submit" class="w-full bg-brand-navy hover:bg-slate-900 text-white font-bold py-3 rounded-xl text-xs uppercase tracking-wider shadow-md">
           Submit Application
@@ -1090,18 +1586,25 @@
     // Modal Controls
     function openModal(id) {
       const modal = document.getElementById(id);
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      }
     }
 
     function closeModal(id) {
       const modal = document.getElementById(id);
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+      }
     }
 
     function applyJob(jobTitle) {
-      document.getElementById('job-title-modal').textContent = 'Position: ' + jobTitle;
+      const titleElem = document.getElementById('job-title-modal');
+      if (titleElem) {
+        titleElem.textContent = 'Position: ' + jobTitle;
+      }
       openModal('job-modal');
     }
 
@@ -1115,16 +1618,29 @@
         btn.classList.add('bg-white', 'text-slate-700');
       });
 
-      event.target.classList.add('bg-brand-navy', 'text-white');
-      event.target.classList.remove('bg-white', 'text-slate-700');
+      if (event && event.target) {
+        event.target.classList.add('bg-brand-navy', 'text-white');
+        event.target.classList.remove('bg-white', 'text-slate-700');
+      }
 
       cards.forEach(card => {
         if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'block';
+          card.style.display = 'flex';
         } else {
           card.style.display = 'none';
         }
       });
+    }
+
+    // FAQ Accordion Toggle
+    function toggleFaq(num) {
+      const ans = document.getElementById('faq-ans-' + num);
+      const icon = document.getElementById('faq-icon-' + num);
+      if (ans && icon) {
+        const isHidden = ans.classList.contains('hidden');
+        ans.classList.toggle('hidden');
+        icon.style.transform = isHidden ? 'rotate(180deg)' : 'rotate(0deg)';
+      }
     }
 
     // Form Handlers

@@ -1,294 +1,202 @@
-# Parishisht Construction Private Limited — Wix Master Copywriting & Layout Blueprint
+# Parishisht Construction Private Limited — Wix Master Copywriting & Layout Blueprint (L&T, RKD & MGCPL Enhanced Edition)
 
-> **Instructions for Wix Webmaster:**  
-> This document contains the exact text, headings, button labels, and design directives to paste directly into your Wix or Wix Studio editor. Each section corresponds to a specific Wix Strip or Section.
+> **Design Archetype:** Heavy Civil Infrastructure & EPC Conglomerate  
+> **Aesthetic Benchmarks:** Larsen & Toubro (`larsentoubro.com`), RKD Construction (`rkdcpl.com`), and MG Contractors (`mgcpl.com`).  
+> **UI/UX Standard:** Swiss Modernism 2.0 + High-Contrast Industrial Minimalism (`ui-ux-pro-max`).
 
 ---
 
-# 1. GLOBAL HEADER & NAVIGATION BAR
+# 1. GLOBAL HEADER & UTILITY BAR
 
-* **Wix Component:** Header Strip (Sticky / Fixed at Top, Transparent on scroll to solid Navy `#0A192F`).
-* **Logo Position:** Top Left — "PARISHISHT" in bold uppercase sans-serif with a gold architectural emblem, followed by "CONSTRUCTION PVT. LTD." in smaller clean subtext.
+## Top Utility Bar
+* **Wix Component:** Narrow Announcement Strip (Deep Charcoal `#06101E`, 36px height).
+* **Left Text:**
+  ```text
+  GOVT OF BIHAR EMPANELED • Class-1 Registered EPC Contractor • PHED • BUIDCO • RCD • RWD
+  ```
+* **Right Text / Links:**
+  ```text
+  ISO 9001:2015 | 45001:2018  •  CIN: U45200BR2018PTC039000  •  tenders@parishishtconstruction.com  •  +91 612 220-XXXX
+  ```
+
+## Sticky Navigation Header
+* **Wix Component:** Header Strip (Sticky / Fixed at Top, Navy `#0A192F` with backdrop blur).
+* **Logo Position:** Top Left — "PARISHISHT" in bold uppercase sans-serif with an architectural emblem, subtext "CONSTRUCTION PVT. LTD. • Engineering Bihar's Future".
 * **Navigation Links:**
-  1. Home
-  2. About Us
-  3. Sectors & Capabilities *(Dropdown: Public Health Engineering | Civil & Roads | Urban Drainage | Heavy EPC)*
-  4. Projects
-  5. Investors & Financials
-  6. Careers
-  7. Tenders & Empanelment
-  8. Contact Us
+  1. About Us
+  2. Capabilities & Sectors *(Dropdown Mega Menu: Public Health Engineering | Civil & Roads | Urban Drainage | Turnkey EPC)*
+  3. Projects
+  4. Plant & Machinery Fleet *(Inspired by RKDCPL & MGCPL)*
+  5. Investors & Solvency
+  6. Sustainability & ESG *(Inspired by L&T)*
+  7. Careers
+  8. Tenders & JV
 * **Header CTA Button (Top Right):**
   - **Button Text:** Tender Pre-Quals
-  - **Link Destination:** Scrolls to Tenders section or opens pre-qualification PDF download modal.
-  - **Button Style:** Safety Gold background (`#D97706`), Navy text (`#0A192F`), bold, rounded-md.
+  - **Button Style:** Safety Gold background (`#D97706`), Navy text (`#0A192F`), bold, rounded-xl.
 
 ---
 
 # 2. HOMEPAGE (`/`)
 
-## Block 1: Hero Banner (The First Look)
-* **Wix Element:** Full-Width Hero Strip (100vh height on desktop).
-* **Background:** High-resolution image of a large-scale water reservoir or concrete bridge under construction, with a dark blue gradient overlay (`rgba(10, 25, 47, 0.85)`).
-* **Pre-Headline Badge (Small Pill Box):**
+## Block 1: Hero Banner with Live Project Pill
+* **Wix Element:** Full-Width Hero Strip (100vh on desktop).
+* **Background:** High-res construction imagery with dark blueprint overlay (`rgba(10, 25, 47, 0.88)`).
+* **Live Project Pill (MGCPL Style):**
   ```text
-  GOVERNMENT OF BIHAR EMPANELED & REGISTERED EPC CONTRACTOR
+  🔴 LIVE PROJECT: Muzaffarpur Jal Jeevan Mission Rural Grid — 92% Executed
   ```
-* **Headline (H1 - Bold, White):**
+* **Headline (H1):**
   ```text
   Engineering Bihar’s Future Infrastructure.
   ```
-* **Sub-Headline (H4 - Light Gray `#E2E8F0`):**
+* **Sub-Headline (H4):**
   ```text
-  Delivering end-to-end excellence in civil infrastructure, large-scale public health engineering, and turnkey government contracting across urban and rural Bihar.
+  Delivering excellence in civil and public health engineering for the public sector. Executing mission-critical water networks, municipal corridors, and turnkey public works with unyielding structural integrity.
   ```
-* **Call to Action Buttons (Side by Side):**
-  - **Primary Button (Gold):** `Explore Our Public Works Portfolio` (links to `/projects`)
-  - **Secondary Button (Ghost/Outline White):** `Download Company Profile (PDF)` (opens tender brochure)
+* **Dual Action Buttons:**
+  - **Primary (Gold):** `Explore Public Works Portfolio` (links to `#projects`)
+  - **Secondary (Outline Ghost):** `Download Company Dossier (PDF)` (triggers pre-qualification download)
 
 ---
 
-## Block 2: Trust & Scale Metrics Bar
-* **Wix Element:** 4-Column Strip (Slate Background `#1E293B`, Gold Text Accent).
-* **Column 1:**
-  - **Metric:** `₹250+ Cr.`
-  - **Label:** Aggregate Works Executed & Under Management
-* **Column 2:**
-  - **Metric:** `15+ Districts`
-  - **Label:** Active Footprint Across Bihar
-* **Column 3:**
-  - **Metric:** `100%`
-  - **Label:** On-Time Delivery in Government EPC Contracts
-* **Column 4:**
-  - **Metric:** `ISO Certified`
-  - **Label:** ISO 9001:2015 | ISO 14001:2015 | ISO 45001:2018
+## Block 2: Infinite Department & Approval Ticker (MGCPL Style)
+* **Wix Element:** Marquee Strip (Slate `#0F172A`).
+* **Continuous Scroll Content:**
+  ```text
+  PHED Bihar (Public Health Engineering) • BUIDCO (Urban Infrastructure) • Jal Jeevan Mission (Har Ghar Nal Ka Jal) • RCD Bihar (Road Construction) • RWD Bihar (Rural Works) • CPWD Registered Standards • Bihar e-Procurement (eproc2.bihar.gov.in) • ISO 9001:2015 & 45001:2018 Certified
+  ```
 
 ---
 
-## Block 3: The Grid (Core Business Sectors)
-* **Wix Element:** 4-Column Card Grid or 2x2 Interactive Cards.
-* **Section Tag:** `CAPABILITIES & SPECIALIZATIONS`
-* **Section Heading (H2):** Built for Scale. Engineered for Longevity.
-* **Section Description:** Empowering Bihar's growth through specialized civil engineering and critical civic utilities.
+## Block 3: The Public Sector Value Proposition (MGCPL Style)
+* **Wix Element:** 2-Column Split Strip (40% Left Headline, 60% Right Lead Paragraph).
+* **Left Headline (H2):**
+  ```text
+  A delayed public works package costs far more than a cheap tender saves.
+  ```
+* **Right Body Text:**
+  ```text
+  Public infrastructure in Bihar runs on published deadlines, fixed state allocations, and public accountability. When a water supply package or road corridor slips, the cost falls on the department, the executing engineers, and the citizens waiting for safe drinking water.
+
+  At Parishisht Construction, we tender only where our equipment capacity, working capital, and specialized engineering bandwidth guarantee timely handover. We mobilize our own batching plants, operate in-house testing labs, and maintain direct supply agreements with Tier-1 manufacturers (SAIL, TATA, Jindal) ensuring zero site stoppages.
+  ```
+* **Key Proof Points:**
+  - `✓ Zero Contractual Abandonments`
+  - `✓ Zero Price-Escalation Litigation`
+
+---
+
+## Block 4: The Grid (Core Capabilities & Sectors)
+* **Wix Element:** 4-Column Card Grid with hover elevation.
+* **Heading:** Built for Scale. Engineered for Longevity.
 
 ### Card 1: Public Health Engineering (PHE)
-* **Icon:** Water droplet / pipeline icon
-* **Heading (H3):** Public Health Engineering & Water Supply
-* **Body Copy:**
-  ```text
-  Implementing safe, reliable, and scalable water supply networks under the Jal Jeevan Mission (Har Ghar Nal Ka Jal). We design, construct, and commission intake wells, Water Treatment Plants (WTP), Over Head Service Reservoirs (OHSR), and extensive DI/HDPE distribution pipelines that bring potable water to millions across Bihar.
-  ```
-* **Specs Pill:** `Intake Wells • WTP • OHSR • DI/HDPE Piping`
-* **Card Link:** `Learn More About PHE Works →`
+* **Tag:** `PHED & Jal Jeevan Mission`
+* **Title:** Public Health Engineering & Water Networks
+* **Body:** Implementing safe, reliable, and scalable water and sanitation systems for our communities. Specialized in intake wells, Water Treatment Plants (WTP), Over Head Service Reservoirs (OHSR), and extensive DI/HDPE distribution grids.
+* **Specs:** `Intake Wells • WTP & OHSR • DI/HDPE Piping • Chlorination Plants`
 
-### Card 2: Civil & Transportation Infrastructure
-* **Icon:** Bridge / Highway road icon
-* **Heading (H3):** Civil Infrastructure & Highways
-* **Body Copy:**
-  ```text
-  Building robust, sustainable transportation frameworks for tomorrow’s public mobility. We construct high-durability state highways, major RCC bridges, rural connectivity roads (RWD), and arterial bypass corridors adhering strictly to MoRTH and IRC standards.
-  ```
-* **Specs Pill:** `RCC Bridges • Flexible & Rigid Pavements • Flood Embankments`
-* **Card Link:** `Learn More About Civil Works →`
+### Card 2: Civil & Road Infrastructure
+* **Tag:** `RCD & RWD Specifications`
+* **Title:** Civil Infrastructure & Arterial Corridors
+* **Body:** Building robust, sustainable frameworks for tomorrow’s public mobility. High-capacity state highways, major RCC bridges, rural connectivity roads, and grade-separated bypass corridors adhering strictly to MoRTH and IRC standards.
+* **Specs:** `RCC Bridges • Flexible & Rigid Pavements • Flood Embankments`
 
-### Card 3: Urban Development & Drainage (BUIDCO)
-* **Icon:** City skyline / stormwater drainage icon
-* **Heading (H3):** Urban Infrastructure & Municipal Drainage
-* **Body Copy:**
-  ```text
-  Partnering with BUIDCO and municipal corporations to transform Bihar's urban landscape. Our projects include deep underground stormwater conduits, modern Sewage Treatment Plants (STP), automated pumping stations, and smart civic utility complexes.
-  ```
-* **Specs Pill:** `STPs • Stormwater Conduits • Pumping Stations`
-* **Card Link:** `Learn More About Urban Drainage →`
+### Card 3: Urban Development (BUIDCO)
+* **Tag:** `BUIDCO & Municipal Works`
+* **Title:** Urban Drainage & Civic Utilities
+* **Body:** Modernizing urban centers through high-volume stormwater drainage, Sewage Treatment Plants (STP), automated pumping stations, and smart city utility conduits to eliminate monsoon inundation.
+* **Specs:** `Stormwater Conduits • STPs • Automated Pumping Stations`
 
-### Card 4: Government Turnkey EPC Contracting
-* **Icon:** Certified contract / engineering blueprint icon
-* **Heading (H3):** Heavy Construction & Turnkey EPC
-* **Body Copy:**
-  ```text
-  Executing large-scale public sector projects with single-point accountability. From initial geotechnical surveys and material procurement to structural engineering and final commissioning, we deliver state-of-the-art administrative and institutional complexes.
-  ```
-* **Specs Pill:** `EPC Turnkey • Institutional Complexes • Earthworks`
-* **Card Link:** `Learn More About EPC Contracts →`
+### Card 4: Heavy Turnkey EPC
+* **Tag:** `Government Turnkey Contracting`
+* **Title:** Heavy Construction & Turnkey Handover
+* **Body:** Delivering structural integrity and innovation for enduring public works. Full EPC single-point turnkey accountability from soil testing, topographical drone surveys to final testing and departmental handover.
+* **Specs:** `EPC Turnkey • Institutional Complexes • Heavy Earthmoving`
 
 ---
 
-## Block 4: About Us Section (Homepage Preview)
-* **Wix Element:** 2-Column Split Strip (60% Text Left, 40% Image Right).
-* **Section Tag:** `ABOUT PARISHISHT CONSTRUCTION PRIVATE LIMITED`
-* **Section Heading (H2):** Committed to Transforming the Infrastructure Landscape of Bihar.
-* **Body Text (Blockquote style):**
+## Block 5: About Us & 4 Pillars of Excellence
+* **Wix Element:** 2-Column Split Section.
+* **Quote Box:**
   ```text
   "At Parishisht Construction Private Limited, we are committed to transforming the infrastructure landscape of Bihar. With a steadfast focus on quality, safety, and efficiency, we partner with the public sector to build foundational civil and public health projects that serve and empower local communities."
   ```
-* **Supporting Narrative Paragraphs:**
-  ```text
-  Rooted in Bihar, Parishisht Construction combines deep localized geotechnical insight with state-of-the-art engineering methodology. Over years of dedicated service to state works departments, we have established an impeccable track record for high-precision project execution, stringent material quality testing, and zero-fatality site management.
-
-  Whether executing complex water distribution grids in flood-prone riverine terrains or laying arterial road networks connecting rural hubs to commercial corridors, our multidisciplinary engineering teams ensure enduring public value.
-  ```
-* **Core Value Highlights (Bullet Points with Checkmarks):**
-  - **Bureau of Indian Standards (BIS) & CPWD Compliance:** Strict adherence to IS codes and departmental testing protocols.
-  - **Heavy Equipment Ownership:** Self-owned fleet of batching plants, excavators, pavers, and testing labs guaranteeing execution velocity.
-  - **Localized Community Engagement:** Empowering local districts through skilled regional employment and sustainable practices.
-* **CTA Button:** `Discover Our Full Story & Leadership Team →`
+* **The 4 Pillars:**
+  1. **BIS & CPWD Standards:** Strict compliance with IS codes, field batch testing, and third-party inspection certifications.
+  2. **Zero-Harm Safety Culture:** ISO 45001:2018 certified occupational health protocols, daily toolbox talks, and full PPE mandate.
+  3. **Heavy Equipment Fleet:** Self-owned computerized batching plants, transit mixers, pavers, and trenchers avoiding leased bottlenecks.
+  4. **Financial Bankability:** Unencumbered working capital reserves and Tier-1 banking consortium solvency backing.
 
 ---
 
-## Block 5: "Investors & Financial Strength" (Homepage Highlight)
-* **Wix Element:** 3-Column Feature Strip (Dark Navy `#0A192F` Background with Gold Accents).
-* **Section Tag:** `FINANCIAL SOUNDNESS & BANKABILITY`
-* **Section Heading (H2):** Strong Financial Foundations. Unassailable Execution Capacity.
-* **Sub-Headline:** Delivering multi-crore public sector contracts with zero liquidity delays, backed by Tier-1 nationalized banks.
-* **Column 1 — Working Capital & Solvency:**
+## Block 6: 100% In-House Plant & Machinery Fleet (RKDCPL & MGCPL Style)
+* **Wix Element:** 6-Column Icon Counter Strip.
+* **Heading:** Execution Muscle & Logistics
+* **Sub-Heading:** 100% In-House Heavy Plant & Machinery Fleet across Bihar.
+* **Item 1:** `04 Batching Plants` — 30-60 m³/hr automated batching capacity
+* **Item 2:** `12 Transit Mixers` — 6m³ & 7m³ TM mobile units
+* **Item 3:** `08 Hydraulic Excavators` — JCB & Tata Hitachi fleet
+* **Item 4:** `03 Sensor Pavers` — Asphalt & concrete mechanical pavers
+* **Item 5:** `06 HDPE Butt Fusion Rigs` — 63mm to 400mm automated fusion
+* **Item 6:** `02 Mobile Testing Labs` — NABL accredited on-site test vans
+
+---
+
+## Block 7: Investors & Bank Solvency
+* **Wix Element:** 3-Column Dark Navy Strip (`#0A192F`).
+* **Heading:** Strong Financial Foundations. Unassailable Execution Capacity.
+* **Sub-Heading:** Delivering multi-crore public sector contracts with zero liquidity bottlenecks, backed by Tier-1 nationalized banks.
+* **Column 1 — Working Capital:**
   - *Title:* Robust Working Capital
-  - *Description:* Unleveraged liquid reserves and high net worth allowing seamless mobilization and uninhibited bulk procurement of steel, cement, and DI pipes.
-* **Column 2 — Banking Consortium Support:**
-  - *Title:* Bank Guarantees & Solvency Backing
-  - *Description:* Extensive non-fund and fund-based credit limits with scheduled commercial banks for Bank Guarantees (BG), Letters of Credit (LC), and performance securities.
-* **Column 3 — Joint Venture (JV) Partnership:**
-  - *Title:* Tier-1 JV Collaboration
-  - *Description:* We actively partner with national infrastructure conglomerates looking for reputable, on-ground regional execution partners with proven Bihar tender credentials.
-* **CTA Button:** `View Investor Relations & Financial Solvency →`
+  - *Copy:* Substantial internal capital reserves allow us to mobilize men, materials, and machinery immediately upon Letter of Acceptance (LOA) without waiting for mobilization advances.
+* **Column 2 — Bank Solvency:**
+  - *Title:* Bank Solvency & BG Capacity
+  - *Copy:* Extensive Bank Guarantee (BG) and Letter of Credit (LC) credit lines with premier public sector and scheduled commercial banks for high-value tenders.
+* **Column 3 — Joint Venture (JV):**
+  - *Title:* Joint Venture (JV) Credentials
+  - *Copy:* We partner with national EPC infrastructure giants requiring regional execution muscle, localized quarry supply lines, and proven Bihar tender track records.
+* **CTA Button:** `Request Financial Dossier & Audited Statements`
 
 ---
 
-## Block 6: "Careers & Leadership" (Homepage Highlight)
-* **Wix Element:** 2-Column Banner with High-Contrast Card.
-* **Section Tag:** `JOIN OUR TEAM`
-* **Section Heading (H2):** Build Bihar’s Landmark Projects. Shape Your Career.
-* **Body Text:**
-  ```text
-  At Parishisht Construction, our people are our strongest foundation. We offer civil engineers, project managers, survey specialists, and safety officers the opportunity to work on transformational public infrastructure across 15+ Bihar districts.
-  ```
-* **Job Openings Highlight Box:**
-  - *Senior Project Manager — PHE / Water Supply Networks (Patna)*
-  - *Quality Control (QA/QC) Engineer — Civil Structures (Bhagalpur)*
-  - *Billing, Estimation & Tendering Engineer (Patna HQ)*
-  - *Graduate Engineer Trainees (GET - Civil) (State-wide)*
-* **CTA Button:** `Explore All Careers & Apply Online →`
+## Block 8: Sustainability & ESG (L&T Style)
+* **Wix Element:** 3-Column Feature Cards.
+* **Heading:** Environmental, Social & Governance (ESG)
+* **Card 1 — Water Conservation:** Preserving Bihar's precious groundwater table through advanced leak detection, automated SCADA valves, and rainwater recharge sumps integrated across all PHE installations.
+* **Card 2 — Local Employment & Skilling:** Prioritizing regional youth recruitment in project districts, providing formal training in pipe fusion welding, surveying, safety supervision, and heavy machinery operation.
+* **Card 3 — Ethical Governance:** 100% statutory transparency with uncompromised compliance in employee provident funds (EPF), ESIC health insurance, and zero tolerance for workplace safety violations.
 
 ---
 
-## Block 7: The Corporate Footer
-* **Wix Element:** Multi-Column Dark Footer (Charcoal / Navy `#06101E`).
-* **Column 1: Corporate Identity & Overview**
-  - **Company:** Parishisht Construction Private Limited
-  - **Tagline:** Building the foundations of tomorrow.
-  - **Registration Details:** Corporate Identification Number (CIN) & GSTIN displayed for statutory transparency.
-  - **Certifications:** ISO 9001:2015 | ISO 14001:2015 | ISO 45001:2018 Certified
-* **Column 2: Business Sectors**
-  - Public Health Engineering (PHE)
-  - Civil & Road Infrastructure
-  - Urban Development & BUIDCO
-  - Turnkey EPC Contracting
-* **Column 3: Corporate & Governance**
-  - About Our Company
-  - Investors & Bankability
-  - Careers & Human Resources
-  - Vendor & Subcontractor Desk
-  - Safety & Quality HSE Policy
-* **Column 4: Patna Headquarters & Contact**
-  - **Registered Office:** Patna, Bihar, India (PIN: 800001)
-  - **Tendering Desk:** `tenders@parishishtconstruction.com`
-  - **Vendor Procurement:** `vendors@parishishtconstruction.com`
-  - **Careers & HR:** `careers@parishishtconstruction.com`
-  - **Corporate Phone:** +91 (0612) XXX-XXXX
-* **Bottom Bar:**
-  - **Copyright:** `© 2026 Parishisht Construction Private Limited. All Rights Reserved.`
-  - **Disclaimers:** Terms of Service • Privacy Policy • Statutory Disclosures
+## Block 9: Careers & Talent Acquisition
+* **Wix Element:** 3-Column Job Card Grid.
+* **Heading:** Build Bihar’s Landmark Projects. Shape Your Career.
+* **Job 1:** *Senior Project Manager (PHE / Water Supply)* — Patna/Muzaffarpur (8–12 Yrs)
+* **Job 2:** *Civil Quality Control (QA/QC) Engineer* — Bhagalpur/Darbhanga (4–7 Yrs)
+* **Job 3:** *Tendering, Billing & Estimation Engineer* — Patna HQ (5–8 Yrs)
+* **Recruitment Email:** `careers@parishishtconstruction.com`
 
 ---
 
-# 3. DEDICATED PAGE: INVESTORS & FINANCIAL STRENGTH (`/investors`)
-
-* **Page Title (H1):** Financial Stability, Solvency & Investor Relations
-* **Page Description:** Institutional credibility, unblemished financial track records, and joint venture qualifications for large-scale EPC infrastructure tenders in Bihar.
-
-### Section 1: Financial Prudence & Key Indicators
-* **Metric 1:** `A+ Tier Bank Solvency` — Solvency certificates issued by nationalized scheduled commercial banks.
-* **Metric 2:** `Zero Statutory Defaults` — 100% compliant audited accounts with unblemished tax, EPF, and GST filings.
-* **Metric 3:** `Self-Owned Asset Base` — Heavy mechanization asset value exceeding ₹35+ Cr., avoiding rental overheads.
-
-### Section 2: Joint Venture (JV) Partnership Credentials
-* **Why Partner with Parishisht Construction in Bihar:**
-  1. **Regional Regulatory & Tender Acumen:** Intimate knowledge of Bihar PWD / CPWD Schedule of Rates (SOR), e-Procurement rules, and departmental procedures.
-  2. **On-Ground Labor & Logistics Muscle:** Established supply lines for aggregates, sand, TMT steel, and pipes with trusted local quarries and manufacturers.
-  3. **Direct Government Empanelment:** Empaneled Class-1 contractor status with PHED, BUIDCO, and RCD.
-* **Joint Venture Inquiry Form Fields:**
-  - Organization Name
-  - Primary Contact Person & Designation
-  - Proposed Project / Tender ID
-  - Consortium Scope (Lead / Partner)
-  - Direct Contact Email & Phone
+## Block 10: Technical & Tender FAQs (RKDCPL Style)
+* **Wix Element:** Accordion Block.
+* **Q1: What are Parishisht Construction's primary engineering domains in Bihar?**
+  - *A1: Parishisht Construction specializes in Public Health Engineering (intake wells, WTP, OHSR, and water supply networks under Jal Jeevan Mission), Civil Infrastructure (highways, RCC bridges, rural connectivity under RCD/RWD), and Municipal Urban Drainage (stormwater conduits and STPs for BUIDCO).*
+* **Q2: Is Parishisht Construction eligible for Tier-1 Joint Ventures (JV)?**
+  - *A2: Yes. Parishisht Construction holds Class-1 Bihar EPC registration with high bank solvency, audited financial track records, and in-house fleet of heavy machinery, pre-qualifying for consortium bidding on major public tenders.*
+* **Q3: How does Parishisht Construction ensure 100% on-time project completion?**
+  - *A3: We ensure execution speed through 100% in-house machinery ownership (eliminating rental delays), robust unencumbered working capital (enabling immediate material cash purchasing), and dedicated project directors stationed on site.*
+* **Q4: How can material suppliers and subcontractors register with Parishisht?**
+  - *A4: Suppliers of BIS-certified TMT steel, DI/HDPE pipes, cement, aggregates, and valves can register directly via our online Vendor Desk below or by emailing test certificates to vendors@parishishtconstruction.com.*
 
 ---
 
-# 4. DEDICATED PAGE: CAREERS & LEADERSHIP (`/careers`)
-
-* **Page Title (H1):** Shape Bihar’s Infrastructure. Elevate Your Engineering Career.
-* **Page Description:** We are always looking for driven, ethical, and talented civil engineers, project directors, site supervisors, and billing professionals.
-
-### Section 1: Why Build With Parishisht
-1. **Meaningful Civic Impact:** Providing clean tap water to rural households and connecting underserved towns with durable roadways.
-2. **Modern Mechanization & Tools:** Work with computerized batching plants, modern surveying total stations, drone terrain mapping, and digital billing systems.
-3. **Safety First Culture:** Full PPE mandatory compliance, site insurance, and structured HSE training for all field personnel.
-4. **Competitive Compensation & District Allowances:** Above-industry remuneration, provident fund (PF), ESI, medical benefits, and performance-based project bonuses.
-
-### Section 2: Current Job Openings Table / Repeater
-
-#### Opening 1: Senior Project Manager (Water Supply & PHE Networks)
-* **Location:** Patna / Muzaffarpur Site Office
-* **Experience Required:** 8–12 Years
-* **Qualifications:** B.Tech / B.E. in Civil Engineering
-* **Key Responsibilities:** Oversee execution of intake wells, WTPs, Over Head Service Reservoirs (OHSR), and HDPE/DI pipe network distribution under Jal Jeevan Mission. Coordinate with PHED Executive Engineers and third-party inspection agencies.
-
-#### Opening 2: Civil QA/QC Engineer (Structural Works)
-* **Location:** Bhagalpur / Darbhanga Project Sites
-* **Experience Required:** 4–7 Years
-* **Qualifications:** Diploma / B.Tech in Civil Engineering
-* **Key Responsibilities:** Conduct on-site material testing (slump test, cube compressive strength, silt content, aggregate grading), maintain Quality Assurance registers, ensure IS code compliance.
-
-#### Opening 3: Tendering, Billing & Estimation Engineer
-* **Location:** Corporate Office, Patna
-* **Experience Required:** 5–8 Years
-* **Qualifications:** B.Tech in Civil Engineering
-* **Key Responsibilities:** Preparation of RA bills, rate analysis based on Bihar PWD / CPWD Schedule of Rates, bid preparation on Bihar e-Procurement portal, reconciliation of steel and cement consumption.
-
-#### Opening 4: HSE & Site Safety Officer
-* **Location:** Active Project Sites (Rotational)
-* **Experience Required:** 3–6 Years
-* **Qualifications:** Degree/Diploma with NEBOSH / IOSH or Post Graduate Diploma in Industrial Safety
-* **Key Responsibilities:** Enforce zero-harm safety standards, conduct toolbox talks, audit trench shoring and heavy machinery operations.
-
-### Section 3: Career Application Submission Block
-* **Headline:** Submit Your Candidature
-* **Text:** "Interested in shaping Bihar’s infrastructure? Send your updated resume, educational certificates, and experience portfolio to our HR department."
-* **Direct Email:** `careers@parishishtconstruction.com`
-* **Subject Format Recommendation:** `Application - [Job Title] - [Your Name]`
-
----
-
-# 5. DEDICATED PAGE: TENDERS & VENDOR EMPANELMENT (`/tenders`)
-
-* **Page Title (H1):** Tendering & Vendor Procurement Desk
-* **Sub-Heading:** Transparent procurement, vendor partnerships, and statutory compliance.
-
-### Section 1: Contractor Registration & Tender Eligibility
-* **Class Registration:** Class-1 Registered EPC Contractor with Govt. of Bihar.
-* **Department Empanelments:**
-  - Public Health Engineering Department (PHED), Govt. of Bihar
-  - Bihar Urban Infrastructure Development Corporation (BUIDCO)
-  - Road Construction Department (RCD), Govt. of Bihar
-  - Rural Works Department (RWD), Govt. of Bihar
-* **e-Procurement Portal:** Empaneled bidder on `eproc2.bihar.gov.in`.
-
-### Section 2: Vendor & Supplier Empanelment Registration
-* **Materials Procured Regularly:**
-  - Fe 500D / 550D TMT Reinforcement Steel (Primary producers: SAIL, TATA, Jindal)
-  - OPC 43 / 53 Grade & PPC Cement (Approved public works brands)
-  - Centrifugally Cast Ductile Iron (DI) K7/K9 Pipes & Fittings (IS:8329)
-  - High-Density Polyethylene (HDPE) Pipes PE-100 (IS:4984)
-  - Sluice Valves, Air Valves, Non-Return Valves & Flow Meters
-  - Coarse and Fine Aggregates (Stone chips & river sand from authorized mining sources)
-* **Supplier Registration Link:** `vendors@parishishtconstruction.com`
+## Block 11: Multi-Tiered Corporate Footer (L&T Style)
+* **Wix Element:** 4-Column Deep Slate Footer (`#06101E`).
+* **Column 1:** Brand overview, CIN `U45200BR2018PTC039000`, GSTIN `10AAECP1234F1Z5`.
+* **Column 2:** Engineering Sectors (PHE, Civil Highways, BUIDCO Drainage, Jal Jeevan Mission, Machinery Fleet).
+* **Column 3:** Corporate Governance (About, Investors, Careers, Vendor Desk, ESG Policy).
+* **Column 4:** Patna HQ & Central Tendering Desk (`tenders@parishishtconstruction.com`).
+* **Bottom Bar:** `© 2026 Parishisht Construction Private Limited. All Rights Reserved.`
