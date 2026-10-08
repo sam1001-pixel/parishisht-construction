@@ -11,3 +11,4 @@
 - **2026-10-08:** [US-002] Authored comprehensive `WIX_MASTER_BLOCKS.md` with complete copy for Home, About, Sectors, Projects, Investors, Careers, Tenders, and Footer.
 - **2026-10-08:** [US-003] Built responsive standalone web portal prototype in `index.html` with interactive filter tabs, tender dossier modal, and career application modal.
 - **2026-10-08:** [US-004] Created `BRAND_GUIDELINES.md` detailing design tokens, color hierarchy, and photography standards.
+- **2026-10-08:** [US-005] Upgraded Hero Banner section to use the photorealistic civil infrastructure hero image as the full-bleed background with multi-layered high-contrast gradient scrims, blueprint overlay, and floating Bihar Field Radar HUD card.

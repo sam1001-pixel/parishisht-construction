@@ -64,6 +64,21 @@
       "priority": 4,
       "passes": true,
       "notes": "Completed BRAND_GUIDELINES.md with full token system."
+    },
+    {
+      "id": "US-005",
+      "title": "Set Hero Infrastructure Image as Full Main Landing Page Background",
+      "description": "As a site visitor, I want a majestic, full-bleed photorealistic civil engineering background in the hero banner with high-contrast scrims and a live field telemetry HUD.",
+      "acceptanceCriteria": [
+        "Hero image applied as full-bleed background of hero section with dark gradient overlays",
+        "WCAG AAA contrast maintained for headlines, subtext, badges, and CTAs",
+        "Dynamic Bihar Field Radar HUD glassmorphic card presenting real-time telemetry",
+        "Mobile responsive across small, tablet, and desktop viewports",
+        "HTML validation passes"
+      ],
+      "priority": 5,
+      "passes": true,
+      "notes": "Hero background updated with multi-layered gradient scrims, blueprint overlay, and operational HUD card."
     }
   ]
 }
