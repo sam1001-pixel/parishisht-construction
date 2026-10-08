@@ -110,6 +110,25 @@
       "priority": 7,
       "passes": true,
       "notes": "Successfully deployed dynamic BOQ estimator, animated counters, Bihar district radar, and toast notification engine."
+    },
+    {
+      "id": "US-009",
+      "title": "Ground-Up Rebuild of Fully Dynamic SPA with Obsidian Blueprint Design System",
+      "description": "As an executive stakeholder, tender committee member, or citizen, I want a modern, reactive single-page portal with state-driven view modes, live telemetry, interactive calculators, and an Obsidian Carbon & Electric Blueprint palette benchmarked against L&T, RKDCPL, and MGCPL.",
+      "acceptanceCriteria": [
+        "Complete ground-up rebuild discarding legacy static layout and outdated color scheme",
+        "State-driven ParishishtApp SPA engine with reactive rendering for all components and modals",
+        "Obsidian Carbon & Electric Blueprint palette (#050811, #080D1A, #0F172A, #0284C7, #38BDF8, #F59E0B) with glassmorphism and technical grid lines",
+        "Dynamic Project Explorer supporting 3 view modes (Bento Grid, Data Table, Corridor Matrix), search, and 3-tab Dossier Modal",
+        "Interactive Bihar Operations Radar featuring Ganges vector flow and live telemetry inspector",
+        "Parametric BOQ Estimator and Tender Bidding Capacity Calculator with printable modal output",
+        "Filterable Plant & Machinery Fleet Telemetry Inspector",
+        "100% Bilingual parity (Hindi and English) across all static and dynamic text",
+        "HTML & JS validation passes with 0 errors"
+      ],
+      "priority": 8,
+      "passes": true,
+      "notes": "Completed full ground-up rebuild of index.html as a fully dynamic SPA with Obsidian Blueprint design system."
     }
   ]
 }

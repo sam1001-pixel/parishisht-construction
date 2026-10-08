@@ -1,7 +1,9 @@
 # Progress Log - Parishisht Construction Private Limited Corporate Web Portal
 
 ## Codebase Patterns
-- **Brand Palette:** High-Vis Safety Orange (`#EA580C`), Blueprint Steel (`#0F172A`), Midnight Obsidian (`#020617`), Precision Blueprint Blue (`#0284C7`), Surface Off-White (`#F8FAFC`).
+- **Brand Palette:** Obsidian Carbon (`#050811`), Deep Space Slate (`#080D1A`), Slate Tech Navy (`#0F172A`), Electric Blueprint Cyan (`#0284C7` / `#38BDF8`), Imperial Gold / Amber (`#F59E0B`), Metric Emerald (`#10B981`).
+- **Architecture Pattern:** Pure Single-Page Application (SPA) driven by centralized `ParishishtApp` reactive state store. Dynamic client-side rendering for project bento/table/corridor views, modal dossiers, parametric BOQ calculations, bidding capacity, fleet telemetry, and GIS operations radar.
+- **Bilingual Reactivity:** 100% synchronized English & authentic Hindi translation dictionaries (`translations.en`, `translations.hi`) applying instant updates to static `data-i18n` elements and dynamic JavaScript render templates.
 - **Terminology Standard:** Aligned strictly with Bihar Public Sector works (PHED, BUIDCO, RCD, RWD, Jal Jeevan Mission, CPWD/IRC standards).
 - **Target Audience:** Tender evaluation committees, chief engineers, institutional bank partners, JV consortiums, civil engineering job applicants.
 - **Wix Block Integration:** Page-by-page ready markdown with pre-formatted H1/H2, body paragraphs, and button configurations.
@@ -14,4 +16,6 @@
 - **2026-10-08:** [US-005] Upgraded Hero Banner section to use the photorealistic civil infrastructure hero image as the full-bleed background with multi-layered high-contrast gradient scrims, blueprint overlay, and floating Bihar Field Radar HUD card.
 - **2026-10-08:** [US-006] Removed hero HUD card for clean cinematic presentation, introduced bilingual Hindi/English toggle button with client-side translation engine, and deployed UI/UX Pro Max High-Vis Safety Orange & Blueprint Steel color system.
 - **2026-10-08:** [US-008] Deployed 4 advanced dynamic frontend features: Public Works BOQ & Timeline Estimator with printable dossier sheet, Viewport Animated Metric Counters (IntersectionObserver) with numerical easing, Accessible Toast Notification Engine with status badges, and Interactive Bihar District Operations Radar & Geo-Navigator with SVG schematic map and 1-click project directory filtering. Complete 100% bilingual Hindi/English dictionary coverage.
+- **2026-10-08:** [US-009] Ground-up rebuild of fully dynamic SPA benchmarked against L&T, RKDCPL, and MGCPL. Discarded legacy static code and old colors. Deployed Obsidian Blueprint palette, multi-view Project Explorer (Bento / Sortable Data Table / Corridor Matrix), Ganges GIS vector radar, parametric BOQ estimator with printable factsheets, government tender bidding formula calculator, fleet telemetry inspector, accessible toasts, and 100% bilingual reactivity.
+
 
