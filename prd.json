@@ -236,6 +236,23 @@
       "priority": 14,
       "passes": true,
       "notes": "Successfully aligned hero to side layout with sunset color harmony and upgraded custom dropdowns across the portal."
+    },
+    {
+      "id": "US-016",
+      "title": "Unboxed Cinematic Hero Redesign via UI/UX Pro Max with Directional Lighting and Docked Translucent Telemetry Bar",
+      "description": "As a site visitor, government official, or partner, I want the hero section to look stunning, professional, and authoritative without awkward box-in-a-box artifacts, featuring unboxed grand typography, directional atmospheric lighting gradient across the photograph, and a docked translucent glass telemetry bar with glowing numerals.",
+      "acceptanceCriteria": [
+        "Eliminated boxed-in container around hero text, letting grand typography breathe directly over the photograph",
+        "Directional atmospheric gradient (bg-gradient-to-r from-slate-950/95 via-slate-950/75 to-slate-950/25) provides 100% crisp contrast on text while dissolving smoothly to showcase civil infrastructure photo",
+        "Main headline scaled to unboxed grand scale (text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.08]) with sunset amber-orange gradient",
+        "4 metric counters converted into a docked translucent architectural glass bar (bg-slate-950/65 backdrop-blur-xl border-t border-white/15) with glowing colored numerals",
+        "All counter targets and bilingual data attributes preserved for dynamic animation",
+        "Passes Python html.parser validation with 0 errors",
+        "Passes JavaScript delimiter check with 0 errors"
+      ],
+      "priority": 15,
+      "passes": true,
+      "notes": "Redesigned hero section with unboxed cinematic typography, directional lighting, and docked glass telemetry bar via UI/UX Pro Max."
     }
   ]
 }
