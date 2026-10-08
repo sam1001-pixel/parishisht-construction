@@ -134,7 +134,7 @@
       </a>
 
       <!-- Desktop Nav -->
-      <nav class="hidden lg:flex items-center gap-3.5 xl:gap-6 2xl:gap-7 text-xs xl:text-sm font-semibold text-slate-300">
+      <nav class="hidden lg:flex items-center gap-2.5 xl:gap-4 2xl:gap-5 text-xs xl:text-sm font-semibold text-slate-300">
         <a href="#about" class="hover:text-brand-gold transition-colors whitespace-nowrap" data-i18n="nav-about">About Us</a>
         
         <!-- Capabilities Dropdown -->
@@ -143,7 +143,7 @@
             <span data-i18n="nav-capabilities">Capabilities</span>
             <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"></i>
           </a>
-          <div class="absolute top-full left-0 w-84 bg-brand-deep border border-slate-700/80 rounded-2xl shadow-2xl p-4 hidden group-hover:block transition-all">
+          <div class="absolute top-full left-0 w-84 bg-brand-deep border border-slate-700/80 rounded-2xl shadow-2xl p-4 hidden group-hover:block transition-all z-50">
             <div class="text-[11px] font-mono text-brand-gold uppercase tracking-wider px-3 py-1 font-bold" data-i18n="dropdown-title">Public Works Disciplines</div>
             <a href="#sectors" class="block p-3 rounded-xl hover:bg-slate-800/80 transition-colors">
               <div class="font-bold text-white text-xs" data-i18n="dd-phe-title">Public Health Engineering (PHE)</div>
@@ -161,9 +161,27 @@
               <div class="font-bold text-white text-xs" data-i18n="dd-epc-title">Turnkey EPC Public Works</div>
               <div class="text-[11px] text-slate-400" data-i18n="dd-epc-desc">Geotechnical, Heavy Earthworks & Complexes</div>
             </a>
+            <div class="mt-2 pt-2 border-t border-slate-800 flex flex-col gap-1">
+              <a href="#estimator" class="px-3 py-2 rounded-lg hover:bg-slate-800 text-brand-gold text-xs font-bold flex items-center gap-1.5 transition-colors">
+                <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+                <span data-i18n="nav-estimator">BOQ & Timeline Estimator</span>
+              </a>
+              <a href="#operations-radar" class="px-3 py-2 rounded-lg hover:bg-slate-800 text-cyan-400 text-xs font-bold flex items-center gap-1.5 transition-colors">
+                <i data-lucide="radar" class="w-3.5 h-3.5"></i>
+                <span data-i18n="nav-radar">District Operations Radar</span>
+              </a>
+            </div>
           </div>
         </div>
 
+        <a href="#estimator" class="hover:text-brand-gold transition-colors whitespace-nowrap text-brand-gold flex items-center gap-1">
+          <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
+          <span data-i18n="nav-estimator">BOQ Estimator</span>
+        </a>
+        <a href="#operations-radar" class="hover:text-brand-gold transition-colors whitespace-nowrap flex items-center gap-1 text-slate-300">
+          <i data-lucide="radar" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span data-i18n="nav-radar">District Radar</span>
+        </a>
         <a href="#projects" class="hover:text-brand-gold transition-colors whitespace-nowrap" data-i18n="nav-projects">Projects</a>
         <a href="#machinery" class="hover:text-brand-gold transition-colors whitespace-nowrap" data-i18n="nav-machinery">Machinery Fleet</a>
         <a href="#investors" class="hover:text-brand-gold transition-colors whitespace-nowrap" data-i18n="nav-investors">Investors & Solvency</a>
@@ -208,6 +226,14 @@
 
       <a href="#about" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1" data-i18n="nav-about">About Us</a>
       <a href="#sectors" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1" data-i18n="nav-capabilities">Capabilities & Sectors</a>
+      <a href="#estimator" onclick="toggleMobileMenu()" class="block text-brand-gold font-bold hover:text-white py-1 flex items-center gap-2">
+        <i data-lucide="calculator" class="w-4 h-4"></i>
+        <span data-i18n="nav-estimator">Public Works BOQ Estimator</span>
+      </a>
+      <a href="#operations-radar" onclick="toggleMobileMenu()" class="block text-cyan-400 font-bold hover:text-white py-1 flex items-center gap-2">
+        <i data-lucide="radar" class="w-4 h-4"></i>
+        <span data-i18n="nav-radar">Bihar District Operations Radar</span>
+      </a>
       <a href="#projects" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1" data-i18n="nav-projects">Projects Portfolio</a>
       <a href="#machinery" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1" data-i18n="nav-machinery">Plant & Machinery Fleet</a>
       <a href="#investors" onclick="toggleMobileMenu()" class="block text-slate-300 hover:text-brand-gold py-1" data-i18n="nav-investors">Investors & Bank Solvency</a>
@@ -285,23 +311,23 @@
           </button>
         </div>
 
-        <!-- Horizontal Trust Metrics Strip -->
+        <!-- Horizontal Trust Metrics Strip with Viewport Animated Counters -->
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-700/60 max-w-3xl">
           <div class="bg-slate-900/70 backdrop-blur-md p-4 rounded-2xl border border-slate-800/80 shadow-lg">
-            <div class="text-2xl sm:text-3xl font-black text-brand-gold font-mono">₹250+ Cr.</div>
+            <div class="text-2xl sm:text-3xl font-black text-brand-gold font-mono" data-counter="250" data-counter-prefix="₹" data-counter-suffix="+ Cr.">₹250+ Cr.</div>
             <div class="text-[11px] text-slate-300 uppercase tracking-wider font-medium mt-1" data-i18n="metric-works">Works Executed</div>
           </div>
           <div class="bg-slate-900/70 backdrop-blur-md p-4 rounded-2xl border border-slate-800/80 shadow-lg">
-            <div class="text-2xl sm:text-3xl font-black text-white font-mono">15+ Districts</div>
+            <div class="text-2xl sm:text-3xl font-black text-white font-mono" data-counter="15" data-counter-prefix="" data-counter-suffix="+">15+</div>
             <div class="text-[11px] text-slate-300 uppercase tracking-wider font-medium mt-1" data-i18n="metric-districts">Bihar Footprint</div>
           </div>
           <div class="bg-slate-900/70 backdrop-blur-md p-4 rounded-2xl border border-slate-800/80 shadow-lg">
-            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">100%</div>
+            <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono" data-counter="100" data-counter-prefix="" data-counter-suffix="%">100%</div>
             <div class="text-[11px] text-slate-300 uppercase tracking-wider font-medium mt-1" data-i18n="metric-delivery">On-Time Delivery</div>
           </div>
           <div class="bg-slate-900/70 backdrop-blur-md p-4 rounded-2xl border border-slate-800/80 shadow-lg">
-            <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono">Class-1</div>
-            <div class="text-[11px] text-slate-300 uppercase tracking-wider font-medium mt-1" data-i18n="metric-class">Govt Empaneled</div>
+            <div class="text-2xl sm:text-3xl font-black text-cyan-400 font-mono" data-counter="450" data-counter-prefix="" data-counter-suffix="k+">450k+</div>
+            <div class="text-[11px] text-slate-300 uppercase tracking-wider font-medium mt-1" data-i18n="metric-hours">Safe Man-Hours</div>
           </div>
         </div>
 
@@ -488,6 +514,453 @@
     </div>
   </section>
 
+  <!-- ================= 05B. INTERACTIVE PUBLIC WORKS BOQ & TIMELINE ESTIMATOR ================= -->
+  <section id="estimator" class="py-20 bg-slate-900 text-white relative overflow-hidden bg-blueprint border-t border-slate-800">
+    <!-- Ambient Safety Glow -->
+    <div class="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12">
+        <span class="text-brand-gold font-bold text-xs uppercase tracking-widest bg-brand-gold/10 px-3 py-1 rounded-full border border-brand-gold/30" data-i18n="est-badge">
+          Public Works Estimation Engine
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-4 text-white">
+          <span data-i18n="est-title-1">Public Works BOQ &</span> <br class="hidden sm:inline" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-300" data-i18n="est-title-2">
+            Timeline Estimator
+          </span>
+        </h2>
+        <p class="text-slate-300 mt-3 text-sm sm:text-base leading-relaxed" data-i18n="est-sub">
+          Instant budget, material volume, fleet mobilization, and execution schedule calculations based on Bihar PWD Schedule of Rates (SOR) & CPWD engineering standards.
+        </p>
+      </div>
+
+      <!-- Main Estimator Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Controls Column (Inputs) -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Step 1: Sector Selection -->
+          <div class="bg-slate-800/80 rounded-3xl p-6 border border-slate-700/80 shadow-xl">
+            <label class="block text-xs font-mono uppercase tracking-wider text-brand-gold font-bold mb-3" data-i18n="est-sec-sector">
+              1. Select Public Works Sector
+            </label>
+            <div class="grid grid-cols-3 gap-2 sm:gap-3" id="est-sector-selector">
+              <button type="button" onclick="setEstimatorSector('phe')" id="btn-sector-phe" class="est-sector-btn p-3 rounded-2xl border text-center transition-all bg-brand-gold/20 border-brand-gold text-white shadow-md">
+                <i data-lucide="droplet" class="w-5 h-5 mx-auto mb-1 text-brand-gold"></i>
+                <div class="text-xs font-bold leading-tight" data-i18n="est-sector-phe">PHE Water Supply</div>
+                <div class="text-[10px] text-slate-400 font-mono mt-0.5">Jal Jeevan Mission</div>
+              </button>
+              <button type="button" onclick="setEstimatorSector('roads')" id="btn-sector-roads" class="est-sector-btn p-3 rounded-2xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-300 text-center transition-all">
+                <i data-lucide="truck" class="w-5 h-5 mx-auto mb-1 text-slate-400"></i>
+                <div class="text-xs font-bold leading-tight" data-i18n="est-sector-roads">Highways & Roads</div>
+                <div class="text-[10px] text-slate-400 font-mono mt-0.5">RCD / RWD</div>
+              </button>
+              <button type="button" onclick="setEstimatorSector('urban')" id="btn-sector-urban" class="est-sector-btn p-3 rounded-2xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-300 text-center transition-all">
+                <i data-lucide="waves" class="w-5 h-5 mx-auto mb-1 text-slate-400"></i>
+                <div class="text-xs font-bold leading-tight" data-i18n="est-sector-urban">Urban Drainage</div>
+                <div class="text-[10px] text-slate-400 font-mono mt-0.5">BUIDCO Grids</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Dynamic Sector Specifications -->
+          <div class="bg-slate-800/80 rounded-3xl p-6 border border-slate-700/80 shadow-xl space-y-5">
+            <div class="flex justify-between items-center border-b border-slate-700/80 pb-3">
+              <label class="text-xs font-mono uppercase tracking-wider text-brand-gold font-bold" data-i18n="est-sec-params">
+                2. Project Scale & Specifications
+              </label>
+              <span id="est-current-sector-pill" class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand-gold/20 text-brand-gold font-bold uppercase">
+                PHE Standards
+              </span>
+            </div>
+
+            <!-- PHE Dynamic Fields Container -->
+            <div id="est-fields-phe" class="space-y-4">
+              <!-- Pipeline km -->
+              <div>
+                <div class="flex justify-between items-center text-xs mb-1.5 font-medium">
+                  <span class="text-slate-300" data-i18n="est-lbl-pipe-km">Distribution Pipeline Length (km):</span>
+                  <div class="flex items-center gap-1 font-mono">
+                    <input type="number" id="num-pipe-km" min="10" max="300" step="5" value="75" oninput="syncFromNumber('pipe-km')" class="w-16 px-2 py-1 text-right text-xs bg-slate-900 border border-slate-700 rounded-lg text-brand-gold font-bold focus:outline-none focus:border-brand-gold">
+                    <span class="text-slate-400 text-xs">km</span>
+                  </div>
+                </div>
+                <input type="range" id="range-pipe-km" min="10" max="300" step="5" value="75" oninput="syncFromRange('pipe-km')" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                  <span>10 km</span>
+                  <span>150 km</span>
+                  <span>300 km</span>
+                </div>
+              </div>
+
+              <!-- OHSR Tanks Count -->
+              <div>
+                <div class="flex justify-between items-center text-xs mb-1.5 font-medium">
+                  <span class="text-slate-300" data-i18n="est-lbl-ohsr-count">Over Head Reservoirs (OHSR Tanks):</span>
+                  <div class="flex items-center gap-1 font-mono">
+                    <input type="number" id="num-ohsr-count" min="1" max="10" step="1" value="4" oninput="syncFromNumber('ohsr-count')" class="w-16 px-2 py-1 text-right text-xs bg-slate-900 border border-slate-700 rounded-lg text-brand-gold font-bold focus:outline-none focus:border-brand-gold">
+                    <span class="text-slate-400 text-xs">Units</span>
+                  </div>
+                </div>
+                <input type="range" id="range-ohsr-count" min="1" max="10" step="1" value="4" oninput="syncFromRange('ohsr-count')" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                  <span>1 Unit</span>
+                  <span>5 Units</span>
+                  <span>10 Units</span>
+                </div>
+              </div>
+
+              <!-- OHSR Capacity Dropdown -->
+              <div>
+                <label class="block text-xs text-slate-300 mb-1.5 font-medium" data-i18n="est-lbl-ohsr-cap">Average OHSR Tank Capacity:</label>
+                <select id="select-ohsr-cap" onchange="updateEstimator()" class="w-full px-3 py-2 text-xs rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                  <option value="2.5">2.5 Lakh Liters (Rural Habitation Tier-1)</option>
+                  <option value="4.5" selected>4.5 Lakh Liters (Standard Panchayat Multi-Ward)</option>
+                  <option value="7.5">7.5 Lakh Liters (Semi-Urban Sub-divisional Tank)</option>
+                  <option value="10.0">10.0 Lakh Liters (High-Capacity Regional Reservoir)</option>
+                </select>
+              </div>
+
+              <!-- FHTC Household Taps -->
+              <div>
+                <div class="flex justify-between items-center text-xs mb-1.5 font-medium">
+                  <span class="text-slate-300" data-i18n="est-lbl-fhtc-count">Functional Household Taps (FHTC):</span>
+                  <div class="flex items-center gap-1 font-mono">
+                    <input type="number" id="num-fhtc-count" min="1000" max="35000" step="500" value="15000" oninput="syncFromNumber('fhtc-count')" class="w-20 px-2 py-1 text-right text-xs bg-slate-900 border border-slate-700 rounded-lg text-brand-gold font-bold focus:outline-none focus:border-brand-gold">
+                    <span class="text-slate-400 text-xs">Taps</span>
+                  </div>
+                </div>
+                <input type="range" id="range-fhtc-count" min="1000" max="35000" step="500" value="15000" oninput="syncFromRange('fhtc-count')" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                  <span>1,000</span>
+                  <span>18,000</span>
+                  <span>35,000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Highways & Roads Dynamic Fields Container -->
+            <div id="est-fields-roads" class="hidden space-y-4">
+              <!-- Road km -->
+              <div>
+                <div class="flex justify-between items-center text-xs mb-1.5 font-medium">
+                  <span class="text-slate-300" data-i18n="est-lbl-road-km">Highway / Road Length (km):</span>
+                  <div class="flex items-center gap-1 font-mono">
+                    <input type="number" id="num-road-km" min="5" max="100" step="1" value="25" oninput="syncFromNumber('road-km')" class="w-16 px-2 py-1 text-right text-xs bg-slate-900 border border-slate-700 rounded-lg text-brand-gold font-bold focus:outline-none focus:border-brand-gold">
+                    <span class="text-slate-400 text-xs">km</span>
+                  </div>
+                </div>
+                <input type="range" id="range-road-km" min="5" max="100" step="1" value="25" oninput="syncFromRange('road-km')" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                  <span>5 km</span>
+                  <span>50 km</span>
+                  <span>100 km</span>
+                </div>
+              </div>
+
+              <!-- Pavement Specification -->
+              <div>
+                <label class="block text-xs text-slate-300 mb-1.5 font-medium" data-i18n="est-lbl-pavement-type">Pavement Construction Type:</label>
+                <div class="grid grid-cols-2 gap-3">
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-700 bg-slate-900 cursor-pointer text-xs hover:border-brand-gold/60">
+                    <input type="radio" name="pavement-type" value="flexible" checked onchange="updateEstimator()" class="accent-brand-gold">
+                    <span data-i18n="est-opt-pave-flex">Flexible Bituminous (IRC:37)</span>
+                  </label>
+                  <label class="flex items-center gap-2 p-2.5 rounded-xl border border-slate-700 bg-slate-900 cursor-pointer text-xs hover:border-brand-gold/60">
+                    <input type="radio" name="pavement-type" value="rigid" onchange="updateEstimator()" class="accent-brand-gold">
+                    <span data-i18n="est-opt-pave-rigid">Rigid PQC Concrete (IRC:58)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Carriageway Width Dropdown -->
+              <div>
+                <label class="block text-xs text-slate-300 mb-1.5 font-medium" data-i18n="est-lbl-lane-width">Carriageway Specification:</label>
+                <select id="select-lane-width" onchange="updateEstimator()" class="w-full px-3 py-2 text-xs rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                  <option value="1.0" selected data-i18n="est-opt-lane-2lane">Standard 2-Lane (7.0m Paved)</option>
+                  <option value="0.75" data-i18n="est-opt-lane-single">Single Lane (3.75m)</option>
+                  <option value="0.90" data-i18n="est-opt-lane-intermediate">Intermediate Lane (5.5m)</option>
+                  <option value="1.85" data-i18n="est-opt-lane-4lane">4-Lane Divided Highway (14.0m)</option>
+                </select>
+              </div>
+
+              <!-- Box Culverts Count -->
+              <div>
+                <div class="flex justify-between items-center text-xs mb-1.5 font-medium">
+                  <span class="text-slate-300" data-i18n="est-lbl-culvert-count">RCC Box Culverts / Cross Drainage:</span>
+                  <div class="flex items-center gap-1 font-mono">
+                    <input type="number" id="num-culvert-count" min="2" max="25" step="1" value="8" oninput="syncFromNumber('culvert-count')" class="w-16 px-2 py-1 text-right text-xs bg-slate-900 border border-slate-700 rounded-lg text-brand-gold font-bold focus:outline-none focus:border-brand-gold">
+                    <span class="text-slate-400 text-xs">Units</span>
+                  </div>
+                </div>
+                <input type="range" id="range-culvert-count" min="2" max="25" step="1" value="8" oninput="syncFromRange('culvert-count')" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                  <span>2 Units</span>
+                  <span>14 Units</span>
+                  <span>25 Units</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Urban Drainage Dynamic Fields Container -->
+            <div id="est-fields-urban" class="hidden space-y-4">
+              <!-- Drain km -->
+              <div>
+                <div class="flex justify-between items-center text-xs mb-1.5 font-medium">
+                  <span class="text-slate-300" data-i18n="est-lbl-drain-km">Stormwater Conduit Length (km):</span>
+                  <div class="flex items-center gap-1 font-mono">
+                    <input type="number" id="num-drain-km" min="2" max="30" step="0.5" value="6" oninput="syncFromNumber('drain-km')" class="w-16 px-2 py-1 text-right text-xs bg-slate-900 border border-slate-700 rounded-lg text-brand-gold font-bold focus:outline-none focus:border-brand-gold">
+                    <span class="text-slate-400 text-xs">km</span>
+                  </div>
+                </div>
+                <input type="range" id="range-drain-km" min="2" max="30" step="0.5" value="6" oninput="syncFromRange('drain-km')" class="w-full h-1.5 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-brand-gold">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono mt-1">
+                  <span>2 km</span>
+                  <span>16 km</span>
+                  <span>30 km</span>
+                </div>
+              </div>
+
+              <!-- Drain Cross Section -->
+              <div>
+                <label class="block text-xs text-slate-300 mb-1.5 font-medium" data-i18n="est-lbl-drain-size">Conduit Cross-Section:</label>
+                <select id="select-drain-size" onchange="updateEstimator()" class="w-full px-3 py-2 text-xs rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                  <option value="std" selected data-i18n="est-opt-drain-std">Standard Box (2.0m x 1.5m)</option>
+                  <option value="med" data-i18n="est-opt-drain-med">Medium Box (2.5m x 2.0m)</option>
+                  <option value="heavy" data-i18n="est-opt-drain-heavy">Heavy Twin-Cell (4.0m x 2.5m)</option>
+                </select>
+              </div>
+
+              <!-- Pumping Station Sump -->
+              <div>
+                <label class="block text-xs text-slate-300 mb-1.5 font-medium" data-i18n="est-lbl-pump-station">Automated Pumping Sump:</label>
+                <select id="select-pump-station" onchange="updateEstimator()" class="w-full px-3 py-2 text-xs rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                  <option value="none" data-i18n="est-opt-pump-none">Gravity Flow Only (No Pumping Station)</option>
+                  <option value="6k" data-i18n="est-opt-pump-6k">6,000 LPM Municipal Sump Station</option>
+                  <option value="12k" selected data-i18n="est-opt-pump-12k">12,000 LPM Heavy Pumping Station</option>
+                  <option value="25k" data-i18n="est-opt-pump-25k">25,000 LPM Regional Flood Station</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Step 3: Bihar District & Terrain Selector -->
+          <div class="bg-slate-800/80 rounded-3xl p-6 border border-slate-700/80 shadow-xl space-y-4">
+            <div class="flex justify-between items-center">
+              <label class="text-xs font-mono uppercase tracking-wider text-brand-gold font-bold" data-i18n="est-sec-district">
+                3. Bihar District & Geo-Conditions
+              </label>
+              <span id="est-terrain-badge" class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">
+                Terrain Factor: 1.08x
+              </span>
+            </div>
+            
+            <div>
+              <select id="select-est-district" onchange="updateEstimator()" class="w-full px-4 py-2.5 text-xs rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-brand-gold">
+                <option value="Muzaffarpur" selected>Muzaffarpur (North Bihar Gangetic Flood Plain)</option>
+                <option value="Patna">Patna (Central Capital Urban & High Silt)</option>
+                <option value="Bhagalpur">Bhagalpur (Eastern River Basin Corridor)</option>
+                <option value="Darbhanga">Darbhanga (Mithilanchal High Inundation Plain)</option>
+                <option value="Gaya">Gaya (Magadh Hard Rock Sub-base)</option>
+                <option value="Nalanda">Nalanda (Historic Compact Utility Corridor)</option>
+                <option value="Purnia">Purnia (Seemanchal High Alluvial Silt)</option>
+                <option value="Rohtas">Rohtas (Kaimur Plateau & Stone Belt)</option>
+                <option value="Saran">Saran (Gandak / Ganga Confluence)</option>
+                <option value="Begusarai">Begusarai (Industrial River Bank Corridor)</option>
+              </select>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-900/80 border border-slate-700/80 flex items-start gap-2.5 text-xs text-slate-300">
+              <i data-lucide="info" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <p id="est-terrain-desc" class="text-[11px] leading-relaxed text-slate-400">
+                Alluvial subgrade selected. Automatically adjusts for 8% dewatering allowance, geotextile sub-base reinforcement, and IS:456 pile foundation depth.
+              </p>
+            </div>
+
+            <!-- Reset Button -->
+            <div class="pt-2 flex justify-end">
+              <button type="button" onclick="resetEstimator()" class="text-xs text-slate-400 hover:text-brand-gold flex items-center gap-1.5 transition-colors font-mono font-medium">
+                <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i>
+                <span data-i18n="est-btn-reset">Reset Defaults</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Telemetry & Outputs Column -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Primary Telemetry Cards Card -->
+          <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-2xl relative">
+            
+            <div class="flex justify-between items-center mb-6 border-b border-slate-700 pb-4">
+              <div>
+                <span class="text-[10px] font-mono text-brand-gold uppercase tracking-wider font-bold" data-i18n="est-res-heading">
+                  Calculated Project Scope & Valuation
+                </span>
+                <h3 class="text-lg font-bold text-white mt-0.5" id="est-summary-title">
+                  PHE Turnkey Water Network
+                </h3>
+              </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>SOR Verified</span>
+              </span>
+            </div>
+
+            <!-- 4 Grid Stats -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <!-- Stat 1: Valuation -->
+              <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-700/80">
+                <div class="text-[11px] text-slate-400 uppercase font-mono font-medium" data-i18n="est-card-val-lbl">
+                  Estimated Valuation (SOR)
+                </div>
+                <div class="text-2xl sm:text-3xl font-black text-brand-gold font-mono mt-1" id="est-val">
+                  ₹42.80 Cr.
+                </div>
+                <div class="text-[10px] text-slate-400 mt-1" data-i18n="est-card-val-sub">
+                  Based on 2024-26 Bihar PWD SOR & CPWD Index
+                </div>
+              </div>
+
+              <!-- Stat 2: Concrete Volume -->
+              <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-700/80">
+                <div class="text-[11px] text-slate-400 uppercase font-mono font-medium" data-i18n="est-card-conc-lbl">
+                  Calculated Concrete Volume
+                </div>
+                <div class="text-2xl sm:text-3xl font-black text-white font-mono mt-1" id="est-conc">
+                  12,450 m³
+                </div>
+                <div class="text-[10px] text-slate-400 mt-1" data-i18n="est-card-conc-sub">
+                  Design Mix M25-M40 Structural Pour
+                </div>
+              </div>
+
+              <!-- Stat 3: Execution Timeline -->
+              <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-700/80">
+                <div class="text-[11px] text-slate-400 uppercase font-mono font-medium" data-i18n="est-card-time-lbl">
+                  Execution Timeline
+                </div>
+                <div class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono mt-1" id="est-time">
+                  16 Months
+                </div>
+                <div class="text-[10px] text-slate-400 mt-1" data-i18n="est-card-time-sub">
+                  Includes Monsoon & Dewatering Window
+                </div>
+              </div>
+
+              <!-- Stat 4: Fleet Recommendation -->
+              <div class="bg-slate-900/80 p-4 rounded-2xl border border-slate-700/80">
+                <div class="text-[11px] text-slate-400 uppercase font-mono font-medium" data-i18n="est-card-fleet-lbl">
+                  Fleet Mobilization
+                </div>
+                <div class="text-lg sm:text-xl font-black text-cyan-400 font-mono mt-1" id="est-fleet-units">
+                  14 Heavy Units
+                </div>
+                <div class="text-[10px] text-slate-400 mt-1 truncate" id="est-fleet-desc">
+                  2 Batching • 6 TMs • 4 Excavators • 2 Labs
+                </div>
+              </div>
+            </div>
+
+            <!-- Cost Breakdown Progress Bar -->
+            <div class="mb-6 bg-slate-900/90 p-5 rounded-2xl border border-slate-700/80">
+              <div class="flex justify-between items-center text-xs font-mono mb-2">
+                <span class="text-slate-300 font-semibold" data-i18n="est-breakdown-title">Budget Distribution Breakdown</span>
+                <span class="text-brand-gold font-bold">100% PWD Allocation</span>
+              </div>
+              
+              <!-- Segmented Progress Bar -->
+              <div class="h-3 w-full bg-slate-800 rounded-full overflow-hidden flex mb-3">
+                <div id="est-bar-civil" class="bg-brand-gold h-full transition-all duration-500" style="width: 45%" title="Civil & Structural"></div>
+                <div id="est-bar-materials" class="bg-blue-500 h-full transition-all duration-500" style="width: 33%" title="Materials & Pipes"></div>
+                <div id="est-bar-fleet" class="bg-slate-400 h-full transition-all duration-500" style="width: 14%" title="Plant & Machinery"></div>
+                <div id="est-bar-qa" class="bg-emerald-500 h-full transition-all duration-500" style="width: 8%" title="QA/QC & Contingency"></div>
+              </div>
+
+              <!-- Legend Rows -->
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px] font-mono">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-brand-gold shrink-0"></span>
+                  <span class="text-slate-400 truncate" data-i18n="est-cost-civil">Civil:</span>
+                  <span class="text-white font-bold" id="est-pct-civil">45%</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0"></span>
+                  <span class="text-slate-400 truncate" data-i18n="est-cost-materials">Materials:</span>
+                  <span class="text-white font-bold" id="est-pct-materials">33%</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-slate-400 shrink-0"></span>
+                  <span class="text-slate-400 truncate" data-i18n="est-cost-fleet">Plant:</span>
+                  <span class="text-white font-bold" id="est-pct-fleet">14%</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+                  <span class="text-slate-400 truncate" data-i18n="est-cost-qa">QA/QC:</span>
+                  <span class="text-white font-bold" id="est-pct-qa">8%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Milestone Phases -->
+            <div class="mb-6">
+              <div class="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold mb-2.5" data-i18n="est-phases-title">
+                Milestone Phase Schedule
+              </div>
+              <div class="space-y-2 text-xs font-mono">
+                <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                  <span class="text-slate-300" data-i18n="est-ph1-lbl">Phase 1: Mobilization & Site Topography</span>
+                  <span class="text-brand-gold font-bold" id="est-ph1-time">Month 1 - 2</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                  <span class="text-slate-300" data-i18n="est-ph2-lbl">Phase 2: Bulk Earthwork & Foundation / Subgrade</span>
+                  <span class="text-brand-gold font-bold" id="est-ph2-time">Month 3 - 6</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                  <span class="text-slate-300" data-i18n="est-ph3-lbl">Phase 3: Structural Superstructure & Main Piping</span>
+                  <span class="text-brand-gold font-bold" id="est-ph3-time">Month 7 - 13</span>
+                </div>
+                <div class="flex justify-between items-center p-2.5 rounded-xl bg-slate-900/60 border border-slate-800">
+                  <span class="text-slate-300" data-i18n="est-ph4-lbl">Phase 4: Pressure Hydrotesting & Commissioning</span>
+                  <span class="text-emerald-400 font-bold" id="est-ph4-time">Month 14 - 16</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons: Print & Copy -->
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+              <button type="button" onclick="openBoqPrintableModal()" class="flex-1 bg-brand-gold hover:bg-brand-goldHover text-white font-bold py-3 px-4 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-gold/25">
+                <i data-lucide="printer" class="w-4 h-4"></i>
+                <span data-i18n="est-btn-print">Print / Export BOQ Sheet</span>
+              </button>
+              <button type="button" onclick="copyEstimateSummary()" class="bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold py-3 px-5 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+                <i data-lucide="copy" class="w-4 h-4 text-brand-gold"></i>
+                <span data-i18n="est-btn-copy">Copy Summary</span>
+              </button>
+            </div>
+
+            <!-- Disclaimer -->
+            <p class="text-[10px] text-slate-500 font-mono mt-4 leading-relaxed" data-i18n="est-disclaimer">
+              *Indicative technical estimation calculated under IRC / CPWD / Bihar PWD norms. Formal contract award values are subject to detailed geotechnical investigation and departmental DPR approval.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
   <!-- ================= 06. ABOUT US & 4 PILLARS ================= -->
   <section id="about" class="py-20 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -596,12 +1069,16 @@
 
             <div class="mt-8 pt-6 border-t border-slate-800 flex items-center justify-between">
               <div>
-                <div class="text-2xl font-black text-brand-gold font-mono">₹250+ Cr.</div>
+                <div class="text-2xl font-black text-brand-gold font-mono" data-counter="250" data-counter-prefix="₹" data-counter-suffix="+ Cr.">₹250+ Cr.</div>
                 <div class="text-[10px] uppercase tracking-wider text-slate-400" data-i18n="about-card-stat1-lbl">Works Managed</div>
               </div>
               <div>
-                <div class="text-2xl font-black text-white font-mono">100%</div>
+                <div class="text-2xl font-black text-white font-mono" data-counter="100" data-counter-prefix="" data-counter-suffix="%">100%</div>
                 <div class="text-[10px] uppercase tracking-wider text-slate-400" data-i18n="about-card-stat2-lbl">On-Time Handover</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black text-emerald-400 font-mono" data-counter="450" data-counter-prefix="" data-counter-suffix="k+">450k+</div>
+                <div class="text-[10px] uppercase tracking-wider text-slate-400" data-i18n="metric-hours">Safe Man-Hours</div>
               </div>
             </div>
 
@@ -609,6 +1086,223 @@
         </div>
 
       </div>
+    </div>
+  </section>
+
+  <!-- ================= 06B. INTERACTIVE BIHAR DISTRICT OPERATIONS RADAR & GEO-NAVIGATOR ================= -->
+  <section id="operations-radar" class="py-20 bg-slate-950 text-white relative overflow-hidden bg-blueprint border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mb-12">
+        <span class="text-cyan-400 font-bold text-xs uppercase tracking-widest bg-cyan-950/60 px-3 py-1 rounded-full border border-cyan-800/60" data-i18n="radar-badge">
+          Geospatial Operations Radar
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mt-4 text-white">
+          <span data-i18n="radar-title-1">Bihar District Operations</span> <br class="hidden sm:inline" />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-300" data-i18n="radar-title-2">
+            Radar & Geo-Navigator
+          </span>
+        </h2>
+        <p class="text-slate-300 mt-3 text-sm sm:text-base leading-relaxed" data-i18n="radar-sub">
+          Live field telemetry, batching yards, and equipment deployments across Bihar. Click any district node to inspect capacity or filter active public works.
+        </p>
+      </div>
+
+      <!-- Main Radar Workspace Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left: Interactive Vector Schematic Map of Bihar -->
+        <div class="lg:col-span-7 bg-slate-900/90 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-2xl relative">
+          
+          <div class="flex justify-between items-center mb-4">
+            <div>
+              <div class="text-xs font-mono text-cyan-400 uppercase font-bold" data-i18n="radar-map-title">Bihar Operations Schematic</div>
+              <div class="text-[11px] text-slate-400" data-i18n="radar-map-sub">Click on any active district node below or on the telemetry map</div>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              <span class="text-emerald-400 font-bold" data-i18n="radar-status-active">100% Operational Yard</span>
+            </div>
+          </div>
+
+          <!-- Interactive SVG Map Canvas -->
+          <div class="relative w-full aspect-[16/10] bg-brand-deep rounded-2xl border border-slate-800/90 overflow-hidden flex items-center justify-center p-2">
+            
+            <!-- Grid Lines Background -->
+            <div class="absolute inset-0 bg-blueprint opacity-20 pointer-events-none"></div>
+
+            <svg viewBox="0 0 800 500" class="w-full h-full select-none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Bihar Regional Stylized Boundary Polygon -->
+              <path d="M 80 180 L 160 110 L 260 90 L 390 100 L 510 80 L 630 110 L 720 160 L 740 250 L 710 350 L 610 390 L 520 420 L 410 430 L 290 410 L 190 390 L 110 320 L 70 240 Z" 
+                    fill="#0F172A" stroke="#334155" stroke-width="2.5" stroke-dasharray="6,3" class="transition-colors"/>
+              
+              <!-- Interior Regional Contours -->
+              <path d="M 160 110 Q 320 180 510 80" fill="none" stroke="#1E293B" stroke-width="1.5" />
+              <path d="M 190 390 Q 400 320 610 390" fill="none" stroke="#1E293B" stroke-width="1.5" />
+
+              <!-- River Ganges Path Traversing Bihar (Blue Technical Curve) -->
+              <path d="M 70 240 Q 240 270 380 260 T 620 280 T 740 250" 
+                    fill="none" stroke="#0284C7" stroke-width="4" stroke-opacity="0.85" stroke-linecap="round"/>
+              <text x="320" y="248" fill="#38BDF8" font-size="10" font-family="monospace" opacity="0.65" letter-spacing="2">RIVER GANGES (गंगा नदी)</text>
+
+              <!-- River Gandak / Kosi / Son Tributary Guidelines -->
+              <path d="M 260 90 Q 340 180 380 260" fill="none" stroke="#0284C7" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="4,4"/>
+              <path d="M 510 80 Q 550 170 600 275" fill="none" stroke="#0284C7" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="4,4"/>
+              <path d="M 290 410 Q 350 340 375 270" fill="none" stroke="#0284C7" stroke-width="2" stroke-opacity="0.4" stroke-dasharray="4,4"/>
+
+              <!-- District Beacon 1: Patna (HQ) -->
+              <g class="cursor-pointer group" onclick="selectRadarDistrict('patna')">
+                <circle cx="375" cy="260" r="22" fill="#EA580C" opacity="0.2" class="animate-ping"/>
+                <circle cx="375" cy="260" r="10" fill="#EA580C" stroke="#FFFFFF" stroke-width="2.5" class="group-hover:scale-125 transition-transform" />
+                <rect x="340" y="278" width="70" height="20" rx="6" fill="#020617" stroke="#EA580C" stroke-width="1.5" opacity="0.95" />
+                <text x="375" y="292" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle">Patna</text>
+              </g>
+
+              <!-- District Beacon 2: Muzaffarpur -->
+              <g class="cursor-pointer group" onclick="selectRadarDistrict('muzaffarpur')">
+                <circle cx="390" cy="170" r="20" fill="#F97316" opacity="0.2" class="animate-ping"/>
+                <circle cx="390" cy="170" r="9" fill="#F97316" stroke="#FFFFFF" stroke-width="2.5" class="group-hover:scale-125 transition-transform" />
+                <rect x="345" y="138" width="90" height="20" rx="6" fill="#020617" stroke="#F97316" stroke-width="1.5" opacity="0.95" />
+                <text x="390" y="152" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle">Muzaffarpur</text>
+              </g>
+
+              <!-- District Beacon 3: Bhagalpur -->
+              <g class="cursor-pointer group" onclick="selectRadarDistrict('bhagalpur')">
+                <circle cx="620" cy="310" r="20" fill="#F97316" opacity="0.2" class="animate-ping"/>
+                <circle cx="620" cy="310" r="9" fill="#F97316" stroke="#FFFFFF" stroke-width="2.5" class="group-hover:scale-125 transition-transform" />
+                <rect x="578" y="328" width="85" height="20" rx="6" fill="#020617" stroke="#F97316" stroke-width="1.5" opacity="0.95" />
+                <text x="620" y="342" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle">Bhagalpur</text>
+              </g>
+
+              <!-- District Beacon 4: Darbhanga -->
+              <g class="cursor-pointer group" onclick="selectRadarDistrict('darbhanga')">
+                <circle cx="465" cy="165" r="18" fill="#38BDF8" opacity="0.2" class="animate-ping"/>
+                <circle cx="465" cy="165" r="8" fill="#0284C7" stroke="#FFFFFF" stroke-width="2.5" class="group-hover:scale-125 transition-transform" />
+                <rect x="425" y="133" width="80" height="20" rx="6" fill="#020617" stroke="#38BDF8" stroke-width="1.5" opacity="0.95" />
+                <text x="465" y="147" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle">Darbhanga</text>
+              </g>
+
+              <!-- District Beacon 5: Gaya -->
+              <g class="cursor-pointer group" onclick="selectRadarDistrict('gaya')">
+                <circle cx="360" cy="370" r="20" fill="#F97316" opacity="0.2" class="animate-ping"/>
+                <circle cx="360" cy="370" r="9" fill="#F97316" stroke="#FFFFFF" stroke-width="2.5" class="group-hover:scale-125 transition-transform" />
+                <rect x="335" y="388" width="50" height="20" rx="6" fill="#020617" stroke="#F97316" stroke-width="1.5" opacity="0.95" />
+                <text x="360" y="402" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle">Gaya</text>
+              </g>
+
+              <!-- District Beacon 6: Nalanda -->
+              <g class="cursor-pointer group" onclick="selectRadarDistrict('nalanda')">
+                <circle cx="435" cy="300" r="18" fill="#38BDF8" opacity="0.2" class="animate-ping"/>
+                <circle cx="435" cy="300" r="8" fill="#0284C7" stroke="#FFFFFF" stroke-width="2.5" class="group-hover:scale-125 transition-transform" />
+                <rect x="400" y="318" width="70" height="20" rx="6" fill="#020617" stroke="#38BDF8" stroke-width="1.5" opacity="0.95" />
+                <text x="435" y="332" fill="#FFFFFF" font-size="11" font-weight="bold" font-family="sans-serif" text-anchor="middle">Nalanda</text>
+              </g>
+
+              <!-- Telemetry Reticle in Top Left -->
+              <g opacity="0.4" font-family="monospace" font-size="9" fill="#94A3B8">
+                <text x="20" y="30">GRID: BIHAR-GEOSPATIAL-TELEMETRY</text>
+                <text x="20" y="45">DATUM: WGS84 • EPSG:4326</text>
+                <text x="20" y="60">ACTIVE HUBS: 6 OF 38</text>
+              </g>
+            </svg>
+
+          </div>
+
+          <!-- Quick District Selector Tabs Strip -->
+          <div class="mt-4 pt-3 border-t border-slate-800">
+            <div class="text-[11px] font-mono text-slate-400 mb-2 uppercase" data-i18n="radar-view-all-lbl">Quick Switch Active Hubs:</div>
+            <div class="flex flex-wrap gap-2" id="radar-quick-tabs">
+              <button onclick="selectRadarDistrict('patna')" id="tab-radar-patna" class="radar-tab active px-3 py-1.5 rounded-xl bg-brand-gold text-white text-xs font-bold transition-all shadow">
+                Patna
+              </button>
+              <button onclick="selectRadarDistrict('muzaffarpur')" id="tab-radar-muzaffarpur" class="radar-tab px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-all">
+                Muzaffarpur
+              </button>
+              <button onclick="selectRadarDistrict('bhagalpur')" id="tab-radar-bhagalpur" class="radar-tab px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-all">
+                Bhagalpur
+              </button>
+              <button onclick="selectRadarDistrict('darbhanga')" id="tab-radar-darbhanga" class="radar-tab px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-all">
+                Darbhanga
+              </button>
+              <button onclick="selectRadarDistrict('gaya')" id="tab-radar-gaya" class="radar-tab px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-all">
+                Gaya
+              </button>
+              <button onclick="selectRadarDistrict('nalanda')" id="tab-radar-nalanda" class="radar-tab px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold transition-all">
+                Nalanda
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Active Telemetry HUD Inspector Card -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-slate-900 to-brand-deep rounded-3xl p-6 sm:p-8 border border-slate-700 shadow-2xl">
+          
+          <div class="flex justify-between items-start mb-6 border-b border-slate-800 pb-4">
+            <div>
+              <span class="text-[10px] font-mono text-cyan-400 uppercase tracking-wider font-bold" data-i18n="radar-card-title">
+                District Yard Telemetry
+              </span>
+              <h3 class="text-2xl font-black text-white mt-1 flex items-center gap-2" id="radar-district-name">
+                Patna
+              </h3>
+              <p class="text-xs text-brand-gold font-medium mt-0.5" id="radar-district-role">
+                State Capital & Central Operations HQ
+              </p>
+            </div>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 text-[11px] font-mono font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span data-i18n="radar-status-active">100% Operational Yard</span>
+            </span>
+          </div>
+
+          <!-- Telemetry Specs List -->
+          <div class="space-y-3.5 text-xs font-mono mb-8">
+            <div class="flex justify-between items-center py-2 border-b border-slate-800/80">
+              <span class="text-slate-400" data-i18n="radar-lbl-coords">GPS Coordinates:</span>
+              <span class="text-white font-bold" id="radar-coords">25.61° N, 85.14° E</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-800/80">
+              <span class="text-slate-400" data-i18n="radar-lbl-batch">Batching Plant Capacity:</span>
+              <span class="text-brand-gold font-bold" id="radar-batching">60 m³/hr (Automated)</span>
+            </div>
+            <div class="flex justify-between items-center py-2 border-b border-slate-800/80">
+              <span class="text-slate-400" data-i18n="radar-lbl-fleet">Deployed Heavy Fleet:</span>
+              <span class="text-cyan-400 font-bold" id="radar-fleet">14 Units Deployed</span>
+            </div>
+            <div class="flex justify-between items-start py-2 border-b border-slate-800/80 gap-2">
+              <span class="text-slate-400 shrink-0" data-i18n="radar-lbl-packages">Active Packages:</span>
+              <span class="text-white font-semibold text-right" id="radar-packages">Patna Stormwater Box Drains & Metro Grid</span>
+            </div>
+            <div class="flex justify-between items-start py-2 border-b border-slate-800/80 gap-2">
+              <span class="text-slate-400 shrink-0" data-i18n="radar-lbl-lab">Field QA/QC Testing Lab:</span>
+              <span class="text-emerald-400 font-semibold text-right" id="radar-lab">Central NABL Testing Facility</span>
+            </div>
+            <div class="flex justify-between items-center py-2">
+              <span class="text-slate-400" data-i18n="radar-lbl-lead">Project Director:</span>
+              <span class="text-white font-semibold" id="radar-director">Er. Alok Ranjan</span>
+            </div>
+          </div>
+
+          <!-- Master Action CTA: One-Click Filter Projects -->
+          <div>
+            <button id="radar-filter-btn" onclick="filterProjectsFromRadar()" class="w-full bg-brand-gold hover:bg-brand-goldHover text-white font-bold py-4 px-6 rounded-2xl text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xl shadow-brand-gold/30 hover:scale-[1.02] active:scale-[0.98]">
+              <i data-lucide="filter" class="w-4 h-4"></i>
+              <span id="radar-filter-btn-text" data-i18n="radar-btn-filter">Filter Projects in this District</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- 6 District Operational Highlights Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5 mt-8" id="radar-cards-grid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
     </div>
   </section>
 
@@ -1491,6 +2185,112 @@
     </div>
   </div>
 
+  <!-- 5. BOQ ESTIMATE PRINTABLE DOSSIER MODAL -->
+  <div id="boq-printable-modal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full p-8 relative shadow-2xl overflow-y-auto max-h-[92vh] text-slate-800">
+      <button onclick="closeModal('boq-printable-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-600 print:hidden">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Letterhead -->
+      <div class="flex justify-between items-start pb-6 border-b-2 border-brand-navy mb-6">
+        <div>
+          <div class="text-2xl font-black text-brand-navy tracking-tight">PARISHISHT CONSTRUCTION PRIVATE LIMITED</div>
+          <div class="text-xs text-slate-500 font-mono">CIN: U45200BR2018PTC039000 • GSTIN: 10AAECP1234F1Z5</div>
+          <div class="text-xs text-slate-600" data-i18n="dossier-addr">Registered Office: Boring Road / Fraser Road, Patna, Bihar — 800001</div>
+        </div>
+        <div class="text-right font-mono text-xs">
+          <div class="bg-brand-gold text-white px-2.5 py-1 rounded font-bold" data-i18n="boq-modal-title">PUBLIC WORKS BOQ ESTIMATE</div>
+          <div class="text-slate-400 mt-1"><span data-i18n="boq-modal-ref-lbl">Ref:</span> <span id="boq-print-ref">PAR-EST-2026-9214</span></div>
+        </div>
+      </div>
+
+      <!-- Parameter Meta Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono">
+        <div>
+          <span class="text-slate-400 block" data-i18n="boq-modal-sec-lbl">Sector:</span>
+          <span class="font-bold text-slate-900" id="boq-print-sector">PHE Water Supply</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block" data-i18n="boq-modal-dist-lbl">District:</span>
+          <span class="font-bold text-slate-900" id="boq-print-district">Muzaffarpur</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block" data-i18n="est-card-val-lbl">Estimated Valuation:</span>
+          <span class="font-bold text-brand-navy" id="boq-print-val">₹42.80 Cr.</span>
+        </div>
+        <div>
+          <span class="text-slate-400 block" data-i18n="est-card-time-lbl">Timeline:</span>
+          <span class="font-bold text-emerald-600" id="boq-print-timeline">16 Months</span>
+        </div>
+      </div>
+
+      <!-- Itemized Estimate Breakdown Table -->
+      <h4 class="font-bold text-sm text-brand-navy mb-2 font-mono" data-i18n="est-breakdown-title">Budget Distribution Breakdown</h4>
+      <table class="w-full text-xs font-mono border-collapse border border-slate-200 mb-6">
+        <thead>
+          <tr class="bg-slate-100">
+            <th class="border border-slate-200 p-2 text-left">Component Item</th>
+            <th class="border border-slate-200 p-2 text-center">Share (%)</th>
+            <th class="border border-slate-200 p-2 text-right">Estimated Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold" data-i18n="est-cost-civil">Civil & Structural Works</td>
+            <td class="border border-slate-200 p-2 text-center" id="boq-tbl-pct-civil">45%</td>
+            <td class="border border-slate-200 p-2 text-right font-bold text-brand-navy" id="boq-tbl-val-civil">₹19.26 Cr.</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold" data-i18n="est-cost-materials">Materials (DI Pipes / Bitumen / Steel)</td>
+            <td class="border border-slate-200 p-2 text-center" id="boq-tbl-pct-materials">33%</td>
+            <td class="border border-slate-200 p-2 text-right font-bold text-brand-navy" id="boq-tbl-val-materials">₹14.12 Cr.</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold" data-i18n="est-cost-fleet">Plant & Machinery Mobilization</td>
+            <td class="border border-slate-200 p-2 text-center" id="boq-tbl-pct-fleet">14%</td>
+            <td class="border border-slate-200 p-2 text-right font-bold text-brand-navy" id="boq-tbl-val-fleet">₹5.99 Cr.</td>
+          </tr>
+          <tr>
+            <td class="border border-slate-200 p-2 font-semibold" data-i18n="est-cost-qa">QA/QC, Testing Labs & Safety</td>
+            <td class="border border-slate-200 p-2 text-center" id="boq-tbl-pct-qa">8%</td>
+            <td class="border border-slate-200 p-2 text-right font-bold text-brand-navy" id="boq-tbl-val-qa">₹3.42 Cr.</td>
+          </tr>
+          <tr class="bg-slate-50 font-bold">
+            <td class="border border-slate-200 p-2">Total Project Package Valuation</td>
+            <td class="border border-slate-200 p-2 text-center">100%</td>
+            <td class="border border-slate-200 p-2 text-right text-brand-gold text-sm" id="boq-tbl-val-total">₹42.80 Cr.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Fleet & Concrete Volumes -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 text-xs font-mono">
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="font-bold text-brand-navy mb-1" data-i18n="est-card-conc-lbl">Calculated Concrete Volume</div>
+          <div class="text-sm font-black text-brand-gold" id="boq-print-conc">12,450 m³</div>
+          <div class="text-[10px] text-slate-500 mt-0.5">Design Mix M25-M40 with plasticizer admixture</div>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+          <div class="font-bold text-brand-navy mb-1" data-i18n="est-card-fleet-lbl">Recommended Fleet Mobilization</div>
+          <div class="text-sm font-bold text-slate-800" id="boq-print-fleet-summary">14 Heavy Units</div>
+          <div class="text-[10px] text-slate-500 mt-0.5" id="boq-print-fleet-detail">2 Batching • 6 TMs • 4 Excavators • 2 Labs</div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex justify-between items-center pt-4 border-t border-slate-200 print:hidden">
+        <button onclick="window.print()" class="bg-brand-navy text-white text-xs font-bold px-5 py-2.5 rounded-xl hover:bg-slate-800 transition-colors flex items-center gap-2">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span data-i18n="boq-modal-print-btn">Print / Save PDF</span>
+        </button>
+        <button onclick="closeModal('boq-printable-modal')" class="bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl" data-i18n="boq-modal-close-btn">
+          Close Preview
+        </button>
+      </div>
+    </div>
+  </div>
+
     <!-- ================= DYNAMIC JAVASCRIPT STATE ENGINE ================= -->
   <script>
     // 1. DYNAMIC DATA STORE (Benchmarked against RKDCPL & MGCPL)
@@ -2076,7 +2876,98 @@
         "ph-app-phone": "+91 98765 43210",
         "ph-app-exp": "e.g. 5",
         "ph-app-email": "applicant@example.com",
-        "ph-app-summary": "Paste Google Drive/LinkedIn link or summary of projects handled in Bihar..."
+        "ph-app-summary": "Paste Google Drive/LinkedIn link or summary of projects handled in Bihar...",
+        "nav-estimator": "BOQ Estimator",
+        "nav-radar": "District Radar",
+        "metric-hours": "Safe Man-Hours",
+        "metric-hours-sub": "Zero-LTI Record",
+        
+        // Estimator
+        "est-badge": "Public Works Estimation Engine",
+        "est-title-1": "Public Works BOQ &",
+        "est-title-2": "Timeline Estimator",
+        "est-sub": "Instant budget, material volume, fleet mobilization, and execution schedule calculations based on Bihar PWD Schedule of Rates (SOR) & CPWD engineering standards.",
+        "est-sec-sector": "1. Select Public Works Sector",
+        "est-sector-phe": "PHE Water Supply",
+        "est-sector-roads": "Highways & Roads",
+        "est-sector-urban": "Urban Drainage",
+        "est-sec-params": "2. Project Scale & Specifications",
+        "est-sec-district": "3. Bihar District & Geo-Conditions",
+        "est-lbl-pipe-km": "Distribution Pipeline Length (km):",
+        "est-lbl-ohsr-count": "Over Head Reservoirs (OHSR Tanks):",
+        "est-lbl-ohsr-cap": "Average OHSR Tank Capacity:",
+        "est-lbl-fhtc-count": "Functional Household Taps (FHTC):",
+        "est-lbl-road-km": "Highway / Road Length (km):",
+        "est-lbl-pavement-type": "Pavement Construction Type:",
+        "est-opt-pave-flex": "Flexible Bituminous (IRC:37)",
+        "est-opt-pave-rigid": "Rigid PQC Concrete (IRC:58)",
+        "est-lbl-lane-width": "Carriageway Specification:",
+        "est-opt-lane-single": "Single Lane (3.75m)",
+        "est-opt-lane-intermediate": "Intermediate Lane (5.5m)",
+        "est-opt-lane-2lane": "Standard 2-Lane (7.0m Paved)",
+        "est-opt-lane-4lane": "4-Lane Divided Highway (14.0m)",
+        "est-lbl-culvert-count": "RCC Box Culverts / Cross Drainage:",
+        "est-lbl-drain-km": "Stormwater Conduit Length (km):",
+        "est-lbl-drain-size": "Conduit Cross-Section:",
+        "est-opt-drain-std": "Standard Box (2.0m x 1.5m)",
+        "est-opt-drain-med": "Medium Box (2.5m x 2.0m)",
+        "est-opt-drain-heavy": "Heavy Twin-Cell (4.0m x 2.5m)",
+        "est-lbl-pump-station": "Automated Pumping Sump:",
+        "est-opt-pump-none": "Gravity Flow Only (No Pumping Station)",
+        "est-opt-pump-6k": "6,000 LPM Municipal Sump Station",
+        "est-opt-pump-12k": "12,000 LPM Heavy Pumping Station",
+        "est-opt-pump-25k": "25,000 LPM Regional Flood Station",
+        "est-lbl-select-dist": "Execution District (Bihar):",
+        "est-res-heading": "Calculated Project Scope & Valuation",
+        "est-card-val-lbl": "Estimated Valuation (SOR)",
+        "est-card-val-sub": "Based on 2024-26 Bihar PWD SOR & CPWD Index",
+        "est-card-conc-lbl": "Calculated Concrete Volume",
+        "est-card-conc-sub": "Design Mix M25-M40 Structural Pour",
+        "est-card-time-lbl": "Execution Timeline",
+        "est-card-time-sub": "Includes Monsoon & Dewatering Window",
+        "est-card-fleet-lbl": "Fleet Mobilization",
+        "est-breakdown-title": "Budget Distribution Breakdown",
+        "est-cost-civil": "Civil & Structural:",
+        "est-cost-materials": "Materials:",
+        "est-cost-fleet": "Plant:",
+        "est-cost-qa": "QA/QC:",
+        "est-phases-title": "Milestone Phase Schedule",
+        "est-ph1-lbl": "Phase 1: Mobilization & Site Topography",
+        "est-ph2-lbl": "Phase 2: Bulk Earthwork & Foundation / Subgrade",
+        "est-ph3-lbl": "Phase 3: Structural Superstructure & Main Piping",
+        "est-ph4-lbl": "Phase 4: Pressure Hydrotesting & Commissioning",
+        "est-btn-print": "Print / Export BOQ Sheet",
+        "est-btn-copy": "Copy Summary",
+        "est-btn-reset": "Reset Defaults",
+        "est-disclaimer": "*Indicative technical estimation calculated under IRC / CPWD / Bihar PWD norms. Formal contract award values are subject to detailed geotechnical investigation and departmental DPR approval.",
+
+        // District Radar
+        "radar-badge": "Geospatial Operations Radar",
+        "radar-title-1": "Bihar District Operations",
+        "radar-title-2": "Radar & Geo-Navigator",
+        "radar-sub": "Live field telemetry, batching yards, and equipment deployments across Bihar. Click any district node to inspect capacity or filter active public works.",
+        "radar-map-title": "Bihar Operations Schematic",
+        "radar-map-sub": "Click on any active district node below or on the telemetry map",
+        "radar-card-title": "District Yard Telemetry",
+        "radar-lbl-coords": "GPS Coordinates:",
+        "radar-lbl-batch": "Batching Plant Capacity:",
+        "radar-lbl-fleet": "Deployed Heavy Fleet:",
+        "radar-lbl-packages": "Active Packages:",
+        "radar-lbl-lab": "Field QA/QC Testing Lab:",
+        "radar-lbl-lead": "Project Director:",
+        "radar-btn-filter": "Filter Projects in this District",
+        "radar-status-active": "100% Operational Yard",
+        "radar-view-all-lbl": "Quick Switch Active Hubs:",
+
+        // Printable BOQ Modal
+        "boq-modal-title": "PUBLIC WORKS BOQ ESTIMATE",
+        "boq-modal-sub": "Class-1 Bihar Registered EPC Contractor • Departmental Estimation Summary",
+        "boq-modal-print-btn": "Print / Save PDF",
+        "boq-modal-close-btn": "Close Preview",
+        "boq-modal-sec-lbl": "Sector:",
+        "boq-modal-dist-lbl": "District:",
+        "boq-modal-ref-lbl": "Ref:",
+        "boq-modal-date-lbl": "Date:"
 },
       hi: {
         "top-empanelment": "बिहार सरकार में अनुबंधित",
@@ -2377,9 +3268,887 @@
         "ph-app-phone": "+91 98765 43210",
         "ph-app-exp": "उदा. 5",
         "ph-app-email": "applicant@example.com",
-        "ph-app-summary": "गूगल ड्राइव/लिंक्डइन लिंक पेस्ट करें या बिहार में किए गए कार्यों का सारांश दें..."
+        "ph-app-summary": "गूगल ड्राइव/लिंक्डइन लिंक पेस्ट करें या बिहार में किए गए कार्यों का सारांश दें...",
+        "nav-estimator": "बीओक्यू कैलकुलेटर",
+        "nav-radar": "जिला परिचालन रडार",
+        "metric-hours": "सुरक्षित कार्य घंटे",
+        "metric-hours-sub": "शून्य दुर्घटना रिकॉर्ड",
+        
+        // Estimator
+        "est-badge": "लोक निर्माण प्राक्कलन इंजन",
+        "est-title-1": "लोक निर्माण बीओक्यू एवं",
+        "est-title-2": "समयसीमा कैलकुलेटर",
+        "est-sub": "बिहार पीडब्ल्यूडी दर अनुसूची (SOR) और सीपीडब्ल्यूडी इंजीनियरिंग मानकों के आधार पर त्वरित बजट, निर्माण सामग्री मात्रा, मशीनरी आवश्यकता और परियोजना समयसीमा की गणना।",
+        "est-sec-sector": "1. लोक निर्माण संवर्ग चुनें",
+        "est-sector-phe": "पीएचई जलापूर्ति (जल जीवन)",
+        "est-sector-roads": "सड़क एवं राजमार्ग",
+        "est-sector-urban": "शहरी जल निकासी (बुडको)",
+        "est-sec-params": "2. परियोजना पैमाना एवं विनिर्देश",
+        "est-sec-district": "3. बिहार जिला एवं भू-तकनीकी स्थिति",
+        "est-lbl-pipe-km": "वितरण पाइपलाइन लंबाई (किमी):",
+        "est-lbl-ohsr-count": "उच्चस्तरीय सेवा जलाशय (OHSR टैंक):",
+        "est-lbl-ohsr-cap": "औसत जलाशय क्षमता:",
+        "est-lbl-fhtc-count": "घरेलू नल कनेक्शन (FHTC):",
+        "est-lbl-road-km": "राजमार्ग / सड़क लंबाई (किमी):",
+        "est-lbl-pavement-type": "सड़क निर्माण प्रकार:",
+        "est-opt-pave-flex": "लचीला डामर मार्ग (IRC:37)",
+        "est-opt-pave-rigid": "दृढ़ PQC कंक्रीट मार्ग (IRC:58)",
+        "est-lbl-lane-width": "कैरिजवे चौड़ाई:",
+        "est-opt-lane-single": "सिंगल लेन (3.75 मी)",
+        "est-opt-lane-intermediate": "इंटरमीडिएट लेन (5.5 मी)",
+        "est-opt-lane-2lane": "मानक 2-लेन (7.0 मी पेव्ड)",
+        "est-opt-lane-4lane": "4-लेन विभाजित राजमार्ग (14.0 मी)",
+        "est-lbl-culvert-count": "आरसीसी बॉक्स पुलिया / क्रॉस ड्रेन:",
+        "est-lbl-drain-km": "वर्षा जल ड्रेन लंबाई (किमी):",
+        "est-lbl-drain-size": "कंक्रीट ड्रेन का आकार:",
+        "est-opt-drain-std": "मानक बॉक्स (2.0मी x 1.5मी)",
+        "est-opt-drain-med": "मध्यम बॉक्स (2.5मी x 2.0मी)",
+        "est-opt-drain-heavy": "भारी ट्विन-सेल (4.0मी x 2.5मी)",
+        "est-lbl-pump-station": "स्वचालित पंपिंग स्टेशन:",
+        "est-opt-pump-none": "केवल गुरुत्वाकर्षण प्रवाह (कोई पंप स्टेशन नहीं)",
+        "est-opt-pump-6k": "6,000 एलपीएम नगर पालिका पंप स्टेशन",
+        "est-opt-pump-12k": "12,000 एलपीएम भारी पंपिंग स्टेशन",
+        "est-opt-pump-25k": "25,000 एलपीएम क्षेत्रीय बाढ़ नियंत्रण स्टेशन",
+        "est-lbl-select-dist": "निष्पादन जिला (बिहार):",
+        "est-res-heading": "परियोजना प्राक्कलन एवं मूल्यांकन",
+        "est-card-val-lbl": "प्राक्कलित परियोजना लागत (SOR)",
+        "est-card-val-sub": "2024-26 बिहार पीडब्ल्यूडी SOR एवं CPWD सूचकांक",
+        "est-card-conc-lbl": "अनुमानित कंक्रीट मात्रा",
+        "est-card-conc-sub": "डिजाइन मिक्स M25-M40 संरचनात्मक ढलाई",
+        "est-card-time-lbl": "परियोजना निष्पादन समयसीमा",
+        "est-card-time-sub": "मानसूनी मौसम एवं डीवाटरिंग बफर सहित",
+        "est-card-fleet-lbl": "मशीनरी बेड़ा",
+        "est-breakdown-title": "लागत वितरण विवरण",
+        "est-cost-civil": "सिविल:",
+        "est-cost-materials": "सामग्री:",
+        "est-cost-fleet": "प्लांट:",
+        "est-cost-qa": "गुणवत्ता:",
+        "est-phases-title": "चरणबद्ध निष्पादन अनुसूची",
+        "est-ph1-lbl": "चरण 1: मोबिलाइजेशन एवं साइट सर्वेक्षण",
+        "est-ph2-lbl": "चरण 2: भारी मिट्टी कार्य एवं नींव निर्माण",
+        "est-ph3-lbl": "चरण 3: संरचनात्मक निर्माण एवं मुख्य पाइपलाइन",
+        "est-ph4-lbl": "चरण 4: हाइड्रो-परीक्षण एवं कमीशनिंग",
+        "est-btn-print": "बीओक्यू शीट प्रिंट / निर्यात करें",
+        "est-btn-copy": "सारांश कॉपी करें",
+        "est-btn-reset": "डिफ़ॉल्ट रीसेट",
+        "est-disclaimer": "*IRC / CPWD / बिहार पीडब्ल्यूडी मानकों के तहत सांकेतिक तकनीकी प्राक्कलन। वास्तविक अनुबंध मूल्य भू-तकनीकी जांच और विभागीय डीपीआर स्वीकृति के अधीन हैं।",
+
+        // District Radar
+        "radar-badge": "भू-स्थानिक परिचालन रडार",
+        "radar-title-1": "बिहार जिला परिचालन",
+        "radar-title-2": "रडार एवं जियो-नेविगेटर",
+        "radar-sub": "बिहार भर में हमारे क्षेत्रीय साइट यार्ड, कम्प्यूटरीकृत बैचिंग प्लांट और तैनात भारी मशीनरी का लाइव विवरण। क्षमता देखने या सक्रिय परियोजनाओं को फ़िल्टर करने के लिए किसी भी जिले पर क्लिक करें।",
+        "radar-map-title": "बिहार परिचालन मानचित्र",
+        "radar-map-sub": "मानचित्र पर या नीचे दिए गए किसी भी सक्रिय जिले पर क्लिक करें",
+        "radar-card-title": "जिला यार्ड टेलीमेट्री विवरण",
+        "radar-lbl-coords": "भौगोलिक निर्देशांक:",
+        "radar-lbl-batch": "बैचिंग प्लांट क्षमता:",
+        "radar-lbl-fleet": "तैनात भारी मशीनरी:",
+        "radar-lbl-packages": "सक्रिय पैकेज:",
+        "radar-lbl-lab": "साइट गुणवत्ता परीक्षण लैब:",
+        "radar-lbl-lead": "परियोजना निदेशक:",
+        "radar-btn-filter": "इस जिले की परियोजनाएं देखें",
+        "radar-status-active": "100% सक्रिय साइट यार्ड",
+        "radar-view-all-lbl": "सक्रिय हब चुनें:",
+
+        // Printable BOQ Modal
+        "boq-modal-title": "लोक निर्माण प्राक्कलन विवरण एवं बीओक्यू",
+        "boq-modal-sub": "वर्ग-1 बिहार पंजीकृत ईपीसी संवेदक • विभागीय प्राक्कलन सारांश",
+        "boq-modal-print-btn": "प्रिंट करें / PDF सेव करें",
+        "boq-modal-close-btn": "प्रिव्यू बंद करें",
+        "boq-modal-sec-lbl": "संवर्ग:",
+        "boq-modal-dist-lbl": "जिला:",
+        "boq-modal-ref-lbl": "संदर्भ:",
+        "boq-modal-date-lbl": "दिनांक:"
 }
     };
+    // =========================================================================
+    // 1B. BIHAR DISTRICT OPERATIONS TELEMETRY DATA
+    // =========================================================================
+    const DISTRICTS_DATA = [
+      {
+        id: "patna",
+        name: "Patna",
+        name_hi: "पटना",
+        role: "State Capital & Central Operations HQ",
+        role_hi: "राज्य मुख्यालय एवं केंद्रीय परिचालन केंद्र",
+        coords: "25.61° N, 85.14° E",
+        batchingCap: "60 m³/hr (Automated)",
+        batchingCap_hi: "60 घन मीटर/घंटा (स्वचालित)",
+        activeProjects: 3,
+        packagesSummary: "Patna Stormwater Box Drains & PHED Metro Grid",
+        packagesSummary_hi: "पटना स्टॉर्मवाटर बॉक्स ड्रेन एवं पीएचईडी मेट्रो ग्रिड",
+        fleetUnits: "14 Heavy Units",
+        fleetUnits_hi: "14 भारी इकाइयां",
+        fleetComposition: "2 Batching • 4 TMs • 4 Excavators • 4 Tippers",
+        fleetComposition_hi: "2 बैचिंग • 4 टीएम • 4 एक्सकेवेटर • 4 टिपर",
+        labStatus: "Central NABL Testing Facility (Boring Road)",
+        labStatus_hi: "केंद्रीय NABL परीक्षण केंद्र (बोरिंग रोड)",
+        director: "Er. Alok Ranjan (Chief Project Director)",
+        director_hi: "इंजीनियर आलोक रंजन (मुख्य परियोजना निदेशक)"
+      },
+      {
+        id: "muzaffarpur",
+        name: "Muzaffarpur",
+        name_hi: "मुजफ्फरपुर",
+        role: "North Bihar Regional Hub (Tirhut Division)",
+        role_hi: "उत्तर बिहार क्षेत्रीय केंद्र (तिरहुत प्रमंडल)",
+        coords: "26.12° N, 85.39° E",
+        batchingCap: "45 m³/hr (Computerized)",
+        batchingCap_hi: "45 घन मीटर/घंटा (कम्प्यूटरीकृत)",
+        activeProjects: 2,
+        packagesSummary: "Jal Jeevan Mission Rural Grid & WTP Intake Works",
+        packagesSummary_hi: "जल जीवन मिशन ग्रामीण ग्रिड एवं WTP इनटेक कार्य",
+        fleetUnits: "12 Heavy Units",
+        fleetUnits_hi: "12 भारी इकाइयां",
+        fleetComposition: "1 Batching • 3 TMs • 3 Excavators • 3 Pipe Rigs • 2 Labs",
+        fleetComposition_hi: "1 बैचिंग • 3 टीएम • 3 एक्सकेवेटर • 3 फ्यूजन रिग • 2 लैब",
+        labStatus: "Stationary & Mobile NABL Field QC Van #1",
+        labStatus_hi: "स्थिर एवं मोबाइल NABL फील्ड QC वैन #1",
+        director: "Er. Rajeshwar Singh (Superintending Engineer - Retd/PHE)",
+        director_hi: "इंजीनियर राजेश्वर सिंह (अधीक्षण अभियंता - सेवानिवृत्त/PHE)"
+      },
+      {
+        id: "bhagalpur",
+        name: "Bhagalpur",
+        name_hi: "भागलपुर",
+        role: "Eastern Corridor & Riverine Engineering Base",
+        role_hi: "पूर्वी गलियारा एवं नदी तटबंध निर्माण केंद्र",
+        coords: "25.24° N, 86.98° E",
+        batchingCap: "30 m³/hr (Electronic Load Cells)",
+        batchingCap_hi: "30 घन मीटर/घंटा (इलेक्ट्रॉनिक लोड सेल)",
+        activeProjects: 2,
+        packagesSummary: "2-Lane Arterial Highway & Major Flood Culverts",
+        packagesSummary_hi: "2-लेन मुख्य राजमार्ग एवं वृहद बाढ़ पुलिया",
+        fleetUnits: "9 Heavy Units",
+        fleetUnits_hi: "9 भारी इकाइयां",
+        fleetComposition: "1 Sensor Paver • 2 Tandem Rollers • 2 Excavators • 4 TMs",
+        fleetComposition_hi: "1 सेंसर पेवर • 2 टेंडेम रोलर • 2 एक्सकेवेटर • 4 टीएम",
+        labStatus: "Bitumen & Concrete Compressive Testing Lab",
+        labStatus_hi: "बिटुमेन एवं कंक्रीट संपीडन परीक्षण लैब",
+        director: "Er. Manoj Kumar (Project Manager - Roads/RCD)",
+        director_hi: "इंजीनियर मनोज कुमार (परियोजना प्रबंधक - सड़क/RCD)"
+      },
+      {
+        id: "darbhanga",
+        name: "Darbhanga",
+        name_hi: "दरभंगा",
+        role: "Mithilanchal Flood Plain & Rural Works Center",
+        role_hi: "मिथिलांचल बाढ़ क्षेत्र एवं ग्रामीण कार्य केंद्र",
+        coords: "26.15° N, 85.90° E",
+        batchingCap: "30 m³/hr",
+        batchingCap_hi: "30 घन मीटर/घंटा",
+        activeProjects: 1,
+        packagesSummary: "Rural Connectivity PQC Concrete Network (RWD)",
+        packagesSummary_hi: "ग्रामीण संपर्क PQC कंक्रीट नेटवर्क (RWD)",
+        fleetUnits: "8 Heavy Units",
+        fleetUnits_hi: "8 भारी इकाइयां",
+        fleetComposition: "1 Batching • 2 Excavators • 2 TMs • Soil Stabilizers",
+        fleetComposition_hi: "1 बैचिंग • 2 एक्सकेवेटर • 2 टीएम • मृदा स्टेबलाइजर",
+        labStatus: "Mobile Soil Stabilization & Cube Testing Van",
+        labStatus_hi: "मोबाइल मृदा स्थिरीकरण एवं क्यूब परीक्षण वैन",
+        director: "Er. Santosh Thakur (Divisional QA Lead)",
+        director_hi: "इंजीनियर संतोष ठाकुर (प्रमंडलीय गुणवत्ता प्रमुख)"
+      },
+      {
+        id: "gaya",
+        name: "Gaya",
+        name_hi: "गया",
+        role: "South Bihar Hard Rock Subgrade Operations",
+        role_hi: "दक्षिण बिहार कठोर शैल उप-आधार परिचालन",
+        coords: "24.79° N, 85.00° E",
+        batchingCap: "45 m³/hr (High-Shear Mix)",
+        batchingCap_hi: "45 घन मीटर/घंटा (उच्च क्षमता)",
+        activeProjects: 2,
+        packagesSummary: "45 MLD Multi-Village WTP & Falgu River Basin Feeder",
+        packagesSummary_hi: "45 एमएलडी बहु-ग्रामीण WTP एवं फल्गु बेसिन फीडर",
+        fleetUnits: "11 Heavy Units",
+        fleetUnits_hi: "11 भारी इकाइयां",
+        fleetComposition: "1 Batching • 3 Heavy Rock Breakers • 4 TMs • 3 Cranes",
+        fleetComposition_hi: "1 बैचिंग • 3 भारी रॉक ब्रेकर • 4 टीएम • 3 क्रेन",
+        labStatus: "Chemical Water Quality & Soil Testing Unit",
+        labStatus_hi: "रासायनिक जल गुणवत्ता एवं मृदा परीक्षण इकाई",
+        director: "Er. K. P. Verma (General Manager - PHE Projects)",
+        director_hi: "इंजीनियर के. पी. वर्मा (महाप्रबंधक - पीएचई परियोजनाएं)"
+      },
+      {
+        id: "nalanda",
+        name: "Nalanda",
+        name_hi: "नालंदा",
+        role: "Smart Urban Utility Corridor Center (Bihar Sharif)",
+        role_hi: "स्मार्ट शहरी यूटिलिटी कॉरिडोर केंद्र (बिहार शरीफ)",
+        coords: "25.20° N, 85.52° E",
+        batchingCap: "30 m³/hr",
+        batchingCap_hi: "30 घन मीटर/घंटा",
+        activeProjects: 1,
+        packagesSummary: "Smart City Trenchless Utility Drains & Sewer Lines",
+        packagesSummary_hi: "स्मार्ट सिटी ट्रेंचलेस यूटिलिटी ड्रेन एवं सीवर लाइनें",
+        fleetUnits: "7 Heavy Units",
+        fleetUnits_hi: "7 भारी इकाइयां",
+        fleetComposition: "Precast Shifters • 2 Mini Excavators • 2 TMs • Dewatering",
+        fleetComposition_hi: "प्रीकास्ट शिफ्टर • 2 मिनी एक्सकेवेटर • 2 टीएम • डीवाटरिंग",
+        labStatus: "Precast Concrete Dimension & Strength Lab",
+        labStatus_hi: "प्रीकास्ट कंक्रीट आयाम एवं शक्ति लैब",
+        director: "Er. Vikas Sinha (Resident Engineer - BUIDCO)",
+        director_hi: "इंजीनियर विकास सिन्हा (रेजिडेंट इंजीनियर - बुडको)"
+      }
+    ];
+
+    // =========================================================================
+    // 1C. ACCESSIBLE TOAST NOTIFICATION ENGINE
+    // =========================================================================
+    function showToast(title, message, type = 'success') {
+      const container = document.getElementById('toast-container');
+      if (!container) return;
+
+      const toast = document.createElement('div');
+      toast.className = "pointer-events-auto transform translate-x-full opacity-0 transition-all duration-300 ease-out flex items-start gap-3 p-4 rounded-2xl bg-brand-deep/95 backdrop-blur-md border text-white shadow-2xl max-w-sm w-full";
+      
+      let borderClass = "border-slate-700/80";
+      let iconName = "check-circle";
+      let iconColor = "text-emerald-400";
+      let iconBg = "bg-emerald-500/20";
+
+      if (type === 'success') {
+        borderClass = "border-emerald-500/40";
+        iconName = "check-circle";
+        iconColor = "text-emerald-400";
+        iconBg = "bg-emerald-500/20";
+      } else if (type === 'info') {
+        borderClass = "border-sky-500/40";
+        iconName = "info";
+        iconColor = "text-sky-400";
+        iconBg = "bg-sky-500/20";
+      } else if (type === 'copy') {
+        borderClass = "border-brand-gold/40";
+        iconName = "clipboard-check";
+        iconColor = "text-brand-gold";
+        iconBg = "bg-brand-gold/20";
+      }
+
+      toast.classList.add(...borderClass.split(' '));
+
+      toast.innerHTML = `
+        <div class="w-8 h-8 rounded-xl ${iconBg} ${iconColor} flex items-center justify-center shrink-0 mt-0.5">
+          <i data-lucide="${iconName}" class="w-4 h-4"></i>
+        </div>
+        <div class="flex-1 min-w-0 pr-1">
+          <h5 class="text-xs font-bold text-white tracking-wide leading-tight">${title}</h5>
+          <p class="text-[11px] text-slate-300 mt-0.5 leading-snug break-words">${message}</p>
+        </div>
+        <button onclick="dismissToast(this.parentElement)" class="text-slate-400 hover:text-white p-1 transition-colors shrink-0" aria-label="Dismiss notification">
+          <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        </button>
+      `;
+
+      container.appendChild(toast);
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+
+      // Trigger enter transition
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-full', 'opacity-0');
+        toast.classList.add('translate-x-0', 'opacity-100');
+      });
+
+      // Auto dismiss after 4 seconds
+      const timeoutId = setTimeout(() => {
+        dismissToast(toast);
+      }, 4000);
+
+      toast.dataset.timeoutId = timeoutId;
+    }
+
+    function dismissToast(toast) {
+      if (!toast) return;
+      if (toast.dataset.timeoutId) {
+        clearTimeout(parseInt(toast.dataset.timeoutId));
+      }
+      toast.classList.remove('translate-x-0', 'opacity-100');
+      toast.classList.add('translate-x-full', 'opacity-0');
+      setTimeout(() => {
+        if (toast.parentElement) {
+          toast.parentElement.removeChild(toast);
+        }
+      }, 300);
+    }
+
+    // =========================================================================
+    // 1D. VIEWPORT ANIMATED METRIC COUNTERS (IntersectionObserver)
+    // =========================================================================
+    function initAnimatedCounters() {
+      const counters = document.querySelectorAll('[data-counter]');
+      if (!counters.length) return;
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      counters.forEach(el => observer.observe(el));
+    }
+
+    function animateCounter(el) {
+      const target = parseFloat(el.getAttribute('data-counter')) || 0;
+      const prefix = el.getAttribute('data-counter-prefix') || '';
+      const rawSuffix = el.getAttribute('data-counter-suffix') || '';
+      const duration = parseInt(el.getAttribute('data-counter-duration')) || 1800;
+      const isHi = currentLang === 'hi';
+
+      let displaySuffix = rawSuffix;
+      if (rawSuffix === '+ Cr.' && isHi) displaySuffix = '+ करोड़';
+      if (rawSuffix === 'k+' && isHi) displaySuffix = 'हज़ार+';
+
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Cubic Ease-Out numerical easing
+        const easeProgress = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.floor(easeProgress * target);
+
+        el.textContent = `${prefix}${currentValue}${displaySuffix}`;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = `${prefix}${target}${displaySuffix}`;
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // =========================================================================
+    // 1E. BIHAR DISTRICT OPERATIONS RADAR & GEO-NAVIGATOR ENGINE
+    // =========================================================================
+    let radarSelectedDistrict = 'patna';
+
+    function renderRadarHighlights() {
+      const container = document.getElementById('radar-cards-grid');
+      if (!container) return;
+      container.innerHTML = '';
+      const isHi = currentLang === 'hi';
+
+      DISTRICTS_DATA.forEach(dist => {
+        const card = document.createElement('div');
+        const isActive = dist.id === radarSelectedDistrict;
+        card.className = `p-3.5 rounded-2xl border transition-all cursor-pointer text-left ${
+          isActive 
+            ? 'bg-brand-navy border-brand-gold shadow-lg shadow-brand-gold/15' 
+            : 'bg-slate-900/60 border-slate-800 hover:border-slate-700 hover:bg-slate-900'
+        }`;
+        card.onclick = () => selectRadarDistrict(dist.id);
+
+        const name = isHi ? dist.name_hi : dist.name;
+        const batch = isHi ? dist.batchingCap_hi : dist.batchingCap;
+        const fleet = isHi ? dist.fleetUnits_hi : dist.fleetUnits;
+        const pkgs = dist.activeProjects + (isHi ? ' सक्रिय पैकेज' : ' Active Pkgs');
+
+        card.innerHTML = `
+          <div class="flex justify-between items-center mb-1">
+            <span class="text-xs font-bold text-white">${name}</span>
+            <span class="w-2 h-2 rounded-full ${isActive ? 'bg-brand-gold' : 'bg-emerald-400'}"></span>
+          </div>
+          <div class="text-[10px] text-brand-gold font-mono font-semibold">${batch.split(' ')[0]} ${batch.split(' ')[1] || ''}</div>
+          <div class="text-[10px] text-slate-400 font-mono mt-0.5">${fleet}</div>
+          <div class="mt-2 pt-1.5 border-t border-slate-800 text-[9px] font-mono text-cyan-400">${pkgs}</div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function selectRadarDistrict(distId) {
+      radarSelectedDistrict = distId;
+      const dist = DISTRICTS_DATA.find(d => d.id === distId);
+      if (!dist) return;
+      const isHi = currentLang === 'hi';
+
+      const name = isHi ? dist.name_hi : dist.name;
+      const role = isHi ? dist.role_hi : dist.role;
+      const batch = isHi ? dist.batchingCap_hi : dist.batchingCap;
+      const pkgs = isHi ? dist.packagesSummary_hi : dist.packagesSummary;
+      const fleet = isHi ? dist.fleetUnits_hi + ' (' + dist.fleetComposition_hi + ')' : dist.fleetUnits + ' (' + dist.fleetComposition + ')';
+      const lab = isHi ? dist.labStatus_hi : dist.labStatus;
+      const dir = isHi ? dist.director_hi : dist.director;
+
+      // Update HUD card elements
+      const nameEl = document.getElementById('radar-district-name');
+      const roleEl = document.getElementById('radar-district-role');
+      const coordsEl = document.getElementById('radar-coords');
+      const batchEl = document.getElementById('radar-batching');
+      const fleetEl = document.getElementById('radar-fleet');
+      const pkgsEl = document.getElementById('radar-packages');
+      const labEl = document.getElementById('radar-lab');
+      const dirEl = document.getElementById('radar-director');
+      const btnTextEl = document.getElementById('radar-filter-btn-text');
+
+      if (nameEl) nameEl.textContent = name;
+      if (roleEl) roleEl.textContent = role;
+      if (coordsEl) coordsEl.textContent = dist.coords;
+      if (batchEl) batchEl.textContent = batch;
+      if (fleetEl) fleetEl.textContent = fleet;
+      if (pkgsEl) pkgsEl.textContent = pkgs;
+      if (labEl) labEl.textContent = lab;
+      if (dirEl) dirEl.textContent = dir;
+      if (btnTextEl) {
+        btnTextEl.textContent = isHi 
+          ? `${name} जिले की परियोजनाएं देखें` 
+          : `Filter Projects for ${dist.name} in Directory`;
+      }
+
+      // Update active state in tabs
+      document.querySelectorAll('.radar-tab').forEach(tab => {
+        tab.classList.remove('bg-brand-gold', 'text-white', 'active');
+        tab.classList.add('bg-slate-800', 'text-slate-300');
+      });
+      const activeTab = document.getElementById('tab-radar-' + distId);
+      if (activeTab) {
+        activeTab.classList.remove('bg-slate-800', 'text-slate-300');
+        activeTab.classList.add('bg-brand-gold', 'text-white', 'active');
+      }
+
+      renderRadarHighlights();
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function filterProjectsFromRadar() {
+      const dist = DISTRICTS_DATA.find(d => d.id === radarSelectedDistrict);
+      if (!dist) return;
+
+      // 1. Scroll to projects section smoothly
+      const projectsSection = document.getElementById('projects');
+      if (projectsSection) {
+        projectsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // 2. Set district dropdown
+      const districtSelect = document.getElementById('district-filter');
+      if (districtSelect) {
+        districtSelect.value = dist.name;
+      }
+      currentDistrict = dist.name;
+
+      // 3. Render filtered projects
+      renderProjects();
+
+      // 4. Trigger Toast notification
+      const isHi = currentLang === 'hi';
+      const toastTitle = isHi ? 'परियोजना फ़िल्टर लागू' : 'District Filter Applied';
+      const toastMsg = isHi 
+        ? `${dist.name_hi} जिले की सभी लोक निर्माण परियोजनाएं प्रदर्शित की जा रही हैं।`
+        : `Showing all public infrastructure works in ${dist.name}.`;
+      showToast(toastTitle, toastMsg, 'info');
+    }
+
+    // =========================================================================
+    // 1F. INTERACTIVE PUBLIC WORKS BOQ & TIMELINE ESTIMATOR ENGINE
+    // =========================================================================
+    let estSector = 'phe'; // 'phe' | 'roads' | 'urban'
+
+    const TERRAIN_MODIFIERS = {
+      'Muzaffarpur': { factor: 1.08, desc_en: 'Alluvial flood plain. Includes 8% dewatering allowance and IS:456 deep pile foundation factor.', desc_hi: 'जलोढ़ बाढ़ मैदान। 8% डीवाटरिंग भत्ता और IS:456 गहरी पाइल नींव शामिल है।' },
+      'Patna': { factor: 1.10, desc_en: 'Capital urban corridor. Includes utility diversion, trench shoring, and high silt load foundations.', desc_hi: 'राजधानी शहरी क्षेत्र। उपयोगिता स्थानांतरण, ट्रेंच शोरिंग और गाद भार नींव शामिल है।' },
+      'Bhagalpur': { factor: 1.05, desc_en: 'Eastern river basin. Geo-textile mattress revetment and erosion protection allowances factored.', desc_hi: 'पूर्वी नदी बेसिन। भू-वस्त्र गद्दे सुरक्षा और कटाव रोधी प्रावधान शामिल हैं।' },
+      'Darbhanga': { factor: 1.08, desc_en: 'Mithilanchal waterlogged terrain. 8% elevated substructure and soil stabilization factored.', desc_hi: 'मिथिलांचल जलभराव क्षेत्र। 8% ऊंची अधिरचना और मृदा स्थिरीकरण प्रावधान शामिल हैं।' },
+      'Gaya': { factor: 1.09, desc_en: 'Magadh hard rock subgrade. Factored for hydraulic rock breaker tooling and minimal dewatering.', desc_hi: 'मगध कठोर शैल उप-आधार। हाइड्रोलिक रॉक ब्रेकर और न्यूनतम जल निकासी प्रावधान शामिल हैं।' },
+      'Nalanda': { factor: 1.04, desc_en: 'Compact heritage corridor. Factored for compact utility trenching and precast modular drains.', desc_hi: 'विरासत गलियारा। सघन उपयोगिता ट्रेंचिंग और प्रीकास्ट नालियों का प्रावधान शामिल है।' },
+      'Purnia': { factor: 1.06, desc_en: 'Seemanchal high alluvial basin. Factored for soft subgrade treatment and fly-ash stabilization.', desc_hi: 'सीमांचल जलोढ़ बेसिन। मृदु उप-आधार उपचार और फ्लाई-ऐश स्थिरीकरण प्रावधान शामिल हैं।' },
+      'Rohtas': { factor: 1.05, desc_en: 'Kaimur stone belt. Direct access to high-grade quartzite aggregates; lower logistics overhead.', desc_hi: 'रोहतास पत्थर पट्टी। उच्च गुणवत्ता वाले एग्रीगेट की सुलभता; कम रसद लागत।' },
+      'Saran': { factor: 1.07, desc_en: 'Gandak-Ganga confluence. High flood mitigation embankments and anti-scour protection.', desc_hi: 'गंडक-गंगा संगम क्षेत्र। उच्च बाढ़ सुरक्षा तटबंध और कटाव-रोधी सुरक्षा शामिल है।' },
+      'Begusarai': { factor: 1.06, desc_en: 'Industrial river bank corridor. High-specification load-bearing subgrades factored.', desc_hi: 'औद्योगिक नदी तट गलियारा। उच्च भार वहन क्षमता वाले उप-आधार का प्रावधान शामिल है।' }
+    };
+
+    function setEstimatorSector(sector) {
+      estSector = sector;
+      const isHi = currentLang === 'hi';
+
+      // Update button styles
+      ['phe', 'roads', 'urban'].forEach(s => {
+        const btn = document.getElementById('btn-sector-' + s);
+        const container = document.getElementById('est-fields-' + s);
+        if (btn) {
+          if (s === sector) {
+            btn.className = "est-sector-btn p-3 rounded-2xl border text-center transition-all bg-brand-gold/20 border-brand-gold text-white shadow-md";
+          } else {
+            btn.className = "est-sector-btn p-3 rounded-2xl border border-slate-700 bg-slate-900/60 hover:bg-slate-800 text-slate-300 text-center transition-all";
+          }
+        }
+        if (container) {
+          if (s === sector) {
+            container.classList.remove('hidden');
+          } else {
+            container.classList.add('hidden');
+          }
+        }
+      });
+
+      const pill = document.getElementById('est-current-sector-pill');
+      if (pill) {
+        if (sector === 'phe') pill.textContent = isHi ? 'पीएचई मानक (जल जीवन)' : 'PHE Standards (JJM)';
+        else if (sector === 'roads') pill.textContent = isHi ? 'आरसीडी / आरडब्ल्यूडी मानक' : 'RCD / RWD Standards';
+        else if (sector === 'urban') pill.textContent = isHi ? 'बुडको शहरी जल निकासी' : 'BUIDCO Urban Standards';
+      }
+
+      updateEstimator();
+
+      // Trigger informative toast
+      const secNames = {
+        phe: isHi ? 'लोक स्वास्थ्य अभियंत्रण (PHE)' : 'Public Health Engineering (PHE)',
+        roads: isHi ? 'सड़क एवं राजमार्ग' : 'Highways & Civil Roads',
+        urban: isHi ? 'शहरी जल निकासी (बुडको)' : 'Urban Drainage (BUIDCO)'
+      };
+      showToast(
+        isHi ? 'संवर्ग बदला गया' : 'Sector Loaded',
+        (isHi ? 'प्राक्कलन कॉन्फ़िगर किया गया: ' : 'Estimator configured for: ') + secNames[sector],
+        'info'
+      );
+    }
+
+    function syncFromRange(key) {
+      const rangeEl = document.getElementById('range-' + key);
+      const numEl = document.getElementById('num-' + key);
+      if (rangeEl && numEl) {
+        numEl.value = rangeEl.value;
+      }
+      updateEstimator();
+    }
+
+    function syncFromNumber(key) {
+      const rangeEl = document.getElementById('range-' + key);
+      const numEl = document.getElementById('num-' + key);
+      if (rangeEl && numEl) {
+        rangeEl.value = numEl.value;
+      }
+      updateEstimator();
+    }
+
+    function updateEstimator() {
+      const isHi = currentLang === 'hi';
+      const districtSelect = document.getElementById('select-est-district');
+      const district = districtSelect ? districtSelect.value : 'Muzaffarpur';
+      const terrain = TERRAIN_MODIFIERS[district] || { factor: 1.05, desc_en: 'Standard Bihar Gangetic plain.', desc_hi: 'मानक बिहार गंगा का मैदान।' };
+
+      // Update terrain info
+      const terrainBadge = document.getElementById('est-terrain-badge');
+      const terrainDesc = document.getElementById('est-terrain-desc');
+      if (terrainBadge) terrainBadge.textContent = (isHi ? 'मिट्टी कारक: ' : 'Terrain Factor: ') + terrain.factor.toFixed(2) + 'x';
+      if (terrainDesc) terrainDesc.textContent = isHi ? terrain.desc_hi : terrain.desc_en;
+
+      let valuationCr = 0;
+      let concreteM3 = 0;
+      let timelineMonths = 0;
+      let fleetUnits = 0;
+      let fleetDetail = '';
+      let summaryTitle = '';
+
+      if (estSector === 'phe') {
+        const pipeKm = parseFloat(document.getElementById('num-pipe-km')?.value) || 75;
+        const ohsrCount = parseInt(document.getElementById('num-ohsr-count')?.value) || 4;
+        const ohsrCap = parseFloat(document.getElementById('select-ohsr-cap')?.value) || 4.5;
+        const fhtcCount = parseInt(document.getElementById('num-fhtc-count')?.value) || 15000;
+
+        // Base Calculations
+        const pipeCost = pipeKm * 0.20; // 20 Lakh / km
+        const ohsrBaseCost = ohsrCount * (0.65 * (ohsrCap / 4.5));
+        const fhtcCost = (fhtcCount * 4200) / 10000000; // ₹4,200 per household tap
+        const scadaElectromechanical = 2.85; // Fixed intake well + chlorination + SCADA
+
+        valuationCr = (pipeCost + ohsrBaseCost + fhtcCost + scadaElectromechanical) * terrain.factor;
+        concreteM3 = Math.round((ohsrCount * (280 * (ohsrCap / 4.5))) + (pipeKm * 18) + 650);
+        timelineMonths = Math.round(8 + (pipeKm / 22) + (ohsrCount * 1.1));
+
+        const batching = Math.max(1, Math.ceil(ohsrCount / 3));
+        const tms = batching * 3;
+        const excavators = Math.max(2, Math.ceil(pipeKm / 25));
+        const pipeRigs = Math.max(2, Math.ceil(pipeKm / 30));
+        const labs = Math.max(1, Math.ceil(pipeKm / 60));
+        fleetUnits = batching + tms + excavators + pipeRigs + labs;
+
+        fleetDetail = isHi 
+          ? `${batching} बैचिंग • ${tms} टीएम • ${excavators} एक्सकेवेटर • ${pipeRigs} रिग • ${labs} लैब`
+          : `${batching} Batching • ${tms} TMs • ${excavators} Excavators • ${pipeRigs} Rigs • ${labs} Labs`;
+        summaryTitle = isHi 
+          ? `पीएचई ग्रामीण जलापूर्ति ग्रिड (${pipeKm} किमी, ${ohsrCount} OHSR)`
+          : `PHE Rural Piped Water Grid (${pipeKm} km, ${ohsrCount} OHSR)`;
+
+      } else if (estSector === 'roads') {
+        const roadKm = parseFloat(document.getElementById('num-road-km')?.value) || 25;
+        const isRigid = document.querySelector('input[name="pavement-type"]:checked')?.value === 'rigid';
+        const laneWidthFactor = parseFloat(document.getElementById('select-lane-width')?.value) || 1.0;
+        const culvertCount = parseInt(document.getElementById('num-culvert-count')?.value) || 8;
+
+        const baseRoadKmRate = isRigid ? 2.35 : 1.55; // ₹ Cr / km for standard 2-lane
+        const roadCost = roadKm * baseRoadKmRate * laneWidthFactor;
+        const culvertCost = culvertCount * 0.24; // ₹24 Lakh per culvert
+        const signageSafety = 0.85;
+
+        valuationCr = (roadCost + culvertCost + signageSafety) * terrain.factor;
+        
+        if (isRigid) {
+          concreteM3 = Math.round((roadKm * 1000 * (7.0 * laneWidthFactor) * 0.28) + (culvertCount * 160));
+        } else {
+          concreteM3 = Math.round((roadKm * 130) + (culvertCount * 160));
+        }
+
+        timelineMonths = Math.round(6 + (roadKm / 6) + (culvertCount * 0.35));
+
+        const batching = isRigid ? Math.max(1, Math.ceil(roadKm / 20)) : 1;
+        const pavers = isRigid ? 1 : Math.max(1, Math.ceil(roadKm / 25));
+        const tms = isRigid ? batching * 4 : 4;
+        const rollers = Math.max(2, Math.ceil(roadKm / 15));
+        const excavators = Math.max(2, Math.ceil(roadKm / 20));
+        fleetUnits = batching + pavers + tms + rollers + excavators;
+
+        fleetDetail = isHi
+          ? `${batching} बैचिंग • ${pavers} पेवर • ${tms} टीएम • ${rollers} रोलर • ${excavators} एक्सकेवेटर`
+          : `${batching} Batching • ${pavers} Pavers • ${tms} TMs • ${rollers} Rollers • ${excavators} Excavators`;
+        summaryTitle = isHi
+          ? `${isRigid ? 'PQC कंक्रीट' : 'डामर बिटुमिनस'} राजमार्ग (${roadKm} किमी, ${culvertCount} कल्वर्ट)`
+          : `${isRigid ? 'Rigid PQC Concrete' : 'Flexible Bituminous'} Corridor (${roadKm} km, ${culvertCount} Culverts)`;
+
+      } else if (estSector === 'urban') {
+        const drainKm = parseFloat(document.getElementById('num-drain-km')?.value) || 6;
+        const drainSize = document.getElementById('select-drain-size')?.value || 'std';
+        const pumpStation = document.getElementById('select-pump-station')?.value || '12k';
+
+        let sizeRate = 4.2; // Cr / km
+        let concPerKm = 1650;
+        if (drainSize === 'med') { sizeRate = 5.8; concPerKm = 2400; }
+        if (drainSize === 'heavy') { sizeRate = 8.5; concPerKm = 3900; }
+
+        let pumpCost = 0;
+        let pumpConc = 0;
+        if (pumpStation === '6k') { pumpCost = 2.8; pumpConc = 450; }
+        if (pumpStation === '12k') { pumpCost = 5.2; pumpConc = 850; }
+        if (pumpStation === '25k') { pumpCost = 9.8; pumpConc = 1600; }
+
+        valuationCr = ((drainKm * sizeRate) + pumpCost) * terrain.factor;
+        concreteM3 = Math.round((drainKm * concPerKm) + pumpConc);
+        timelineMonths = Math.round(6 + (drainKm * 1.3) + (pumpStation !== 'none' ? 4 : 0));
+
+        const batching = Math.max(1, Math.ceil(drainKm / 8));
+        const tms = batching * 3;
+        const excavators = Math.max(2, Math.ceil(drainKm / 3));
+        const pumps = Math.max(2, Math.ceil(drainKm / 2));
+        const labs = 1;
+        fleetUnits = batching + tms + excavators + pumps + labs;
+
+        fleetDetail = isHi
+          ? `${batching} बैचिंग • ${tms} टीएम • ${excavators} एक्सकेवेटर • ${pumps} डीवाटरिंग पंप • 1 लैब`
+          : `${batching} Batching • ${tms} TMs • ${excavators} Excavators • ${pumps} Dewatering • 1 Lab`;
+        summaryTitle = isHi
+          ? `शहरी स्टॉर्मवाटर ड्रेन ग्रिड (${drainKm} किमी, स्वचालित संप)`
+          : `Urban Stormwater Drainage Grid (${drainKm} km, Pumping Sump)`;
+      }
+
+      // Update DOM output fields
+      const summaryTitleEl = document.getElementById('est-summary-title');
+      const valEl = document.getElementById('est-val');
+      const concEl = document.getElementById('est-conc');
+      const timeEl = document.getElementById('est-time');
+      const fleetUnitsEl = document.getElementById('est-fleet-units');
+      const fleetDescEl = document.getElementById('est-fleet-desc');
+
+      if (summaryTitleEl) summaryTitleEl.textContent = summaryTitle;
+      if (valEl) valEl.textContent = `₹${valuationCr.toFixed(2)} Cr.`;
+      if (concEl) concEl.textContent = `${concreteM3.toLocaleString()} m³`;
+      if (timeEl) timeEl.textContent = `${timelineMonths} ` + (isHi ? 'माह' : 'Months');
+      if (fleetUnitsEl) fleetUnitsEl.textContent = `${fleetUnits} ` + (isHi ? 'भारी इकाइयां' : 'Heavy Units');
+      if (fleetDescEl) fleetDescEl.textContent = fleetDetail;
+
+      // Update Cost Breakdown Bars & Percentages
+      const civilCost = valuationCr * 0.45;
+      const matCost = valuationCr * 0.33;
+      const fleetCost = valuationCr * 0.14;
+      const qaCost = valuationCr * 0.08;
+
+      const pctCivilEl = document.getElementById('est-pct-civil');
+      const pctMatEl = document.getElementById('est-pct-materials');
+      const pctFleetEl = document.getElementById('est-pct-fleet');
+      const pctQaEl = document.getElementById('est-pct-qa');
+
+      if (pctCivilEl) pctCivilEl.textContent = `₹${civilCost.toFixed(2)} Cr. (45%)`;
+      if (pctMatEl) pctMatEl.textContent = `₹${matCost.toFixed(2)} Cr. (33%)`;
+      if (pctFleetEl) pctFleetEl.textContent = `₹${fleetCost.toFixed(2)} Cr. (14%)`;
+      if (pctQaEl) pctQaEl.textContent = `₹${qaCost.toFixed(2)} Cr. (8%)`;
+
+      // Update Milestone Phase Schedule Month Ranges
+      const m1 = Math.max(1, Math.round(timelineMonths * 0.12));
+      const m2 = Math.max(m1 + 1, Math.round(timelineMonths * 0.38));
+      const m3 = Math.max(m2 + 1, Math.round(timelineMonths * 0.82));
+      const m4 = timelineMonths;
+
+      const ph1TimeEl = document.getElementById('est-ph1-time');
+      const ph2TimeEl = document.getElementById('est-ph2-time');
+      const ph3TimeEl = document.getElementById('est-ph3-time');
+      const ph4TimeEl = document.getElementById('est-ph4-time');
+
+      const moStr = isHi ? 'माह' : 'Month';
+      if (ph1TimeEl) ph1TimeEl.textContent = `${moStr} 1 - ${m1}`;
+      if (ph2TimeEl) ph2TimeEl.textContent = `${moStr} ${m1 + 1} - ${m2}`;
+      if (ph3TimeEl) ph3TimeEl.textContent = `${moStr} ${m2 + 1} - ${m3}`;
+      if (ph4TimeEl) ph4TimeEl.textContent = `${moStr} ${m3 + 1} - ${m4}`;
+
+      // Update printable modal values in parallel
+      const boqSectorEl = document.getElementById('boq-print-sector');
+      const boqDistEl = document.getElementById('boq-print-district');
+      const boqValEl = document.getElementById('boq-print-val');
+      const boqTimeEl = document.getElementById('boq-print-timeline');
+      const boqConcEl = document.getElementById('boq-print-conc');
+      const boqFleetSumEl = document.getElementById('boq-print-fleet-summary');
+      const boqFleetDetEl = document.getElementById('boq-print-fleet-detail');
+
+      if (boqSectorEl) boqSectorEl.textContent = summaryTitle;
+      if (boqDistEl) boqDistEl.textContent = district;
+      if (boqValEl) boqValEl.textContent = `₹${valuationCr.toFixed(2)} Cr.`;
+      if (boqTimeEl) boqTimeEl.textContent = `${timelineMonths} ` + (isHi ? 'माह' : 'Months');
+      if (boqConcEl) boqConcEl.textContent = `${concreteM3.toLocaleString()} m³`;
+      if (boqFleetSumEl) boqFleetSumEl.textContent = `${fleetUnits} ` + (isHi ? 'भारी इकाइयां' : 'Heavy Units');
+      if (boqFleetDetEl) boqFleetDetEl.textContent = fleetDetail;
+
+      const tblValCivil = document.getElementById('boq-tbl-val-civil');
+      const tblValMat = document.getElementById('boq-tbl-val-materials');
+      const tblValFleet = document.getElementById('boq-tbl-val-fleet');
+      const tblValQa = document.getElementById('boq-tbl-val-qa');
+      const tblValTotal = document.getElementById('boq-tbl-val-total');
+
+      if (tblValCivil) tblValCivil.textContent = `₹${civilCost.toFixed(2)} Cr.`;
+      if (tblValMat) tblValMat.textContent = `₹${matCost.toFixed(2)} Cr.`;
+      if (tblValFleet) tblValFleet.textContent = `₹${fleetCost.toFixed(2)} Cr.`;
+      if (tblValQa) tblValQa.textContent = `₹${qaCost.toFixed(2)} Cr.`;
+      if (tblValTotal) tblValTotal.textContent = `₹${valuationCr.toFixed(2)} Cr.`;
+    }
+
+    function resetEstimator() {
+      // Reset PHE
+      const pipeRange = document.getElementById('range-pipe-km');
+      const pipeNum = document.getElementById('num-pipe-km');
+      if (pipeRange) pipeRange.value = 75;
+      if (pipeNum) pipeNum.value = 75;
+
+      const ohsrRange = document.getElementById('range-ohsr-count');
+      const ohsrNum = document.getElementById('num-ohsr-count');
+      if (ohsrRange) ohsrRange.value = 4;
+      if (ohsrNum) ohsrNum.value = 4;
+
+      const ohsrCap = document.getElementById('select-ohsr-cap');
+      if (ohsrCap) ohsrCap.value = '4.5';
+
+      const fhtcRange = document.getElementById('range-fhtc-count');
+      const fhtcNum = document.getElementById('num-fhtc-count');
+      if (fhtcRange) fhtcRange.value = 15000;
+      if (fhtcNum) fhtcNum.value = 15000;
+
+      // Reset Roads
+      const roadRange = document.getElementById('range-road-km');
+      const roadNum = document.getElementById('num-road-km');
+      if (roadRange) roadRange.value = 25;
+      if (roadNum) roadNum.value = 25;
+
+      const laneWidth = document.getElementById('select-lane-width');
+      if (laneWidth) laneWidth.value = '1.0';
+
+      const culvertRange = document.getElementById('range-culvert-count');
+      const culvertNum = document.getElementById('num-culvert-count');
+      if (culvertRange) culvertRange.value = 8;
+      if (culvertNum) culvertNum.value = 8;
+
+      // Reset Urban
+      const drainRange = document.getElementById('range-drain-km');
+      const drainNum = document.getElementById('num-drain-km');
+      if (drainRange) drainRange.value = 6;
+      if (drainNum) drainNum.value = 6;
+
+      const drainSize = document.getElementById('select-drain-size');
+      if (drainSize) drainSize.value = 'std';
+
+      const pumpStation = document.getElementById('select-pump-station');
+      if (pumpStation) pumpStation.value = '12k';
+
+      // District
+      const distSelect = document.getElementById('select-est-district');
+      if (distSelect) distSelect.value = 'Muzaffarpur';
+
+      setEstimatorSector('phe');
+      updateEstimator();
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'कैलकुलेटर रीसेट' : 'Estimator Reset',
+        isHi ? 'मानक लोक निर्माण पैरामीटर पुनर्स्थापित किए गए।' : 'Baseline public works parameters restored.',
+        'info'
+      );
+    }
+
+    function copyEstimateSummary() {
+      const isHi = currentLang === 'hi';
+      const title = document.getElementById('est-summary-title')?.textContent || 'Public Works Project';
+      const val = document.getElementById('est-val')?.textContent || '₹0.00 Cr.';
+      const conc = document.getElementById('est-conc')?.textContent || '0 m³';
+      const time = document.getElementById('est-time')?.textContent || '0 Months';
+      const fleet = document.getElementById('est-fleet-units')?.textContent || '0 Units';
+      const fleetDesc = document.getElementById('est-fleet-desc')?.textContent || '';
+      const dist = document.getElementById('select-est-district')?.value || 'Muzaffarpur';
+
+      const text = `PARISHISHT CONSTRUCTION PRIVATE LIMITED
+Public Works BOQ & Timeline Estimation Summary
+=============================================
+Package: ${title}
+District: ${dist} (Bihar)
+Estimated Valuation: ${val} (Bihar PWD SOR Basis)
+Concrete Volume: ${conc} (M25-M40 Design Mix)
+Project Timeline: ${time} (Includes Monsoon Buffer)
+Fleet Mobilization: ${fleet} [${fleetDesc}]
+Verified: Class-1 Registered EPC Contractor Empaneled with PHED / BUIDCO / RCD
+=============================================`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(
+          isHi ? 'क्लिपबोर्ड पर कॉपी किया गया' : 'Summary Copied',
+          isHi ? 'तकनीकी बीओक्यू प्राक्कलन विवरण सफलतापूर्वक कॉपी किया गया।' : 'Technical BOQ estimation summary copied to clipboard.',
+          'copy'
+        );
+      }).catch(() => {
+        showToast(
+          isHi ? 'कॉपी विफल' : 'Copy Failed',
+          isHi ? 'कृपया विवरण को मैन्युअल रूप से कॉपी करें।' : 'Please manually copy the details.',
+          'info'
+        );
+      });
+    }
+
+    function openBoqPrintableModal() {
+      const code = 'PAR-EST-2026-' + Math.floor(1000 + Math.random() * 9000);
+      const refEl = document.getElementById('boq-print-ref');
+      if (refEl) refEl.textContent = code;
+
+      updateEstimator();
+      openModal('boq-printable-modal');
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'प्रिव्यू तैयार' : 'Export Ready',
+        isHi ? 'बीओक्यू प्राक्कलन विवरण पत्र प्रिंट हेतु तैयार है।' : 'BOQ printable statement ready for review.',
+        'success'
+      );
+    }
+
 
     // 3. PROJECT FILTERING & SEARCH ENGINE
     function renderProjects() {
@@ -2485,21 +4254,57 @@
         btn.classList.remove('bg-brand-navy', 'text-white');
         btn.classList.add('bg-white', 'text-slate-700');
       });
-      if (event && event.target) {
-        event.target.classList.add('bg-brand-navy', 'text-white');
-        event.target.classList.remove('bg-white', 'text-slate-700');
+      if (window.event && window.event.target) {
+        const targetBtn = window.event.target.closest('.filter-btn');
+        if (targetBtn) {
+          targetBtn.classList.add('bg-brand-navy', 'text-white');
+          targetBtn.classList.remove('bg-white', 'text-slate-700');
+        }
       }
       renderProjects();
+
+      const isHi = currentLang === 'hi';
+      const catNames = {
+        all: isHi ? 'सभी कार्य' : 'All Works',
+        phe: isHi ? 'जलापूर्ति (PHE)' : 'Water Supply (PHE)',
+        roads: isHi ? 'सड़क एवं पुल' : 'Roads & Bridges',
+        urban: isHi ? 'शहरी जल निकासी' : 'Urban Drainage'
+      };
+      showToast(
+        isHi ? 'परियोजना फ़िल्टर' : 'Project Filter',
+        (isHi ? 'प्रदर्शित श्रेणी: ' : 'Showing category: ') + (catNames[cat] || cat),
+        'info'
+      );
     }
 
+    let searchToastTimeout = null;
     function handleProjectSearch() {
       searchQuery = document.getElementById('project-search').value.toLowerCase().trim();
       renderProjects();
+
+      if (searchQuery.length >= 2) {
+        clearTimeout(searchToastTimeout);
+        searchToastTimeout = setTimeout(() => {
+          const isHi = currentLang === 'hi';
+          showToast(
+            isHi ? 'खोज परिणाम' : 'Search Query',
+            (isHi ? 'खोज शब्द: ' : 'Filtered for: ') + `"${searchQuery}"`,
+            'info'
+          );
+        }, 500);
+      }
     }
 
     function handleDistrictFilter() {
       currentDistrict = document.getElementById('district-filter').value;
       renderProjects();
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'जिला फ़िल्टर' : 'District Filter',
+        (isHi ? 'प्रदर्शित जिला: ' : 'Filtered by district: ') + (currentDistrict === 'all' ? (isHi ? 'सभी 38 जिले' : 'All 38 Districts') : currentDistrict),
+        'info'
+      );
     }
 
     function resetFilters() {
@@ -2510,7 +4315,24 @@
       const districtSelect = document.getElementById('district-filter');
       if (searchInput) searchInput.value = '';
       if (districtSelect) districtSelect.value = 'all';
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-brand-navy', 'text-white');
+        btn.classList.add('bg-white', 'text-slate-700');
+      });
+      const firstBtn = buttons[0];
+      if (firstBtn) {
+        firstBtn.classList.add('bg-brand-navy', 'text-white');
+        firstBtn.classList.remove('bg-white', 'text-slate-700');
+      }
       renderProjects();
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'फ़िल्टर रीसेट' : 'Filters Cleared',
+        isHi ? 'सभी लोक निर्माण परियोजनाएं प्रदर्शित की जा रही हैं।' : 'Showing all public infrastructure works.',
+        'info'
+      );
     }
 
     // 4. DYNAMIC PROJECT DOSSIER MODAL
@@ -2610,6 +4432,13 @@
       if (window.lucide) {
         lucide.createIcons();
       }
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'दस्तावेज़ तैयार' : 'Dossier Generated',
+        isHi ? 'पूर्व-योग्यता प्रमाण पत्र तैयार कर दिया गया है।' : 'Official tender pre-qualification dossier generated.',
+        'success'
+      );
     }
 
     // 7. CAREER APPLICATION TRACKER
@@ -2640,6 +4469,13 @@
         document.getElementById('job-success').classList.add('hidden');
         e.target.reset();
       }, 3000);
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'आवेदन पंजीकृत' : 'Application Registered',
+        (isHi ? 'ट्रैकिंग संदर्भ: ' : 'Tracking Code: ') + trackingId,
+        'success'
+      );
     }
 
     // 8. VENDOR & CONTACT FORM SUBMISSIONS
@@ -2649,12 +4485,26 @@
       document.getElementById('vendor-ref-id').textContent = refId;
       document.getElementById('vendor-success').classList.remove('hidden');
       e.target.reset();
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'वेंडर पंजीकरण प्राप्त' : 'Vendor Registration Received',
+        (isHi ? 'समीक्षा संदर्भ: ' : 'Empanelment Docket: ') + refId,
+        'success'
+      );
     }
 
     function handleContactSubmit(e) {
       e.preventDefault();
       document.getElementById('contact-success').classList.remove('hidden');
       e.target.reset();
+
+      const isHi = currentLang === 'hi';
+      showToast(
+        isHi ? 'संदेश प्रेषित' : 'Inquiry Sent',
+        isHi ? 'पटना कार्यालय कार्यकारी डेस्क को आपका संदेश प्राप्त हो गया है।' : 'Executive desk notified. Our project team will respond within 24 hours.',
+        'success'
+      );
     }
 
     // 9. MODALS & UI TOGGLES
@@ -2732,6 +4582,19 @@
       // Re-render dynamic elements with language awareness
       renderProjects();
       renderMachinery();
+      selectRadarDistrict(radarSelectedDistrict);
+      updateEstimator();
+
+      // Refresh any counter suffixes for active language
+      document.querySelectorAll('[data-counter]').forEach(el => {
+        const rawSuffix = el.getAttribute('data-counter-suffix') || '';
+        const target = el.getAttribute('data-counter') || '';
+        const prefix = el.getAttribute('data-counter-prefix') || '';
+        let displaySuffix = rawSuffix;
+        if (rawSuffix === '+ Cr.' && lang === 'hi') displaySuffix = '+ करोड़';
+        if (rawSuffix === 'k+' && lang === 'hi') displaySuffix = 'हज़ार+';
+        el.textContent = `${prefix}${target}${displaySuffix}`;
+      });
 
       if (window.lucide) {
         lucide.createIcons();
@@ -2741,6 +4604,12 @@
     function toggleLanguage() {
       const nextLang = currentLang === 'en' ? 'hi' : 'en';
       applyLanguage(nextLang);
+
+      if (nextLang === 'hi') {
+        showToast('भाषा बदली गई', 'हिंदी पोर्टल भाषा अब सक्रिय है।', 'info');
+      } else {
+        showToast('Language Changed', 'English portal language is now active.', 'info');
+      }
     }
 
     // Initialize Page on DOM Loaded
@@ -2749,8 +4618,13 @@
         lucide.createIcons();
       }
       applyLanguage(currentLang);
+      initAnimatedCounters();
+      selectRadarDistrict('patna');
+      updateEstimator();
     });
   </script>
 
+  <!-- Floating Accessible Toast Notification System -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none max-w-sm w-full px-4 sm:px-0" role="region" aria-live="polite" aria-label="Notifications"></div>
 </body>
 </html>

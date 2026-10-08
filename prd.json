@@ -94,6 +94,22 @@
       "priority": 6,
       "passes": true,
       "notes": "Completed HUD card removal, language toggle, and color system deployment."
+    },
+    {
+      "id": "US-008",
+      "title": "Upgrade Portal with Advanced Dynamic Engineering Widgets & Micro-Interactions",
+      "description": "As a government tender board engineer or public works official, I want an interactive BOQ estimator, viewport animated metrics, interactive Bihar district radar, and an accessible toast feedback engine benchmarked against L&T, RKDCPL, and MGCPL.",
+      "acceptanceCriteria": [
+        "Interactive Public Works BOQ & Timeline Estimator with sector-specific inputs, concrete volume, fleet mobilization, and printable BOQ dossier",
+        "Viewport Animated Metric Counters with numerical easing (IntersectionObserver) for ₹250+ Cr, 15+ Districts, 100% On-Time, and 450k+ Safe Hours",
+        "Accessible floating Toast Notification System triggered on language switch, form actions, and filtering",
+        "Interactive Bihar District Operations Radar & Geo-Navigator with SVG schematic map, telemetry HUD, and one-click project filtering",
+        "100% bilingual translation coverage across English and Hindi in the data dictionaries",
+        "HTML validation passes with zero syntax errors or unclosed tags"
+      ],
+      "priority": 7,
+      "passes": true,
+      "notes": "Successfully deployed dynamic BOQ estimator, animated counters, Bihar district radar, and toast notification engine."
     }
   ]
 }
